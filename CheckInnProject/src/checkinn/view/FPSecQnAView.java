@@ -46,6 +46,7 @@ public class FPSecQnAView extends javax.swing.JFrame {
 
         ProceedToSetPassButton.setBackground(new java.awt.Color(0, 102, 0));
         ProceedToSetPassButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        ProceedToSetPassButton.setForeground(new java.awt.Color(255, 255, 255));
         ProceedToSetPassButton.setText("Proceed to Set Password");
         ProceedToSetPassButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
