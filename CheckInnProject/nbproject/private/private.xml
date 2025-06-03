@@ -5,6 +5,7 @@
         <group>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <file>file:/S:/NetBeansProjects/CheckInnProject/src/checkinn/view/LoginView.java</file>
             <file>file:/S:/NetBeansProjects/CheckInnProject/src/checkinn/view/RegistrationView.java</file>
             <file>file:/S:/NetBeansProjects/CheckInnProject/src/checkinn/controller/RedirectToRegController.java</file>
@@ -20,6 +21,11 @@
             <file>file:/D:/Sem%202/Computer%20Science%20Activity%20project%202/NetBeansProjects/CheckInnProject/src/checkinn/view/RegistrationView.java</file>
             <file>file:/D:/Sem%202/Computer%20Science%20Activity%20project%202/NetBeansProjects/CheckInnProject/src/checkinn/view/RoomDetailsView.java</file>
 >>>>>>> 7e5567b6b593ec8fc0e3293ac33aa89504e11939
+=======
+            <file>file:/D:/NetBeansProjects/CheckInnProject/src/checkinn/view/RegistrationView.java</file>
+            <file>file:/D:/NetBeansProjects/CheckInnProject/src/checkinn/view/LoginView.java</file>
+            <file>file:/D:/NetBeansProjects/CheckInnProject/src/checkinn/view/FPSecQnAView.java</file>
+>>>>>>> origin/sauravsc2
         </group>
     </open-files>
 </project-private>
