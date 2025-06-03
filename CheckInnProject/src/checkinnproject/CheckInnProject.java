@@ -4,7 +4,11 @@
  */
 package checkinnproject;
 
+<<<<<<< HEAD
 import checkinn.controller.RedirectToRegcontroller;
+=======
+import checkinn.controller.RedirectToRegController;
+>>>>>>> main
 import checkinn.view.LoginView;
 /**
  *
@@ -19,12 +23,21 @@ public class CheckInnProject {
     public static void main(String[] args) {
         // TODO code application logic here
         LoginView loginView=new LoginView();
+<<<<<<< HEAD
         loginView.setVisible(true);
         
         java.awt.EventQueue.invokeLater(() -> {
         new RedirectToRegcontroller(loginView); // Initialize controller
         loginView.setVisible(true);
     });
+=======
+        loginView.setLocationRelativeTo(null);
+        
+//        java.awt.EventQueue.invokeLater(() -> {
+        new RedirectToRegController(loginView); // Initialize controller
+        loginView.setVisible(true);
+//    });
+>>>>>>> main
         
         
         
