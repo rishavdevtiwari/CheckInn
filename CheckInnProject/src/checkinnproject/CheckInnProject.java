@@ -18,7 +18,6 @@ public class CheckInnProject {
      */
     @SuppressWarnings("ResultOfObjectAllocationIgnored")
     public static void main(String[] args) {
-        // TODO code application logic here
         LoginView loginView=new LoginView();
         loginView.setLocationRelativeTo(null);
         
