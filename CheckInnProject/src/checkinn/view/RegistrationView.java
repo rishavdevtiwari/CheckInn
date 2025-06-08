@@ -1,11 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package checkinn.view;
+
+import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
+
+import javax.swing.JOptionPane;
+//import javax.swing.*;
 /**
  *
- * @author risha
+ * @author rishav
  */
 public class RegistrationView extends javax.swing.JFrame {
 
@@ -356,34 +359,49 @@ public class RegistrationView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 
-//    private LoginView loginViewReference;
-//
-//public javax.swing.JLabel getRedirectToLogin(){
-//    return RedirectToLogin;
-//}
-//
-//public void setLoginViewReference(LoginView loginView){
-//    this.loginViewReference=loginView;
-//}
-//
-//private void makeRedirectLabelClickable() {
-//    RedirectToLogin.setForeground(new java.awt.Color(0, 51, 153));
-//    RedirectToLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-//    
-//    RedirectToLogin.addMouseListener(new java.awt.event.MouseAdapter() {
-//        @Override
-//        public void mouseClicked(java.awt.event.MouseEvent evt) {
-//            // Open LoginView
-//            LoginView loginView = new LoginView();
-//            loginView.setVisible(true);
-//            loginView.setLocationRelativeTo(null);
-//            
-//            // Close the registration window
-//            dispose();
-//        }
-//    });
-//}
 
+    public String getFirstName() {
+        return RegFNameInput.getText().trim();
+    }
+
+    public String getLastName() {
+        return RegLNameInput.getText().trim();
+    }
+
+    public String getEmail() {
+        return RegEmailInput.getText().trim();
+    }
+
+    public String getPassword() {
+        return new String(RegNewPassInput.getPassword()).trim();
+    }
+
+    public String getConfirmPassword() {
+        return new String(RegConfirmNewPassInput.getPassword()).trim();
+    }
+
+    public String getPhoneNumber() {
+        return RegPhInput.getText().trim();
+    }
+
+    public String getSecurityQuestion() {
+        return RegSecQInput.getText().trim();
+    }
+
+    public String getSecurityAnswer() {
+        return RegSecAnsInput.getText().trim();
+    }
+    public void showError(String message) { JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE); }
+    public void showMessage(String message) { JOptionPane.showMessageDialog(this, message, "Info", JOptionPane.INFORMATION_MESSAGE); }
+
+    public void addRegisterListener(ActionListener listener) {
+        RegButton.addActionListener(listener);
+    }
+
+    public void addLoginNavigationListener(MouseListener listener) {
+        RedirectToLogin.addMouseListener(listener);
+    }
+    
   public javax.swing.JLabel getRedirectToLogin() {
       return RedirectToLogin;
   }

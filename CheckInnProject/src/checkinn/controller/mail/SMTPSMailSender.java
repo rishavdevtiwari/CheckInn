@@ -1,102 +1,42 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package checkinn.controller.mail;
 
-
-import com.sun.jdi.connect.Transport;
-import java.net.Authenticator;
-import java.net.PasswordAuthentication;
 import java.util.Properties;
+import javax.mail.*;
+import javax.mail.internet.*;
 
-/**
- *
- * @author LPR HUB
- */
 public class SMTPSMailSender {
+    private static final String FROM_EMAIL = "rishavdevtiwari01@gmail.com";
+    private static final String FROM_PASSWORD = "ghme jkls rbzr ijpz"; // Use Gmail App Password
 
-    private static final String host = "smtp.gmail.com";
+    public static boolean sendOtpEmail(String toEmail, String otp) {
+        String subject = "Your OTP for Password Reset";
+        String body = "Your OTP for password reset is: " + otp;
 
-    private static final String port = "587"; 
+        Properties props = new Properties();
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.ssl.protocols", "TLSv1.2");
 
-    private static final String email = "ENTER YOUR EMAIL";
-
-    private static String password = "ENTER YOUR APP PASSWORD";
-    private static Object Session;
-
-
-
-    // Send Email Method
-
-    public static boolean sendMail(String recipient, String subject, String body) {
-
-        // Set up properties for the email session
-
-        Properties properties = new Properties();
-
-        properties.setProperty("mail.smtp.host", host);
-
-        properties.setProperty("mail.smtp.port", port);  
-
-        properties.setProperty("mail.smtp.auth", "true");
-
-        properties.setProperty("mail.smtp.starttls.enable", "true");  // Enable STARTTLS
-
-        properties.put("mail.smtp.starttls.enable", "true");
-
-        properties.put("mail.smtp.ssl.protocols", "TLSv1.2");  // Forces TLSv1.2
-
-        // Create a session with the properties
-
-        Session session = Session.getInstance(properties, new Authenticator() {
-
-
+        Session session = Session.getInstance(props, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-
-                return new PasswordAuthentication(email, password);
-
+                return new PasswordAuthentication(FROM_EMAIL, FROM_PASSWORD);
             }
-
         });
 
-
-
         try {
-
-            // Create the message
-
-            MimeMessage message;
-            message = new MimeMessage(session);
-
-            message.setFrom(new InternetAddress(emailaddress));
-
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
-
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(FROM_EMAIL));
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail));
             message.setSubject(subject);
-
             message.setText(body);
 
-            // Send the message
-
             Transport.send(message);
-
-            System.out.println("Mail sent successfully!"+body);
-
             return true;
-
-        } catch (MessagingException mex) {
-
-            mex.printStackTrace();
-
+        } catch (MessagingException e) {
             return false;
-
         }
-
     }
- 
 }
-
- 
-

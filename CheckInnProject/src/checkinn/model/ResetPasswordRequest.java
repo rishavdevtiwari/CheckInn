@@ -1,32 +1,38 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package checkinn.model;
 
-/**
- *
- * @author ACER NITRO
- */
 public class ResetPasswordRequest {
-     private String email;
-    private String password;
-    public ResetPasswordRequest(String email, String password){
-        this.email=email;
-        this.password=password;
+    private String email;
+    private String newPassword;
+    private String otp;
+
+    public ResetPasswordRequest(String email, String newPassword) {
+        this.email = email;
+        this.newPassword = newPassword;
+        this.otp = otp;
     }
-    public void setEmail(String email){
-        this.email=email;
-    }
-    public void setPassword(String password){
-        this.password=password;
-    }
-    public String getEmail(){
+
+    // Getters and Setters
+    public String getEmail() {
         return email;
     }
-    public String getPassword(){
-        return password;
-    }
-    
-}
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getNewPassword() {
+        return newPassword;
+    }
+
+    public void setNewPassword(String newPassword) {
+        this.newPassword = newPassword;
+    }
+
+    public String getOtp() {
+        return otp;
+    }
+
+    public void setOtp(String otp) {
+        this.otp = otp;
+    }
+}

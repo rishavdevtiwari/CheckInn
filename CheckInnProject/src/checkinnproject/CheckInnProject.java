@@ -5,10 +5,11 @@
 package checkinnproject;
 
 
-import checkinn.controller.RedirectToRegController;
+import checkinn.controller.LoginController;
+import checkinn.dao.UserDao;
 import checkinn.view.LoginView;
 /**
- *
+ *s
  * @author ACER NITRO
  */
 public class CheckInnProject {
@@ -18,15 +19,11 @@ public class CheckInnProject {
      */
     @SuppressWarnings("ResultOfObjectAllocationIgnored")
     public static void main(String[] args) {
-        LoginView loginView=new LoginView();
-        loginView.setLocationRelativeTo(null);
-        
-//        java.awt.EventQueue.invokeLater(() -> {
-        new RedirectToRegController(loginView); // Initialize controller
-        loginView.setVisible(true);
-//    });
-        
-        
+LoginView loginView = new LoginView();
+UserDao userDao = new UserDao();
+LoginController loginController = new LoginController(loginView, userDao);
+loginController.open();
+loginView.setLocationRelativeTo(null);      
         
     }
     
