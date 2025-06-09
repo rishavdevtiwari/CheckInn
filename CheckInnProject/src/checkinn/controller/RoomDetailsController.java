@@ -18,6 +18,10 @@ public class RoomDetailsController {
 
     /**
      * EDITED: The constructor now accepts a single Room object.
+     * @param view
+     * @param dashboardView
+     * @param user
+     * @param room
      */
     public RoomDetailsController(RoomDetailsView view, DashboardView dashboardView, UserData user, Room room) {
         this.view = view;
