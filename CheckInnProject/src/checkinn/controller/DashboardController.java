@@ -4,6 +4,7 @@ import checkinn.dao.UserDao;
 import checkinn.model.UserData;
 import checkinn.view.DashboardView;
 import checkinn.view.LoginView;
+import checkinn.view.RoomDetailsView;
 import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
 
@@ -34,21 +35,21 @@ public class DashboardController {
             dashboardView.setWelcomeMessage("Welcome, Guest!");
         }
 
-        // Assign listeners to buttons
+        // Assign listeners to buttons (only once per button)
         dashboardView.addSingleRoomListener((ActionEvent e) -> {
-            handleRoomSelection("Single Room", 100.00, "Standard single bed room with basic amenities");
+            openRoomDetailsPage("Single Room", 100.00, "Standard single bed room with basic amenities");
         });
 
         dashboardView.addDoubleRoomListener((ActionEvent e) -> {
-            handleRoomSelection("Double Room", 150.00, "Standard double bed room with basic amenities");
+            openRoomDetailsPage("Double Room", 150.00, "Standard double bed room with basic amenities");
         });
 
         dashboardView.addDeluxeRoomListener((ActionEvent e) -> {
-            handleRoomSelection("Deluxe Room", 250.00, "Spacious room with premium amenities and city view");
+            openRoomDetailsPage("Deluxe Room", 250.00, "Spacious room with premium amenities and city view");
         });
 
         dashboardView.addSuiteRoomListener((ActionEvent e) -> {
-            handleRoomSelection("Suite", 400.00, "Luxurious suite with separate living area and premium services");
+            openRoomDetailsPage("Executive Suite", 400.00, "Luxurious suite with separate living area and premium services");
         });
 
         dashboardView.addBookingHistoryListener((ActionEvent e) -> {
@@ -81,28 +82,14 @@ public class DashboardController {
         });
     }
 
-    private void handleRoomSelection(String roomType, double price, String description) {
-        String message = String.format(
-            "%s\nPrice: $%.2f per night\nDescription: %s\n\nWould you like to book this room?",
-            roomType, price, description
-        );
-
-        int choice = JOptionPane.showConfirmDialog(
-            dashboardView,
-            message,
-            roomType + " Details",
-            JOptionPane.YES_NO_OPTION
-        );
-
-        if (choice == JOptionPane.YES_OPTION) {
-            JOptionPane.showMessageDialog(
-                dashboardView,
-                "Proceeding to booking for " + roomType,
-                "Booking",
-                JOptionPane.INFORMATION_MESSAGE
-            );
-        }
-    }
+    // Open the RoomDetailsView with the correct info
+private void openRoomDetailsPage(String roomType, double price, String description) {
+    RoomDetailsView detailsView = new RoomDetailsView();
+    detailsView.setRoomName(roomType);
+    detailsView.setPrice(price);
+    detailsView.setDescription(description);
+    detailsView.setVisible(true);
+}
 
     private void refreshDashboard() {
         if (user != null && user.getFirstName() != null) {
