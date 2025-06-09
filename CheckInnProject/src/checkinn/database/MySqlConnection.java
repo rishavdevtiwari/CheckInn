@@ -12,7 +12,7 @@ public class MySqlConnection implements DbConnection {
     private static final String DB_PORT = "3306";
     private static final String DB_NAME = "CheckInndb";
     private static final String DB_USER = "root"; 
-    private static final String DB_PASSWORD = "1234";
+    private static final String DB_PASSWORD = "Coventry2019@";
 
     private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String SERVER_URL = "jdbc:mysql://" + DB_HOST + ":" + DB_PORT + "/?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC";
@@ -82,9 +82,7 @@ public class MySqlConnection implements DbConnection {
 
                 "CREATE TABLE IF NOT EXISTS MenuItem (" +
                 "menu_id INT AUTO_INCREMENT PRIMARY KEY, " +
-                "itemname VARCHAR(100) NOT NULL, " +
-                "status_id INT, " +
-                "FOREIGN KEY (status_id) REFERENCES Statuses(status_id) ON DELETE SET NULL ON UPDATE CASCADE)",
+                "itemname VARCHAR(100) NOT NULL, ",
 
                 "CREATE TABLE IF NOT EXISTS Booking (" +
                 "booking_id INT AUTO_INCREMENT PRIMARY KEY, " +
@@ -94,7 +92,9 @@ public class MySqlConnection implements DbConnection {
                 "status_id INT, " +
                 "menu_id INT, " +
                 "invoice_id INT, " +
-                "booking_date DATETIME NOT NULL, " +
+                "CheckIn_date DATETIME NOT NULL, " +
+                "CheckOut_date DATETIME NOT NULL, " +
+                "total_price Decimal(5,2)"+
                 "FOREIGN KEY (room_id) REFERENCES Room(room_id) ON DELETE CASCADE ON UPDATE CASCADE, " +
                 "FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE CASCADE ON UPDATE CASCADE, " +
                 "FOREIGN KEY (admin_id) REFERENCES Admin(admin_id) ON DELETE SET NULL ON UPDATE CASCADE, " +
