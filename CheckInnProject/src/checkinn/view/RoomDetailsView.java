@@ -47,6 +47,7 @@ public class RoomDetailsView extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        imageLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
@@ -60,17 +61,10 @@ public class RoomDetailsView extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 153, 153));
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 496, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 228, Short.MAX_VALUE)
-        );
+        imageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(imageLabel, java.awt.BorderLayout.CENTER);
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
@@ -151,7 +145,7 @@ public class RoomDetailsView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 353, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1)
                         .addGap(44, 44, 44)
@@ -206,6 +200,7 @@ public class RoomDetailsView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel imageLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -217,14 +212,7 @@ public class RoomDetailsView extends javax.swing.JFrame {
     private javax.swing.JButton jTextField2;
     // End of variables declaration//GEN-END:variables
 
-    // =========================================================================
-    // == NEW METHODS TO BE CALLED BY THE CONTROLLER ==
-    // =========================================================================
 
-    /**
-     * Adds a listener to the "Book now" button.
-     * @param listener The action listener to be added.
-     */
     public void addBookingListener(ActionListener listener) {
         jButton1.addActionListener(listener); // The "Book now" button
     }
@@ -236,4 +224,50 @@ public class RoomDetailsView extends javax.swing.JFrame {
     public void addBackListener(MouseAdapter listener) {
         jTextField2.addMouseListener(listener); // The "<- Dashboard" text field
     }
+    // In RoomDetailsView.java, add these two methods at the end of the file
+
+/**
+ * Loads an image from the given path, scales it, and sets it on the imageLabel.
+ * @param imagePath The resource path to the image (e.g., "/images/singleroom.jpg").
+ */
+// In RoomDetailsView.java
+
+/**
+ * Loads an image from the given path, scales it to a FIXED size, and sets it on the imageLabel.
+ * @param imagePath The resource path to the image (e.g., "/images/singleroom.jpg").
+ */
+public void setRoomImage(String imagePath) {
+    // --- EDITED SECTION: Define a fixed size for the image ---
+    // You can adjust these values to best fit your UI design.
+    final int IMAGE_WIDTH = 450;
+    final int IMAGE_HEIGHT = 220;
+
+    java.net.URL imageUrl = getClass().getResource(imagePath);
+
+    if (imageUrl != null) {
+        javax.swing.ImageIcon rawIcon = new javax.swing.ImageIcon(imageUrl);
+        
+        // --- EDITED SECTION: Pass the fixed size to the scaler ---
+        javax.swing.ImageIcon scaledIcon = scaleImage(rawIcon, IMAGE_WIDTH, IMAGE_HEIGHT);
+        imageLabel.setIcon(scaledIcon);
+        
+    } else {
+        System.err.println("Couldn't find image: " + imagePath);
+        imageLabel.setText("Image not found");
+    }
+}
+
+/**
+ * A helper method to scale an ImageIcon.
+ * @param icon The icon to scale.
+ * @param w The target width.
+ * @param h The target height.
+ * @return The scaled ImageIcon.
+ */
+private javax.swing.ImageIcon scaleImage(javax.swing.ImageIcon icon, int w, int h) {
+    java.awt.Image img = icon.getImage();
+    // Use SCALE_SMOOTH for better quality
+    java.awt.Image scaledImg = img.getScaledInstance(w, h, java.awt.Image.SCALE_SMOOTH);
+    return new javax.swing.ImageIcon(scaledImg);
+}
 }

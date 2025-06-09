@@ -1,5 +1,6 @@
 package checkinn.controller;
 
+import checkinn.model.Room; // <-- Import the Room model
 import checkinn.model.UserData;
 import checkinn.view.DashboardView;
 import checkinn.view.RoomDetailsView;
@@ -11,22 +12,24 @@ import javax.swing.JOptionPane;
 public class RoomDetailsController {
 
     private final RoomDetailsView view;
-    private final DashboardView dashboardView; // To go back to the dashboard
+    private final DashboardView dashboardView;
     private final UserData user;
-    private final String roomType;
-    private final double price;
+    private final Room room; // <-- Store the whole Room object as a field
 
-    public RoomDetailsController(RoomDetailsView view, DashboardView dashboardView, UserData user, String roomType, double price, String description) {
+    /**
+     * EDITED: The constructor now accepts a single Room object.
+     */
+    public RoomDetailsController(RoomDetailsView view, DashboardView dashboardView, UserData user, Room room) {
         this.view = view;
         this.dashboardView = dashboardView;
         this.user = user;
-        this.roomType = roomType;
-        this.price = price;
+        this.room = room; // <-- Assign the passed-in Room object to the field
 
-        // Populate the view with room data
-        this.view.setRoomName(roomType);
-        this.view.setPrice(price);
-        this.view.setDescription(description);
+        // Populate the view with data from the Room object
+        this.view.setRoomName(room.getRoomType());
+        this.view.setPrice(room.getPrice());
+        this.view.setDescription(room.getDescription());
+        this.view.setRoomImage(room.getImagePath()); // Set the image
 
         initializeListeners();
     }
@@ -48,9 +51,11 @@ public class RoomDetailsController {
 
     private void bookRoom() {
         String userName = (user != null && user.getFirstName() != null) ? user.getFirstName() : "Guest";
+        
+        // Use the room object to get details for the confirmation message
         int confirm = JOptionPane.showConfirmDialog(
                 view,
-                "Confirm booking for " + roomType + " at RS. " + String.format("%.2f", price) + "?",
+                "Confirm booking for " + room.getRoomType() + " at RS. " + String.format("%.2f", room.getPrice()) + "?",
                 "Confirm Booking",
                 JOptionPane.YES_NO_OPTION
         );

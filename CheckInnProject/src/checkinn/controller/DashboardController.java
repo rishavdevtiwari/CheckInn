@@ -1,6 +1,7 @@
 package checkinn.controller;
 
 import checkinn.dao.UserDao;
+import checkinn.model.Room; // <-- Import the Room model
 import checkinn.model.UserData;
 import checkinn.view.DashboardView;
 import checkinn.view.LoginView;
@@ -35,27 +36,23 @@ public class DashboardController {
             dashboardView.setWelcomeMessage("Welcome, Guest!");
         }
 
-        // Assign listeners to buttons (only once per button)
-        dashboardView.addSingleRoomListener((ActionEvent e) -> {
-            openRoomDetailsPage("Single Room", 100.00, "Standard single bed room with basic amenities");
-        });
+        // --- EDITED SECTION: Create Room objects to hold all data ---
+        Room singleRoom = new Room("Single Room", 100.00, "Standard single bed room with basic amenities.", "/images/singleroom.jpg");
+        Room doubleRoom = new Room("Double Room", 150.00, "Standard double bed room with basic amenities.", "/images/doubleroom.jpg");
+        Room deluxeRoom = new Room("Deluxe Room", 250.00, "Spacious room with premium amenities and city view.", "/images/Deluxe.jpg");
+        Room suiteRoom = new Room("Executive Suite", 400.00, "Luxurious suite with separate living area and premium services.", "/images/executive room.jpg");
+        
+        // --- EDITED SECTION: Assign listeners using the Room objects ---
+        dashboardView.addSingleRoomListener((e) -> openRoomDetailsPage(singleRoom));
+        dashboardView.addDoubleRoomListener((e) -> openRoomDetailsPage(doubleRoom));
+        dashboardView.addDeluxeRoomListener((e) -> openRoomDetailsPage(deluxeRoom));
+        dashboardView.addSuiteRoomListener((e) -> openRoomDetailsPage(suiteRoom));
 
-        dashboardView.addDoubleRoomListener((ActionEvent e) -> {
-            openRoomDetailsPage("Double Room", 150.00, "Standard double bed room with basic amenities");
-        });
-
-        dashboardView.addDeluxeRoomListener((ActionEvent e) -> {
-            openRoomDetailsPage("Deluxe Room", 250.00, "Spacious room with premium amenities and city view");
-        });
-
-        dashboardView.addSuiteRoomListener((ActionEvent e) -> {
-            openRoomDetailsPage("Executive Suite", 400.00, "Luxurious suite with separate living area and premium services");
-        });
 
         dashboardView.addBookingHistoryListener((ActionEvent e) -> {
             String bookingHistory = "Booking History for " + (user != null ? user.getFirstName() : "Guest") + ":\n"
-                                 + "1. Single Room - 2023-05-15 to 2023-05-17\n"
-                                 + "2. Deluxe Room - 2023-06-01 to 2023-06-05";
+                                  + "1. Single Room - 2023-05-15 to 2023-05-17\n"
+                                  + "2. Deluxe Room - 2023-06-01 to 2023-06-05";
             JOptionPane.showMessageDialog(dashboardView, bookingHistory, "Booking History", JOptionPane.INFORMATION_MESSAGE);
         });
 
@@ -82,14 +79,21 @@ public class DashboardController {
         });
     }
 
-    // Open the RoomDetailsView with the correct info
-private void openRoomDetailsPage(String roomType, double price, String description) {
-    RoomDetailsView detailsView = new RoomDetailsView();
-    detailsView.setRoomName(roomType);
-    detailsView.setPrice(price);
-    detailsView.setDescription(description);
-    detailsView.setVisible(true);
-}
+    /**
+     * EDITED: This method now accepts a single Room object.
+     * It creates and shows the RoomDetailsView, passing the responsibility to the RoomDetailsController.
+     * @param room The Room object containing all details for the selected room.
+     */
+    private void openRoomDetailsPage(Room room) {
+        dashboardView.setVisible(false);
+
+        RoomDetailsView detailsView = new RoomDetailsView();
+        // Pass the entire 'room' object to the details controller.
+        // This assumes your RoomDetailsController is updated to accept a Room object.
+        RoomDetailsController detailsController = new RoomDetailsController(detailsView, this.dashboardView, this.user, room);
+        
+        detailsController.showView();
+    }
 
     private void refreshDashboard() {
         if (user != null && user.getFirstName() != null) {
