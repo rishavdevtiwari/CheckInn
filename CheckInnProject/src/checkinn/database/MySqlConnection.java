@@ -148,6 +148,6 @@ public class MySqlConnection implements DbConnection {
             }
         } catch (SQLException e) {
             System.err.println("Error closing connection: " + e.getMessage());
-        }
+}
     }
 }
