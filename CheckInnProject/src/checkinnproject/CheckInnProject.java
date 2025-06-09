@@ -19,11 +19,11 @@ public class CheckInnProject {
      */
     @SuppressWarnings("ResultOfObjectAllocationIgnored")
     public static void main(String[] args) {
-LoginView loginView = new LoginView();
-UserDao userDao = new UserDao();
-LoginController loginController = new LoginController(loginView, userDao);
-loginController.open();
-loginView.setLocationRelativeTo(null);      
+    LoginView loginView = new LoginView();
+    UserDao userDao = new UserDao();
+    LoginController loginController = new LoginController(loginView, userDao);
+    loginController.open();
+    loginView.setLocationRelativeTo(null);      
         
     }
     

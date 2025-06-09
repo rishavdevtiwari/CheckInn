@@ -6,6 +6,8 @@ import checkinn.view.LoginView;
 import checkinn.view.RegistrationView;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseAdapter;
 
 public class RegistrationController {
     private final RegistrationView registrationView;
@@ -15,6 +17,7 @@ public class RegistrationController {
         this.registrationView = registrationView;
         this.userDao = userDao;
         this.registrationView.addRegisterListener(new RegisterListener());
+        this.registrationView.addLoginNavigationListener(new LoginNavigationListener());
     }
 
     public void open() {
@@ -58,4 +61,18 @@ public class RegistrationController {
             }
         }
     }
+    
+        class LoginNavigationListener extends MouseAdapter {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            close();
+        LoginView loginView = new LoginView();
+        UserDao userDao = new UserDao();
+        LoginController loginController = new LoginController(loginView, userDao);
+        loginController.open();
+        loginView.setLocationRelativeTo(null);
+        }
+
+    }
+    
 }

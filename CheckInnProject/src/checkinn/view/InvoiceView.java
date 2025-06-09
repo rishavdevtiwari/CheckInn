@@ -93,7 +93,7 @@ public class InvoiceView extends javax.swing.JFrame {
                 .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(InvoicePanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(LogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(TopicLabel)
                         .addGap(47, 47, 47))
