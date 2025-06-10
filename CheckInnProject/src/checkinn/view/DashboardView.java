@@ -56,7 +56,6 @@ public class DashboardView extends javax.swing.JFrame {
         UserNameLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1347, 821));
 
         jPanel2.setBackground(new java.awt.Color(23, 194, 157));
 
@@ -267,6 +266,7 @@ public class DashboardView extends javax.swing.JFrame {
             }
         });
 
+        jButton7.setBackground(new java.awt.Color(255, 0, 0));
         jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/7124045_logout_icon(1).png"))); // NOI18N
         jButton7.setText("Logout");

@@ -64,13 +64,13 @@ public class DashboardController {
             int confirm = JOptionPane.showConfirmDialog(
                 dashboardView,
                 "Are you sure you want to logout?",
-                "Confirm Logout",
+                "Confirm Logout | CheckInn",
                 JOptionPane.YES_NO_OPTION
             );
 
             if (confirm == JOptionPane.YES_OPTION) {
                 close();
-                JOptionPane.showMessageDialog(null, "Logged out successfully", "Logout", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Logged out successfully", "Logout | CheckInn", JOptionPane.INFORMATION_MESSAGE);
                 LoginView loginView = new LoginView();
                 UserDao userDao = new UserDao();
                 LoginController loginController = new LoginController(loginView, userDao);
