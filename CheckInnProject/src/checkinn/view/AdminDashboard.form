@@ -145,18 +145,6 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="singleRoomStatusLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jButton10" max="32767" attributes="0"/>
-                      <Component id="jButton9" alignment="0" max="32767" attributes="0"/>
-                      <Component id="singleVacantBtn" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-=======
                   <Component id="SingleLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
@@ -167,27 +155,11 @@
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Component id="SingleSetOutOfOrderButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="singleVacantBtn" min="-2" pref="21" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton9" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
-                              <Component id="singleRoomStatusLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton10" min="-2" pref="21" max="-2" attributes="0"/>
-=======
               <Group type="102" attributes="0">
                   <EmptySpace pref="33" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -199,7 +171,6 @@
                           <Component id="SingleSetOccupiedButton" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
                           <Component id="SingleSetVacantButton" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
                           <Component id="SingleSetOutOfOrderButton" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
@@ -216,7 +187,7 @@
             <Property name="text" type="java.lang.String" value="Single"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="singleRoomStatusLabel">
+        <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -224,11 +195,7 @@
             <Property name="text" type="java.lang.String" value="Vacant"/>
           </Properties>
         </Component>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-        <Component class="javax.swing.JButton" name="singleVacantBtn">
-=======
         <Component class="javax.swing.JButton" name="SingleSetVacantButton">
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -236,11 +203,7 @@
             <Property name="text" type="java.lang.String" value="Vacant"/>
           </Properties>
           <Events>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="singleVacantBtnActionPerformed"/>
-=======
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SingleSetVacantButtonActionPerformed"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="SingleSetOccupiedButton">
@@ -277,26 +240,6 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="doubleVacantBtn" min="-2" pref="120" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="doubleOutOfOrderBtn" min="-2" pref="120" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="163" max="-2" attributes="0"/>
-                          <Component id="doubleRoomStatusLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
-                          <Component id="doubleOccupiedBtn" min="-2" pref="120" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-=======
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace pref="36" max="32767" attributes="0"/>
                   <Component id="DoubleLabel" min="-2" max="-2" attributes="0"/>
@@ -309,26 +252,12 @@
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Component id="DoubleSetOutOfOrderButton" min="-2" pref="120" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="doubleVacantBtn" min="-2" pref="21" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="doubleOccupiedBtn" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="doubleRoomStatusLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="10" max="32767" attributes="0"/>
-                  <Component id="doubleOutOfOrderBtn" min="-2" pref="21" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-=======
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="DoubleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -338,7 +267,6 @@
                       <Component id="DoubleSetOutOfOrderButton" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="37" max="32767" attributes="0"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
               </Group>
           </Group>
         </DimensionLayout>
@@ -352,7 +280,7 @@
             <Property name="text" type="java.lang.String" value="Double"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="doubleRoomStatusLabel">
+        <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -360,11 +288,7 @@
             <Property name="text" type="java.lang.String" value="Out Of Order"/>
           </Properties>
         </Component>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-        <Component class="javax.swing.JButton" name="doubleVacantBtn">
-=======
         <Component class="javax.swing.JButton" name="DoubleSetVacantButton">
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -372,17 +296,10 @@
             <Property name="text" type="java.lang.String" value="Vacant"/>
           </Properties>
           <Events>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="doubleVacantBtnActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="doubleOccupiedBtn">
-=======
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DoubleSetVacantButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="DoubleSetOccupiedButton">
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -390,17 +307,10 @@
             <Property name="text" type="java.lang.String" value="Occupied"/>
           </Properties>
           <Events>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="doubleOccupiedBtnActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="doubleOutOfOrderBtn">
-=======
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DoubleSetOccupiedButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="DoubleSetOutOfOrderButton">
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -408,11 +318,7 @@
             <Property name="text" type="java.lang.String" value="Out Of Order"/>
           </Properties>
           <Events>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="doubleOutOfOrderBtnActionPerformed"/>
-=======
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DoubleSetOutOfOrderButtonActionPerformed"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           </Events>
         </Component>
       </SubComponents>
@@ -428,26 +334,6 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jButton17" min="-2" pref="130" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
-                          <Component id="suiteStatusLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="179" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="suiteOccupiedBtn" max="32767" attributes="0"/>
-                              <Component id="suiteOutOfOrderBtn" pref="130" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-=======
                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                   <Component id="ExecutiveSuitLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
@@ -459,32 +345,12 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="ExecutiveSetOutOfOrderButton" min="-2" pref="127" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton17" min="-2" pref="21" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="suiteStatusLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="suiteOccupiedBtn" min="-2" pref="21" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="suiteOutOfOrderBtn" min="-2" pref="21" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-=======
                   <EmptySpace pref="38" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="ExecutiveSetOccupiedButton" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
@@ -492,7 +358,6 @@
                       <Component id="ExecutiveSetOutOfOrderButton" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
                       <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ExecutiveSuitLabel" alignment="3" min="-2" max="-2" attributes="0"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
                   </Group>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
@@ -508,7 +373,7 @@
             <Property name="text" type="java.lang.String" value="Executive Suite"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="suiteStatusLabel">
+        <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -527,11 +392,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ExecutiveSetVacantButtonActionPerformed"/>
           </Events>
         </Component>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-        <Component class="javax.swing.JButton" name="suiteOccupiedBtn">
-=======
         <Component class="javax.swing.JButton" name="ExecutiveSetOccupiedButton">
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -539,17 +400,10 @@
             <Property name="text" type="java.lang.String" value="Occupied"/>
           </Properties>
           <Events>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="suiteOccupiedBtnActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="suiteOutOfOrderBtn">
-=======
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ExecutiveSetOccupiedButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="ExecutiveSetOutOfOrderButton">
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -557,11 +411,7 @@
             <Property name="text" type="java.lang.String" value="Out Of Order"/>
           </Properties>
           <Events>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="suiteOutOfOrderBtnActionPerformed"/>
-=======
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ExecutiveSetOutOfOrderButtonActionPerformed"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           </Events>
         </Component>
       </SubComponents>
@@ -596,11 +446,7 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-                          <Component id="bookingHistoryButton" min="-2" pref="151" max="-2" attributes="0"/>
-=======
                           <Component id="BookingHistoryButton" min="-2" pref="151" max="-2" attributes="0"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
@@ -620,13 +466,8 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-                              <Component id="logoutButton" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="adminDashboardButton" alignment="1" min="-2" max="-2" attributes="0"/>
-=======
                               <Component id="LogOutButton" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Component id="AdminDashboardButton" alignment="1" min="-2" max="-2" attributes="0"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
                           </Group>
                       </Group>
                   </Group>
@@ -647,30 +488,18 @@
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-                  <Component id="adminDashboardButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="bookingHistoryButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="191" max="32767" attributes="0"/>
-                  <Component id="logoutButton" min="-2" max="-2" attributes="0"/>
-=======
                   <Component id="AdminDashboardButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="BookingHistoryButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="191" max="32767" attributes="0"/>
                   <Component id="LogOutButton" min="-2" max="-2" attributes="0"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
                   <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-        <Component class="javax.swing.JButton" name="adminDashboardButton">
-=======
         <Component class="javax.swing.JButton" name="AdminDashboardButton">
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -678,17 +507,10 @@
             <Property name="text" type="java.lang.String" value="Admin Dashboard"/>
           </Properties>
           <Events>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adminDashboardButtonActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="bookingHistoryButton">
-=======
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AdminDashboardButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BookingHistoryButton">
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -696,17 +518,10 @@
             <Property name="text" type="java.lang.String" value="Booking history"/>
           </Properties>
           <Events>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bookingHistoryButtonActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="logoutButton">
-=======
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BookingHistoryButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="LogOutButton">
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -759,26 +574,6 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="deluxeVacantBtn" min="-2" pref="128" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="deluxeRoomStatusLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="144" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="deluxeOccupiedBtn" max="32767" attributes="0"/>
-                              <Component id="deluxeOutOfOrderBtn" pref="128" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-=======
                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   <Component id="DeluxeLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
@@ -790,26 +585,11 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="DeluxeSetOutOfOrderButton" min="-2" pref="128" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-              <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="deluxeVacantBtn" min="-2" pref="21" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="deluxeOccupiedBtn" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="deluxeRoomStatusLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="deluxeOutOfOrderBtn" min="-2" pref="21" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-=======
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace pref="36" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -820,7 +600,6 @@
                       <Component id="DeluxeSetOutOfOrderButton" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
               </Group>
           </Group>
         </DimensionLayout>
@@ -834,7 +613,7 @@
             <Property name="text" type="java.lang.String" value="Deluxe"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="deluxeRoomStatusLabel">
+        <Component class="javax.swing.JLabel" name="jLabel12">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -842,11 +621,7 @@
             <Property name="text" type="java.lang.String" value="Occupied"/>
           </Properties>
         </Component>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-        <Component class="javax.swing.JButton" name="deluxeOutOfOrderBtn">
-=======
         <Component class="javax.swing.JButton" name="DeluxeSetOutOfOrderButton">
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -854,17 +629,10 @@
             <Property name="text" type="java.lang.String" value="Out Of Order"/>
           </Properties>
           <Events>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deluxeOutOfOrderBtnActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="deluxeOccupiedBtn">
-=======
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeluxeSetOutOfOrderButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="DeluxeSetOccupied">
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -872,17 +640,10 @@
             <Property name="text" type="java.lang.String" value="Occupied"/>
           </Properties>
           <Events>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deluxeOccupiedBtnActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="deluxeVacantBtn">
-=======
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeluxeSetOccupiedActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="DeluxeSetVacant">
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -890,11 +651,7 @@
             <Property name="text" type="java.lang.String" value="Vacant"/>
           </Properties>
           <Events>
-<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.form
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deluxeVacantBtnActionPerformed"/>
-=======
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeluxeSetVacantActionPerformed"/>
->>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/build/classes/checkinn/view/AdminDashboard.form
           </Events>
         </Component>
       </SubComponents>

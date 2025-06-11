@@ -99,8 +99,9 @@ public class AdminDashboardView extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
+        CheckinnLogoLabel = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
         jLabel5 = new javax.swing.JLabel();
         singleRoomStatusLabel = new javax.swing.JLabel();
         singleVacantBtn = new javax.swing.JButton();
@@ -134,12 +135,47 @@ public class AdminDashboardView extends javax.swing.JFrame {
         deluxeOutOfOrderBtn = new javax.swing.JButton();
         deluxeOccupiedBtn = new javax.swing.JButton();
         deluxeVacantBtn = new javax.swing.JButton();
+=======
+        SingleLabel = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        SingleSetVacantButton = new javax.swing.JButton();
+        SingleSetOccupiedButton = new javax.swing.JButton();
+        SingleSetOutOfOrderButton = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        DoubleLabel = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        DoubleSetVacantButton = new javax.swing.JButton();
+        DoubleSetOccupiedButton = new javax.swing.JButton();
+        DoubleSetOutOfOrderButton = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        ExecutiveSuitLabel = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        ExecutiveSetVacantButton = new javax.swing.JButton();
+        ExecutiveSetOccupiedButton = new javax.swing.JButton();
+        ExecutiveSetOutOfOrderButton = new javax.swing.JButton();
+        AccomodationLabel = new javax.swing.JLabel();
+        SetAvailabilityLabel = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        AdminDashboardButton = new javax.swing.JButton();
+        BookingHistoryButton = new javax.swing.JButton();
+        LogOutButton = new javax.swing.JButton();
+        AdminPfpLabel = new javax.swing.JLabel();
+        AdUserNameLabel = new javax.swing.JLabel();
+        AdminLabel = new javax.swing.JLabel();
+        CurrentAvailabilityLabel = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        DeluxeLabel = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        DeluxeSetOutOfOrderButton = new javax.swing.JButton();
+        DeluxeSetOccupied = new javax.swing.JButton();
+        DeluxeSetVacant = new javax.swing.JButton();
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(23, 194, 157));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
+        CheckinnLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -147,46 +183,54 @@ public class AdminDashboardView extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CheckinnLogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(973, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(jLabel13)
+                .addComponent(CheckinnLogoLabel)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(23, 194, 157));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setText("Single");
+        SingleLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        SingleLabel.setText("Single");
 
         singleRoomStatusLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         singleRoomStatusLabel.setText("Vacant");
 
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
         singleVacantBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         singleVacantBtn.setText("Vacant");
         singleVacantBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 singleVacantBtnActionPerformed(evt);
+=======
+        SingleSetVacantButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        SingleSetVacantButton.setText("Vacant");
+        SingleSetVacantButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SingleSetVacantButtonActionPerformed(evt);
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
             }
         });
 
-        jButton9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton9.setText("Occupied");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        SingleSetOccupiedButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        SingleSetOccupiedButton.setText("Occupied");
+        SingleSetOccupiedButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                SingleSetOccupiedButtonActionPerformed(evt);
             }
         });
 
-        jButton10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton10.setText("Out Of Order");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        SingleSetOutOfOrderButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        SingleSetOutOfOrderButton.setText("Out Of Order");
+        SingleSetOutOfOrderButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                SingleSetOutOfOrderButtonActionPerformed(evt);
             }
         });
 
@@ -196,6 +240,7 @@ public class AdminDashboardView extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(singleRoomStatusLabel)
@@ -221,16 +266,43 @@ public class AdminDashboardView extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
+=======
+                .addComponent(SingleLabel)
+                .addGap(206, 206, 206)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 201, Short.MAX_VALUE)
+                .addComponent(SingleSetVacantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(SingleSetOccupiedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(SingleSetOutOfOrderButton)
+                .addGap(32, 32, 32))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap(33, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(SingleLabel)
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(SingleSetOccupiedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(SingleSetVacantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(SingleSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(33, 33, 33))
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
         );
 
         jPanel6.setBackground(new java.awt.Color(23, 194, 157));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("Double");
+        DoubleLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        DoubleLabel.setText("Double");
 
         doubleRoomStatusLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         doubleRoomStatusLabel.setText("Out Of Order");
 
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
         doubleVacantBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         doubleVacantBtn.setText("Vacant");
         doubleVacantBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -252,6 +324,29 @@ public class AdminDashboardView extends javax.swing.JFrame {
         doubleOutOfOrderBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 doubleOutOfOrderBtnActionPerformed(evt);
+=======
+        DoubleSetVacantButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        DoubleSetVacantButton.setText("Vacant");
+        DoubleSetVacantButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DoubleSetVacantButtonActionPerformed(evt);
+            }
+        });
+
+        DoubleSetOccupiedButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        DoubleSetOccupiedButton.setText("Occupied");
+        DoubleSetOccupiedButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DoubleSetOccupiedButtonActionPerformed(evt);
+            }
+        });
+
+        DoubleSetOutOfOrderButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        DoubleSetOutOfOrderButton.setText("Out Of Order");
+        DoubleSetOutOfOrderButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DoubleSetOutOfOrderButtonActionPerformed(evt);
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
             }
         });
 
@@ -259,6 +354,7 @@ public class AdminDashboardView extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(doubleVacantBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -274,10 +370,25 @@ public class AdminDashboardView extends javax.swing.JFrame {
                         .addGap(152, 152, 152)
                         .addComponent(doubleOccupiedBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+=======
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap(36, Short.MAX_VALUE)
+                .addComponent(DoubleLabel)
+                .addGap(173, 173, 173)
+                .addComponent(jLabel6)
+                .addGap(175, 175, 175)
+                .addComponent(DoubleSetVacantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(DoubleSetOccupiedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(DoubleSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
                 .addContainerGap()
                 .addComponent(doubleVacantBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -288,24 +399,35 @@ public class AdminDashboardView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addComponent(doubleOutOfOrderBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+=======
+                .addGap(33, 33, 33)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DoubleLabel)
+                    .addComponent(DoubleSetOccupiedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(DoubleSetVacantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DoubleSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(37, Short.MAX_VALUE))
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
         );
 
         jPanel4.setBackground(new java.awt.Color(23, 194, 157));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel7.setText("Executive Suite");
+        ExecutiveSuitLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ExecutiveSuitLabel.setText("Executive Suite");
 
         suiteStatusLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         suiteStatusLabel.setText("Vacant");
 
-        jButton17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton17.setText("Vacant");
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        ExecutiveSetVacantButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ExecutiveSetVacantButton.setText("Vacant");
+        ExecutiveSetVacantButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
+                ExecutiveSetVacantButtonActionPerformed(evt);
             }
         });
 
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
         suiteOccupiedBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         suiteOccupiedBtn.setText("Occupied");
         suiteOccupiedBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -319,6 +441,21 @@ public class AdminDashboardView extends javax.swing.JFrame {
         suiteOutOfOrderBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 suiteOutOfOrderBtnActionPerformed(evt);
+=======
+        ExecutiveSetOccupiedButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ExecutiveSetOccupiedButton.setText("Occupied");
+        ExecutiveSetOccupiedButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExecutiveSetOccupiedButtonActionPerformed(evt);
+            }
+        });
+
+        ExecutiveSetOutOfOrderButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ExecutiveSetOutOfOrderButton.setText("Out Of Order");
+        ExecutiveSetOutOfOrderButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExecutiveSetOutOfOrderButtonActionPerformed(evt);
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
             }
         });
 
@@ -327,6 +464,7 @@ public class AdminDashboardView extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -341,10 +479,24 @@ public class AdminDashboardView extends javax.swing.JFrame {
                             .addComponent(suiteOccupiedBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(suiteOutOfOrderBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))))
                 .addGap(23, 23, 23))
+=======
+                .addGap(35, 35, 35)
+                .addComponent(ExecutiveSuitLabel)
+                .addGap(152, 152, 152)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, Short.MAX_VALUE)
+                .addComponent(ExecutiveSetVacantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(ExecutiveSetOccupiedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(ExecutiveSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
                 .addContainerGap()
                 .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -359,16 +511,27 @@ public class AdminDashboardView extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(suiteOutOfOrderBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
+=======
+                .addContainerGap(38, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ExecutiveSetOccupiedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ExecutiveSetVacantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ExecutiveSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8)
+                    .addComponent(ExecutiveSuitLabel))
+                .addGap(33, 33, 33))
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
         );
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setText("Accomodation");
+        AccomodationLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AccomodationLabel.setText("Accomodation");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setText("Set Availability");
+        SetAvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        SetAvailabilityLabel.setText("Set Availability");
 
         jPanel7.setBackground(new java.awt.Color(23, 194, 157));
 
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
         adminDashboardButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         adminDashboardButton.setText("Admin Dashboard");
         adminDashboardButton.addActionListener(new java.awt.event.ActionListener() {
@@ -388,14 +551,35 @@ public class AdminDashboardView extends javax.swing.JFrame {
         logoutButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         logoutButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/7124045_logout_icon(1).png"))); // NOI18N
         logoutButton.setText("Logout");
+=======
+        AdminDashboardButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AdminDashboardButton.setText("Admin Dashboard");
+        AdminDashboardButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AdminDashboardButtonActionPerformed(evt);
+            }
+        });
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-3296(2).png"))); // NOI18N
-        jLabel11.setText("jLabel11");
+        BookingHistoryButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BookingHistoryButton.setText("Booking history");
+        BookingHistoryButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BookingHistoryButtonActionPerformed(evt);
+            }
+        });
 
-        UserNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        UserNameLabel.setText("John Doe");
+        LogOutButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        LogOutButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/7124045_logout_icon(1).png"))); // NOI18N
+        LogOutButton.setText("Logout");
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
 
-        jLabel14.setText("Admin");
+        AdminPfpLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-3296(2).png"))); // NOI18N
+        AdminPfpLabel.setText("jLabel11");
+
+        AdUserNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AdUserNameLabel.setText("John Doe");
+
+        AdminLabel.setText("Admin");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -405,23 +589,32 @@ public class AdminDashboardView extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
                         .addComponent(bookingHistoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+=======
+                        .addComponent(BookingHistoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(AdminPfpLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(UserNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE))
+                                .addComponent(AdUserNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE))
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addGap(30, 30, 30)
-                                .addComponent(jLabel14)
+                                .addComponent(AdminLabel)
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
                             .addComponent(logoutButton, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(adminDashboardButton, javax.swing.GroupLayout.Alignment.TRAILING))))
+=======
+                            .addComponent(LogOutButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(AdminDashboardButton, javax.swing.GroupLayout.Alignment.TRAILING))))
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
                 .addGap(51, 51, 51))
         );
         jPanel7Layout.setVerticalGroup(
@@ -429,31 +622,40 @@ public class AdminDashboardView extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel11)
+                    .addComponent(AdminPfpLabel)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(UserNameLabel)
+                        .addComponent(AdUserNameLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel14)))
+                        .addComponent(AdminLabel)))
                 .addGap(92, 92, 92)
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
                 .addComponent(adminDashboardButton)
                 .addGap(30, 30, 30)
                 .addComponent(bookingHistoryButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
                 .addComponent(logoutButton)
+=======
+                .addComponent(AdminDashboardButton)
+                .addGap(30, 30, 30)
+                .addComponent(BookingHistoryButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
+                .addComponent(LogOutButton)
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
                 .addGap(86, 86, 86))
         );
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel9.setText("Current Availability");
+        CurrentAvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CurrentAvailabilityLabel.setText("Current Availability");
 
         jPanel5.setBackground(new java.awt.Color(23, 194, 157));
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel10.setText("Deluxe");
+        DeluxeLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        DeluxeLabel.setText("Deluxe");
 
         deluxeRoomStatusLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         deluxeRoomStatusLabel.setText("Occupied");
 
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
         deluxeOutOfOrderBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         deluxeOutOfOrderBtn.setText("Out Of Order");
         deluxeOutOfOrderBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -475,6 +677,29 @@ public class AdminDashboardView extends javax.swing.JFrame {
         deluxeVacantBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deluxeVacantBtnActionPerformed(evt);
+=======
+        DeluxeSetOutOfOrderButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        DeluxeSetOutOfOrderButton.setText("Out Of Order");
+        DeluxeSetOutOfOrderButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeluxeSetOutOfOrderButtonActionPerformed(evt);
+            }
+        });
+
+        DeluxeSetOccupied.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        DeluxeSetOccupied.setText("Occupied");
+        DeluxeSetOccupied.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeluxeSetOccupiedActionPerformed(evt);
+            }
+        });
+
+        DeluxeSetVacant.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        DeluxeSetVacant.setText("Vacant");
+        DeluxeSetVacant.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeluxeSetVacantActionPerformed(evt);
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
             }
         });
 
@@ -483,6 +708,7 @@ public class AdminDashboardView extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -497,10 +723,24 @@ public class AdminDashboardView extends javax.swing.JFrame {
                             .addComponent(deluxeOccupiedBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(deluxeOutOfOrderBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))))
                 .addGap(24, 24, 24))
+=======
+                .addGap(34, 34, 34)
+                .addComponent(DeluxeLabel)
+                .addGap(184, 184, 184)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
+                .addComponent(DeluxeSetVacant, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(DeluxeSetOccupied, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(DeluxeSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17))
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
                 .addContainerGap()
                 .addComponent(deluxeVacantBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -511,6 +751,16 @@ public class AdminDashboardView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(deluxeOutOfOrderBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+=======
+                .addContainerGap(36, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DeluxeSetOccupied, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12)
+                    .addComponent(DeluxeLabel)
+                    .addComponent(DeluxeSetVacant, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DeluxeSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33))
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -522,17 +772,21 @@ public class AdminDashboardView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(13, 13, 13)
-                        .addComponent(jLabel1)
+                        .addComponent(AccomodationLabel)
                         .addGap(128, 128, 128)
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2)
-                        .addGap(27, 27, 27))
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(376, 376, 376))
+                        .addComponent(CurrentAvailabilityLabel)
+                        .addGap(73, 312, Short.MAX_VALUE)
+                        .addComponent(SetAvailabilityLabel)
+                        .addGap(229, 229, 229))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -548,18 +802,18 @@ public class AdminDashboardView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(198, 198, 198)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
-                .addGap(30, 30, 30)
+                    .addComponent(CurrentAvailabilityLabel)
+                    .addComponent(SetAvailabilityLabel)
+                    .addComponent(AccomodationLabel))
+                .addGap(41, 41, 41)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68)
+                .addGap(53, 53, 53)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addGap(53, 53, 53)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48))
+                .addGap(43, 43, 43))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -572,6 +826,7 @@ public class AdminDashboardView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
     private void adminDashboardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminDashboardButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_adminDashboardButtonActionPerformed
@@ -583,15 +838,29 @@ public class AdminDashboardView extends javax.swing.JFrame {
     private void singleVacantBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_singleVacantBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_singleVacantBtnActionPerformed
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+=======
+    private void AdminDashboardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminDashboardButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_AdminDashboardButtonActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void BookingHistoryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BookingHistoryButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_BookingHistoryButtonActionPerformed
 
+    private void SingleSetVacantButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SingleSetVacantButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SingleSetVacantButtonActionPerformed
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
+
+    private void SingleSetOccupiedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SingleSetOccupiedButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SingleSetOccupiedButtonActionPerformed
+
+    private void SingleSetOutOfOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SingleSetOutOfOrderButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SingleSetOutOfOrderButtonActionPerformed
+
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
     private void doubleVacantBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doubleVacantBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_doubleVacantBtnActionPerformed
@@ -615,11 +884,37 @@ public class AdminDashboardView extends javax.swing.JFrame {
     private void deluxeVacantBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deluxeVacantBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_deluxeVacantBtnActionPerformed
-
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+=======
+    private void DoubleSetVacantButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoubleSetVacantButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton17ActionPerformed
+    }//GEN-LAST:event_DoubleSetVacantButtonActionPerformed
 
+    private void DoubleSetOccupiedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoubleSetOccupiedButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DoubleSetOccupiedButtonActionPerformed
+
+    private void DoubleSetOutOfOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoubleSetOutOfOrderButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DoubleSetOutOfOrderButtonActionPerformed
+
+    private void DeluxeSetOutOfOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeluxeSetOutOfOrderButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DeluxeSetOutOfOrderButtonActionPerformed
+
+    private void DeluxeSetOccupiedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeluxeSetOccupiedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DeluxeSetOccupiedActionPerformed
+
+    private void DeluxeSetVacantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeluxeSetVacantActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DeluxeSetVacantActionPerformed
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
+
+    private void ExecutiveSetVacantButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExecutiveSetVacantButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ExecutiveSetVacantButtonActionPerformed
+
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
     private void suiteOccupiedBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suiteOccupiedBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_suiteOccupiedBtnActionPerformed
@@ -627,6 +922,15 @@ public class AdminDashboardView extends javax.swing.JFrame {
     private void suiteOutOfOrderBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suiteOutOfOrderBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_suiteOutOfOrderBtnActionPerformed
+=======
+    private void ExecutiveSetOccupiedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExecutiveSetOccupiedButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ExecutiveSetOccupiedButtonActionPerformed
+
+    private void ExecutiveSetOutOfOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExecutiveSetOutOfOrderButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ExecutiveSetOutOfOrderButtonActionPerformed
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
 
     /**
      * @param args the command line arguments
@@ -664,6 +968,7 @@ public class AdminDashboardView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD:CheckInnProject/src/checkinn/view/AdminDashboardView.java
     private javax.swing.JLabel UserNameLabel;
     private javax.swing.JButton adminDashboardButton;
     private javax.swing.JButton bookingHistoryButton;
@@ -688,6 +993,38 @@ public class AdminDashboardView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
+=======
+    private javax.swing.JLabel AccomodationLabel;
+    private javax.swing.JLabel AdUserNameLabel;
+    private javax.swing.JButton AdminDashboardButton;
+    private javax.swing.JLabel AdminLabel;
+    private javax.swing.JLabel AdminPfpLabel;
+    private javax.swing.JButton BookingHistoryButton;
+    private javax.swing.JLabel CheckinnLogoLabel;
+    private javax.swing.JLabel CurrentAvailabilityLabel;
+    private javax.swing.JLabel DeluxeLabel;
+    private javax.swing.JButton DeluxeSetOccupied;
+    private javax.swing.JButton DeluxeSetOutOfOrderButton;
+    private javax.swing.JButton DeluxeSetVacant;
+    private javax.swing.JLabel DoubleLabel;
+    private javax.swing.JButton DoubleSetOccupiedButton;
+    private javax.swing.JButton DoubleSetOutOfOrderButton;
+    private javax.swing.JButton DoubleSetVacantButton;
+    private javax.swing.JButton ExecutiveSetOccupiedButton;
+    private javax.swing.JButton ExecutiveSetOutOfOrderButton;
+    private javax.swing.JButton ExecutiveSetVacantButton;
+    private javax.swing.JLabel ExecutiveSuitLabel;
+    private javax.swing.JButton LogOutButton;
+    private javax.swing.JLabel SetAvailabilityLabel;
+    private javax.swing.JLabel SingleLabel;
+    private javax.swing.JButton SingleSetOccupiedButton;
+    private javax.swing.JButton SingleSetOutOfOrderButton;
+    private javax.swing.JButton SingleSetVacantButton;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
+>>>>>>> 9e8f41a7995e392c3df6c59ec2badd3bccd6dc29:CheckInnProject/src/checkinn/view/AdminDashboard.java
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
