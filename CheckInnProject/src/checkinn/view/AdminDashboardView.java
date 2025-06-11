@@ -1,22 +1,94 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-package checkinn.view;
-
-/**
- *
- * @author LPR HUB
- */
-public class AdminDashboard extends javax.swing.JFrame {
+public class AdminDashboardView extends javax.swing.JFrame {
 
     /**
-     * Creates new form AdminDashboard
+     * Creates new form AdminDashboardView
      */
-    public AdminDashboard() {
+    public AdminDashboardView() {
         initComponents();
     }
+    
+    //================================================================
+    //== ALL YOUR NEW CUSTOM METHODS ARE PLACED HERE, INSIDE THE CLASS ==
+    //================================================================
 
+    // --- 1. METHODS TO UPDATE THE STATUS LABELS ---
+
+    public void setSingleRoomStatus(String status) {
+        singleRoomStatusLabel.setText(status);
+    }
+
+    public void setDoubleRoomStatus(String status) {
+        doubleRoomStatusLabel.setText(status);
+    }
+
+    public void setDeluxeRoomStatus(String status) {
+        deluxeRoomStatusLabel.setText(status);
+    }
+
+    public void setSuiteRoomStatus(String status) {
+        suiteStatusLabel.setText(status);
+    }
+
+
+    // --- 2. METHODS TO LISTEN FOR BUTTON CLICKS ---
+
+    // -- Single Room Listeners --
+    public void addSingleVacantListener(ActionListener listener) {
+        singleVacantBtn.addActionListener(listener);
+    }
+    public void addSingleOccupiedListener(ActionListener listener) {
+        singleOccupiedBtn.addActionListener(listener);
+    }
+    public void addSingleOutOfOrderListener(ActionListener listener) {
+        singleOutOfOrderBtn.addActionListener(listener);
+    }
+
+    // -- Double Room Listeners --
+    public void addDoubleVacantListener(ActionListener listener) {
+        doubleVacantBtn.addActionListener(listener);
+    }
+    public void addDoubleOccupiedListener(ActionListener listener) {
+        doubleOccupiedBtn.addActionListener(listener);
+    }
+    public void addDoubleOutOfOrderListener(ActionListener listener) {
+        doubleOutOfOrderBtn.addActionListener(listener);
+    }
+
+    // -- Deluxe Room Listeners --
+    public void addDeluxeVacantListener(ActionListener listener) {
+        deluxeVacantBtn.addActionListener(listener);
+    }
+    public void addDeluxeOccupiedListener(ActionListener listener) {
+        deluxeOccupiedBtn.addActionListener(listener);
+    }
+    public void addDeluxeOutOfOrderListener(ActionListener listener) {
+        deluxeOutOfOrderBtn.addActionListener(listener);
+    }
+
+    // -- Suite Room Listeners --
+    public void addSuiteVacantListener(ActionListener listener) {
+        suiteVacantBtn.addActionListener(listener);
+    }
+    public void addSuiteOccupiedListener(ActionListener listener) {
+        suiteOccupiedBtn.addActionListener(listener);
+    }
+    public void addSuiteOutOfOrderListener(ActionListener listener) {
+        suiteOutOfOrderBtn.addActionListener(listener);
+    }
+
+
+    // -- Navigation Panel Listeners --
+    public void addDashboardRefreshListener(ActionListener listener) {
+        dashboardRefreshButton.addActionListener(listener);
+    }
+
+    public void addBookingHistoryListener(ActionListener listener) {
+        bookingHistoryButton.addActionListener(listener);
+    }
+
+    public void addLogoutListener(ActionListener listener) {
+        logoutButton.addActionListener(listener);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -630,6 +702,4 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel suiteStatusLabel;
     // End of variables declaration//GEN-END:variables
 }
-public void addLogoutListener(java.awt.event.ActionListener listener) {
-    logoutButton.addActionListener(listener);
-}
+
