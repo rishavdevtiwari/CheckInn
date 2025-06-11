@@ -2,7 +2,7 @@ package checkinn.controller;
 
 import checkinn.model.Room; // <-- Import the Room model
 import checkinn.model.UserData;
-import checkinn.view.BookingForm;
+import checkinn.view.BookingFormView;
 import checkinn.view.DashboardView;
 import checkinn.view.RoomDetailsView;
 import java.awt.event.ActionEvent;
@@ -76,7 +76,7 @@ public class RoomDetailsController {
         close();
 
         // Open BookingForm and pass room name and price
-        BookingForm bookingForm = new BookingForm();
+        BookingFormView bookingForm = new BookingFormView();
         BookingFormController bookingFormController = new BookingFormController(
             bookingForm,
             room.getRoomType(),

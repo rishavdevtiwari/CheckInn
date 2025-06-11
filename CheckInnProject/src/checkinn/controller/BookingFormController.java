@@ -1,12 +1,12 @@
 package checkinn.controller;
 
-import checkinn.view.BookingForm;
+import checkinn.view.BookingFormView;
 
 public class BookingFormController {
-    private final BookingForm bookingForm;
+    private final BookingFormView bookingForm;
     private final RoomDetailsController roomDetailsController;
 
-    public BookingFormController(BookingForm bookingForm, String roomName, double roomPrice, RoomDetailsController roomDetailsController) {
+    public BookingFormController(BookingFormView bookingForm, String roomName, double roomPrice, RoomDetailsController roomDetailsController) {
         this.bookingForm = bookingForm;
         this.roomDetailsController = roomDetailsController;
         this.bookingForm.setRoomName(roomName);
