@@ -37,17 +37,17 @@ public class CheckInnPackages extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jCheckBox5 = new javax.swing.JCheckBox();
+        CheckInnBreakfastPackageCheckBox = new javax.swing.JCheckBox();
         jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jCheckBox7 = new javax.swing.JCheckBox();
+        CheckInnLunchPackageCheckBox = new javax.swing.JCheckBox();
         jLabel8 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jCheckBox8 = new javax.swing.JCheckBox();
+        CheckInnDinnerPackageCheckBox = new javax.swing.JCheckBox();
         jLabel9 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -71,11 +71,11 @@ public class CheckInnPackages extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel10.setText("<html> \n<p>Sandwich</p> \n<p>Sausages</p> \n<p>Dry Fruits</p>\n<p>Coffee</p>\n </html>");
 
-        jCheckBox5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jCheckBox5.setText("Price: XXX.XX");
-        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+        CheckInnBreakfastPackageCheckBox.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CheckInnBreakfastPackageCheckBox.setText("Price: XXX.XX");
+        CheckInnBreakfastPackageCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox5ActionPerformed(evt);
+                CheckInnBreakfastPackageCheckBoxActionPerformed(evt);
             }
         });
 
@@ -91,7 +91,7 @@ public class CheckInnPackages extends javax.swing.JFrame {
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CheckInnBreakfastPackageCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(82, 82, 82))
@@ -105,7 +105,7 @@ public class CheckInnPackages extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CheckInnBreakfastPackageCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56))
         );
 
@@ -118,11 +118,11 @@ public class CheckInnPackages extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel12.setText("<html>  <p>Chicken Sandwich</p>  <p>Small Dessert</p>  <p>Bottled Water</p> <p>Soft Drink</p>  </html>");
 
-        jCheckBox7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jCheckBox7.setText("Price: XXX.XX");
-        jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
+        CheckInnLunchPackageCheckBox.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CheckInnLunchPackageCheckBox.setText("Price: XXX.XX");
+        CheckInnLunchPackageCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox7ActionPerformed(evt);
+                CheckInnLunchPackageCheckBoxActionPerformed(evt);
             }
         });
 
@@ -137,7 +137,7 @@ public class CheckInnPackages extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jCheckBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CheckInnLunchPackageCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(33, 33, 33)
                         .addComponent(jLabel3))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -155,7 +155,7 @@ public class CheckInnPackages extends javax.swing.JFrame {
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox7)
+                    .addComponent(CheckInnLunchPackageCheckBox)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
@@ -169,11 +169,11 @@ public class CheckInnPackages extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel13.setText("<html>  <p>Steamed Vegetables</p>  <p>Mashed Potatoes</p>  <p>Rice Set</p> <p>Chocolate Mousse</p> <p>Sparkling Water</p>   </html>");
 
-        jCheckBox8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jCheckBox8.setText("Price: XXX.XX");
-        jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
+        CheckInnDinnerPackageCheckBox.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CheckInnDinnerPackageCheckBox.setText("Price: XXX.XX");
+        CheckInnDinnerPackageCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox8ActionPerformed(evt);
+                CheckInnDinnerPackageCheckBoxActionPerformed(evt);
             }
         });
 
@@ -190,7 +190,7 @@ public class CheckInnPackages extends javax.swing.JFrame {
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jCheckBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CheckInnDinnerPackageCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(105, 105, 105))
@@ -204,7 +204,7 @@ public class CheckInnPackages extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jCheckBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CheckInnDinnerPackageCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -295,17 +295,17 @@ public class CheckInnPackages extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
+    private void CheckInnBreakfastPackageCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckInnBreakfastPackageCheckBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox5ActionPerformed
+    }//GEN-LAST:event_CheckInnBreakfastPackageCheckBoxActionPerformed
 
-    private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
+    private void CheckInnLunchPackageCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckInnLunchPackageCheckBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox7ActionPerformed
+    }//GEN-LAST:event_CheckInnLunchPackageCheckBoxActionPerformed
 
-    private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
+    private void CheckInnDinnerPackageCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckInnDinnerPackageCheckBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox8ActionPerformed
+    }//GEN-LAST:event_CheckInnDinnerPackageCheckBoxActionPerformed
 
     private void CheckInnBrunchPackageCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckInnBrunchPackageCheckBoxActionPerformed
         // TODO add your handling code here:
@@ -347,10 +347,10 @@ public class CheckInnPackages extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox CheckInnBreakfastPackageCheckBox;
     private javax.swing.JCheckBox CheckInnBrunchPackageCheckBox;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
+    private javax.swing.JCheckBox CheckInnDinnerPackageCheckBox;
+    private javax.swing.JCheckBox CheckInnLunchPackageCheckBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
