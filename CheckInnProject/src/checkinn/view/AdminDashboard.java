@@ -30,38 +30,38 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
+        singleRoomStatusLabel = new javax.swing.JLabel();
+        singleVacantBtn = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
+        doubleRoomStatusLabel = new javax.swing.JLabel();
+        doubleVacantBtn = new javax.swing.JButton();
+        doubleOccupiedBtn = new javax.swing.JButton();
+        doubleOutOfOrderBtn = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        suiteStatusLabel = new javax.swing.JLabel();
         jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
+        suiteOccupiedBtn = new javax.swing.JButton();
+        suiteOutOfOrderBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        adminDashboardButton = new javax.swing.JButton();
+        bookingHistoryButton = new javax.swing.JButton();
+        logoutButton = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         UserNameLabel = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
+        deluxeRoomStatusLabel = new javax.swing.JLabel();
+        deluxeOutOfOrderBtn = new javax.swing.JButton();
+        deluxeOccupiedBtn = new javax.swing.JButton();
+        deluxeVacantBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,14 +91,14 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Single");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Vacant");
+        singleRoomStatusLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        singleRoomStatusLabel.setText("Vacant");
 
-        jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton8.setText("Vacant");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        singleVacantBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        singleVacantBtn.setText("Vacant");
+        singleVacantBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                singleVacantBtnActionPerformed(evt);
             }
         });
 
@@ -126,26 +126,26 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
+                .addComponent(singleRoomStatusLabel)
                 .addGap(142, 142, 142)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(singleVacantBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(27, 27, 27))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(singleVacantBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
+                            .addComponent(singleRoomStatusLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -156,30 +156,30 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Double");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setText("Out Of Order");
+        doubleRoomStatusLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        doubleRoomStatusLabel.setText("Out Of Order");
 
-        jButton11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton11.setText("Vacant");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        doubleVacantBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        doubleVacantBtn.setText("Vacant");
+        doubleVacantBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                doubleVacantBtnActionPerformed(evt);
             }
         });
 
-        jButton12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton12.setText("Occupied");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        doubleOccupiedBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        doubleOccupiedBtn.setText("Occupied");
+        doubleOccupiedBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                doubleOccupiedBtnActionPerformed(evt);
             }
         });
 
-        jButton13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton13.setText("Out Of Order");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        doubleOutOfOrderBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        doubleOutOfOrderBtn.setText("Out Of Order");
+        doubleOutOfOrderBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                doubleOutOfOrderBtnActionPerformed(evt);
             }
         });
 
@@ -189,32 +189,32 @@ public class AdminDashboard extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(doubleVacantBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(doubleOutOfOrderBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(163, 163, 163)
-                        .addComponent(jLabel6)
+                        .addComponent(doubleRoomStatusLabel)
                         .addGap(152, 152, 152)
-                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(doubleOccupiedBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(doubleVacantBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addComponent(doubleOccupiedBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(doubleRoomStatusLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(doubleOutOfOrderBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -223,8 +223,8 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Executive Suite");
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel8.setText("Vacant");
+        suiteStatusLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        suiteStatusLabel.setText("Vacant");
 
         jButton17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton17.setText("Vacant");
@@ -234,19 +234,19 @@ public class AdminDashboard extends javax.swing.JFrame {
             }
         });
 
-        jButton18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton18.setText("Occupied");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
+        suiteOccupiedBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        suiteOccupiedBtn.setText("Occupied");
+        suiteOccupiedBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
+                suiteOccupiedBtnActionPerformed(evt);
             }
         });
 
-        jButton19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton19.setText("Out Of Order");
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
+        suiteOutOfOrderBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        suiteOutOfOrderBtn.setText("Out Of Order");
+        suiteOutOfOrderBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
+                suiteOutOfOrderBtnActionPerformed(evt);
             }
         });
 
@@ -263,11 +263,11 @@ public class AdminDashboard extends javax.swing.JFrame {
                         .addGap(37, 37, 37)
                         .addComponent(jLabel7)
                         .addGap(121, 121, 121)
-                        .addComponent(jLabel8)
+                        .addComponent(suiteStatusLabel)
                         .addGap(179, 179, 179)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))))
+                            .addComponent(suiteOccupiedBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(suiteOutOfOrderBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))))
                 .addGap(23, 23, 23))
         );
         jPanel4Layout.setVerticalGroup(
@@ -280,12 +280,12 @@ public class AdminDashboard extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
-                            .addComponent(jLabel8))
+                            .addComponent(suiteStatusLabel))
                         .addGap(27, 27, 27))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(suiteOccupiedBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(suiteOutOfOrderBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
         );
 
@@ -297,25 +297,25 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         jPanel7.setBackground(new java.awt.Color(23, 194, 157));
 
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton5.setText("Admin Dashboard");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        adminDashboardButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        adminDashboardButton.setText("Admin Dashboard");
+        adminDashboardButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                adminDashboardButtonActionPerformed(evt);
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton6.setText("Booking history");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        bookingHistoryButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bookingHistoryButton.setText("Booking history");
+        bookingHistoryButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                bookingHistoryButtonActionPerformed(evt);
             }
         });
 
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/7124045_logout_icon(1).png"))); // NOI18N
-        jButton7.setText("Logout");
+        logoutButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        logoutButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/7124045_logout_icon(1).png"))); // NOI18N
+        logoutButton.setText("Logout");
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-3296(2).png"))); // NOI18N
         jLabel11.setText("jLabel11");
@@ -333,7 +333,7 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(bookingHistoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -348,8 +348,8 @@ public class AdminDashboard extends javax.swing.JFrame {
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addComponent(logoutButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(adminDashboardButton, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addGap(51, 51, 51))
         );
         jPanel7Layout.setVerticalGroup(
@@ -363,11 +363,11 @@ public class AdminDashboard extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel14)))
                 .addGap(92, 92, 92)
-                .addComponent(jButton5)
+                .addComponent(adminDashboardButton)
                 .addGap(30, 30, 30)
-                .addComponent(jButton6)
+                .addComponent(bookingHistoryButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
-                .addComponent(jButton7)
+                .addComponent(logoutButton)
                 .addGap(86, 86, 86))
         );
 
@@ -379,30 +379,30 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setText("Deluxe");
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel12.setText("Occupied");
+        deluxeRoomStatusLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        deluxeRoomStatusLabel.setText("Occupied");
 
-        jButton14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton14.setText("Out Of Order");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        deluxeOutOfOrderBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        deluxeOutOfOrderBtn.setText("Out Of Order");
+        deluxeOutOfOrderBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                deluxeOutOfOrderBtnActionPerformed(evt);
             }
         });
 
-        jButton15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton15.setText("Occupied");
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        deluxeOccupiedBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        deluxeOccupiedBtn.setText("Occupied");
+        deluxeOccupiedBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                deluxeOccupiedBtnActionPerformed(evt);
             }
         });
 
-        jButton16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton16.setText("Vacant");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        deluxeVacantBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        deluxeVacantBtn.setText("Vacant");
+        deluxeVacantBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                deluxeVacantBtnActionPerformed(evt);
             }
         });
 
@@ -414,30 +414,30 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(deluxeVacantBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel12)
+                        .addComponent(deluxeRoomStatusLabel)
                         .addGap(144, 144, 144)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))))
+                            .addComponent(deluxeOccupiedBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(deluxeOutOfOrderBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))))
                 .addGap(24, 24, 24))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(deluxeVacantBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12)
+                    .addComponent(deluxeOccupiedBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(deluxeRoomStatusLabel)
                     .addComponent(jLabel10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(deluxeOutOfOrderBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -500,17 +500,17 @@ public class AdminDashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void adminDashboardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminDashboardButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_adminDashboardButtonActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void bookingHistoryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bookingHistoryButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_bookingHistoryButtonActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void singleVacantBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_singleVacantBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_singleVacantBtnActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
@@ -520,41 +520,41 @@ public class AdminDashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton10ActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void doubleVacantBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doubleVacantBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_doubleVacantBtnActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void doubleOccupiedBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doubleOccupiedBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }//GEN-LAST:event_doubleOccupiedBtnActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void doubleOutOfOrderBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doubleOutOfOrderBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
+    }//GEN-LAST:event_doubleOutOfOrderBtnActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void deluxeOutOfOrderBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deluxeOutOfOrderBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_deluxeOutOfOrderBtnActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+    private void deluxeOccupiedBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deluxeOccupiedBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15ActionPerformed
+    }//GEN-LAST:event_deluxeOccupiedBtnActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void deluxeVacantBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deluxeVacantBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
+    }//GEN-LAST:event_deluxeVacantBtnActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton17ActionPerformed
 
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+    private void suiteOccupiedBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suiteOccupiedBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton18ActionPerformed
+    }//GEN-LAST:event_suiteOccupiedBtnActionPerformed
 
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+    private void suiteOutOfOrderBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suiteOutOfOrderBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton19ActionPerformed
+    }//GEN-LAST:event_suiteOutOfOrderBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -593,34 +593,28 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel UserNameLabel;
+    private javax.swing.JButton adminDashboardButton;
+    private javax.swing.JButton bookingHistoryButton;
+    private javax.swing.JButton deluxeOccupiedBtn;
+    private javax.swing.JButton deluxeOutOfOrderBtn;
+    private javax.swing.JLabel deluxeRoomStatusLabel;
+    private javax.swing.JButton deluxeVacantBtn;
+    private javax.swing.JButton doubleOccupiedBtn;
+    private javax.swing.JButton doubleOutOfOrderBtn;
+    private javax.swing.JLabel doubleRoomStatusLabel;
+    private javax.swing.JButton doubleVacantBtn;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -628,5 +622,14 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JButton logoutButton;
+    private javax.swing.JLabel singleRoomStatusLabel;
+    private javax.swing.JButton singleVacantBtn;
+    private javax.swing.JButton suiteOccupiedBtn;
+    private javax.swing.JButton suiteOutOfOrderBtn;
+    private javax.swing.JLabel suiteStatusLabel;
     // End of variables declaration//GEN-END:variables
+}
+public void addLogoutListener(java.awt.event.ActionListener listener) {
+    logoutButton.addActionListener(listener);
 }

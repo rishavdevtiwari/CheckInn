@@ -1,5 +1,7 @@
 package checkinn.controller;
 
+package checkinn.controller;
+
 import checkinn.view.mail.AdminDashboard;
 import java.awt.event.ActionEvent;
 
