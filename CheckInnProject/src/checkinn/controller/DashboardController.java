@@ -1,7 +1,7 @@
 package checkinn.controller;
 
 import checkinn.dao.UserDao;
-import checkinn.model.Room; // <-- Import the Room model
+import checkinn.model.Room; 
 import checkinn.model.UserData;
 import checkinn.view.DashboardView;
 import checkinn.view.LoginView;
@@ -85,15 +85,16 @@ public class DashboardController {
      * @param room The Room object containing all details for the selected room.
      */
     private void openRoomDetailsPage(Room room) {
-        dashboardView.setVisible(false);
-
-        RoomDetailsView detailsView = new RoomDetailsView();
-        // Pass the entire 'room' object to the details controller.
-        // This assumes your RoomDetailsController is updated to accept a Room object.
-        RoomDetailsController detailsController = new RoomDetailsController(detailsView, this.dashboardView, this.user, room);
-        
-        detailsController.showView();
-    }
+    RoomDetailsView roomDetailsView = new RoomDetailsView();
+    RoomDetailsController roomDetailsController = new RoomDetailsController(
+        roomDetailsView,
+        dashboardView,
+        user,
+        room
+    );
+    dashboardView.setVisible(false); // Hide dashboard
+    roomDetailsController.open();
+}
 
     private void refreshDashboard() {
         if (user != null && user.getFirstName() != null) {
