@@ -1,15 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package checkinnproject;
-
 
 import checkinn.controller.LoginController;
 import checkinn.dao.UserDao;
 import checkinn.view.LoginView;
+import com.formdev.flatlaf.themes.FlatMacLightLaf; 
+
 /**
- *s
+ *
  * @author ACER NITRO
  */
 public class CheckInnProject {
@@ -17,14 +14,19 @@ public class CheckInnProject {
     /**
      * @param args the command line arguments
      */
-    @SuppressWarnings("ResultOfObjectAllocationIgnored")
     public static void main(String[] args) {
-    LoginView loginView = new LoginView();
-    UserDao userDao = new UserDao();
-    LoginController loginController = new LoginController(loginView, userDao);
-    loginController.open();
-    loginView.setLocationRelativeTo(null);      
         
+        try {
+            FlatMacLightLaf.setup();
+        } catch (Exception ex) {
+            System.err.println("Failed to initialize LaF");
+        }
+        
+        LoginView loginView = new LoginView();
+        UserDao userDao = new UserDao();
+        LoginController loginController = new LoginController(loginView, userDao);
+        
+        loginController.open(); 
+        loginView.setLocationRelativeTo(null);
     }
-    
 }

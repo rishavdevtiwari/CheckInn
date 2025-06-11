@@ -94,7 +94,7 @@ public class MySqlConnection implements DbConnection {
                 "invoice_id INT, " +
                 "CheckIn_date DATETIME NOT NULL, " +
                 "CheckOut_date DATETIME NOT NULL, " +
-                "total_price Decimal(5,2)"+
+                "total_price Decimal(5,2),"+
                 "FOREIGN KEY (room_id) REFERENCES Room(room_id) ON DELETE CASCADE ON UPDATE CASCADE, " +
                 "FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE CASCADE ON UPDATE CASCADE, " +
                 "FOREIGN KEY (admin_id) REFERENCES Admin(admin_id) ON DELETE SET NULL ON UPDATE CASCADE, " +
@@ -148,6 +148,6 @@ public class MySqlConnection implements DbConnection {
             }
         } catch (SQLException e) {
             System.err.println("Error closing connection: " + e.getMessage());
-        }
+}
     }
 }
