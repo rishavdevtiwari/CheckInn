@@ -8,21 +8,17 @@ import javax.swing.JOptionPane;
 public class AdminDashboardController {
     
     private final AdminDashboard view;
-    // In the future, you will add a Dao for room statuses here, e.g.:
     // private final RoomStatusDao roomStatusDao; 
 
     public AdminDashboardController(AdminDashboard view) {
         this.view = view;
-        // this.roomStatusDao = new RoomStatusDao(); // For future database work
+        // this.roomStatusDao = new RoomStatusDao(); // database work
         
         initializeListeners();
         loadInitialRoomStatuses();
     }
     
-    /**
-     * Sets the initial state of the dashboard.
-     * In a real application, this would fetch the current statuses from a database.
-     */
+//initial state setting of dashboard
     private void loadInitialRoomStatuses() {
         view.setSingleRoomStatus("Vacant");
         view.setDoubleRoomStatus("Occupied");
@@ -30,31 +26,29 @@ public class AdminDashboardController {
         view.setSuiteRoomStatus("Vacant");
     }
 
-    /**
-     * Attaches all the button-click logic to the view's components.
-     */
+//Action listeners for set status buttons
     private void initializeListeners() {
-        // --- Single Room Listeners ---
+        //Single room status listners
         view.addSingleVacantListener(e -> updateRoomStatus("Single", "Vacant"));
         view.addSingleOccupiedListener(e -> updateRoomStatus("Single", "Occupied"));
         view.addSingleOutOfOrderListener(e -> updateRoomStatus("Single", "Out of Order"));
 
-        // --- Double Room Listeners ---
+        //Double room status listeners
         view.addDoubleVacantListener(e -> updateRoomStatus("Double", "Vacant"));
         view.addDoubleOccupiedListener(e -> updateRoomStatus("Double", "Occupied"));
         view.addDoubleOutOfOrderListener(e -> updateRoomStatus("Double", "Out of Order"));
         
-        // --- Deluxe Room Listeners ---
+        //Deluxe room status listeners
         view.addDeluxeVacantListener(e -> updateRoomStatus("Deluxe", "Vacant"));
         view.addDeluxeOccupiedListener(e -> updateRoomStatus("Deluxe", "Occupied"));
         view.addDeluxeOutOfOrderListener(e -> updateRoomStatus("Deluxe", "Out of Order"));
 
-        // --- Suite Room Listeners ---
+        //Suite room status listeners
         view.addSuiteVacantListener(e -> updateRoomStatus("Suite", "Vacant"));
         view.addSuiteOccupiedListener(e -> updateRoomStatus("Suite", "Occupied"));
         view.addSuiteOutOfOrderListener(e -> updateRoomStatus("Suite", "Out of Order"));
 
-        // --- Navigation Listeners ---
+        //Admin dashboard navigation listeners
         view.addLogoutListener(e -> logout());
         
         view.addDashboardRefreshListener(e -> {

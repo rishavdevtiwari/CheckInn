@@ -1,6 +1,3 @@
-/*
- * DbConnection - Interface for database connection operations
- */
 package checkinn.database;
 
 import java.sql.Connection;

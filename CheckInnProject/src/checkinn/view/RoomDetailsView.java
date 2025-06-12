@@ -12,15 +12,10 @@ import java.awt.event.MouseAdapter;
  * @author ACER NITRO
  */
 public class RoomDetailsView extends javax.swing.JFrame {
-
-    /**
-     * Creates new form RoomDetailsView
-     */
     public RoomDetailsView() {
         initComponents();
-        // **IMPORTANT FIX:** This prevents the whole app from closing
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setLocationRelativeTo(null); // Center the window on screen
+        setLocationRelativeTo(null); 
     }
 
     public void setRoomName(String roomName) {
@@ -34,11 +29,7 @@ public class RoomDetailsView extends javax.swing.JFrame {
 
     // Set the description in the text area
    public void setDescription(String description) {
-    // We use HTML to make the JLabel wrap the text automatically.
-    // You can adjust the width (e.g., "350px") to best fit your layout.
     descriptionLabel.setText("<html><p style=\"width:350px\">" + description + "</p></html>");
-    
-    // This makes the text align to the top of the label, which looks much better.
     descriptionLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 }
     /**
@@ -221,30 +212,14 @@ public class RoomDetailsView extends javax.swing.JFrame {
     private javax.swing.JButton jTextField2;
     // End of variables declaration//GEN-END:variables
 
-
+    //BOOK NOW BUTTON
     public void addBookingListener(ActionListener listener) {
-        jButton1.addActionListener(listener); // The "Book now" button
+        jButton1.addActionListener(listener); 
     }
 
-    /**
-     * Adds a listener for mouse clicks on the "Back" text field.
-     * @param listener The mouse adapter to be added.
-     */
     public void addBackListener(MouseAdapter listener) {
-        jTextField2.addMouseListener(listener); // The "<- Dashboard" text field
+        jTextField2.addMouseListener(listener); 
     }
-    // In RoomDetailsView.java, add these two methods at the end of the file
-
-/**
- * Loads an image from the given path, scales it, and sets it on the imageLabel.
- * @param imagePath The resource path to the image (e.g., "/images/singleroom.jpg").
- */
-// In RoomDetailsView.java
-
-/**
- * Loads an image from the given path, scales it to a FIXED size, and sets it on the imageLabel.
- * @param imagePath The resource path to the image (e.g., "/images/singleroom.jpg").
- */
 public void setRoomImage(String imagePath) {
     // --- EDITED SECTION: Define a fixed size for the image ---
     // You can adjust these values to best fit your UI design.

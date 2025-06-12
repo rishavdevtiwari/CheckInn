@@ -2,12 +2,12 @@ package checkinn.controller;
 
 import checkinn.model.Room; // <-- Import the Room model
 import checkinn.model.UserData;
+import checkinn.view.BookingForm;
 import checkinn.view.DashboardView;
 import checkinn.view.RoomDetailsView;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import javax.swing.JOptionPane;
 
 public class RoomDetailsController {
 
@@ -41,7 +41,7 @@ public class RoomDetailsController {
     private void initializeListeners() {
         // Listener for the "Book now" button
         view.addBookingListener((ActionEvent e) -> {
-            bookRoom();
+            openBookingForm();
         });
 
         // Listener for the "<- Dashboard" text field
@@ -53,31 +53,33 @@ public class RoomDetailsController {
         });
     }
 
-    private void bookRoom() {
-        String userName = (user != null && user.getFirstName() != null) ? user.getFirstName() : "Guest";
-        
-        // Use the room object to get details for the confirmation message
-        int confirm = JOptionPane.showConfirmDialog(
-                view,
-                "Confirm booking for " + room.getRoomType() + " at RS. " + String.format("%.2f", room.getPrice()) + "?",
-                "Confirm Booking",
-                JOptionPane.YES_NO_OPTION
-        );
+    private void openBookingForm() {
+        // Close RoomDetailsView
+        close();
 
-        if (confirm == JOptionPane.YES_OPTION) {
-            // Here you would add your database logic to save the booking
-            JOptionPane.showMessageDialog(view, "Room booked successfully for " + userName + "!", "Success", JOptionPane.INFORMATION_MESSAGE);
-            goBack(); // Go back to dashboard after booking
-        }
+        // Open BookingForm and pass room name and price
+        BookingForm bookingForm = new BookingForm();
+        BookingFormController bookingFormController = new BookingFormController(
+            bookingForm,
+            room.getRoomType(),
+            room.getPrice(),
+            this
+        );
+        bookingFormController.open();
     }
+
+    public void close() {
+        view.dispose();
+    }
+
 
     private void goBack() {
         view.dispose(); // Close the RoomDetailsView
         dashboardView.setVisible(true); // Show the dashboard again
     }
 
-    public void showView() {
-        view.setLocationRelativeTo(dashboardView); // Open centered on the dashboard
+    public void open() {
+        view.setLocationRelativeTo(dashboardView); 
         view.setVisible(true);
     }
 }
