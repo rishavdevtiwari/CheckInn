@@ -2,17 +2,19 @@ package checkinn.controller;
 
 import checkinn.dao.UserDao;
 import checkinn.model.LoginRequest;
-import checkinn.model.ResetPasswordRequest;
+import checkinn.model.ResetPasswordRequest; 
 import checkinn.view.DashboardView;
 import checkinn.view.LoginView;
 import checkinn.view.RegistrationView;
 import checkinn.controller.mail.SMTPSMailSender;
+import checkinn.view.AdminDashboard;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Random;
+import javax.swing.JOptionPane;
 
 public class LoginController {
     private final LoginView loginView;
@@ -29,6 +31,7 @@ public class LoginController {
     }
 
     public void open() {
+        loginView.setLocationRelativeTo(null); // Center the login view
         loginView.setVisible(true);
     }
 
@@ -41,22 +44,44 @@ public class LoginController {
         public void actionPerformed(ActionEvent e) {
             String email = loginView.getEmail();
             String password = loginView.getPassword();
-            LoginRequest request = new LoginRequest(email, password);
-
-            if (!request.isValid()) {
+            
+            if (email.isEmpty() || password.isEmpty()) {
                 loginView.showError("Please enter both email and password.");
                 return;
             }
 
-            boolean authenticated = userDao.authenticateUser(email, password);
-            if (authenticated) {
-                loginView.showMessage("Login successful!");
-                close();
-                DashboardView dashboardView = new DashboardView();
-                DashboardController dashboardController = new DashboardController(dashboardView, email);
-                dashboardController.open();
+            // --- NEW ADMIN CHECK ---
+            // First, check for the hardcoded admin credentials.
+            if (email.equals("admin") && password.equals("admin@")) {
+                
+                loginView.showMessage("Admin login successful!");
+                close(); // Close the login view
+
+                // Create and show the new Admin Dashboard
+                AdminDashboard adminView = new AdminDashboard();
+                AdminDashboardController adminController = new AdminDashboardController(adminView);
+                adminController.showView();
+            
             } else {
-                loginView.showError("Invalid email or password.");
+                // --- REGULAR USER LOGIC ---
+                // If not admin, proceed with the database check for regular users.
+                LoginRequest request = new LoginRequest(email, password);
+                if (!request.isValid()) {
+                    loginView.showError("Invalid email format.");
+                    return;
+                }
+
+                boolean authenticated = userDao.authenticateUser(email, password);
+                if (authenticated) {
+                    loginView.showMessage("Login successful!");
+                    close();
+                    
+                    DashboardView dashboardView = new DashboardView();
+                    DashboardController dashboardController = new DashboardController(dashboardView, email);
+                    dashboardController.open();
+                } else {
+                    loginView.showError("Invalid email or password.");
+                }
             }
         }
     }
@@ -82,11 +107,12 @@ public class LoginController {
             if (!userDao.emailExists(email)) {
                 loginView.showError("No user found with this email.");
                 return;
-            } else {
             }
+            
             // Generate OTP
             generatedOTP = String.format("%06d", new Random().nextInt(999999));
             otpEmail = email;
+            
             // Send OTP
             boolean sent = SMTPSMailSender.sendOtpEmail(email, generatedOTP);
             if (!sent) {
