@@ -6,14 +6,17 @@
             <file>file:/D:/wgs/CheckInnProject/src/checkinn/controller/mail/SMTPSMailSender.java</file>
             <file>file:/D:/wgs/CheckInnProject/src/checkinnproject/CheckInnProject.java</file>
             <file>file:/D:/wgs/CheckInnProject/src/checkinn/controller/DashboardController.java</file>
-            <file>file:/D:/wgs/CheckInnProject/src/checkinn/database/MySqlConnection.java</file>
-            <file>file:/D:/wgs/CheckInnProject/src/checkinn/controller/LoginController.java</file>
-            <file>file:/D:/wgs/CheckInnProject/src/checkinn/view/RoomDetailsView.java</file>
             <file>file:/D:/wgs/CheckInnProject/src/checkinn/controller/RoomDetailsController.java</file>
             <file>file:/D:/wgs/CheckInnProject/src/checkinn/model/Room.java</file>
             <file>file:/D:/wgs/CheckInnProject/src/checkinn/model/UserData.java</file>
             <file>file:/D:/wgs/CheckInnProject/src/checkinn/model/RegistrationRequest.java</file>
             <file>file:/D:/wgs/CheckInnProject/src/checkinn/view/RegistrationView.java</file>
+            <file>file:/D:/wgs/CheckInnProject/src/checkinn/view/BookingForm.java</file>
+            <file>file:/D:/wgs/CheckInnProject/src/checkinn/view/DashboardView.java</file>
+            <file>file:/D:/wgs/CheckInnProject/src/checkinn/dao/UserDao.java</file>
+            <file>file:/D:/wgs/CheckInnProject/src/checkinn/view/BookingHistoryView.java</file>
+            <file>file:/D:/wgs/CheckInnProject/src/checkinn/controller/AdminDashboardController.java</file>
+            <file>file:/D:/wgs/CheckInnProject/src/checkinn/view/AdminDashboardView.java</file>
         </group>
     </open-files>
 </project-private>
