@@ -1,4 +1,4 @@
-package checkinnproject;
+package checkinn.project;
 
 import checkinn.controller.LoginController;
 import checkinn.dao.UserDao;
