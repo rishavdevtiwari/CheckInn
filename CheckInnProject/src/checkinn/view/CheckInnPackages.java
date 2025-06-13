@@ -328,6 +328,10 @@ public class CheckInnPackages extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox6ActionPerformed
 
+        public void addBackToBookingFormListener(java.awt.event.ActionListener listener) {
+        BackToBookingFormButton.addActionListener(listener);
+    }
+
     /**
      * @param args the command line arguments
      */

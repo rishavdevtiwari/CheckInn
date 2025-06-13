@@ -22,10 +22,14 @@ public class BookingFormController {
             roomDetailsController.open();
         });
 
-            bookingForm.addMenuItemsListener(e -> {
+
+        bookingForm.addMenuItemsListener(e -> {
             close();
             CheckInnPackages checkInnPackagesView = new CheckInnPackages();
-            CheckInnPackagesController checkInnPackagesController = new CheckInnPackagesController(checkInnPackagesView);
+            CheckInnPackagesController checkInnPackagesController = new CheckInnPackagesController(
+                checkInnPackagesView,
+                this // Pass the current BookingFormController
+            );
             checkInnPackagesController.open();
         });
     }
