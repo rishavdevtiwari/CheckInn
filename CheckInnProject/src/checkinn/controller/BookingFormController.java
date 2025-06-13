@@ -85,6 +85,7 @@ public class BookingFormController {
                 InvoiceView invoiceView = new InvoiceView();
                 invoiceView.setInvoiceData(
                     bookingForm.getRoomName(),
+                    bookingForm.getFullName(),
                     fullName,
                     checkIn,
                     checkOut,
