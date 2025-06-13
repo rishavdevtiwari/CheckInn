@@ -53,20 +53,21 @@ public class RoomDetailsController {
         });
     }
 
-    private void openBookingForm() {
-        // Close RoomDetailsView
-        close();
-
-        // Open BookingForm and pass room name and price
-        BookingForm bookingForm = new BookingForm();
-        BookingFormController bookingFormController = new BookingFormController(
-            bookingForm,
-            room.getRoomType(),
-            room.getPrice(),
-            this
-        );
-        bookingFormController.open();
-    }
+private void openBookingForm() {
+close();
+    BookingForm bookingForm = new BookingForm();
+    bookingForm.setRoomId(room.getRoomId());
+    bookingForm.setRoomName(room.getRoomType());
+    bookingForm.setRoomPrice(room.getPrice());
+    bookingForm.setUserId(user.getUserId());
+    BookingFormController bookingFormController = new BookingFormController(
+        bookingForm,
+        room.getRoomType(),
+        room.getPrice(),
+        this
+    );
+    bookingFormController.open();
+}
 
     public void close() {
         view.dispose();

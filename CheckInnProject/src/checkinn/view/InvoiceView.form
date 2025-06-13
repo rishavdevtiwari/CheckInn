@@ -69,7 +69,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="LogoLabel" min="-2" pref="269" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="TopicLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
@@ -85,7 +85,7 @@
                                       <Component id="MenuItemsField" min="-2" max="-2" attributes="0"/>
                                       <Component id="RoomTypeField" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="82" max="32767" attributes="0"/>
+                                  <EmptySpace pref="73" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="InvoiceCheckOut" alignment="1" min="-2" max="-2" attributes="0"/>
                                       <Component id="InvoiceMenuItems" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -117,14 +117,14 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="LogoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="TopicLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="RoomTypeField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="InvoiceRoomName" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="CheckInDateField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="InvoiceCheckIn" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -134,14 +134,14 @@
                       <Component id="CheckOutDateField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="InvoiceCheckOut" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="MenuItemsField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="InvoiceMenuItems" alignment="3" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                   <Component id="jSeparator1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" pref="57" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="TotalPriceField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="InvoiceTotalPrice" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -158,14 +158,6 @@
               <Image iconType="3" name="/images/checkinnlogo.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel2"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="TopicLabel">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Times New Roman" size="48" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Invoice"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="RoomTypeField">
@@ -221,7 +213,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="24" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Breakfast, Brunch, Lunch, Dinner"/>
+            <Property name="text" type="java.lang.String" value="Breakfast Package, Brunch Package, Lunch Package, Dinner Package"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="InvoiceRoomName">
@@ -249,6 +241,13 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator1">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/Invoice.png"/>
+            </Property>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

@@ -16,13 +16,6 @@ public class UserDao {
         this.dbConnection = new MySqlConnection();
     }
 
-    /**
-     * UserAuth with email and password
-     * Returns true if credentials are valid, false otherwise.
-     * @param email
-     * @param password
-     * @return 
-     */
     public boolean authenticateUser(String email, String password) {
         String sql = "SELECT * FROM User WHERE email = ? AND password = ?";
         try (Connection conn = dbConnection.openConnection();
@@ -40,27 +33,20 @@ public class UserDao {
         return false;
     }
 
-    /**
-     * Registers a new user using RegistrationRequest.Returns true if registration is successful, false otherwise.
-     * @param request
-     * @return 
-     */
     public boolean registerUser(RegistrationRequest request) {
-        // Check if email already exists
         if (emailExists(request.getEmail())) {
             return false;
         }
 
-        String sql = "INSERT INTO User (first_name, last_name, email, password, phone_number, security_question, security_answer) "
-                   + "VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO User (first_name, last_name, phone_number, email, password) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = dbConnection.openConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, request.getFirstName());
             pstmt.setString(2, request.getLastName());
-            pstmt.setString(3, request.getEmail());
-            pstmt.setString(4, request.getPassword());
-            pstmt.setString(5, request.getPhoneNumber());
+            pstmt.setString(3, request.getPhoneNumber());
+            pstmt.setString(4, request.getEmail());
+            pstmt.setString(5, request.getPassword());
 
             int rowsAffected = pstmt.executeUpdate();
             return rowsAffected > 0;
@@ -70,11 +56,6 @@ public class UserDao {
         }
     }
 
-    /**
-     * Checks if an email exists in the database
-     * @param email
-     * @return 
-     */
     public boolean emailExists(String email) {
         String sql = "SELECT COUNT(*) FROM User WHERE email = ?";
         try (Connection conn = dbConnection.openConnection();
@@ -92,12 +73,6 @@ public class UserDao {
         return false;
     }
 
-    /**
-     * Resets a user's password
-     * @param email
-     * @param newPassword
-     * @return 
-     */
     public boolean resetPassword(String email, String newPassword) {
         String sql = "UPDATE User SET password = ? WHERE email = ?";
         try (Connection conn = dbConnection.openConnection();
@@ -114,24 +89,17 @@ public class UserDao {
         }
     }
 
-    /**
-     * Creates a new user (legacy, uses UserData)
-     * @param user
-     * @return 
-     */
     public boolean createUser(UserData user) {
-        String sql = "INSERT INTO User (first_name, last_name, email, password, phone_number, "
-                   + "security_question, security_answer) "
-                   + "VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO User (first_name, last_name, phone_number, email, password) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection conn = dbConnection.openConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, user.getFirstName());
             pstmt.setString(2, user.getLastName());
-            pstmt.setString(3, user.getEmail());
-            pstmt.setString(4, user.getPassword());
-            pstmt.setString(5, user.getPhoneNumber());
+            pstmt.setString(3, user.getPhoneNumber());
+            pstmt.setString(4, user.getEmail());
+            pstmt.setString(5, user.getPassword());
 
             int rowsAffected = pstmt.executeUpdate();
             return rowsAffected > 0;
@@ -141,14 +109,8 @@ public class UserDao {
         }
     }
 
-    /**
-     * Updates user information
-     * @param user
-     * @return 
-     */
     public boolean updateUser(UserData user) {
-        String sql = "UPDATE User SET first_name = ?, last_name = ?, phone_number = ?, "
-                   + "security_question = ?, security_answer = ? WHERE user_id = ?";
+        String sql = "UPDATE User SET first_name = ?, last_name = ?, phone_number = ? WHERE user_id = ?";
 
         try (Connection conn = dbConnection.openConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -156,7 +118,7 @@ public class UserDao {
             pstmt.setString(1, user.getFirstName());
             pstmt.setString(2, user.getLastName());
             pstmt.setString(3, user.getPhoneNumber());
-            pstmt.setInt(6, user.getUserId());
+            pstmt.setInt(4, user.getUserId());
 
             int rowsAffected = pstmt.executeUpdate();
             return rowsAffected > 0;
@@ -166,9 +128,6 @@ public class UserDao {
         }
     }
 
-    /**
-     * Helper method to extract UserData from ResultSet
-     */
     private UserData extractUserFromResultSet(ResultSet rs) throws SQLException {
         UserData user = new UserData();
         user.setUserId(rs.getInt("user_id"));
@@ -180,11 +139,6 @@ public class UserDao {
         return user;
     }
 
-    /**
-     * Gets user by email
-     * @param email
-     * @return 
-     */
     public UserData getUserByEmail(String email) {
         String sql = "SELECT * FROM User WHERE email = ?";
         try (Connection conn = dbConnection.openConnection();
