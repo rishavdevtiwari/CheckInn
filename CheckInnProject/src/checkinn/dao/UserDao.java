@@ -61,8 +61,6 @@ public class UserDao {
             pstmt.setString(3, request.getEmail());
             pstmt.setString(4, request.getPassword());
             pstmt.setString(5, request.getPhoneNumber());
-            pstmt.setString(6, request.getSecurityQuestion());
-            pstmt.setString(7, request.getSecurityAnswer());
 
             int rowsAffected = pstmt.executeUpdate();
             return rowsAffected > 0;
@@ -117,53 +115,6 @@ public class UserDao {
     }
 
     /**
-     * Gets security question for password recovery
-     * @param email
-     * @return 
-     */
-    public String getSecurityQuestion(String email) {
-        String sql = "SELECT security_question FROM User WHERE email = ?";
-        try (Connection conn = dbConnection.openConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setString(1, email);
-            try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) {
-                    return rs.getString("security_question");
-                }
-            }
-        } catch (SQLException e) {
-            System.err.println("Error getting security question: " + e.getMessage());
-        }
-        return null;
-    }
-
-    /**
-     * Verifies security answer
-     * @param email
-     * @param answer
-     * @return 
-     */
-    public boolean verifySecurityAnswer(String email, String answer) {
-        String sql = "SELECT COUNT(*) FROM User WHERE email = ? AND security_answer = ?";
-        try (Connection conn = dbConnection.openConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setString(1, email);
-            pstmt.setString(2, answer);
-
-            try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) {
-                    return rs.getInt(1) > 0;
-                }
-            }
-        } catch (SQLException e) {
-            System.err.println("Error verifying security answer: " + e.getMessage());
-        }
-        return false;
-    }
-
-    /**
      * Creates a new user (legacy, uses UserData)
      * @param user
      * @return 
@@ -181,8 +132,6 @@ public class UserDao {
             pstmt.setString(3, user.getEmail());
             pstmt.setString(4, user.getPassword());
             pstmt.setString(5, user.getPhoneNumber());
-            pstmt.setString(6, user.getSecurityQuestion());
-            pstmt.setString(7, user.getSecurityAnswer());
 
             int rowsAffected = pstmt.executeUpdate();
             return rowsAffected > 0;
@@ -207,8 +156,6 @@ public class UserDao {
             pstmt.setString(1, user.getFirstName());
             pstmt.setString(2, user.getLastName());
             pstmt.setString(3, user.getPhoneNumber());
-            pstmt.setString(4, user.getSecurityQuestion());
-            pstmt.setString(5, user.getSecurityAnswer());
             pstmt.setInt(6, user.getUserId());
 
             int rowsAffected = pstmt.executeUpdate();
@@ -230,8 +177,6 @@ public class UserDao {
         user.setEmail(rs.getString("email"));
         user.setPassword(rs.getString("password"));
         user.setPhoneNumber(rs.getString("phone_number"));
-        user.setSecurityQuestion(rs.getString("security_question"));
-        user.setSecurityAnswer(rs.getString("security_answer"));
         return user;
     }
 

@@ -50,7 +50,6 @@ public class MySqlConnection implements DbConnection {
 
     private void initializeTables(Connection conn) throws SQLException {
         try (Statement stmt = conn.createStatement()) {
-            // Create tables if they don't exist
             String[] createTables = {
                 "CREATE TABLE IF NOT EXISTS Statuses (" +
                 "status_id INT AUTO_INCREMENT PRIMARY KEY, " +
@@ -62,9 +61,7 @@ public class MySqlConnection implements DbConnection {
                 "last_name VARCHAR(50) NOT NULL, " +
                 "phone_number VARCHAR(20), " +
                 "email VARCHAR(100) UNIQUE NOT NULL, " +
-                "password VARCHAR(255) NOT NULL, " +
-                "security_question VARCHAR(255), " +
-                "security_answer VARCHAR(255))",
+                "password VARCHAR(255) NOT NULL, ",
 
                 "CREATE TABLE IF NOT EXISTS Admin (" +
                 "admin_id INT AUTO_INCREMENT PRIMARY KEY, " +
@@ -114,7 +111,6 @@ public class MySqlConnection implements DbConnection {
                 stmt.execute(sql);
             }
 
-            // Add the invoice foreign key to Booking if it doesn't exist
             if (!foreignKeyExists(conn, DB_NAME, "Booking", "fk_booking_invoice")) {
                 stmt.execute("ALTER TABLE Booking ADD CONSTRAINT fk_booking_invoice " +
                              "FOREIGN KEY (invoice_id) REFERENCES Invoice(invoice_id) " +

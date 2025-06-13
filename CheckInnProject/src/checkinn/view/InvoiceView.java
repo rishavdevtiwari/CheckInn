@@ -15,6 +15,8 @@ public class InvoiceView extends javax.swing.JFrame {
      */
     public InvoiceView() {
         initComponents();
+        setTitle("Invoice | CheckInn");
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -83,7 +85,7 @@ public class InvoiceView extends javax.swing.JFrame {
         TotalPriceField.setText("Total Price : ");
 
         InvoiceTotalPrice.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        InvoiceTotalPrice.setText("Rs. XX.XX");
+        InvoiceTotalPrice.setText("Rs. XXXX.XX");
 
         javax.swing.GroupLayout InvoicePanelLayout = new javax.swing.GroupLayout(InvoicePanel);
         InvoicePanel.setLayout(InvoicePanelLayout);
@@ -95,9 +97,8 @@ public class InvoiceView extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(LogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(TopicLabel)
-                        .addGap(47, 47, 47))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, InvoicePanelLayout.createSequentialGroup()
+                        .addComponent(TopicLabel))
+                    .addGroup(InvoicePanelLayout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, InvoicePanelLayout.createSequentialGroup()
@@ -109,7 +110,7 @@ public class InvoiceView extends javax.swing.JFrame {
                                     .addComponent(CheckOutDateField)
                                     .addComponent(MenuItemsField)
                                     .addComponent(RoomTypeField))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                                 .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(InvoiceCheckOut, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(InvoiceMenuItems, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -148,10 +149,10 @@ public class InvoiceView extends javax.swing.JFrame {
                 .addGap(87, 87, 87)
                 .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MenuItemsField)
-                    .addComponent(InvoiceMenuItems))
-                .addGap(42, 42, 42)
+                    .addComponent(InvoiceMenuItems, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(81, 81, 81)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addGap(18, 57, Short.MAX_VALUE)
                 .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TotalPriceField)
                     .addComponent(InvoiceTotalPrice))
@@ -206,10 +207,8 @@ public class InvoiceView extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new InvoiceView().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new InvoiceView().setVisible(true);
         });
     }
 
@@ -230,4 +229,8 @@ public class InvoiceView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
+
+    private void getLocationRelativeTo(Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

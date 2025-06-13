@@ -15,6 +15,7 @@ public class RoomDetailsView extends javax.swing.JFrame {
     public RoomDetailsView() {
         initComponents();
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Room Details | CheckInn");
         setLocationRelativeTo(null); 
     }
 
@@ -221,8 +222,6 @@ public class RoomDetailsView extends javax.swing.JFrame {
         jTextField2.addMouseListener(listener); 
     }
 public void setRoomImage(String imagePath) {
-    // --- EDITED SECTION: Define a fixed size for the image ---
-    // You can adjust these values to best fit your UI design.
     final int IMAGE_WIDTH = 450;
     final int IMAGE_HEIGHT = 220;
 

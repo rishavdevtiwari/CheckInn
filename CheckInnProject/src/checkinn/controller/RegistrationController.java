@@ -36,11 +36,9 @@ public class RegistrationController {
             String email = registrationView.getEmail();
             String password = registrationView.getPassword();
             String phoneNumber = registrationView.getPhoneNumber();
-            String securityQuestion = registrationView.getSecurityQuestion();
-            String securityAnswer = registrationView.getSecurityAnswer();
 
             RegistrationRequest request = new RegistrationRequest(
-                firstName, lastName, email, password, phoneNumber, securityQuestion, securityAnswer
+                firstName, lastName, email, password, phoneNumber
             );
 
             if (!request.isValid()) {

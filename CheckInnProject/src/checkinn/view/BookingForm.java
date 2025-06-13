@@ -15,6 +15,8 @@ public class BookingForm extends javax.swing.JFrame {
      */
     public BookingForm() {
         initComponents();
+        setTitle("Booking Form | CheckInn");
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -27,7 +29,6 @@ public class BookingForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        BFCompleteBookingButton = new javax.swing.JTextField();
         BFFullNameLabel = new javax.swing.JLabel();
         BFCheckInDateLabel = new javax.swing.JLabel();
         BFCheckOutDateLabel = new javax.swing.JLabel();
@@ -36,20 +37,12 @@ public class BookingForm extends javax.swing.JFrame {
         BFTotalPriceLabel = new javax.swing.JTextField();
         BFCheckOutDateInput = new javax.swing.JTextField();
         BFFullNameInput = new javax.swing.JTextField();
-        BFRoomDetailButton = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        SelextMenuItemsButton = new javax.swing.JButton();
+        BackToRoomDetailsButton = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        BFCompleteBookingButton.setBackground(new java.awt.Color(0, 204, 102));
-        BFCompleteBookingButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        BFCompleteBookingButton.setText("                 Complete Booking");
-        BFCompleteBookingButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BFCompleteBookingButtonActionPerformed(evt);
-            }
-        });
 
         BFFullNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         BFFullNameLabel.setText("Full Name");
@@ -93,23 +86,22 @@ public class BookingForm extends javax.swing.JFrame {
             }
         });
 
-        BFRoomDetailButton.setBackground(new java.awt.Color(0, 204, 102));
-        BFRoomDetailButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        BFRoomDetailButton.setText("           <- Room Detail");
-        BFRoomDetailButton.addActionListener(new java.awt.event.ActionListener() {
+        SelextMenuItemsButton.setBackground(new java.awt.Color(0, 204, 51));
+        SelextMenuItemsButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        SelextMenuItemsButton.setText("Select Menu Items ->");
+        SelextMenuItemsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BFRoomDetailButtonActionPerformed(evt);
+                SelextMenuItemsButtonActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(0, 204, 51));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton1.setText("Select Menu Items ->");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        BackToRoomDetailsButton.setBackground(new java.awt.Color(51, 204, 0));
+        BackToRoomDetailsButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        BackToRoomDetailsButton.setText("<- Room Details");
+
+        jButton2.setBackground(new java.awt.Color(51, 204, 0));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton2.setText("Complete Booking");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -117,18 +109,20 @@ public class BookingForm extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(30, 30, 30)
+                            .addComponent(BFRoomNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(SelextMenuItemsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(19, 19, 19)
+                            .addComponent(BFTotalPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(BFRoomNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(BFRoomDetailButton)
-                            .addComponent(BFTotalPriceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(273, 273, 273)
+                        .addGap(27, 27, 27)
+                        .addComponent(BackToRoomDetailsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(265, 265, 265)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,9 +134,11 @@ public class BookingForm extends javax.swing.JFrame {
                             .addComponent(BFFullNameInput, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(BFCheckOutDateInput, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE)
-                                .addComponent(BFCheckInDateInput, javax.swing.GroupLayout.Alignment.TRAILING))))
-                    .addComponent(BFCompleteBookingButton))
-                .addGap(13, 13, 13))
+                                .addComponent(BFCheckInDateInput, javax.swing.GroupLayout.Alignment.TRAILING)))
+                        .addGap(13, 13, 13))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,7 +156,7 @@ public class BookingForm extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(BFCheckInDateInput, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(BFCheckInDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(SelextMenuItemsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addComponent(BFRoomNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -170,10 +166,10 @@ public class BookingForm extends javax.swing.JFrame {
                     .addComponent(BFTotalPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BFCheckOutDateInput, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BFCompleteBookingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BFRoomDetailButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(71, 71, 71))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(BackToRoomDetailsButton, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(70, 70, 70))
         );
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
@@ -183,12 +179,10 @@ public class BookingForm extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addGap(60, 60, 60)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -196,17 +190,13 @@ public class BookingForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void BFCompleteBookingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BFCompleteBookingButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BFCompleteBookingButtonActionPerformed
 
     private void BFCheckInDateInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BFCheckInDateInputActionPerformed
         // TODO add your handling code here:
@@ -224,13 +214,9 @@ public class BookingForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BFFullNameInputActionPerformed
 
-    private void BFRoomDetailButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BFRoomDetailButtonActionPerformed
+    private void SelextMenuItemsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelextMenuItemsButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BFRoomDetailButtonActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_SelextMenuItemsButtonActionPerformed
 
     public void setRoomName(String roomName) {
         BFRoomNameLabel.setText(roomName);
@@ -241,11 +227,11 @@ public class BookingForm extends javax.swing.JFrame {
     }
 
     public void addBackListener(java.awt.event.ActionListener listener) {
-        BFRoomDetailButton.addActionListener(listener); 
+        BackToRoomDetailsButton.addActionListener(listener); 
     }
 
         public void addMenuItemsListener(java.awt.event.ActionListener listener) {
-        jButton1.addActionListener(listener); // jButton1 is the "Select Menu Items" button
+        SelextMenuItemsButton.addActionListener(listener); // jButton1 is the "Select Menu Items" button
     }
 
 
@@ -287,13 +273,13 @@ public class BookingForm extends javax.swing.JFrame {
     private javax.swing.JLabel BFCheckInDateLabel;
     private javax.swing.JTextField BFCheckOutDateInput;
     private javax.swing.JLabel BFCheckOutDateLabel;
-    private javax.swing.JTextField BFCompleteBookingButton;
     private javax.swing.JTextField BFFullNameInput;
     private javax.swing.JLabel BFFullNameLabel;
-    private javax.swing.JTextField BFRoomDetailButton;
     private javax.swing.JLabel BFRoomNameLabel;
     private javax.swing.JTextField BFTotalPriceLabel;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton BackToRoomDetailsButton;
+    private javax.swing.JButton SelextMenuItemsButton;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

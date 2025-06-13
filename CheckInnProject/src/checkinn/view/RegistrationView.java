@@ -12,12 +12,10 @@ import javax.swing.JOptionPane;
  */
 public class RegistrationView extends javax.swing.JFrame {
 
-    /**
-     * Creates new form RegistrationView
-     */
     public RegistrationView() {
         initComponents();
         makeRedirectLabelClickable();
+        setTitle("Registration Form | CheckInn");
         setLocationRelativeTo(null);
         
     }
@@ -46,10 +44,6 @@ public class RegistrationView extends javax.swing.JFrame {
         RegConfirmNewpass = new javax.swing.JLabel();
         RegPh = new javax.swing.JLabel();
         RegPhInput = new javax.swing.JTextField();
-        RegSecQ = new javax.swing.JLabel();
-        RegSecA = new javax.swing.JLabel();
-        RegSecQInput = new javax.swing.JTextField();
-        RegSecAnsInput = new javax.swing.JTextField();
         RegButton = new javax.swing.JButton();
         AlrHavAccQ = new javax.swing.JLabel();
         RedirectToLogin = new javax.swing.JLabel();
@@ -106,21 +100,6 @@ public class RegistrationView extends javax.swing.JFrame {
 
         RegPhInput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        RegSecQ.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        RegSecQ.setText("Security Question");
-
-        RegSecA.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        RegSecA.setText("Security Answer");
-
-        RegSecQInput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-
-        RegSecAnsInput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        RegSecAnsInput.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegSecAnsInputActionPerformed(evt);
-            }
-        });
-
         RegButton.setBackground(new java.awt.Color(0, 153, 0));
         RegButton.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         RegButton.setText("Register");
@@ -148,24 +127,19 @@ public class RegistrationView extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(RegButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(RegSecQInput, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(RegConfirmNewpass)
+                                        .addComponent(RegConfirmNewPassInput, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(RegSecQ)
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(RegLNameInput, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(RegPhInput, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addGap(58, 58, 58)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(RegNewPassInput, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(RegSecA)
-                                    .addComponent(RegSecAnsInput, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(RegConfirmNewPassInput, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(RegConfirmNewpass))))
+                                            .addComponent(RegLNameInput, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(RegLastName))
+                                        .addGap(58, 58, 58)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(RegNewpass, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(RegNewPassInput, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                         .addGap(71, 71, 71))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,14 +149,11 @@ public class RegistrationView extends javax.swing.JFrame {
                                     .addGap(331, 331, 331)
                                     .addComponent(RegEmail))
                                 .addComponent(RegPh, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(RegPhInput, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(RegFNameInput, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(RegLastName))
+                                .addComponent(RegFNameInput, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(58, 58, 58)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(RegNewpass, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(RegEmailInput, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(RegEmailInput, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,35 +182,27 @@ public class RegistrationView extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegEmail)
                     .addComponent(RegFirstName))
-                .addGap(30, 30, 30)
+                .addGap(52, 52, 52)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RegEmailInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RegFNameInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
+                    .addComponent(RegFNameInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegEmailInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(58, 58, 58)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegNewpass)
                     .addComponent(RegLastName))
-                .addGap(36, 36, 36)
+                .addGap(58, 58, 58)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RegNewPassInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RegLNameInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
+                    .addComponent(RegLNameInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegNewPassInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(63, 63, 63)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RegConfirmNewpass)
-                    .addComponent(RegPh))
-                .addGap(39, 39, 39)
+                    .addComponent(RegPh)
+                    .addComponent(RegConfirmNewpass))
+                .addGap(53, 53, 53)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegConfirmNewPassInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RegPhInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RegSecA)
-                    .addComponent(RegSecQ))
-                .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RegSecAnsInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RegSecQInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
+                .addGap(62, 62, 62)
                 .addComponent(RegButton)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -283,20 +246,16 @@ public class RegistrationView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void RegSecAnsInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegSecAnsInputActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_RegSecAnsInputActionPerformed
-
     private void RegEmailInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegEmailInputActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_RegEmailInputActionPerformed
 
     private void RegButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegButtonActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_RegButtonActionPerformed
 
     private void RegConfirmNewPassInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegConfirmNewPassInputActionPerformed
-        // TODO add your handling code here:
+   
     }//GEN-LAST:event_RegConfirmNewPassInputActionPerformed
 
     /**
@@ -348,10 +307,6 @@ public class RegistrationView extends javax.swing.JFrame {
     private javax.swing.JLabel RegNewpass;
     private javax.swing.JLabel RegPh;
     private javax.swing.JTextField RegPhInput;
-    private javax.swing.JLabel RegSecA;
-    private javax.swing.JTextField RegSecAnsInput;
-    private javax.swing.JLabel RegSecQ;
-    private javax.swing.JTextField RegSecQInput;
     private javax.swing.JLabel SubtitleLabel;
     private javax.swing.JLabel TitleLabel;
     private javax.swing.JLabel jLabel1;
@@ -384,13 +339,6 @@ public class RegistrationView extends javax.swing.JFrame {
         return RegPhInput.getText().trim();
     }
 
-    public String getSecurityQuestion() {
-        return RegSecQInput.getText().trim();
-    }
-
-    public String getSecurityAnswer() {
-        return RegSecAnsInput.getText().trim();
-    }
     public void showError(String message) { JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE); }
     public void showMessage(String message) { JOptionPane.showMessageDialog(this, message, "Info", JOptionPane.INFORMATION_MESSAGE); }
 

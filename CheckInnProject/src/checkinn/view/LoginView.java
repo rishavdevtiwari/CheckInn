@@ -21,6 +21,7 @@ public class LoginView extends javax.swing.JFrame {
         initComponents();
         makeRedirectLabelClickable();
         makeForgotPasswordLabelClickable();
+        setTitle("Login Form | CheckInn");
         setLocationRelativeTo(null);
     }
     

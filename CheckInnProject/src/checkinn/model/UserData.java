@@ -10,34 +10,27 @@ public class UserData {
     private String phoneNumber;
     private String email;
     private String password;
-    private String securityQuestion;
-    private String securityAnswer;
 
     // Constructors
     public UserData() {}
 
     public UserData(String firstName, String lastName, String email, String password, 
-                   String phoneNumber, String securityQuestion, String securityAnswer) {
+                   String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.phoneNumber = phoneNumber;
-        this.securityQuestion = securityQuestion;
-        this.securityAnswer = securityAnswer;
     }
 
     public UserData(int userId, String firstName, String lastName, String email, 
-                   String password, String phoneNumber, 
-                   String securityQuestion, String securityAnswer, int statusId) {
+                   String password, String phoneNumber) {
         this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.phoneNumber = phoneNumber;
-        this.securityQuestion = securityQuestion;
-        this.securityAnswer = securityAnswer;
     }
 
     // Getters and Setters
@@ -87,22 +80,6 @@ public class UserData {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getSecurityQuestion() {
-        return securityQuestion;
-    }
-
-    public void setSecurityQuestion(String securityQuestion) {
-        this.securityQuestion = securityQuestion;
-    }
-
-    public String getSecurityAnswer() {
-        return securityAnswer;
-    }
-
-    public void setSecurityAnswer(String securityAnswer) {
-        this.securityAnswer = securityAnswer;
     }
 
     @Override

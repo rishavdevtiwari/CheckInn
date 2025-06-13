@@ -5,15 +5,7 @@ import checkinn.dao.UserDao;
 import checkinn.view.LoginView;
 import com.formdev.flatlaf.themes.FlatMacLightLaf; 
 
-/**
- *
- * @author ACER NITRO
- */
 public class CheckInnProject {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         
         try {
