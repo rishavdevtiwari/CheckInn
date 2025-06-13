@@ -1,20 +1,18 @@
 package checkinn.controller;
 
+import checkinn.controller.mail.SMTPSMailSender;
 import checkinn.dao.UserDao;
 import checkinn.model.LoginRequest;
 import checkinn.model.ResetPasswordRequest; 
+import checkinn.view.AdminDashboard;
 import checkinn.view.DashboardView;
 import checkinn.view.LoginView;
 import checkinn.view.RegistrationView;
-import checkinn.controller.mail.SMTPSMailSender;
-import checkinn.view.AdminDashboard;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Random;
-import javax.swing.JOptionPane;
 
 public class LoginController {
     private final LoginView loginView;
@@ -49,8 +47,6 @@ public class LoginController {
                 loginView.showError("Please enter both email and password.");
                 return;
             }
-
-            // --- NEW ADMIN CHECK ---
             // First, check for the hardcoded admin credentials.
             if (email.equals("admin") && password.equals("admin@")) {
                 
@@ -63,27 +59,45 @@ public class LoginController {
                 adminController.showView();
             
             } else {
-                // --- REGULAR USER LOGIC ---
                 // If not admin, proceed with the database check for regular users.
-                LoginRequest request = new LoginRequest(email, password);
-                if (!request.isValid()) {
-                    loginView.showError("Invalid email format.");
-                    return;
-                }
+LoginRequest request = new LoginRequest(email, password);
+            if (!request.isValid()) {
+                loginView.showError("Invalid email format.");
+                return;
+            }
 
-                boolean authenticated = userDao.authenticateUser(email, password);
-                if (authenticated) {
-                    loginView.showMessage("Login successful!");
+            // Check if email is a Gmail address and does not exist
+            if (email.endsWith("@gmail.com") && !userDao.emailExists(email)) {
+                int choice = javax.swing.JOptionPane.showConfirmDialog(
+                    loginView,
+                    "This Gmail is not registered. Would you like to create a new account?",
+                    "Register New Account",
+                    javax.swing.JOptionPane.YES_NO_OPTION
+                );
+                if (choice == javax.swing.JOptionPane.YES_OPTION) {
                     close();
-                    
-                    DashboardView dashboardView = new DashboardView();
-                    DashboardController dashboardController = new DashboardController(dashboardView, email);
-                    dashboardController.open();
-                } else {
-                    loginView.showError("Invalid email or password.");
+                    RegistrationView registrationView = new RegistrationView();
+                    RegistrationController registrationController = new RegistrationController(registrationView, userDao);
+                    registrationController.open();
                 }
+                return;
+            }
+
+            // Now check credentials
+            boolean authenticated = userDao.authenticateUser(email, password);
+            if (authenticated) {
+                loginView.showMessage("Login successful!");
+                close();
+
+                DashboardView dashboardView = new DashboardView();
+                DashboardController dashboardController = new DashboardController(dashboardView, email);
+                dashboardController.open();
+            } else {
+                loginView.showError("Invalid email or password.");
             }
         }
+    }
+    
     }
 
     class RegisterNavigationListener extends MouseAdapter {
