@@ -46,7 +46,7 @@ public class UserProfileView extends javax.swing.JFrame {
         UserProfile.setText("USER PROFILE");
 
         Username.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        Username.setText("Username");
+        Username.setText("Full Name");
 
         PhoneNumber.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         PhoneNumber.setText("Phone Number");
@@ -187,8 +187,13 @@ public void addBackToDashboardListener(java.awt.event.ActionListener listener) {
 
 
 public void addDeleteAccountListener(java.awt.event.ActionListener listener){
-    DeleteAccountButton.addActionListener(listener);
+    DeleteAccountButton.addActionListener(listener);  
         }
+
+public void setUserProfileData(String fullName, String phoneNumber) {
+    UserNameLabel.setText(fullName);
+    PhoneNumberLabel.setText(phoneNumber);
+}
 }
 
 

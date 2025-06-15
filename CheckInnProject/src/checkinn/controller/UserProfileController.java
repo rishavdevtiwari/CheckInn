@@ -62,10 +62,13 @@ public class UserProfileController {
         });
     }
 
-    public void open() {
-        userProfileView.setLocationRelativeTo(null);
-        userProfileView.setVisible(true);
-    }
+ public void open() {
+    String fullName = user.getFirstName() + " " + user.getLastName();
+    String phone = user.getPhoneNumber();
+    userProfileView.setUserProfileData(fullName, phone);
+    userProfileView.setLocationRelativeTo(null);
+    userProfileView.setVisible(true);
+}
 
   
 }
