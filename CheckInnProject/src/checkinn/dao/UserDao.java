@@ -195,4 +195,18 @@ public class UserDao {
     }
     return users;
 }
+    
+    
+    public boolean deleteUserById(int userId) {
+    String sql = "DELETE FROM User WHERE user_id = ?";
+    try (Connection conn = dbConnection.openConnection();
+         PreparedStatement stmt = conn.prepareStatement(sql)) {
+        stmt.setInt(1, userId);
+        int rows = stmt.executeUpdate();
+        return rows > 0;
+    } catch (SQLException e) {
+        e.printStackTrace();
+        return false;
+    }
+}
 }
