@@ -107,6 +107,11 @@ public void addBookingHistoryListener(ActionListener listener) {
     BookingHistoryButton.addActionListener(listener);
 }
 
+
+public void addAdminClientButtonListener(java.awt.event.ActionListener listener) {
+    AdminClientButton.addActionListener(listener);
+}
+
 public void addLogoutListener(ActionListener listener) {
     LogOutButton.addActionListener(listener);
 }

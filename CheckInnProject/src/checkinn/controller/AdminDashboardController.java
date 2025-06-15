@@ -1,6 +1,7 @@
 package checkinn.controller;
 
 import checkinn.dao.UserDao;
+import checkinn.view.AdminClientView;
 import checkinn.view.AdminDashboard; // IMPORTANT: Make sure this class name matches your view file!
 import checkinn.view.LoginView;
 import javax.swing.JOptionPane;
@@ -50,6 +51,7 @@ public class AdminDashboardController {
 
         //Admin dashboard navigation listeners
         view.addLogoutListener(e -> logout());
+        view.addAdminClientButtonListener(e -> openAdminClientView());
         
         view.addDashboardRefreshListener(e -> {
             loadInitialRoomStatuses();
@@ -102,7 +104,12 @@ public class AdminDashboardController {
             new LoginController(loginView, userDao).open();
         }
     }
-    
+    private void openAdminClientView() {
+    AdminClientView adminClientView = new AdminClientView();
+    AdminClientController adminClientController = new AdminClientController(adminClientView, this);
+    view.setVisible(false); 
+    adminClientController.open();
+}
     /**
      * Makes the admin dashboard visible.
      */

@@ -293,4 +293,15 @@ public class AdminClientView extends javax.swing.JFrame {
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
+public void addBackToDashboardListener(java.awt.event.ActionListener listener) {
+    AdminDashboardButton.addActionListener(listener);
+}
+
+public void setClientTextArea(String text) {
+    AdminClientTextArea.setText(text);
+}
+    
+    
+    
+    
 }
