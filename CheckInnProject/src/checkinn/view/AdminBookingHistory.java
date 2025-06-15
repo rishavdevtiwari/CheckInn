@@ -333,7 +333,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
                         .addGap(36, 36, 36)))
                 .addGap(23, 23, 23))
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(79, 79, 79)
+                .addGap(82, 82, 82)
                 .addComponent(jLabel3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -355,9 +355,9 @@ public class AdminBookingHistory extends javax.swing.JFrame {
                 .addComponent(AdminBookingHistoryButton)
                 .addGap(29, 29, 29)
                 .addComponent(AdminClientButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(38, 38, 38)
                 .addComponent(jLabel3)
-                .addGap(74, 74, 74)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(LogoutButton)
                 .addGap(86, 86, 86))
         );
