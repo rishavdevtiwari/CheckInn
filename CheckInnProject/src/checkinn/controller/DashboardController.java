@@ -3,6 +3,7 @@ package checkinn.controller;
 import checkinn.dao.UserDao;
 import checkinn.model.Room; 
 import checkinn.model.UserData;
+import checkinn.view.BookingHistoryView;
 import checkinn.view.DashboardView;
 import checkinn.view.LoginView;
 import checkinn.view.RoomDetailsView;
@@ -50,12 +51,9 @@ public class DashboardController {
         dashboardView.addSuiteRoomListener((e) -> openRoomDetailsPage(suiteRoom));
 
 
-        dashboardView.addBookingHistoryListener((ActionEvent e) -> {
-            String bookingHistory = "Booking History for " + (user != null ? user.getFirstName() : "Guest") + ":\n"
-                                  + "1. Single Room - 2023-05-15 to 2023-05-17\n"
-                                  + "2. Deluxe Room - 2023-06-01 to 2023-06-05";
-            JOptionPane.showMessageDialog(dashboardView, bookingHistory, "Booking History", JOptionPane.INFORMATION_MESSAGE);
-        });
+    dashboardView.addBookingHistoryListener((ActionEvent e) -> {
+        openBookingHistoryView();
+    });
 
         dashboardView.addDashboardListener((ActionEvent e) -> {
             refreshDashboard();
@@ -101,6 +99,13 @@ public class DashboardController {
     UserProfileController userProfileController = new UserProfileController(userProfileView, this, user);
     dashboardView.setVisible(false); // Hide dashboard
     userProfileController.open();
+}
+
+private void openBookingHistoryView() {
+    BookingHistoryView bookingHistoryView = new BookingHistoryView();
+    BookingHistoryController bookingHistoryController = new BookingHistoryController(bookingHistoryView, user, this);
+    dashboardView.setVisible(false);
+    bookingHistoryController.open();
 }
 
     private void refreshDashboard() {
