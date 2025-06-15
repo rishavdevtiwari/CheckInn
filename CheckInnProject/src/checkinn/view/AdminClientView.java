@@ -42,7 +42,7 @@ public class AdminClientView extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         AdminClientTextArea = new javax.swing.JTextArea();
         jScrollBar1 = new javax.swing.JScrollBar();
-        jButton1 = new javax.swing.JButton();
+        DeleteClientButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -177,10 +177,10 @@ public class AdminClientView extends javax.swing.JFrame {
         AdminClientTextArea.setRows(5);
         jScrollPane1.setViewportView(AdminClientTextArea);
 
-        jButton1.setBackground(new java.awt.Color(204, 0, 0));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Delete Client");
+        DeleteClientButton.setBackground(new java.awt.Color(204, 0, 0));
+        DeleteClientButton.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        DeleteClientButton.setForeground(new java.awt.Color(255, 255, 255));
+        DeleteClientButton.setText("Delete Client");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -192,7 +192,7 @@ public class AdminClientView extends javax.swing.JFrame {
                         .addGap(438, 438, 438)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(DeleteClientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(307, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 939, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -213,7 +213,7 @@ public class AdminClientView extends javax.swing.JFrame {
                 .addGap(175, 175, 175)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3)
-                    .addComponent(jButton1))
+                    .addComponent(DeleteClientButton))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -283,8 +283,8 @@ public class AdminClientView extends javax.swing.JFrame {
     private javax.swing.JLabel AdminPfpLabel;
     private javax.swing.JButton BookingHistoryButton;
     private javax.swing.JLabel CheckinnLogoLabel;
+    private javax.swing.JButton DeleteClientButton;
     private javax.swing.JButton LogOutButton;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -300,7 +300,9 @@ public void addBackToDashboardListener(java.awt.event.ActionListener listener) {
 public void setClientTextArea(String text) {
     AdminClientTextArea.setText(text);
 }
-    
+    public void addDeleteClientListener(java.awt.event.ActionListener listener) {
+    DeleteClientButton.addActionListener(listener); 
+}
     
     
     
