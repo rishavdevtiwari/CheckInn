@@ -510,6 +510,10 @@ public class DashboardView extends javax.swing.JFrame {
     public void addDashboardListener(ActionListener actionListener) {
         DashboardButton.addActionListener(actionListener);
     }
+    
+    public void addUserProfileRedirectionListener(java.awt.event.ActionListener listener) {
+    UserProfileRedirectionButton.addActionListener(listener);
+}
 
     public void addLogoutListener(ActionListener actionListener) {
         LogoutButton.addActionListener(actionListener);

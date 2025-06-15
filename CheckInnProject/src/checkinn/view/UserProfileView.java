@@ -4,16 +4,18 @@
  */
 package checkinn.view;
 
+import checkinn.model.UserData;
+
 /**
  *
  * @author ACER NITRO
  */
-public class UserProfile extends javax.swing.JFrame {
+public class UserProfileView extends javax.swing.JFrame {
 
     /**
      * Creates new form UserProfile
      */
-    public UserProfile() {
+    public UserProfileView(UserData user) {
         initComponents();
     }
 
@@ -44,7 +46,7 @@ public class UserProfile extends javax.swing.JFrame {
         UserProfile.setText("USER PROFILE");
 
         Username.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        Username.setText("Username");
+        Username.setText("Full Name");
 
         PhoneNumber.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         PhoneNumber.setText("Phone Number");
@@ -148,20 +150,22 @@ public class UserProfile extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(UserProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserProfileView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(UserProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserProfileView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(UserProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserProfileView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(UserProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserProfileView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UserProfile().setVisible(true);
+                UserData user = null;
+                new UserProfileView(user).setVisible(true);
             }
         });
     }
@@ -177,4 +181,19 @@ public class UserProfile extends javax.swing.JFrame {
     private javax.swing.JPanel UserProfilePannel;
     private javax.swing.JLabel Username;
     // End of variables declaration//GEN-END:variables
+public void addBackToDashboardListener(java.awt.event.ActionListener listener) {
+    BackToDashboard.addActionListener(listener);
 }
+
+
+public void addDeleteAccountListener(java.awt.event.ActionListener listener){
+    DeleteAccountButton.addActionListener(listener);  
+        }
+
+public void setUserProfileData(String fullName, String phoneNumber) {
+    UserNameLabel.setText(fullName);
+    PhoneNumberLabel.setText(phoneNumber);
+}
+}
+
+
