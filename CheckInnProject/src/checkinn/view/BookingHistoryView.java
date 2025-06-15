@@ -518,4 +518,9 @@ public class BookingHistoryView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     // End of variables declaration//GEN-END:variables
+
+public void addBackToDashboardListener(java.awt.event.ActionListener listener) {
+    jButton5.addActionListener(listener); 
+}
+
 }

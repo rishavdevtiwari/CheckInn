@@ -11,7 +11,7 @@ public class BookingHistoryController {
     }
 
     public void open() {
-        // Optionally: loadBookingHistory();
+        //loadBookingHistory();
         view.setLocationRelativeTo(null);
         view.setVisible(true);
     }
