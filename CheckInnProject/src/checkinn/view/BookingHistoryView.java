@@ -535,4 +535,8 @@ public void addUserProfileRedirectionListener(java.awt.event.ActionListener list
     UserProfileRedirectionButton.addActionListener(listener);
 }
 
+public void addLogoutListener(java.awt.event.ActionListener listener) {
+    LogOutButton.addActionListener(listener);
+}
+
 }

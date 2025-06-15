@@ -35,5 +35,22 @@ public class BookingHistoryController {
         userProfileController.open();
     });
             
+                view.addLogoutListener(e -> {
+        int confirm = javax.swing.JOptionPane.showConfirmDialog(
+            view,
+            "Are you sure you want to logout?",
+            "Confirm Logout | CheckInn",
+            javax.swing.JOptionPane.YES_NO_OPTION
+        );
+        if (confirm == javax.swing.JOptionPane.YES_OPTION) {
+            view.dispose();
+            javax.swing.JOptionPane.showMessageDialog(null, "Logged out successfully", "Logout | CheckInn", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+            checkinn.view.LoginView loginView = new checkinn.view.LoginView();
+            checkinn.dao.UserDao userDao = new checkinn.dao.UserDao();
+            checkinn.controller.LoginController loginController = new checkinn.controller.LoginController(loginView, userDao);
+            loginController.open();
+        }
+    });
+            
     }
 }
