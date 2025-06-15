@@ -27,24 +27,16 @@ public class UserProfile extends javax.swing.JFrame {
     private void initComponents() {
 
         UserProfilePannel = new javax.swing.JPanel();
-        ReturnToDashboardButton = new javax.swing.JTextField();
         ImageLabel = new javax.swing.JLabel();
         UserProfile = new javax.swing.JLabel();
         Username = new javax.swing.JLabel();
         UserNameLabel = new javax.swing.JTextField();
         PhoneNumber = new javax.swing.JLabel();
         PhoneNumberLabel = new javax.swing.JTextField();
-        DeleteAccountButton = new javax.swing.JTextField();
+        BackToDashboard = new javax.swing.JButton();
+        DeleteAccountButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        ReturnToDashboardButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        ReturnToDashboardButton.setText("<- Dashboard");
-        ReturnToDashboardButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ReturnToDashboardButtonActionPerformed(evt);
-            }
-        });
 
         ImageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dsh.png"))); // NOI18N
 
@@ -57,41 +49,40 @@ public class UserProfile extends javax.swing.JFrame {
         PhoneNumber.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         PhoneNumber.setText("Phone Number");
 
+        BackToDashboard.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        BackToDashboard.setText("<- Dashboard");
+
         DeleteAccountButton.setBackground(new java.awt.Color(255, 0, 0));
-        DeleteAccountButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        DeleteAccountButton.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         DeleteAccountButton.setForeground(new java.awt.Color(255, 255, 255));
-        DeleteAccountButton.setText("     Delete Account");
-        DeleteAccountButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DeleteAccountButtonActionPerformed(evt);
-            }
-        });
+        DeleteAccountButton.setText("Delete Account");
 
         javax.swing.GroupLayout UserProfilePannelLayout = new javax.swing.GroupLayout(UserProfilePannel);
         UserProfilePannel.setLayout(UserProfilePannelLayout);
         UserProfilePannelLayout.setHorizontalGroup(
             UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserProfilePannelLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(PhoneNumber)
-                    .addComponent(Username)
-                    .addComponent(ReturnToDashboardButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(UserProfilePannelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
-                        .addComponent(ImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(UserProfile))
-                    .addGroup(UserProfilePannelLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(PhoneNumber)
+                            .addComponent(Username))
                         .addGap(128, 128, 128)
                         .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(UserNameLabel)
-                            .addComponent(PhoneNumberLabel))))
+                            .addComponent(PhoneNumberLabel)))
+                    .addGroup(UserProfilePannelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BackToDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
+                        .addComponent(ImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(UserProfile)))
                 .addGap(46, 46, 46))
             .addGroup(UserProfilePannelLayout.createSequentialGroup()
-                .addGap(185, 185, 185)
-                .addComponent(DeleteAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(173, 173, 173)
+                .addComponent(DeleteAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         UserProfilePannelLayout.setVerticalGroup(
@@ -99,14 +90,14 @@ public class UserProfile extends javax.swing.JFrame {
             .addGroup(UserProfilePannelLayout.createSequentialGroup()
                 .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(UserProfilePannelLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(ReturnToDashboardButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(UserProfilePannelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(ImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(UserProfilePannelLayout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addComponent(UserProfile)))
+                        .addComponent(UserProfile))
+                    .addGroup(UserProfilePannelLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(BackToDashboard)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
                 .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Username, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -115,9 +106,9 @@ public class UserProfile extends javax.swing.JFrame {
                 .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PhoneNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(131, 131, 131)
-                .addComponent(DeleteAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(110, 110, 110))
+                .addGap(120, 120, 120)
+                .addComponent(DeleteAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(123, 123, 123))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -139,14 +130,6 @@ public class UserProfile extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void ReturnToDashboardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnToDashboardButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ReturnToDashboardButtonActionPerformed
-
-    private void DeleteAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteAccountButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DeleteAccountButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -184,11 +167,11 @@ public class UserProfile extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField DeleteAccountButton;
+    private javax.swing.JButton BackToDashboard;
+    private javax.swing.JButton DeleteAccountButton;
     private javax.swing.JLabel ImageLabel;
     private javax.swing.JLabel PhoneNumber;
     private javax.swing.JTextField PhoneNumberLabel;
-    private javax.swing.JTextField ReturnToDashboardButton;
     private javax.swing.JTextField UserNameLabel;
     private javax.swing.JLabel UserProfile;
     private javax.swing.JPanel UserProfilePannel;
