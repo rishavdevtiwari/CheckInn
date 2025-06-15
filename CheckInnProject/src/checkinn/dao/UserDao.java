@@ -155,4 +155,18 @@ public class UserDao {
         }
         return null;
     }
+    
+    
+    public boolean deleteUserByEmail(String email) {
+    String sql = "DELETE FROM User WHERE email = ?";
+    try (Connection conn = dbConnection.openConnection();
+         PreparedStatement stmt = conn.prepareStatement(sql)) {
+        stmt.setString(1, email);
+        int rows = stmt.executeUpdate();
+        return rows > 0;
+    } catch (SQLException e) {
+        e.printStackTrace();
+        return false;
+    }
+}
 }

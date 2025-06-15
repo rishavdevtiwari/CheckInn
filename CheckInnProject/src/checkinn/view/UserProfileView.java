@@ -183,6 +183,12 @@ public class UserProfileView extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 public void addBackToDashboardListener(java.awt.event.ActionListener listener) {
     BackToDashboard.addActionListener(listener);
-}}
+}
+
+
+public void addDeleteAccountListener(java.awt.event.ActionListener listener){
+    DeleteAccountButton.addActionListener(listener);
+        }
+}
 
 

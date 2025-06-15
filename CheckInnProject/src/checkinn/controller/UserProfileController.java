@@ -1,5 +1,6 @@
 package checkinn.controller;
 
+import checkinn.dao.UserDao;
 import checkinn.model.UserData;
 import checkinn.view.UserProfileView;
 import java.awt.event.WindowAdapter;
@@ -31,6 +32,32 @@ public class UserProfileController {
             @Override
             public void windowClosing(WindowEvent e) {
                 dashboardController.open();
+            }
+        });
+    
+    
+    userProfileView.addDeleteAccountListener(e -> {
+            int confirm = javax.swing.JOptionPane.showConfirmDialog(
+                userProfileView,
+                "Are you sure you want to delete your account? This action cannot be undone.",
+                "Confirm Delete",
+                javax.swing.JOptionPane.YES_NO_OPTION
+            );
+            if (confirm == javax.swing.JOptionPane.YES_OPTION) {
+                UserDao userDao = new UserDao();
+                boolean deleted = userDao.deleteUserByEmail(user.getEmail());
+                if (deleted) {
+                    javax.swing.JOptionPane.showMessageDialog(userProfileView, "Account deleted successfully.", "Deleted", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                    userProfileView.dispose();
+                    dashboardController.close();
+                    // Open login view
+                    checkinn.view.LoginView loginView = new checkinn.view.LoginView();
+                    checkinn.dao.UserDao newUserDao = new checkinn.dao.UserDao();
+                    checkinn.controller.LoginController loginController = new checkinn.controller.LoginController(loginView, newUserDao);
+                    loginController.open();
+                } else {
+                    javax.swing.JOptionPane.showMessageDialog(userProfileView, "Failed to delete account.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+                }
             }
         });
     }
