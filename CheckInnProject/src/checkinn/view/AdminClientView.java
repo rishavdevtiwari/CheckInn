@@ -28,7 +28,7 @@ public class AdminClientView extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         CheckinnLogoLabel = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        BoyWalkingWithStuff = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         AdminDashboardButton = new javax.swing.JButton();
         BookingHistoryButton = new javax.swing.JButton();
@@ -36,9 +36,9 @@ public class AdminClientView extends javax.swing.JFrame {
         AdminPfpLabel = new javax.swing.JLabel();
         AdUserNameLabel = new javax.swing.JLabel();
         AdminLabel = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        Picture = new javax.swing.JLabel();
         AdminClientButton = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        TitleLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         AdminClientTextArea = new javax.swing.JTextArea();
         jScrollBar1 = new javax.swing.JScrollBar();
@@ -50,7 +50,7 @@ public class AdminClientView extends javax.swing.JFrame {
 
         CheckinnLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BoyWithStuff.png"))); // NOI18N
+        BoyWalkingWithStuff.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BoyWithStuff.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -60,7 +60,7 @@ public class AdminClientView extends javax.swing.JFrame {
                 .addGap(64, 64, 64)
                 .addComponent(CheckinnLogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 814, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BoyWalkingWithStuff, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37))
         );
         jPanel2Layout.setVerticalGroup(
@@ -71,7 +71,7 @@ public class AdminClientView extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
+                .addComponent(BoyWalkingWithStuff)
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
@@ -100,7 +100,7 @@ public class AdminClientView extends javax.swing.JFrame {
 
         AdminLabel.setText("Admin");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/IconAdmin.png"))); // NOI18N
+        Picture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dsh.png"))); // NOI18N
 
         AdminClientButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         AdminClientButton.setText("Clients");
@@ -132,7 +132,7 @@ public class AdminClientView extends javax.swing.JFrame {
                         .addComponent(LogOutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(75, 75, 75)
-                        .addComponent(jLabel1)))
+                        .addComponent(Picture)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -157,21 +157,21 @@ public class AdminClientView extends javax.swing.JFrame {
                         .addComponent(AdUserNameLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(AdminLabel)))
-                .addGap(79, 79, 79)
+                .addGap(56, 56, 56)
                 .addComponent(AdminDashboardButton)
-                .addGap(36, 36, 36)
+                .addGap(32, 32, 32)
                 .addComponent(BookingHistoryButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(AdminClientButton)
                 .addGap(29, 29, 29)
-                .addComponent(jLabel1)
+                .addComponent(Picture)
                 .addGap(37, 37, 37)
                 .addComponent(LogOutButton)
                 .addGap(44, 44, 44))
         );
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel3.setText("CheckInn Clients");
+        TitleLabel.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        TitleLabel.setText("CheckInn Clients");
 
         AdminClientTextArea.setColumns(20);
         AdminClientTextArea.setRows(5);
@@ -190,7 +190,7 @@ public class AdminClientView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(438, 438, 438)
-                        .addComponent(jLabel3)
+                        .addComponent(TitleLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(DeleteClientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -212,18 +212,18 @@ public class AdminClientView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(175, 175, 175)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
+                    .addComponent(TitleLabel)
                     .addComponent(DeleteClientButton))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                     .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(26, 26, 26)))
         );
@@ -282,12 +282,12 @@ public class AdminClientView extends javax.swing.JFrame {
     private javax.swing.JLabel AdminLabel;
     private javax.swing.JLabel AdminPfpLabel;
     private javax.swing.JButton BookingHistoryButton;
+    private javax.swing.JLabel BoyWalkingWithStuff;
     private javax.swing.JLabel CheckinnLogoLabel;
     private javax.swing.JButton DeleteClientButton;
     private javax.swing.JButton LogOutButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel Picture;
+    private javax.swing.JLabel TitleLabel;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollBar jScrollBar1;
