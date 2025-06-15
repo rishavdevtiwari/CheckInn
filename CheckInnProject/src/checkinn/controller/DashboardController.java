@@ -6,6 +6,7 @@ import checkinn.model.UserData;
 import checkinn.view.DashboardView;
 import checkinn.view.LoginView;
 import checkinn.view.RoomDetailsView;
+import checkinn.view.UserProfileView;
 import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
 
@@ -59,6 +60,10 @@ public class DashboardController {
         dashboardView.addDashboardListener((ActionEvent e) -> {
             refreshDashboard();
         });
+        
+        dashboardView.addUserProfileRedirectionListener((ActionEvent e) -> {
+        openUserProfileView();
+    });
 
         dashboardView.addLogoutListener((ActionEvent e) -> {
             int confirm = JOptionPane.showConfirmDialog(
@@ -89,6 +94,13 @@ public class DashboardController {
     );
     dashboardView.setVisible(false); // Hide dashboard
     roomDetailsController.open();
+}
+    
+    private void openUserProfileView() {
+    UserProfileView userProfileView = new UserProfileView(user); // Pass user data if needed
+    UserProfileController userProfileController = new UserProfileController(userProfileView, this, user);
+    dashboardView.setVisible(false); // Hide dashboard
+    userProfileController.open();
 }
 
     private void refreshDashboard() {
