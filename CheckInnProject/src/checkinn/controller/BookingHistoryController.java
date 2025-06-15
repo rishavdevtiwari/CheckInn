@@ -1,3 +1,9 @@
+package checkinn.controller;
+
+import checkinn.model.UserData;
+import checkinn.view.BookingHistoryView;
+import checkinn.view.UserProfileView;
+
 public class BookingHistoryController {
     private final BookingHistoryView view;
     private final UserData user;
@@ -21,5 +27,13 @@ public class BookingHistoryController {
             view.dispose();
             dashboardController.open();
         });
+        
+            view.addUserProfileRedirectionListener(e -> {
+        view.dispose();
+        UserProfileView userProfileView = new UserProfileView(user);
+        UserProfileController userProfileController = new UserProfileController(userProfileView, dashboardController, user);
+        userProfileController.open();
+    });
+            
     }
 }

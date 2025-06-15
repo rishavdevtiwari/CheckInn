@@ -35,6 +35,7 @@ public class BookingHistoryView extends javax.swing.JFrame {
         UserProfile = new javax.swing.JLabel();
         UserNameLabel = new javax.swing.JLabel();
         Image = new javax.swing.JLabel();
+        UserProfileRedirectionButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         CheckInnLogo = new javax.swing.JLabel();
         BoyWithStuffImg = new javax.swing.JLabel();
@@ -95,6 +96,9 @@ public class BookingHistoryView extends javax.swing.JFrame {
 
         Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dsh2.png"))); // NOI18N
 
+        UserProfileRedirectionButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        UserProfileRedirectionButton.setText("Profile");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -107,7 +111,8 @@ public class BookingHistoryView extends javax.swing.JFrame {
                             .addComponent(LogOutButton)
                             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(RedirectToDashboardButton, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(BookingHistoryButton))))
+                                .addComponent(BookingHistoryButton)
+                                .addComponent(UserProfileRedirectionButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addComponent(UserProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -130,6 +135,8 @@ public class BookingHistoryView extends javax.swing.JFrame {
                 .addComponent(RedirectToDashboardButton)
                 .addGap(27, 27, 27)
                 .addComponent(BookingHistoryButton)
+                .addGap(33, 33, 33)
+                .addComponent(UserProfileRedirectionButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Image)
                 .addGap(62, 62, 62)
@@ -511,6 +518,7 @@ public class BookingHistoryView extends javax.swing.JFrame {
     private javax.swing.JLabel TitleLabel;
     private javax.swing.JLabel UserNameLabel;
     private javax.swing.JLabel UserProfile;
+    private javax.swing.JButton UserProfileRedirectionButton;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -521,6 +529,10 @@ public class BookingHistoryView extends javax.swing.JFrame {
 
 public void addBackToDashboardListener(java.awt.event.ActionListener listener) {
     RedirectToDashboardButton.addActionListener(listener); 
+}
+
+public void addUserProfileRedirectionListener(java.awt.event.ActionListener listener) {
+    UserProfileRedirectionButton.addActionListener(listener);
 }
 
 }
