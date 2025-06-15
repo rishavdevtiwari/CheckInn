@@ -3,6 +3,7 @@ package checkinn.controller;
 import checkinn.dao.UserDao;
 import checkinn.model.UserData;
 import checkinn.view.AdminClientView;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdminClientController {
@@ -41,4 +42,5 @@ public class AdminClientController {
         }
         view.setClientTextArea(sb.toString());
     }
+
 }

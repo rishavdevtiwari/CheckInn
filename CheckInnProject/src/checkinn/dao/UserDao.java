@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDao {
     private final DbConnection dbConnection;
@@ -168,5 +170,29 @@ public class UserDao {
         e.printStackTrace();
         return false;
     }
+}
+    
+    
+    public List<UserData> getAllUsers() {
+    List<UserData> users = new ArrayList<>();
+    String sql = "SELECT * FROM User";
+    try (Connection conn = dbConnection.openConnection();
+         PreparedStatement stmt = conn.prepareStatement(sql);
+         ResultSet rs = stmt.executeQuery()) {
+        while (rs.next()) {
+            UserData user = new UserData(
+                rs.getInt("user_id"),
+                rs.getString("first_name"),
+                rs.getString("last_name"),
+                rs.getString("email"),
+                rs.getString("password"),
+                rs.getString("phone_number")
+            );
+            users.add(user);
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    return users;
 }
 }
