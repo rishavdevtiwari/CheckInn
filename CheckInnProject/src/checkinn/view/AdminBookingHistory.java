@@ -32,6 +32,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         DoubleViewInvoiceButton = new javax.swing.JButton();
         DoubleRoomLabel = new javax.swing.JLabel();
         DoubleRoomClient = new javax.swing.JLabel();
+        DoubleCancelButton = new javax.swing.JButton();
         BookingHistoryLabel = new javax.swing.JLabel();
         CheckedInClientLabel = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -41,11 +42,13 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         ExecutiveSuiteViewInvoiceButton = new javax.swing.JButton();
         ExecutiveSuiteLabel = new javax.swing.JLabel();
         ExecutiveSuiteRoomClient = new javax.swing.JLabel();
+        ExecutiveSuiteCancelButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         SingleViewInvoiceButton = new javax.swing.JButton();
         SingleRoomLabel = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         SingleRoomClient = new javax.swing.JLabel();
+        SingleCancelButton = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         AdminDashboardButton = new javax.swing.JButton();
         AdminBookingHistoryButton = new javax.swing.JButton();
@@ -59,6 +62,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         DeluxeViewInvoiceButton = new javax.swing.JButton();
         DeluxeRoomLabel = new javax.swing.JLabel();
         DeluxeRoomClient = new javax.swing.JLabel();
+        DeluxeCancelButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,6 +82,16 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         DoubleRoomClient.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DoubleRoomClient.setText("Client 2");
 
+        DoubleCancelButton.setBackground(new java.awt.Color(255, 0, 0));
+        DoubleCancelButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        DoubleCancelButton.setForeground(new java.awt.Color(255, 255, 255));
+        DoubleCancelButton.setText("Cancel");
+        DoubleCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DoubleCancelButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -85,11 +99,13 @@ public class AdminBookingHistory extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addGap(105, 105, 105)
                 .addComponent(DoubleRoomLabel)
-                .addGap(281, 281, 281)
+                .addGap(243, 243, 243)
                 .addComponent(DoubleRoomClient, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(211, 211, 211)
                 .addComponent(DoubleViewInvoiceButton)
-                .addGap(27, 27, 27))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(DoubleCancelButton)
+                .addGap(38, 38, 38))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,7 +114,8 @@ public class AdminBookingHistory extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DoubleViewInvoiceButton)
                     .addComponent(DoubleRoomLabel)
-                    .addComponent(DoubleRoomClient))
+                    .addComponent(DoubleRoomClient)
+                    .addComponent(DoubleCancelButton))
                 .addGap(18, 18, 18))
         );
 
@@ -152,6 +169,16 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         ExecutiveSuiteRoomClient.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ExecutiveSuiteRoomClient.setText("-");
 
+        ExecutiveSuiteCancelButton.setBackground(new java.awt.Color(255, 0, 0));
+        ExecutiveSuiteCancelButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ExecutiveSuiteCancelButton.setForeground(new java.awt.Color(255, 255, 255));
+        ExecutiveSuiteCancelButton.setText("Cancel");
+        ExecutiveSuiteCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExecutiveSuiteCancelButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -159,11 +186,13 @@ public class AdminBookingHistory extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGap(82, 82, 82)
                 .addComponent(ExecutiveSuiteLabel)
-                .addGap(262, 262, 262)
+                .addGap(223, 223, 223)
                 .addComponent(ExecutiveSuiteRoomClient, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(217, 217, 217)
                 .addComponent(ExecutiveSuiteViewInvoiceButton)
-                .addGap(22, 22, 22))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                .addComponent(ExecutiveSuiteCancelButton)
+                .addGap(37, 37, 37))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,7 +201,8 @@ public class AdminBookingHistory extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ExecutiveSuiteViewInvoiceButton)
                     .addComponent(ExecutiveSuiteLabel)
-                    .addComponent(ExecutiveSuiteRoomClient))
+                    .addComponent(ExecutiveSuiteRoomClient)
+                    .addComponent(ExecutiveSuiteCancelButton))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -194,6 +224,16 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         SingleRoomClient.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         SingleRoomClient.setText("Client 1");
 
+        SingleCancelButton.setBackground(new java.awt.Color(255, 0, 0));
+        SingleCancelButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        SingleCancelButton.setForeground(new java.awt.Color(255, 255, 255));
+        SingleCancelButton.setText("Cancel");
+        SingleCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SingleCancelButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -203,11 +243,13 @@ public class AdminBookingHistory extends javax.swing.JFrame {
                 .addComponent(SingleRoomLabel)
                 .addGap(175, 175, 175)
                 .addComponent(jLabel14)
-                .addGap(115, 115, 115)
+                .addGap(71, 71, 71)
                 .addComponent(SingleRoomClient, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 348, Short.MAX_VALUE)
+                .addGap(211, 211, 211)
                 .addComponent(SingleViewInvoiceButton)
-                .addGap(29, 29, 29))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addComponent(SingleCancelButton)
+                .addGap(41, 41, 41))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -217,7 +259,8 @@ public class AdminBookingHistory extends javax.swing.JFrame {
                     .addComponent(SingleRoomLabel)
                     .addComponent(jLabel14)
                     .addComponent(SingleRoomClient)
-                    .addComponent(SingleViewInvoiceButton))
+                    .addComponent(SingleViewInvoiceButton)
+                    .addComponent(SingleCancelButton))
                 .addGap(22, 22, 22))
         );
 
@@ -326,6 +369,16 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         DeluxeRoomClient.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DeluxeRoomClient.setText("-");
 
+        DeluxeCancelButton.setBackground(new java.awt.Color(255, 0, 0));
+        DeluxeCancelButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        DeluxeCancelButton.setForeground(new java.awt.Color(255, 255, 255));
+        DeluxeCancelButton.setText("Cancel");
+        DeluxeCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeluxeCancelButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -333,11 +386,13 @@ public class AdminBookingHistory extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addGap(106, 106, 106)
                 .addComponent(DeluxeRoomLabel)
-                .addGap(290, 290, 290)
+                .addGap(254, 254, 254)
                 .addComponent(DeluxeRoomClient, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(217, 217, 217)
                 .addComponent(DeluxeViewInvoiceButton)
-                .addGap(25, 25, 25))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(DeluxeCancelButton)
+                .addGap(37, 37, 37))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -346,7 +401,8 @@ public class AdminBookingHistory extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DeluxeViewInvoiceButton)
                     .addComponent(DeluxeRoomLabel)
-                    .addComponent(DeluxeRoomClient))
+                    .addComponent(DeluxeRoomClient)
+                    .addComponent(DeluxeCancelButton))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -355,28 +411,33 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(356, 356, 356)
-                                .addComponent(BookingHistoryLabel)
-                                .addGap(432, 432, 432))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(85, 85, 85)
+                                .addGap(112, 112, 112)
                                 .addComponent(AccomodationLabel)
-                                .addGap(241, 241, 241)
-                                .addComponent(CheckedInClientLabel)))))
-                .addContainerGap(33, Short.MAX_VALUE))
+                                .addGap(186, 186, 186)
+                                .addComponent(CheckedInClientLabel))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(BookingHistoryLabel)
+                                        .addGap(432, 432, 432))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(24, 24, 24)))))))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -429,6 +490,22 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_SingleViewInvoiceButtonActionPerformed
 
+    private void SingleCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SingleCancelButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SingleCancelButtonActionPerformed
+
+    private void DoubleCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoubleCancelButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DoubleCancelButtonActionPerformed
+
+    private void DeluxeCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeluxeCancelButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DeluxeCancelButtonActionPerformed
+
+    private void ExecutiveSuiteCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExecutiveSuiteCancelButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ExecutiveSuiteCancelButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -471,16 +548,20 @@ public class AdminBookingHistory extends javax.swing.JFrame {
     private javax.swing.JLabel BookingHistoryLabel;
     private javax.swing.JLabel CheckInnLogoLabel;
     private javax.swing.JLabel CheckedInClientLabel;
+    private javax.swing.JButton DeluxeCancelButton;
     private javax.swing.JLabel DeluxeRoomClient;
     private javax.swing.JLabel DeluxeRoomLabel;
     private javax.swing.JButton DeluxeViewInvoiceButton;
+    private javax.swing.JButton DoubleCancelButton;
     private javax.swing.JLabel DoubleRoomClient;
     private javax.swing.JLabel DoubleRoomLabel;
     private javax.swing.JButton DoubleViewInvoiceButton;
+    private javax.swing.JButton ExecutiveSuiteCancelButton;
     private javax.swing.JLabel ExecutiveSuiteLabel;
     private javax.swing.JLabel ExecutiveSuiteRoomClient;
     private javax.swing.JButton ExecutiveSuiteViewInvoiceButton;
     private javax.swing.JButton LogoutButton;
+    private javax.swing.JButton SingleCancelButton;
     private javax.swing.JLabel SingleRoomClient;
     private javax.swing.JLabel SingleRoomLabel;
     private javax.swing.JButton SingleViewInvoiceButton;
