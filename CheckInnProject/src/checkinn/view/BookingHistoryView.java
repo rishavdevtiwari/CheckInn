@@ -590,4 +590,8 @@ public void setUnbookedRooms(List<Booking> userBookings) {
     if (!exec) setExecutiveSuiteBooking(null, null, false);
 }
 
+public void setUserName(String name) {
+    UserNameLabel.setText(name);
+}
+
 }

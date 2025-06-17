@@ -20,6 +20,7 @@ public class DashboardController {
         this.dashboardView = dashboardView;
         this.userEmail = userEmail;
         loadUserData();
+        loadRoomStatuses();
         initialize();
     }
 
@@ -27,6 +28,27 @@ public class DashboardController {
         UserDao userDao = new UserDao();
         this.user = userDao.getUserByEmail(userEmail);
     }
+    private void loadRoomStatuses() {
+    checkinn.dao.RoomDao roomDao = new checkinn.dao.RoomDao();
+    int singleStatus = roomDao.getRoomStatusId(1);
+    int doubleStatus = roomDao.getRoomStatusId(2);
+    int deluxeStatus = roomDao.getRoomStatusId(3);
+    int suiteStatus = roomDao.getRoomStatusId(4);
+
+    dashboardView.setRoomStatus(statusString(singleStatus), "Single Room");
+    dashboardView.setRoomStatus(statusString(doubleStatus), "Double Room");
+    dashboardView.setRoomStatus(statusString(deluxeStatus), "Deluxe Room");
+    dashboardView.setRoomStatus(statusString(suiteStatus), "Executive Suite");
+}
+
+private String statusString(int statusId) {
+    return switch (statusId) {
+        case 1 -> "Vacant";
+        case 2 -> "Occupied";
+        case 3 -> "Out of Order";
+        default -> "Unknown";
+    };
+}
 
     private void initialize() {
         // Set user name and welcome message on dashboard if available
