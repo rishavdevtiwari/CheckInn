@@ -292,9 +292,8 @@ public void setInvoiceData(String roomType, String customerName, String fullName
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 
-
-    public void addCloseInvoiceListener(java.awt.event.ActionListener listener) {
-    CloseInvoice.addActionListener(listener);
+    public javax.swing.JButton getCloseInvoiceButton() {
+    return CloseInvoice;
 }
 
 }
