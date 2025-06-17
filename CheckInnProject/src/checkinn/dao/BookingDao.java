@@ -13,7 +13,7 @@ import java.util.List;
 
 public class BookingDao {
     private final MySqlConnection dbConnection = new MySqlConnection();
-
+    
     public int saveBooking(Booking booking) {
         String sql = "INSERT INTO Booking (room_id, user_id, status_id, invoice_id, CheckIn_date, CheckOut_date, total_price) VALUES (?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = dbConnection.openConnection();
@@ -145,4 +145,24 @@ public class BookingDao {
         }
         return bookings;
     }
+
+public boolean isRoomBookedForPeriod(int roomId, java.util.Date checkIn, java.util.Date checkOut) {
+    String sql = "SELECT COUNT(*) FROM Booking WHERE room_id = ? " +
+                 "AND (CheckIn_date < ? AND CheckOut_date > ?)";
+    try (Connection conn = dbConnection.openConnection();
+         PreparedStatement stmt = conn.prepareStatement(sql)) {
+        stmt.setInt(1, roomId);
+        stmt.setTimestamp(2, new java.sql.Timestamp(checkOut.getTime()));
+        stmt.setTimestamp(3, new java.sql.Timestamp(checkIn.getTime()));
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            return rs.getInt(1) > 0;
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    return false;
+}
+
+
 }

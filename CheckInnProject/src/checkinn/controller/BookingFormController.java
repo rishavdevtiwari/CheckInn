@@ -43,6 +43,12 @@ private void initializeListeners() {
         Date checkIn = bookingForm.getCheckInDate();
         Date checkOut = bookingForm.getCheckOutDate();
         List<MenuItem> selectedMenuItems = bookingForm.getSelectedMenuItems();
+        int roomId = bookingForm.getRoomId();
+        BookingDao bookingDao = new BookingDao();
+        if (bookingDao.isRoomBookedForPeriod(roomId, checkIn, checkOut)) {
+            bookingForm.showError("This room is already booked for the selected dates. Please choose another date.");
+            return;
+        }
 
         if (fullName == null || fullName.trim().isEmpty()) {
             bookingForm.showError("Full name is required.");
@@ -106,15 +112,6 @@ private void initializeListeners() {
         DashboardController dashboardController = new DashboardController(dashboardView, email);
         dashboardController.open();
     });
-            // invoiceView.addWindowListener(new java.awt.event.WindowAdapter() {
-            //     @Override
-            //     public void windowClosed(java.awt.event.WindowEvent e) {
-            //     DashboardView dashboardView = new DashboardView();
-            //     DashboardController dashboardController = new DashboardController(dashboardView, email);
-            //     dashboardController.open();
-            //     }
-            // });
-
             invoiceView.setVisible(true);
             close();
         } else {
