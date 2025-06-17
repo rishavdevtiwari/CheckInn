@@ -103,6 +103,7 @@ private void openInvoiceForRoom(String roomType) {
                 booking.getMenuItems(),
                 booking.getTotalPrice()
             );
+            invoiceView.addCloseInvoiceListener(e -> invoiceView.dispose());
             invoiceView.setVisible(true);
             break;
         }

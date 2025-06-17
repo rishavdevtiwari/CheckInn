@@ -48,6 +48,7 @@ public void setMenuItems(List<MenuItem> menuItems) {
     public Date getCheckOutDate() { return checkOutDate; }
     public void setCheckOutDate(Date checkOutDate) { this.checkOutDate = checkOutDate; }
     public double getTotalPrice() { return totalPrice; }
-    public void setTotalPrice(double totalPrice) { this.totalPrice = totalPrice; }
-
+public void setTotalPrice(double totalPrice) {
+    this.totalPrice = totalPrice;
+}
 }
