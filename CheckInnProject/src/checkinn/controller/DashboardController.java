@@ -54,10 +54,10 @@ private String statusString(int statusId) {
         // Set user name and welcome message on dashboard if available
         if (user != null && user.getFirstName() != null) {
             dashboardView.setUserName(user.getFirstName());
-            dashboardView.setWelcomeMessage("Welcome, " + user.getFirstName() + "!");
+            dashboardView.setWelcomeMessage("Welcome to CheckInn, " + user.getFirstName() + "!");
         } else {
             dashboardView.setUserName("Guest");
-            dashboardView.setWelcomeMessage("Welcome, Guest!");
+            dashboardView.setWelcomeMessage("Welcome to CheckInn, Guest!");
         }
 
         // --- EDITED SECTION: Create Room objects to hold all data ---
