@@ -18,6 +18,9 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         setTitle("Admin Booking History | CheckInn");
         setLocationRelativeTo(null);
     }
+    public javax.swing.JButton getAdminDashboardButton() {
+    return AdminDashboardButton;
+}
 
     /**
      * This method is called from within the constructor to initialize the form.

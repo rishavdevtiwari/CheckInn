@@ -57,7 +57,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="BackToRoomDetailsButton" min="-2" pref="385" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -65,19 +65,15 @@
                                       <Component id="BFCheckInDateLabel" alignment="0" min="-2" pref="172" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="BFFullNameInput" min="-2" pref="251" max="-2" attributes="0"/>
-                                      <Component id="BFCheckInDateInput" alignment="0" min="-2" pref="251" max="-2" attributes="0"/>
-                                      <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="BFFullNameInput" pref="251" max="32767" attributes="0"/>
+                                      <Component id="CheckInDateChooser" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="BFCheckOutDateLabel" min="-2" pref="189" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="BFCheckOutDateInput" min="-2" pref="251" max="-2" attributes="0"/>
-                                      <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="CheckOutDateChooser" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
@@ -147,7 +143,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="300" max="-2" attributes="0"/>
                                   <Component id="jButton2" min="-2" pref="391" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -213,47 +209,33 @@
                       <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="BFCheckInDateLabel" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
-                              <Component id="BFCheckInDateInput" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="CheckInDateChooser" max="32767" attributes="0"/>
+                      <Component id="BFCheckInDateLabel" pref="47" max="32767" attributes="0"/>
+                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jSeparator3" min="-2" pref="14" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="DinnerPackage" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="BFCheckOutDateLabel" min="-2" pref="63" max="-2" attributes="0"/>
+                      </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="DinnerPackage" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="BFCheckOutDateLabel" alignment="3" min="-2" pref="63" max="-2" attributes="0"/>
-                                      <Component id="BFCheckOutDateInput" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="CheckOutDateChooser" min="-2" pref="44" max="-2" attributes="0"/>
+                              <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="8" max="32767" attributes="0"/>
+                  <EmptySpace pref="30" max="32767" attributes="0"/>
                   <Component id="jSeparator4" min="-2" pref="14" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="BFTotalPriceLabel" min="-2" pref="47" max="-2" attributes="0"/>
@@ -300,16 +282,6 @@
             <Property name="text" type="java.lang.String" value="       &lt;ROOM NAME&gt;"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="BFCheckInDateInput">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="24" style="1"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BFCheckInDateInputActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JTextField" name="BFTotalPriceLabel">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
@@ -320,16 +292,6 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BFTotalPriceLabelActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="BFCheckOutDateInput">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="24" style="1"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BFCheckOutDateInputActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="BFFullNameInput">
@@ -512,15 +474,9 @@
             <Property name="text" type="java.lang.String" value="Steamed Vegetables, Mashed potato, Chocolate Mousse, Rice Set"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel14">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="eg : 01-01-2025"/>
-          </Properties>
+        <Component class="com.toedter.calendar.JDateChooser" name="CheckInDateChooser">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel15">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="eg: 02-01-2025"/>
-          </Properties>
+        <Component class="com.toedter.calendar.JDateChooser" name="CheckOutDateChooser">
         </Component>
       </SubComponents>
     </Container>

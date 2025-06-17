@@ -1,9 +1,12 @@
 package checkinn.controller;
 
+import checkinn.controller.LoginController.ForgotPasswordListener;
+import checkinn.controller.LoginController.RegisterNavigationListener;
 import checkinn.controller.mail.SMTPSMailSender;
 import checkinn.dao.UserDao;
 import checkinn.model.LoginRequest;
-import checkinn.model.ResetPasswordRequest; 
+import checkinn.model.ResetPasswordRequest;
+import checkinn.model.UserData;
 import checkinn.view.AdminDashboard;
 import checkinn.view.DashboardView;
 import checkinn.view.LoginView;
@@ -49,16 +52,23 @@ public class LoginController {
             }
             // First, check for the hardcoded admin credentials.
             if (email.equals("admin") && password.equals("admin@")) {
-                
-                loginView.showMessage("Admin login successful!");
-                close(); // Close the login view
+    
+    loginView.showMessage("Admin login successful!");
+    close(); // Close the login view
 
-                // Create and show the new Admin Dashboard
-                AdminDashboard adminView = new AdminDashboard();
-                AdminDashboardController adminController = new AdminDashboardController(adminView);
-                adminController.showView();
-            
-            } else {
+    // Create a placeholder UserData object for the admin
+    UserData adminData = new UserData();
+    adminData.setFirstName("John");
+    adminData.setLastName("Doe");
+    adminData.setEmail("admin");
+    
+    // Create and show the new Admin Dashboard
+    AdminDashboard adminView = new AdminDashboard();
+    // Pass both the view AND the admin data to the controller
+    AdminDashboardController adminController = new AdminDashboardController(adminView, adminData);
+    adminController.showView();
+
+} else { 
                 // If not admin, proceed with the database check for regular users.
 LoginRequest request = new LoginRequest(email, password);
             if (!request.isValid()) {
