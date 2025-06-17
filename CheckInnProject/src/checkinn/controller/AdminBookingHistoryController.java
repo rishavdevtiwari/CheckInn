@@ -29,19 +29,16 @@ public class AdminBookingHistoryController {
     }
 
     private void initializeListeners() {
-        // Listener to go back to the dashboard
         view.getAdminDashboardButton().addActionListener(e -> {
             view.dispose();
             dashboardController.showView();
         });
 
-        // Listeners for View Invoice buttons
         view.getSingleViewInvoiceButton().addActionListener(e -> openInvoiceForRoom("Single Room"));
         view.getDoubleViewInvoiceButton().addActionListener(e -> openInvoiceForRoom("Double Room"));
         view.getDeluxeViewInvoiceButton().addActionListener(e -> openInvoiceForRoom("Deluxe Room"));
         view.getExecutiveSuiteViewInvoiceButton().addActionListener(e -> openInvoiceForRoom("Executive Suite"));
 
-        // Listeners for Cancel buttons
         view.getSingleCancelButton().addActionListener(e -> cancelBookingForRoom("Single Room"));
         view.getDoubleCancelButton().addActionListener(e -> cancelBookingForRoom("Double Room"));
         view.getDeluxeCancelButton().addActionListener(e -> cancelBookingForRoom("Deluxe Room"));
@@ -49,22 +46,26 @@ public class AdminBookingHistoryController {
     }
 
     private void loadBookingHistory() {
-        view.resetView(); 
+        // 1. Reset all rows to their default (disabled) state
+        view.resetAllBookings(); 
+        
+        // 2. Get all current bookings from the database
         allBookings = bookingDao.getAllBookings();
 
+        // 3. Loop through the bookings and update only the relevant rows
         for (Booking booking : allBookings) {
             switch (booking.getRoomType()) {
                 case "Single Room":
-                    view.setSingleBookingInfo(booking.getClientName());
+                    view.setSingleBooking(true, booking.getClientName());
                     break;
                 case "Double Room":
-                    view.setDoubleBookingInfo(booking.getClientName());
+                    view.setDoubleBooking(true, booking.getClientName());
                     break;
                 case "Deluxe Room":
-                    view.setDeluxeBookingInfo(booking.getClientName());
+                    view.setDeluxeBooking(true, booking.getClientName());
                     break;
                 case "Executive Suite":
-                    view.setExecutiveSuiteBookingInfo(booking.getClientName());
+                    view.setExecutiveSuiteBooking(true, booking.getClientName());
                     break;
             }
         }
@@ -85,17 +86,11 @@ public class AdminBookingHistoryController {
                 booking.getMenuItems(),
                 booking.getTotalPrice()
             );
-            invoiceView.getCloseInvoiceButton().addActionListener(e -> {
-            invoiceView.dispose(); // Close the invoice
-            dashboardController.showView(); // Show the AdminDashboard again
-        });
-        
-        invoiceView.setVisible(true);
-    } else {
-        JOptionPane.showMessageDialog(view, "No active booking for " + roomType, "Info", JOptionPane.INFORMATION_MESSAGE);
+            invoiceView.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(view, "No active booking for " + roomType, "Info", JOptionPane.INFORMATION_MESSAGE);
+        }
     }
-}
-    
 
     private void cancelBookingForRoom(String roomType) {
         Optional<Booking> bookingOpt = findBookingByRoomType(roomType);
