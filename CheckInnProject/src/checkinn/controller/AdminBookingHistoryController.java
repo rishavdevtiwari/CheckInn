@@ -86,11 +86,18 @@ public class AdminBookingHistoryController {
                 booking.getMenuItems(),
                 booking.getTotalPrice()
             );
-            invoiceView.setVisible(true);
-        } else {
-            JOptionPane.showMessageDialog(view, "No active booking for " + roomType, "Info", JOptionPane.INFORMATION_MESSAGE);
-        }
+             invoiceView.getCloseInvoiceButton().addActionListener(e -> {
+            invoiceView.dispose(); // Close the invoice
+            dashboardController.showView(); // Show theS AdminDashboard again
+        });
+        
+        invoiceView.setVisible(true);
+
+    } else {
+        JOptionPane.showMessageDialog(view, "No active booking for " + roomType, "Info", JOptionPane.INFORMATION_MESSAGE);
     }
+}
+    
 
     private void cancelBookingForRoom(String roomType) {
         Optional<Booking> bookingOpt = findBookingByRoomType(roomType);
