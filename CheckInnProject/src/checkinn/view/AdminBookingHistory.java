@@ -9,29 +9,7 @@ package checkinn.view;
  * @author ACEWR
  */
 public class AdminBookingHistory extends javax.swing.JFrame {
-     public javax.swing.JButton getAdminDashboardButton() { return AdminDashboardButton; }
-    public javax.swing.JButton getSingleViewInvoiceButton() { return SingleViewInvoiceButton; }
-    public javax.swing.JButton getDoubleViewInvoiceButton() { return DoubleViewInvoiceButton; }
-    public javax.swing.JButton getDeluxeViewInvoiceButton() { return DeluxeViewInvoiceButton; }
-    public javax.swing.JButton getExecutiveSuiteViewInvoiceButton() { return ExecutiveSuiteViewInvoiceButton; }
-    public javax.swing.JButton getSingleCancelButton() { return SingleCancelButton; }
-    public javax.swing.JButton getDoubleCancelButton() { return DoubleCancelButton; }
-    public javax.swing.JButton getDeluxeCancelButton() { return DeluxeCancelButton; }
-    public javax.swing.JButton getExecutiveSuiteCancelButton() { return ExecutiveSuiteCancelButton; }
-
-    // --- SETTERS FOR BOOKING INFO ---
-    public void setSingleBookingInfo(String clientName) { SingleRoomClient.setText(clientName); }
-    public void setDoubleBookingInfo(String clientName) { DoubleRoomClient.setText(clientName); }
-    public void setDeluxeBookingInfo(String clientName) { DeluxeRoomClient.setText(clientName); }
-    public void setExecutiveSuiteBookingInfo(String clientName) { ExecutiveSuiteRoomClient.setText(clientName); }
     
-    // --- METHOD TO RESET THE VIEW ---
-    public void resetView() {
-        SingleRoomClient.setText("-");
-        DoubleRoomClient.setText("-");
-        DeluxeRoomClient.setText("-");
-        ExecutiveSuiteRoomClient.setText("-");
-    }
 
     /**
      * Creates new form AdminBookingHistory
@@ -41,10 +19,6 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         setTitle("Admin Booking History | CheckInn");
         setLocationRelativeTo(null);
     }
-    public javax.swing.JButton getAdminDashboardButton() {
-    return AdminDashboardButton;
-}
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -620,4 +594,31 @@ public class AdminBookingHistory extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     // End of variables declaration//GEN-END:variables
+    public javax.swing.JButton getAdminDashboardButton() { return AdminDashboardButton; }
+    public javax.swing.JButton getSingleViewInvoiceButton() { return SingleViewInvoiceButton; }
+    public javax.swing.JButton getDoubleViewInvoiceButton() { return DoubleViewInvoiceButton; }
+    public javax.swing.JButton getDeluxeViewInvoiceButton() { return DeluxeViewInvoiceButton; }
+    public javax.swing.JButton getExecutiveSuiteViewInvoiceButton() { return ExecutiveSuiteViewInvoiceButton; }
+    public javax.swing.JButton getSingleCancelButton() { return SingleCancelButton; }
+    public javax.swing.JButton getDoubleCancelButton() { return DoubleCancelButton; }
+    public javax.swing.JButton getDeluxeCancelButton() { return DeluxeCancelButton; }
+    public javax.swing.JButton getExecutiveSuiteCancelButton() { return ExecutiveSuiteCancelButton; }
+
+    // --- SETTERS FOR BOOKING INFO ---
+    public void setSingleBookingInfo(String clientName) { SingleRoomClient.setText(clientName); }
+    public void setDoubleBookingInfo(String clientName) { DoubleRoomClient.setText(clientName); }
+    public void setDeluxeBookingInfo(String clientName) { DeluxeRoomClient.setText(clientName); }
+    public void setExecutiveSuiteBookingInfo(String clientName) { ExecutiveSuiteRoomClient.setText(clientName); }
+    
+    // --- METHOD TO RESET THE VIEW ---
+    public void resetView() {
+        SingleRoomClient.setText("-");
+        DoubleRoomClient.setText("-");
+        DeluxeRoomClient.setText("-");
+        ExecutiveSuiteRoomClient.setText("-");
+    }
+
+
+
 }
+
