@@ -4,6 +4,7 @@ import checkinn.model.Room; // <-- Import the Room model
 import checkinn.model.UserData;
 import checkinn.view.BookingForm;
 import checkinn.view.DashboardView;
+import checkinn.view.InvoiceView;
 import checkinn.view.RoomDetailsView;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
@@ -14,6 +15,7 @@ public class RoomDetailsController {
     private final RoomDetailsView view;
     private final DashboardView dashboardView;
     private final UserData user;
+    private final InvoiceView invoiceView;
     private final Room room; // <-- Store the whole Room object as a field
 
     /**
@@ -23,9 +25,10 @@ public class RoomDetailsController {
      * @param user
      * @param room
      */
-    public RoomDetailsController(RoomDetailsView view, DashboardView dashboardView, UserData user, Room room) {
+    public RoomDetailsController(RoomDetailsView view, DashboardView dashboardView, UserData user, Room room, InvoiceView invoiceView) {
         this.view = view;
         this.dashboardView = dashboardView;
+        this.invoiceView=invoiceView;
         this.user = user;
         this.room = room; // <-- Assign the passed-in Room object to the field
 
@@ -64,7 +67,10 @@ close();
         bookingForm,
         room.getRoomType(),
         room.getPrice(),
-        this
+        this,
+        dashboardView ,
+        user.getEmail(),
+            invoiceView
     );
     bookingFormController.open();
 }

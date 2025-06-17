@@ -88,7 +88,7 @@ public class DashboardController {
         roomDetailsView,
         dashboardView,
         user,
-        room
+        room, null
     );
     dashboardView.setVisible(false); // Hide dashboard
     roomDetailsController.open();
