@@ -16,6 +16,7 @@ public class Booking {
     private Date checkOutDate;
     private double totalPrice;
     private List<MenuItem> menuItems;
+    private String clientName;
 
     public int getBookingId() { return bookingId; }
     public void setBookingId(int bookingId) { this.bookingId = bookingId; }
