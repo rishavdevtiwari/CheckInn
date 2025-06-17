@@ -1,6 +1,7 @@
 package checkinn.controller;
 
 import checkinn.dao.BookingDao;
+import checkinn.dao.RoomDao;
 import checkinn.model.Booking;
 import checkinn.view.AdminBookingHistory;
 import checkinn.view.InvoiceView;
@@ -121,6 +122,8 @@ public class AdminBookingHistoryController {
             boolean success = bookingDao.cancelBooking(bookingToCancel.getBookingId());
             if (success) {
                 JOptionPane.showMessageDialog(view, "Booking cancelled successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+                            RoomDao roomDao = new RoomDao();
+            roomDao.setRoomStatus(bookingToCancel.getRoomId(), 1);
                 loadBookingHistory();
             } else {
                 JOptionPane.showMessageDialog(view, "Failed to cancel the booking.", "Error", JOptionPane.ERROR_MESSAGE);

@@ -4,6 +4,7 @@ import checkinn.dao.BookingDao;
 import checkinn.model.Booking;
 import checkinn.model.UserData;
 import checkinn.view.BookingHistoryView;
+import checkinn.view.InvoiceView;
 import checkinn.view.UserProfileView;
 import java.util.List;
 
@@ -21,6 +22,7 @@ public class BookingHistoryController {
     }
 
     public void open() {
+            view.setUserName(user.getFirstName() + " " + user.getLastName());
         loadBookingHistory();
         view.setLocationRelativeTo(null);
         view.setVisible(true);
@@ -93,7 +95,7 @@ public class BookingHistoryController {
 private void openInvoiceForRoom(String roomType) {
     for (Booking booking : userBookings) {
         if (booking.getRoomType().equals(roomType)) {
-            checkinn.view.InvoiceView invoiceView = new checkinn.view.InvoiceView();
+            InvoiceView invoiceView = new InvoiceView();
             invoiceView.setInvoiceData(
                 booking.getRoomType(),
                 user.getFirstName() + " " + user.getLastName(),
@@ -103,6 +105,7 @@ private void openInvoiceForRoom(String roomType) {
                 booking.getMenuItems(),
                 booking.getTotalPrice()
             );
+            invoiceView.getCloseInvoiceButton().addActionListener(e -> invoiceView.dispose());
             invoiceView.setVisible(true);
             break;
         }
