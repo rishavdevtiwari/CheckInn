@@ -16,6 +16,7 @@ public class Booking {
     private Date checkOutDate;
     private double totalPrice;
     private List<MenuItem> menuItems;
+    private String clientName;
 
     public int getBookingId() { return bookingId; }
     public void setBookingId(int bookingId) { this.bookingId = bookingId; }
@@ -49,5 +50,7 @@ public void setMenuItems(List<MenuItem> menuItems) {
     public void setCheckOutDate(Date checkOutDate) { this.checkOutDate = checkOutDate; }
     public double getTotalPrice() { return totalPrice; }
     public void setTotalPrice(double totalPrice) { this.totalPrice = totalPrice; }
-
+    public String getClientName() { return clientName; }
+    public void setClientName(String clientName) { this.clientName = clientName; }
 }
+
