@@ -52,4 +52,6 @@ public void setMenuItems(List<MenuItem> menuItems) {
 public void setTotalPrice(double totalPrice) {
     this.totalPrice = totalPrice;
 }
+    public String getClientName() { return clientName; }
+    public void setClientName(String clientName) { this.clientName = clientName; }
 }

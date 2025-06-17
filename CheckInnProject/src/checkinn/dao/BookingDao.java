@@ -179,5 +179,30 @@ public boolean isRoomBookedForPeriod(int roomId, java.util.Date checkIn, java.ut
     return false;
 }
 
+    public void deleteBookingMenuItems(int bookingId) {
+        String sql = "DELETE FROM BookingMenuItem WHERE booking_id = ?";
+        try (Connection conn = dbConnection.openConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, bookingId);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public boolean cancelBooking(int bookingId) {
+        deleteBookingMenuItems(bookingId);
+        
+        String sql = "DELETE FROM Booking WHERE booking_id = ?";
+        try (Connection conn = dbConnection.openConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, bookingId);
+            int affectedRows = stmt.executeUpdate();
+            return affectedRows > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 
 }

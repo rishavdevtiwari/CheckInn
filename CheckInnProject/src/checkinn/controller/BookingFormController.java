@@ -158,15 +158,13 @@ private void initializeListeners() {
             if (bookingId > 0) {
                 bookingDao.saveBookingMenuItems(bookingId, selectedMenuItems);
 
-                RoomDao roomDao = new RoomDao();
-                roomDao.setRoomStatus(booking.getRoomId(), 2);
-
                 InvoiceDao invoiceDao = new InvoiceDao();
                 int invoiceId = invoiceDao.createInvoice(bookingId, totalPrice, "Cash");
                 bookingDao.updateInvoiceId(bookingId, invoiceId);
 
                 bookingForm.showMessage("Booking successful!");
-
+RoomDao roomDao = new RoomDao();
+roomDao.setRoomStatus(booking.getRoomId(), 2);
                 InvoiceView newInvoiceView = new InvoiceView();
                 newInvoiceView.setInvoiceData(
                     bookingForm.getRoomName(),

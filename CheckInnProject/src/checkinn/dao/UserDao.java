@@ -2,6 +2,7 @@ package checkinn.dao;
 
 import checkinn.database.DbConnection;
 import checkinn.database.MySqlConnection;
+import checkinn.model.LoginRequest;
 import checkinn.model.RegistrationRequest;
 import checkinn.model.UserData;
 import java.sql.Connection;
@@ -209,4 +210,30 @@ public class UserDao {
         return false;
     }
 }
+  public UserData login(LoginRequest loginReq) {
+    String query = "SELECT * FROM User WHERE email=? AND password=?";
+    Connection conn = dbConnection.openConnection();
+    try {
+        PreparedStatement stmnt = conn.prepareStatement(query);
+        stmnt.setString(1, loginReq.getEmail());
+        stmnt.setString(2, loginReq.getPassword());
+        ResultSet result = stmnt.executeQuery();
+        if (result.next()) {
+            int userId = result.getInt("user_id");
+            String firstName = result.getString("first_name");
+            String lastName = result.getString("last_name");
+            String email = result.getString("email");
+            String password = result.getString("password");
+            String phoneNumber = result.getString("phone_number");
+            UserData user = new UserData(userId, firstName, lastName, email, password, phoneNumber);
+            return user;
+        } else {
+            return null;
+        }
+    } catch (Exception e) {
+        return null;
+    } finally {
+        try { if (conn != null) conn.close(); } catch (Exception ex) {}
+    }
+}  
 }
