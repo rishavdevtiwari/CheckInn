@@ -1,13 +1,17 @@
 package checkinn.controller;
 
+import checkinn.dao.BookingDao;
+import checkinn.model.Booking;
 import checkinn.model.UserData;
 import checkinn.view.BookingHistoryView;
 import checkinn.view.UserProfileView;
+import java.util.List;
 
 public class BookingHistoryController {
     private final BookingHistoryView view;
     private final UserData user;
     private final DashboardController dashboardController;
+        private List<Booking> userBookings;
 
     public BookingHistoryController(BookingHistoryView view, UserData user, DashboardController dashboardController) {
         this.view = view;
@@ -17,7 +21,7 @@ public class BookingHistoryController {
     }
 
     public void open() {
-        //loadBookingHistory();
+        loadBookingHistory();
         view.setLocationRelativeTo(null);
         view.setVisible(true);
     }
@@ -34,6 +38,11 @@ public class BookingHistoryController {
         UserProfileController userProfileController = new UserProfileController(userProfileView, dashboardController, user);
         userProfileController.open();
     });
+
+    view.SingleRoomViewInvoice.addActionListener(e -> openInvoiceForRoom("Single Room"));
+    view.DoubleRoomViewInvoice.addActionListener(e -> openInvoiceForRoom("Double Room"));
+    view.DeluxeRoomViewInvoice.addActionListener(e -> openInvoiceForRoom("Deluxe Room"));
+    view.ExecutiveSuiteVieWInvoice.addActionListener(e -> openInvoiceForRoom("Executive Suite"));
             
                 view.addLogoutListener(e -> {
         int confirm = javax.swing.JOptionPane.showConfirmDialog(
@@ -53,4 +62,51 @@ public class BookingHistoryController {
     });
             
     }
+    private void loadBookingHistory() {
+    BookingDao bookingDao = new BookingDao();
+    userBookings = bookingDao.getBookingsWithMenuItemsByUser(user.getUserId());
+
+    // For each room type, update the view
+    for (Booking booking : userBookings) {
+        String roomType = booking.getRoomType();
+        if ("Single Room".equals(roomType)) {
+            view.setSingleRoomBooking(
+                booking.getCheckInDate(), booking.getCheckOutDate(), true
+            );
+        } else if ("Double Room".equals(roomType)) {
+            view.setDoubleRoomBooking(
+                booking.getCheckInDate(), booking.getCheckOutDate(), true
+            );
+        } else if ("Deluxe Room".equals(roomType)) {
+            view.setDeluxeRoomBooking(
+                booking.getCheckInDate(), booking.getCheckOutDate(), true
+            );
+        } else if ("Executive Suite".equals(roomType)) {
+            view.setExecutiveSuiteBooking(
+                booking.getCheckInDate(), booking.getCheckOutDate(), true
+            );
+        }
+    }
+    view.setUnbookedRooms(userBookings);
+}
+
+private void openInvoiceForRoom(String roomType) {
+    for (Booking booking : userBookings) {
+        if (booking.getRoomType().equals(roomType)) {
+            checkinn.view.InvoiceView invoiceView = new checkinn.view.InvoiceView();
+            invoiceView.setInvoiceData(
+                booking.getRoomType(),
+                user.getFirstName() + " " + user.getLastName(),
+                user.getFirstName() + " " + user.getLastName(),
+                booking.getCheckInDate(),
+                booking.getCheckOutDate(),
+                booking.getMenuItems(),
+                booking.getTotalPrice()
+            );
+            invoiceView.setVisible(true);
+            break;
+        }
+    }
+}
+
 }

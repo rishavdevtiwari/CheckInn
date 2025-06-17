@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BookingDao {
@@ -65,6 +66,50 @@ public void updateInvoiceId(int bookingId, int invoiceId) {
         stmt.executeUpdate();
     } catch (SQLException e) {
     }
+}
+
+public List<Booking> getBookingsWithMenuItemsByUser(int userId) {
+    List<Booking> bookings = new ArrayList<>();
+    String sql = "SELECT b.*, r.room_type, r.price, " +
+                 "GROUP_CONCAT(m.itemname SEPARATOR ',') AS menu_items, " +
+                 "GROUP_CONCAT(m.price SEPARATOR ',') AS menu_prices " +
+                 "FROM Booking b " +
+                 "JOIN Room r ON b.room_id = r.room_id " +
+                 "LEFT JOIN BookingMenuItem bmi ON b.booking_id = bmi.booking_id " +
+                 "LEFT JOIN MenuItem m ON bmi.menu_id = m.menu_id " +
+                 "WHERE b.user_id = ? " +
+                 "GROUP BY b.booking_id";
+    try (Connection conn = dbConnection.openConnection();
+         PreparedStatement stmt = conn.prepareStatement(sql)) {
+        stmt.setInt(1, userId);
+        ResultSet rs = stmt.executeQuery();
+        while (rs.next()) {
+            Booking booking = new Booking();
+            booking.setBookingId(rs.getInt("booking_id"));
+            booking.setRoomId(rs.getInt("room_id"));
+            booking.setUserId(rs.getInt("user_id"));
+            booking.setCheckInDate(rs.getTimestamp("CheckIn_date"));
+            booking.setCheckOutDate(rs.getTimestamp("CheckOut_date"));
+            booking.setTotalPrice(rs.getDouble("total_price"));
+            booking.setRoomType(rs.getString("room_type"));
+            booking.setRoomPrice(rs.getDouble("price"));
+
+            String[] menuNames = rs.getString("menu_items") != null ? rs.getString("menu_items").split(",") : new String[0];
+            String[] menuPrices = rs.getString("menu_prices") != null ? rs.getString("menu_prices").split(",") : new String[0];
+            List<MenuItem> menuItems = new ArrayList<>();
+            for (int i = 0; i < menuNames.length; i++) {
+                MenuItem item = new MenuItem();
+                item.setItemName(menuNames[i]);
+                item.setPrice(Double.parseDouble(menuPrices[i]));
+                menuItems.add(item);
+            }
+            booking.setMenuItems(menuItems);
+            bookings.add(booking);
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    return bookings;
 }
 
 }
