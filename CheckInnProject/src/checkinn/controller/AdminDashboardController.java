@@ -1,25 +1,37 @@
 package checkinn.controller;
 
 import checkinn.dao.UserDao;
+import checkinn.model.UserData;
+import checkinn.view.AdminBookingHistory;
 import checkinn.view.AdminClientView;
-import checkinn.view.AdminDashboard; // IMPORTANT: Make sure this class name matches your view file!
+import checkinn.view.AdminDashboard;
 import checkinn.view.LoginView;
 import javax.swing.JOptionPane;
+// Add missing imports for the controllers
+import checkinn.controller.AdminBookingHistoryController;
+import checkinn.controller.AdminClientController;
+
 
 public class AdminDashboardController {
-    
-    private final AdminDashboard view;
-    // private final RoomStatusDao roomStatusDao; 
 
-    public AdminDashboardController(AdminDashboard view) {
+    private final AdminDashboard view;
+    private final UserData adminData; // Re-add UserData to hold admin's info
+
+    // Update the constructor to accept UserData again
+    public AdminDashboardController(AdminDashboard view, UserData adminData) {
         this.view = view;
-        // this.roomStatusDao = new RoomStatusDao(); // database work
-        
+        this.adminData = adminData; // Store the admin data
+        initializeView(); // Call method to set the admin's name
         initializeListeners();
         loadInitialRoomStatuses();
     }
     
-//initial state setting of dashboard
+    // Re-add the method to set the admin's name on the view
+    private void initializeView() {
+        view.setAdminName(adminData.getFirstName() + " " + adminData.getLastName());
+    }
+
+    // Initial state setting of dashboard
     private void loadInitialRoomStatuses() {
         view.setSingleRoomStatus("Vacant");
         view.setDoubleRoomStatus("Occupied");
@@ -27,29 +39,36 @@ public class AdminDashboardController {
         view.setSuiteRoomStatus("Vacant");
     }
 
-//Action listeners for set status buttons
+    private void openAdminBookingHistory() {
+        AdminBookingHistory bookingHistoryView = new AdminBookingHistory();
+        AdminBookingHistoryController bookingHistoryController = new AdminBookingHistoryController(bookingHistoryView, this);
+        view.setVisible(false); // Hide the dashboard
+        bookingHistoryController.open();
+    }
+
+    // Action listeners for set status buttons
     private void initializeListeners() {
-        //Single room status listners
+        // Single room status listners
         view.addSingleVacantListener(e -> updateRoomStatus("Single", "Vacant"));
         view.addSingleOccupiedListener(e -> updateRoomStatus("Single", "Occupied"));
         view.addSingleOutOfOrderListener(e -> updateRoomStatus("Single", "Out of Order"));
 
-        //Double room status listeners
+        // Double room status listeners
         view.addDoubleVacantListener(e -> updateRoomStatus("Double", "Vacant"));
         view.addDoubleOccupiedListener(e -> updateRoomStatus("Double", "Occupied"));
         view.addDoubleOutOfOrderListener(e -> updateRoomStatus("Double", "Out of Order"));
         
-        //Deluxe room status listeners
+        // Deluxe room status listeners
         view.addDeluxeVacantListener(e -> updateRoomStatus("Deluxe", "Vacant"));
         view.addDeluxeOccupiedListener(e -> updateRoomStatus("Deluxe", "Occupied"));
         view.addDeluxeOutOfOrderListener(e -> updateRoomStatus("Deluxe", "Out of Order"));
 
-        //Suite room status listeners
+        // Suite room status listeners
         view.addSuiteVacantListener(e -> updateRoomStatus("Suite", "Vacant"));
         view.addSuiteOccupiedListener(e -> updateRoomStatus("Suite", "Occupied"));
         view.addSuiteOutOfOrderListener(e -> updateRoomStatus("Suite", "Out of Order"));
 
-        //Admin dashboard navigation listeners
+        // Admin dashboard navigation listeners
         view.addLogoutListener(e -> logout());
         view.addAdminClientButtonListener(e -> openAdminClientView());
         
@@ -58,9 +77,7 @@ public class AdminDashboardController {
             JOptionPane.showMessageDialog(view, "Dashboard has been refreshed.", "Refresh", JOptionPane.INFORMATION_MESSAGE);
         });
         
-        view.addBookingHistoryListener(e -> {
-            JOptionPane.showMessageDialog(view, "Booking History feature will be added later!", "Info", JOptionPane.INFORMATION_MESSAGE);
-        });
+        view.addBookingHistoryListener(e -> openAdminBookingHistory());
     }
 
     /**
@@ -101,15 +118,18 @@ public class AdminDashboardController {
             // Re-open the login screen
             LoginView loginView = new LoginView();
             UserDao userDao = new UserDao();
-            new LoginController(loginView, userDao).open();
+            new LoginController(loginView, userDao);
+            loginView.setVisible(true);
         }
     }
+
     private void openAdminClientView() {
-    AdminClientView adminClientView = new AdminClientView();
-    AdminClientController adminClientController = new AdminClientController(adminClientView, this);
-    view.setVisible(false); 
-    adminClientController.open();
-}
+        AdminClientView adminClientView = new AdminClientView();
+        AdminClientController adminClientController = new AdminClientController(adminClientView, this);
+        view.setVisible(false); 
+        adminClientController.open();
+    }
+
     /**
      * Makes the admin dashboard visible.
      */
