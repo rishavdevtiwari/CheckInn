@@ -582,7 +582,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    // End of variables declaration//GEN-END:variables
+
     public javax.swing.JButton getAdminDashboardButton() { return AdminDashboardButton; }
     public javax.swing.JButton getSingleViewInvoiceButton() { return SingleViewInvoiceButton; }
     public javax.swing.JButton getDoubleViewInvoiceButton() { return DoubleViewInvoiceButton; }
@@ -594,17 +594,36 @@ public class AdminBookingHistory extends javax.swing.JFrame {
     public javax.swing.JButton getExecutiveSuiteCancelButton() { return ExecutiveSuiteCancelButton; }
 
     // --- SETTERS FOR BOOKING INFO ---
-    public void setSingleBookingInfo(String clientName) { SingleRoomClient.setText(clientName); }
-    public void setDoubleBookingInfo(String clientName) { DoubleRoomClient.setText(clientName); }
-    public void setDeluxeBookingInfo(String clientName) { DeluxeRoomClient.setText(clientName); }
-    public void setExecutiveSuiteBookingInfo(String clientName) { ExecutiveSuiteRoomClient.setText(clientName); }
+     public void setSingleBooking(boolean isBooked, String clientName) {
+        SingleRoomClient.setText(isBooked ? clientName : "-");
+        SingleViewInvoiceButton.setEnabled(isBooked);
+        SingleCancelButton.setEnabled(isBooked);
+    }
+    
+    public void setDoubleBooking(boolean isBooked, String clientName) {
+        DoubleRoomClient.setText(isBooked ? clientName : "-");
+        DoubleViewInvoiceButton.setEnabled(isBooked);
+        DoubleCancelButton.setEnabled(isBooked);
+    }
+    
+    public void setDeluxeBooking(boolean isBooked, String clientName) {
+        DeluxeRoomClient.setText(isBooked ? clientName : "-");
+        DeluxeViewInvoiceButton.setEnabled(isBooked);
+        DeluxeCancelButton.setEnabled(isBooked);
+    }
+    
+    public void setExecutiveSuiteBooking(boolean isBooked, String clientName) {
+        ExecutiveSuiteRoomClient.setText(isBooked ? clientName : "-");
+        ExecutiveSuiteViewInvoiceButton.setEnabled(isBooked);
+        ExecutiveSuiteCancelButton.setEnabled(isBooked);
+    }
     
     // --- METHOD TO RESET THE VIEW ---
-    public void resetView() {
-        SingleRoomClient.setText("-");
-        DoubleRoomClient.setText("-");
-        DeluxeRoomClient.setText("-");
-        ExecutiveSuiteRoomClient.setText("-");
+   public void resetAllBookings() {
+        setSingleBooking(false, null);
+        setDoubleBooking(false, null);
+        setDeluxeBooking(false, null);
+        setExecutiveSuiteBooking(false, null);
     }
 
 
