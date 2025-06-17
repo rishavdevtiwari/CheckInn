@@ -3,8 +3,6 @@ package checkinn.controller;
 import checkinn.dao.UserDao;
 import checkinn.model.UserData;
 import checkinn.view.UserProfileView;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
 public class UserProfileController {
     private final UserProfileView userProfileView;
@@ -28,11 +26,16 @@ public class UserProfileController {
             dashboardController.open();
         });
 
-        userProfileView.addWindowListener(new WindowAdapter() {
+        userProfileView.addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
-            public void windowClosing(WindowEvent e) {
-                dashboardController.open();
-            }
+            public void windowClosing(java.awt.event.WindowEvent e) {
+                Object parentController = null;
+                if (parentController instanceof checkinn.controller.DashboardController dashboardController) {
+                    dashboardController.open();
+        } else if (parentController instanceof checkinn.controller.BookingHistoryController bookingHistoryController) {
+            bookingHistoryController.open();
+        }
+    }
         });
     
     

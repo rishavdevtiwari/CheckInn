@@ -6,21 +6,27 @@ import checkinn.dao.RoomDao;
 import checkinn.model.Booking;
 import checkinn.model.MenuItem;
 import checkinn.view.BookingForm;
+import checkinn.view.DashboardView;
 import checkinn.view.InvoiceView;
 import java.util.Date;
 import java.util.List;
 
 public class BookingFormController {
     private final BookingForm bookingForm;
+    private final DashboardView dashboardView;
+    private final InvoiceView invoiceView;
+    private final String email;
     private final RoomDetailsController roomDetailsController;
     private final BookingDao bookingDao = new BookingDao();
 
-    public BookingFormController(BookingForm bookingForm, String roomName, double roomPrice, RoomDetailsController roomDetailsController) {
+    public BookingFormController(BookingForm bookingForm, String roomName, double roomPrice, RoomDetailsController roomDetailsController, DashboardView dashboardView, String email, InvoiceView invoiceView) {
         this.bookingForm = bookingForm;
+        this.dashboardView = dashboardView;
+        this.email = email;
         this.roomDetailsController = roomDetailsController;
         this.bookingForm.setRoomName(roomName);
         this.bookingForm.setRoomPrice(roomPrice);
-
+        this.invoiceView = invoiceView;
         initializeListeners();
     }
 
@@ -62,28 +68,27 @@ public class BookingFormController {
             Booking booking = new Booking();
             booking.setRoomId(bookingForm.getRoomId());
             booking.setUserId(bookingForm.getUserId());
-            booking.setMenuId(selectedMenuItems.get(0).getMenuId()); // If you want to support multiple, use a join table
             booking.setStatusId(2); // 2 = Occupied
-            booking.setInvoiceId(0); // Set to 0 if not generated yet
+            booking.setInvoiceId(0); // Set to 0 if error with generation
             booking.setCheckInDate(checkIn);
             booking.setCheckOutDate(checkOut);
             booking.setTotalPrice(totalPrice);
 
-            
             int bookingId = bookingDao.saveBooking(booking);
             if (bookingId > 0) {
+                bookingDao.saveBookingMenuItems(bookingId, selectedMenuItems);
 
                 RoomDao roomDao = new RoomDao();
                 roomDao.setRoomStatus(booking.getRoomId(), 2);
 
                 InvoiceDao invoiceDao = new InvoiceDao();
-                int invoiceId = invoiceDao.createInvoice(bookingId, totalPrice, "Cash"); // or get payment method from UI
+                int invoiceId = invoiceDao.createInvoice(bookingId, totalPrice, "Cash");
                 bookingDao.updateInvoiceId(bookingId, invoiceId);
 
                 bookingForm.showMessage("Booking successful!");
 
-                InvoiceView invoiceView = new InvoiceView();
-                invoiceView.setInvoiceData(
+                InvoiceView newInvoiceView = new InvoiceView();
+                newInvoiceView.setInvoiceData(
                     bookingForm.getRoomName(),
                     bookingForm.getFullName(),
                     fullName,
@@ -92,7 +97,16 @@ public class BookingFormController {
                     selectedMenuItems,
                     totalPrice
                 );
-                invoiceView.setVisible(true);
+
+                // This is the updated part
+                newInvoiceView.getCloseInvoiceButton().addActionListener(e2 -> {
+                    newInvoiceView.dispose();
+                    DashboardView newDashboardView = new DashboardView();
+                    DashboardController dashboardController = new DashboardController(newDashboardView, email);
+                    dashboardController.open();
+                });
+
+                newInvoiceView.setVisible(true);
                 close();
             } else {
                 bookingForm.showError("Booking failed. Please try again.");

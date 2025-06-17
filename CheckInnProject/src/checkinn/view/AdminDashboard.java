@@ -33,6 +33,10 @@ public class AdminDashboard extends javax.swing.JFrame {
          setTitle("Administrator Dashboard | CheckInn");
         
     }
+    
+public void setAdminName(String name) {
+    AdUserNameLabel.setText(name); // AdUserNameLabel is the name of your JLabel
+}
 
 public void setSingleRoomStatus(String status) {
     singleRoomStatusLabel.setText(status);

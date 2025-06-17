@@ -503,16 +503,16 @@ public class DashboardView extends javax.swing.JFrame {
         ExecutiveSuiteRoomDetailsButton.addActionListener(actionListener);
     }
 
-    public void addBookingHistoryListener(ActionListener actionListener) {
-        BookingHistoryButton.addActionListener(actionListener);
-    }
-
     public void addDashboardListener(ActionListener actionListener) {
         DashboardButton.addActionListener(actionListener);
     }
     
     public void addUserProfileRedirectionListener(java.awt.event.ActionListener listener) {
     UserProfileRedirectionButton.addActionListener(listener);
+}
+
+public void addBookingHistoryListener(java.awt.event.ActionListener listener) {
+    BookingHistoryButton.addActionListener(listener);
 }
 
     public void addLogoutListener(ActionListener actionListener) {

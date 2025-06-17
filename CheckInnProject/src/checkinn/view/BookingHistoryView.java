@@ -4,12 +4,20 @@
  */
 package checkinn.view;
 
+import java.util.List;
+
+import checkinn.model.Booking;
+
 /**
  *
  * @author ACEWR
  */
 public class BookingHistoryView extends javax.swing.JFrame {
-
+private String formatDate(java.util.Date date) {
+    if (date == null) return "--";
+    java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("dd-MM-yyyy");
+    return sdf.format(date);
+}
     /**
      * Creates new form BookingHistoryView
      */
@@ -29,71 +37,75 @@ public class BookingHistoryView extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel7 = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        RedirectToDashboardButton = new javax.swing.JButton();
+        BookingHistoryButton = new javax.swing.JButton();
+        LogOutButton = new javax.swing.JButton();
+        UserProfile = new javax.swing.JLabel();
+        UserNameLabel = new javax.swing.JLabel();
+        Image = new javax.swing.JLabel();
+        UserProfileRedirectionButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        CheckInnLogo = new javax.swing.JLabel();
+        BoyWithStuffImg = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        SingleRoomViewInvoice = new javax.swing.JButton();
         SingleLabel = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        CheckOutLabelSingle = new javax.swing.JLabel();
+        CheckInLabelSingle = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        DoubleRoomViewInvoice = new javax.swing.JButton();
         DoubleLabel = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        CheckOutLabelDouble = new javax.swing.JLabel();
+        CheckInLabelDouble = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        ExecutiveSuiteVieWInvoice = new javax.swing.JButton();
         ExecutiveSuiteLabel = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        CheckInLabelExecutiveSuite = new javax.swing.JLabel();
+        CheckOutLabelExecutiveSuite = new javax.swing.JLabel();
+        AccomodationLabel = new javax.swing.JLabel();
+        TitleLabel = new javax.swing.JLabel();
+        CheckInLabel = new javax.swing.JLabel();
+        CheckOutLabel = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
+        DeluxeRoomViewInvoice = new javax.swing.JButton();
         DeluxeLabel = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        CheckInLabelDeluxe = new javax.swing.JLabel();
+        CheckOutLabelDeluxe = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel7.setBackground(new java.awt.Color(23, 194, 157));
 
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton5.setText("Dashboard");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        RedirectToDashboardButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        RedirectToDashboardButton.setText("Dashboard");
+        RedirectToDashboardButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                RedirectToDashboardButtonActionPerformed(evt);
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton6.setText("Booking history");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        BookingHistoryButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BookingHistoryButton.setText("Booking history");
+        BookingHistoryButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                BookingHistoryButtonActionPerformed(evt);
             }
         });
 
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/7124045_logout_icon(1).png"))); // NOI18N
-        jButton7.setText("Logout");
+        LogOutButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        LogOutButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/7124045_logout_icon(1).png"))); // NOI18N
+        LogOutButton.setText("Logout");
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-3296(2).png"))); // NOI18N
-        jLabel11.setText("jLabel11");
+        UserProfile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-3296(2).png"))); // NOI18N
+        UserProfile.setText("jLabel11");
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel12.setText("sukrant kharel");
+        UserNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        UserNameLabel.setText("sukrant kharel");
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dsh2.png"))); // NOI18N
+        Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dsh2.png"))); // NOI18N
+
+        UserProfileRedirectionButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        UserProfileRedirectionButton.setText("Profile");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -102,21 +114,23 @@ public class BookingHistoryView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton7)
-                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton6))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(UserProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)))
+                        .addComponent(UserNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap(55, Short.MAX_VALUE)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(UserProfileRedirectionButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(RedirectToDashboardButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BookingHistoryButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                                .addComponent(LogOutButton)
+                                .addGap(14, 14, 14)))))
                 .addGap(51, 51, 51))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel4)
+                .addComponent(Image)
                 .addGap(77, 77, 77))
         );
         jPanel7Layout.setVerticalGroup(
@@ -124,24 +138,26 @@ public class BookingHistoryView extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel12))
+                    .addComponent(UserProfile)
+                    .addComponent(UserNameLabel))
                 .addGap(52, 52, 52)
-                .addComponent(jButton5)
+                .addComponent(RedirectToDashboardButton)
                 .addGap(27, 27, 27)
-                .addComponent(jButton6)
+                .addComponent(BookingHistoryButton)
+                .addGap(33, 33, 33)
+                .addComponent(UserProfileRedirectionButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(62, 62, 62)
-                .addComponent(jButton7)
-                .addGap(48, 48, 48))
+                .addComponent(Image)
+                .addGap(65, 65, 65)
+                .addComponent(LogOutButton)
+                .addGap(45, 45, 45))
         );
 
         jPanel2.setBackground(new java.awt.Color(23, 194, 157));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
+        CheckInnLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BoyWithStuff.png"))); // NOI18N
+        BoyWithStuffImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BoyWithStuff.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -149,9 +165,9 @@ public class BookingHistoryView extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CheckInnLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 838, Short.MAX_VALUE)
-                .addComponent(jLabel3)
+                .addComponent(BoyWithStuffImg)
                 .addGap(34, 34, 34))
         );
         jPanel2Layout.setVerticalGroup(
@@ -159,43 +175,43 @@ public class BookingHistoryView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BoyWithStuffImg)
+                    .addComponent(CheckInnLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
         jPanel3.setBackground(new java.awt.Color(23, 194, 157));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("View Invoice");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        SingleRoomViewInvoice.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        SingleRoomViewInvoice.setText("View Invoice");
+        SingleRoomViewInvoice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                SingleRoomViewInvoiceActionPerformed(evt);
             }
         });
 
         SingleLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         SingleLabel.setText("Single");
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel14.setText("xx-xx-xxxx");
+        CheckOutLabelSingle.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CheckOutLabelSingle.setText("xx-xx-xxxx");
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel15.setText("xx-xx-xxxx");
+        CheckInLabelSingle.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CheckInLabelSingle.setText("xx-xx-xxxx");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(105, 105, 105)
+                .addGap(84, 84, 84)
                 .addComponent(SingleLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel15)
+                .addComponent(CheckInLabelSingle)
                 .addGap(171, 171, 171)
-                .addComponent(jLabel14)
+                .addComponent(CheckOutLabelSingle)
                 .addGap(142, 142, 142)
-                .addComponent(jButton1)
+                .addComponent(SingleRoomViewInvoice)
                 .addGap(33, 33, 33))
         );
         jPanel3Layout.setVerticalGroup(
@@ -205,44 +221,44 @@ public class BookingHistoryView extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(SingleLabel)
-                        .addComponent(jLabel14)
-                        .addComponent(jLabel15))
-                    .addComponent(jButton1))
+                        .addComponent(CheckOutLabelSingle)
+                        .addComponent(CheckInLabelSingle))
+                    .addComponent(SingleRoomViewInvoice))
                 .addGap(19, 19, 19))
         );
 
         jPanel6.setBackground(new java.awt.Color(23, 194, 157));
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setText("View Invoice");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        DoubleRoomViewInvoice.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        DoubleRoomViewInvoice.setText("View Invoice");
+        DoubleRoomViewInvoice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                DoubleRoomViewInvoiceActionPerformed(evt);
             }
         });
 
         DoubleLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DoubleLabel.setText("Double");
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel16.setText("xx-xx-xxxx");
+        CheckOutLabelDouble.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CheckOutLabelDouble.setText("xx-xx-xxxx");
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel17.setText("xx-xx-xxxx");
+        CheckInLabelDouble.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CheckInLabelDouble.setText("xx-xx-xxxx");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(105, 105, 105)
+                .addGap(85, 85, 85)
                 .addComponent(DoubleLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel17)
+                .addComponent(CheckInLabelDouble)
                 .addGap(174, 174, 174)
-                .addComponent(jLabel16)
+                .addComponent(CheckOutLabelDouble)
                 .addGap(146, 146, 146)
-                .addComponent(jButton2)
+                .addComponent(DoubleRoomViewInvoice)
                 .addGap(27, 27, 27))
         );
         jPanel6Layout.setVerticalGroup(
@@ -250,45 +266,45 @@ public class BookingHistoryView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap(20, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(DoubleRoomViewInvoice)
                     .addComponent(DoubleLabel)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel17))
+                    .addComponent(CheckOutLabelDouble)
+                    .addComponent(CheckInLabelDouble))
                 .addGap(18, 18, 18))
         );
 
         jPanel4.setBackground(new java.awt.Color(23, 194, 157));
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton3.setText("View Invoice");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ExecutiveSuiteVieWInvoice.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ExecutiveSuiteVieWInvoice.setText("View Invoice");
+        ExecutiveSuiteVieWInvoice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ExecutiveSuiteVieWInvoiceActionPerformed(evt);
             }
         });
 
         ExecutiveSuiteLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ExecutiveSuiteLabel.setText("Executive Suite");
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel18.setText("xx-xx-xxxx");
+        CheckInLabelExecutiveSuite.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CheckInLabelExecutiveSuite.setText("xx-xx-xxxx");
 
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel19.setText("xx-xx-xxxx");
+        CheckOutLabelExecutiveSuite.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CheckOutLabelExecutiveSuite.setText("xx-xx-xxxx");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(78, 78, 78)
+                .addGap(53, 53, 53)
                 .addComponent(ExecutiveSuiteLabel)
-                .addGap(161, 161, 161)
-                .addComponent(jLabel18)
+                .addGap(186, 186, 186)
+                .addComponent(CheckInLabelExecutiveSuite)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
-                .addComponent(jLabel19)
+                .addComponent(CheckOutLabelExecutiveSuite)
                 .addGap(148, 148, 148)
-                .addComponent(jButton3)
+                .addComponent(ExecutiveSuiteVieWInvoice)
                 .addGap(22, 22, 22))
         );
         jPanel4Layout.setVerticalGroup(
@@ -296,57 +312,57 @@ public class BookingHistoryView extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
+                    .addComponent(ExecutiveSuiteVieWInvoice)
                     .addComponent(ExecutiveSuiteLabel)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel19))
+                    .addComponent(CheckInLabelExecutiveSuite)
+                    .addComponent(CheckOutLabelExecutiveSuite))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setText("Accomodation");
+        AccomodationLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AccomodationLabel.setText("Accomodation");
 
-        jLabel9.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        jLabel9.setText("BOOKING HISTORY");
+        TitleLabel.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        TitleLabel.setText("BOOKING HISTORY");
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel10.setText("Check-in");
+        CheckInLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CheckInLabel.setText("Check-in");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setText("Check-out");
+        CheckOutLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CheckOutLabel.setText("Check-out");
 
         jPanel5.setBackground(new java.awt.Color(23, 194, 157));
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton4.setText("View Invoice");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        DeluxeRoomViewInvoice.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        DeluxeRoomViewInvoice.setText("View Invoice");
+        DeluxeRoomViewInvoice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                DeluxeRoomViewInvoiceActionPerformed(evt);
             }
         });
 
         DeluxeLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DeluxeLabel.setText("Deluxe");
 
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel20.setText("xx-xx-xxxx");
+        CheckInLabelDeluxe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CheckInLabelDeluxe.setText("xx-xx-xxxx");
 
-        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel21.setText("xx-xx-xxxx");
+        CheckOutLabelDeluxe.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CheckOutLabelDeluxe.setText("xx-xx-xxxx");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGap(106, 106, 106)
+                .addGap(83, 83, 83)
                 .addComponent(DeluxeLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel20)
+                .addComponent(CheckInLabelDeluxe)
                 .addGap(175, 175, 175)
-                .addComponent(jLabel21)
+                .addComponent(CheckOutLabelDeluxe)
                 .addGap(150, 150, 150)
-                .addComponent(jButton4)
+                .addComponent(DeluxeRoomViewInvoice)
                 .addGap(22, 22, 22))
         );
         jPanel5Layout.setVerticalGroup(
@@ -354,10 +370,10 @@ public class BookingHistoryView extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
+                    .addComponent(DeluxeRoomViewInvoice)
                     .addComponent(DeluxeLabel)
-                    .addComponent(jLabel20)
-                    .addComponent(jLabel21))
+                    .addComponent(CheckInLabelDeluxe)
+                    .addComponent(CheckOutLabelDeluxe))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -374,20 +390,20 @@ public class BookingHistoryView extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(125, 125, 125)
-                                .addComponent(jLabel1)
-                                .addGap(174, 174, 174)
+                                .addGap(101, 101, 101)
+                                .addComponent(AccomodationLabel)
+                                .addGap(198, 198, 198)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel10)
+                                        .addComponent(CheckInLabel)
                                         .addGap(185, 185, 185)
-                                        .addComponent(jLabel2))
-                                    .addComponent(jLabel9))
+                                        .addComponent(CheckOutLabel))
+                                    .addComponent(TitleLabel))
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(73, 73, 73))
@@ -403,12 +419,12 @@ public class BookingHistoryView extends javax.swing.JFrame {
                         .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(50, 50, 50)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(46, 46, 46)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel2))
+                            .addComponent(AccomodationLabel)
+                            .addComponent(CheckInLabel)
+                            .addComponent(CheckOutLabel))
                         .addGap(56, 56, 56)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(37, 37, 37)
@@ -423,29 +439,29 @@ public class BookingHistoryView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void RedirectToDashboardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RedirectToDashboardButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_RedirectToDashboardButtonActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void BookingHistoryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BookingHistoryButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_BookingHistoryButtonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void SingleRoomViewInvoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SingleRoomViewInvoiceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_SingleRoomViewInvoiceActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void DoubleRoomViewInvoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoubleRoomViewInvoiceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_DoubleRoomViewInvoiceActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void ExecutiveSuiteVieWInvoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExecutiveSuiteVieWInvoiceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_ExecutiveSuiteVieWInvoiceActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void DeluxeRoomViewInvoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeluxeRoomViewInvoiceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_DeluxeRoomViewInvoiceActionPerformed
 
     /**
      * @param args the command line arguments
@@ -483,34 +499,35 @@ public class BookingHistoryView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel AccomodationLabel;
+    private javax.swing.JButton BookingHistoryButton;
+    private javax.swing.JLabel BoyWithStuffImg;
+    private javax.swing.JLabel CheckInLabel;
+    public javax.swing.JLabel CheckInLabelDeluxe;
+    public javax.swing.JLabel CheckInLabelDouble;
+    public javax.swing.JLabel CheckInLabelExecutiveSuite;
+    public javax.swing.JLabel CheckInLabelSingle;
+    private javax.swing.JLabel CheckInnLogo;
+    private javax.swing.JLabel CheckOutLabel;
+    public javax.swing.JLabel CheckOutLabelDeluxe;
+    public javax.swing.JLabel CheckOutLabelDouble;
+    public javax.swing.JLabel CheckOutLabelExecutiveSuite;
+    public javax.swing.JLabel CheckOutLabelSingle;
     private javax.swing.JLabel DeluxeLabel;
+    public javax.swing.JButton DeluxeRoomViewInvoice;
     private javax.swing.JLabel DoubleLabel;
+    public javax.swing.JButton DoubleRoomViewInvoice;
     private javax.swing.JLabel ExecutiveSuiteLabel;
+    public javax.swing.JButton ExecutiveSuiteVieWInvoice;
+    private javax.swing.JLabel Image;
+    private javax.swing.JButton LogOutButton;
+    private javax.swing.JButton RedirectToDashboardButton;
     private javax.swing.JLabel SingleLabel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel9;
+    public javax.swing.JButton SingleRoomViewInvoice;
+    private javax.swing.JLabel TitleLabel;
+    private javax.swing.JLabel UserNameLabel;
+    private javax.swing.JLabel UserProfile;
+    private javax.swing.JButton UserProfileRedirectionButton;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -518,4 +535,55 @@ public class BookingHistoryView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     // End of variables declaration//GEN-END:variables
+
+public void addBackToDashboardListener(java.awt.event.ActionListener listener) {
+    RedirectToDashboardButton.addActionListener(listener); 
+}
+
+public void addUserProfileRedirectionListener(java.awt.event.ActionListener listener) {
+    UserProfileRedirectionButton.addActionListener(listener);
+}
+
+public void addLogoutListener(java.awt.event.ActionListener listener) {
+    LogOutButton.addActionListener(listener);
+}
+
+public void setSingleRoomBooking(java.util.Date checkIn, java.util.Date checkOut, boolean enableInvoice) {
+    CheckInLabelSingle.setText(formatDate(checkIn));
+    CheckOutLabelSingle.setText(formatDate(checkOut));
+    SingleRoomViewInvoice.setEnabled(enableInvoice);
+}
+
+public void setDoubleRoomBooking(java.util.Date checkIn, java.util.Date checkOut, boolean enableInvoice) {
+    CheckInLabelDouble.setText(formatDate(checkIn));
+    CheckOutLabelDouble.setText(formatDate(checkOut));
+    DoubleRoomViewInvoice.setEnabled(enableInvoice);
+}
+
+public void setDeluxeRoomBooking(java.util.Date checkIn, java.util.Date checkOut, boolean enableInvoice) {
+    CheckInLabelDeluxe.setText(formatDate(checkIn));
+    CheckOutLabelDeluxe.setText(formatDate(checkOut));
+    DeluxeRoomViewInvoice.setEnabled(enableInvoice);
+}
+
+public void setExecutiveSuiteBooking(java.util.Date checkIn, java.util.Date checkOut, boolean enableInvoice) {
+    CheckInLabelExecutiveSuite.setText(formatDate(checkIn));
+    CheckOutLabelExecutiveSuite.setText(formatDate(checkOut));
+    ExecutiveSuiteVieWInvoice.setEnabled(enableInvoice);
+}
+
+public void setUnbookedRooms(List<Booking> userBookings) {
+    boolean single = false, dbl = false, deluxe = false, exec = false;
+    for (Booking b : userBookings) {
+        if ("Single Room".equals(b.getRoomType())) single = true;
+        if ("Double Room".equals(b.getRoomType())) dbl = true;
+        if ("Deluxe Room".equals(b.getRoomType())) deluxe = true;
+        if ("Executive Suite".equals(b.getRoomType())) exec = true;
+    }
+    if (!single) setSingleRoomBooking(null, null, false);
+    if (!dbl) setDoubleRoomBooking(null, null, false);
+    if (!deluxe) setDeluxeRoomBooking(null, null, false);
+    if (!exec) setExecutiveSuiteBooking(null, null, false);
+}
+
 }

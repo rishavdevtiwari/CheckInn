@@ -12,11 +12,16 @@ import checkinn.model.UserData;
  */
 public class UserProfileView extends javax.swing.JFrame {
 
+    private Object parentController;
+
     /**
      * Creates new form UserProfile
      */
     public UserProfileView(UserData user) {
+        setLocationRelativeTo(null);
+        setTitle("User Profile | CheckInn");
         initComponents();
+            setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -38,7 +43,6 @@ public class UserProfileView extends javax.swing.JFrame {
         BackToDashboard = new javax.swing.JButton();
         DeleteAccountButton = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         ImageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dsh.png"))); // NOI18N
 
@@ -193,6 +197,10 @@ public void addDeleteAccountListener(java.awt.event.ActionListener listener){
 public void setUserProfileData(String fullName, String phoneNumber) {
     UserNameLabel.setText(fullName);
     PhoneNumberLabel.setText(phoneNumber);
+}
+
+public void setParentController(Object parentController) {
+    this.parentController = parentController;
 }
 }
 
