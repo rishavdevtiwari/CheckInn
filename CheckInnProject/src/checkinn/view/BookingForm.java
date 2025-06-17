@@ -31,11 +31,21 @@ private JDateChooser checkOutDateChooser;
 
             checkInDateChooser = new JDateChooser();
             checkInDateChooser.setDateFormatString("dd-MM-yyyy");
+            CheckInDateChooser.setMinSelectableDate(new Date());
             checkOutDateChooser = new JDateChooser();
             checkOutDateChooser.setDateFormatString("dd-MM-yyyy");
 
                 jPanel1.add(checkInDateChooser);
                 jPanel1.add(checkOutDateChooser);
+
+                    CheckInDateChooser.getDateEditor().addPropertyChangeListener(evt -> {
+        if ("date".equals(evt.getPropertyName())) {
+            Date checkIn = CheckInDateChooser.getDate();
+            if (checkIn != null) {
+                CheckOutDateChooser.setMinSelectableDate(checkIn);
+            }
+        }
+    });
 
     }
 
