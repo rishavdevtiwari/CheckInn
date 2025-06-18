@@ -3,6 +3,7 @@ package checkinn.controller;
 import checkinn.dao.UserDao;
 import checkinn.model.UserData;
 import checkinn.view.AdminClientView;
+import checkinn.view.AdminReviewView;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +29,8 @@ public class AdminClientController {
         dashboardController.showView();
     });
 
+
+    
     view.addDeleteClientListener(e -> {
         String input = javax.swing.JOptionPane.showInputDialog(view, "Enter User ID to delete:");
         if (input != null && !input.trim().isEmpty()) {
