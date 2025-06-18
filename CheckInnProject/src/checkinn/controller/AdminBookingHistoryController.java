@@ -2,9 +2,11 @@ package checkinn.controller;
 
 import checkinn.dao.BookingDao;
 import checkinn.dao.RoomDao;
+import checkinn.dao.UserDao; // Import for UserDao
 import checkinn.model.Booking;
 import checkinn.view.AdminBookingHistory;
 import checkinn.view.InvoiceView;
+import checkinn.view.LoginView; // Import for LoginView
 import java.util.List;
 import java.util.Optional;
 import javax.swing.JOptionPane;
@@ -44,6 +46,27 @@ public class AdminBookingHistoryController {
         view.getDoubleCancelButton().addActionListener(e -> cancelBookingForRoom("Double Room"));
         view.getDeluxeCancelButton().addActionListener(e -> cancelBookingForRoom("Deluxe Room"));
         view.getExecutiveSuiteCancelButton().addActionListener(e -> cancelBookingForRoom("Executive Suite"));
+
+        // Logout Button Listener
+        view.getLogoutButton().addActionListener(e -> {
+            int confirm = JOptionPane.showConfirmDialog(
+                view, 
+                "Are you sure you want to logout?",
+                "Confirm Logout | CheckInn",
+                JOptionPane.YES_NO_OPTION
+            );
+            if (confirm == JOptionPane.YES_OPTION) {
+                view.dispose(); // Close the current AdminBookingHistory view
+
+                JOptionPane.showMessageDialog(null, "Logged out successfully", "Logout | CheckInn", JOptionPane.INFORMATION_MESSAGE);
+                
+                // Open the LoginView
+                LoginView loginView = new LoginView();
+                UserDao userDao = new UserDao(); // Assuming you have a UserDao to pass to LoginController
+                LoginController loginController = new LoginController(loginView, userDao);
+                loginController.open();
+            }
+        });
     }
 
     private void loadBookingHistory() {
@@ -89,7 +112,7 @@ public class AdminBookingHistoryController {
             );
              invoiceView.getCloseInvoiceButton().addActionListener(e -> {
             invoiceView.dispose(); // Close the invoice
-            dashboardController.showView(); // Show theS AdminDashboard again
+            dashboardController.showView(); // Show the AdminDashboard again
         });
         
         invoiceView.setVisible(true);
