@@ -48,7 +48,12 @@ public class BookingHistoryController {
     view.ExecutiveSuiteVieWInvoice.addActionListener(e -> openInvoiceForRoom("Executive Suite"));
             
 
-
+    view.getReviewButton().addActionListener(e -> {
+    ReviewView reviewView = new ReviewView();
+    ReviewController reviewController = new ReviewController(reviewView, user);
+    reviewController.open();
+    view.setVisible(false); 
+});
 
                 view.addLogoutListener(e -> {
         int confirm = javax.swing.JOptionPane.showConfirmDialog(
