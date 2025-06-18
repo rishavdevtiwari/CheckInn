@@ -12,6 +12,8 @@ package checkinn.dao;
 import checkinn.database.MySqlConnection;
 import checkinn.model.Review;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ReviewDao {
     private final MySqlConnection dbConnection = new MySqlConnection();
@@ -27,4 +29,24 @@ public class ReviewDao {
             e.printStackTrace();
         }
     }
+    
+    public List<Review> getAllReviews() {
+    List<Review> reviews = new ArrayList<>();
+    String sql = "SELECT * FROM Review ORDER BY review_date DESC";
+    try (Connection conn = dbConnection.openConnection();
+         PreparedStatement stmt = conn.prepareStatement(sql);
+         ResultSet rs = stmt.executeQuery()) {
+        while (rs.next()) {
+            Review review = new Review();
+            review.setReviewId(rs.getInt("review_id"));
+            review.setUserId(rs.getInt("user_id"));
+            review.setReviewText(rs.getString("review_text"));
+            review.setReviewDate(rs.getTimestamp("review_date"));
+            reviews.add(review);
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    return reviews;
+}
 }

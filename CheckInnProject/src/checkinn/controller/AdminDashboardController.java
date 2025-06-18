@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 // Add missing imports for the controllers
 import checkinn.controller.AdminBookingHistoryController;
 import checkinn.controller.AdminClientController;
+import checkinn.view.AdminReviewView;
 
 
 public class AdminDashboardController {
@@ -78,6 +79,13 @@ private String statusString(int statusId) {
         view.addSuiteOccupiedListener(e -> updateRoomStatus("Suite", "Occupied"));
         view.addSuiteOutOfOrderListener(e -> updateRoomStatus("Suite", "Out of Order"));
 
+        view.getAdminReviewButton().addActionListener(e->{
+            view.setVisible(false);
+            AdminReviewView adminReviewView=new AdminReviewView();
+            AdminReviewController adminReviewController=new AdminReviewController(adminReviewView,this);
+            adminReviewController.open();
+        });
+        
         // Admin dashboard navigation listeners
         view.addLogoutListener(e -> logout());
         view.addAdminClientButtonListener(e -> openAdminClientView());

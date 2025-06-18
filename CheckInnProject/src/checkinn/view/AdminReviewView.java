@@ -14,6 +14,9 @@ public class AdminReviewView extends javax.swing.JFrame {
      * Creates new form AdminReviewView
      */
     public AdminReviewView() {
+        setLocationRelativeTo(null);
+        setTitle("View User Reviews | CheckInn");
+                setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         initComponents();
     }
 
@@ -185,4 +188,13 @@ public class AdminReviewView extends javax.swing.JFrame {
     private java.awt.Label label2;
     private java.awt.Label label3;
     // End of variables declaration//GEN-END:variables
+
+
+    public javax.swing.JButton getExitButton(){
+        return ExitButton;
+    }
+    public javax.swing.JTextArea getReviewTextArea(){
+        return ReviewTextArea;
+    }
+    
 }
