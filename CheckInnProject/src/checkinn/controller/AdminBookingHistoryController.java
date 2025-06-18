@@ -5,6 +5,7 @@ import checkinn.dao.RoomDao;
 import checkinn.dao.UserDao; // Import for UserDao
 import checkinn.model.Booking;
 import checkinn.view.AdminBookingHistory;
+import checkinn.view.AdminReviewView;
 import checkinn.view.InvoiceView;
 import checkinn.view.LoginView; // Import for LoginView
 import java.util.List;
@@ -35,6 +36,13 @@ public class AdminBookingHistoryController {
         view.getAdminDashboardButton().addActionListener(e -> {
             view.dispose();
             dashboardController.showView();
+        });
+        
+                view.getAdminReviewButton().addActionListener(e->{
+            view.setVisible(false);
+            AdminReviewView adminReviewView=new AdminReviewView();
+            AdminReviewController adminReviewController=new AdminReviewController(adminReviewView,dashboardController);
+            adminReviewController.open();
         });
 
         view.getSingleViewInvoiceButton().addActionListener(e -> openInvoiceForRoom("Single Room"));

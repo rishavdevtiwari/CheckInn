@@ -6,6 +6,7 @@ import checkinn.model.UserData;
 import checkinn.view.BookingHistoryView;
 import checkinn.view.DashboardView;
 import checkinn.view.LoginView;
+import checkinn.view.ReviewView;
 import checkinn.view.RoomDetailsView;
 import checkinn.view.UserProfileView;
 import java.awt.event.ActionEvent;
@@ -84,6 +85,13 @@ private String statusString(int statusId) {
         dashboardView.addUserProfileRedirectionListener((ActionEvent e) -> {
         openUserProfileView();
     });
+
+    dashboardView.getReviewButton().addActionListener(e -> {
+    ReviewView reviewView = new ReviewView();
+    ReviewController reviewController = new ReviewController(reviewView, user,this);
+    reviewController.open();
+    dashboardView.setVisible(false); 
+});
 
         dashboardView.addLogoutListener((ActionEvent e) -> {
             int confirm = JOptionPane.showConfirmDialog(
