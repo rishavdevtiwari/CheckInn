@@ -27,9 +27,7 @@
             <file>file:/E:/CheckInnProject/src/checkinn/view/DashboardView.java</file>
             <file>file:/E:/CheckInnProject/src/checkinn/dao/RoomDao.java</file>
             <file>file:/E:/CheckInnProject/src/checkinn/project/CheckInnProject.java</file>
-            <file>file:/E:/CheckInnProject/src/AdminDashboardController.java</file>
             <file>file:/E:/CheckInnProject/src/checkinn/view/AdminClientView.java</file>
-            <file>file:/E:/CheckInnProject/src/checkinn/controller/BookingHistoryController.java</file>
             <file>file:/E:/CheckInnProject/src/checkinn/controller/BookingFormController.java</file>
             <file>file:/E:/CheckInnProject/src/checkinn/dao/InvoiceDao.java</file>
             <file>file:/E:/CheckInnProject/src/checkinn/model/Invoice.java</file>
@@ -40,6 +38,10 @@
             <file>file:/E:/CheckInnProject/src/checkinn/view/UserProfileView.java</file>
             <file>file:/E:/CheckInnProject/src/checkinn/controller/AdminBookingHistoryController.java</file>
             <file>file:/E:/CheckInnProject/src/checkinn/controller/AdminDashboardController.java</file>
+            <file>file:/E:/CheckInnProject/src/checkinn/controller/AdminClientController.java</file>
+            <file>file:/E:/CheckInnProject/src/checkinn/controller/BookingHistoryController.java</file>
+            <file>file:/E:/CheckInnProject/src/checkinn/view/AdminReviewView.java</file>
+            <file>file:/E:/CheckInnProject/src/checkinn/view/ReviewView.java</file>
         </group>
     </open-files>
 </project-private>

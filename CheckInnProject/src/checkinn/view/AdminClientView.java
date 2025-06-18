@@ -34,10 +34,9 @@ public class AdminClientView extends javax.swing.JFrame {
         BookingHistoryButton = new javax.swing.JButton();
         LogOutButton = new javax.swing.JButton();
         AdminPfpLabel = new javax.swing.JLabel();
-        AdUserNameLabel = new javax.swing.JLabel();
-        AdminLabel = new javax.swing.JLabel();
         Picture = new javax.swing.JLabel();
         AdminClientButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         TitleLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         AdminClientTextArea = new javax.swing.JTextArea();
@@ -46,7 +45,7 @@ public class AdminClientView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel2.setBackground(new java.awt.Color(113, 161, 161));
 
         CheckinnLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
 
@@ -75,7 +74,7 @@ public class AdminClientView extends javax.swing.JFrame {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        jPanel7.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel7.setBackground(new java.awt.Color(61, 125, 125));
 
         AdminDashboardButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         AdminDashboardButton.setText("Admin Dashboard");
@@ -95,11 +94,6 @@ public class AdminClientView extends javax.swing.JFrame {
         AdminPfpLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/IconAdmin.png"))); // NOI18N
         AdminPfpLabel.setText("jLabel11");
 
-        AdUserNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        AdUserNameLabel.setText("John Doe");
-
-        AdminLabel.setText("Admin");
-
         Picture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dsh.png"))); // NOI18N
 
         AdminClientButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -110,30 +104,14 @@ public class AdminClientView extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Admin");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(AdminPfpLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(AdUserNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
-                        .addGap(18, 18, 18))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(AdminLabel)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(LogOutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(Picture)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
@@ -145,18 +123,28 @@ public class AdminClientView extends javax.swing.JFrame {
                             .addComponent(BookingHistoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AdminClientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(51, 51, 51))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(AdminPfpLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(LogOutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(Picture)))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AdminPfpLabel)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(AdUserNameLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(AdminLabel)))
+                    .addComponent(jLabel2))
                 .addGap(56, 56, 56)
                 .addComponent(AdminDashboardButton)
                 .addGap(32, 32, 32)
@@ -275,11 +263,9 @@ public class AdminClientView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AdUserNameLabel;
     private javax.swing.JButton AdminClientButton;
     private javax.swing.JTextArea AdminClientTextArea;
     private javax.swing.JButton AdminDashboardButton;
-    private javax.swing.JLabel AdminLabel;
     private javax.swing.JLabel AdminPfpLabel;
     private javax.swing.JButton BookingHistoryButton;
     private javax.swing.JLabel BoyWalkingWithStuff;
@@ -288,6 +274,7 @@ public class AdminClientView extends javax.swing.JFrame {
     private javax.swing.JButton LogOutButton;
     private javax.swing.JLabel Picture;
     private javax.swing.JLabel TitleLabel;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollBar jScrollBar1;

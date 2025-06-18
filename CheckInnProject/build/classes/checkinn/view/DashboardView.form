@@ -34,23 +34,23 @@
                       <Component id="AvailabilityLabel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                       <Component id="SingleRoomPanel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="DoubleRoomPanel" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="DeluxeRoomPanel" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="ExecutiveSuitePanel" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="DoubleRoomPanel" alignment="1" max="32767" attributes="0"/>
+                          <Component id="ExecutiveSuitePanel" alignment="1" max="32767" attributes="0"/>
+                          <Component id="DeluxeRoomPanel" alignment="1" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="62" max="32767" attributes="0"/>
+              <EmptySpace pref="61" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <Component id="LogoPanel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="51" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -89,7 +89,7 @@
     <Container class="javax.swing.JPanel" name="LogoPanel">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="a1" green="a1" red="71" type="rgb"/>
         </Property>
       </Properties>
 
@@ -138,7 +138,7 @@
     <Container class="javax.swing.JPanel" name="SingleRoomPanel">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="cc" green="d6" red="a8" type="rgb"/>
         </Property>
       </Properties>
 
@@ -148,9 +148,9 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="353" max="32767" attributes="0"/>
-                  <Component id="SingleRoomStatusLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="256" max="-2" attributes="0"/>
+                  <EmptySpace pref="345" max="32767" attributes="0"/>
+                  <Component id="SingleRoomStatusLabel" min="-2" pref="131" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="180" max="-2" attributes="0"/>
                   <Component id="SingleRoomDetailsButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               </Group>
@@ -165,7 +165,7 @@
                       <Component id="SingleRoomStatusLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="SingleRoomDetailsButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -203,7 +203,7 @@
     <Container class="javax.swing.JPanel" name="DeluxeRoomPanel">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="cc" green="d6" red="a8" type="rgb"/>
         </Property>
       </Properties>
 
@@ -213,28 +213,24 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="335" max="32767" attributes="0"/>
-                  <Component id="DeluxeRoomStatusLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="232" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="DeluxeRoomStatusLabel" min="-2" pref="123" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
                   <Component id="DeluxeRoomDetailsButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="DeluxeRoomDetailsButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="DeluxeRoomStatusLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="32" max="32767" attributes="0"/>
-              </Group>
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <EmptySpace pref="33" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="DeluxeRoomStatusLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="DeluxeRoomDetailsButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -272,7 +268,7 @@
     <Container class="javax.swing.JPanel" name="ExecutiveSuitePanel">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="cc" green="d6" red="a8" type="rgb"/>
         </Property>
       </Properties>
 
@@ -283,8 +279,8 @@
                   <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                   <Component id="jLabel9" min="-2" pref="114" max="-2" attributes="0"/>
                   <EmptySpace pref="311" max="32767" attributes="0"/>
-                  <Component id="ExecutiveSuiteStatusLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="252" max="-2" attributes="0"/>
+                  <Component id="ExecutiveSuiteStatusLabel" min="-2" pref="99" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
                   <Component id="ExecutiveSuiteRoomDetailsButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
@@ -293,13 +289,13 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ExecutiveSuiteStatusLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ExecutiveSuiteRoomDetailsButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="31" max="32767" attributes="0"/>
+                  <EmptySpace pref="37" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -337,7 +333,7 @@
     <Container class="javax.swing.JPanel" name="DoubleRoomPanel">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="cc" green="d6" red="a8" type="rgb"/>
         </Property>
       </Properties>
 
@@ -347,9 +343,9 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="346" max="32767" attributes="0"/>
-                  <Component id="DoubleRoomStatusLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="244" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="DoubleRoomStatusLabel" min="-2" pref="136" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
                   <Component id="DoubleRoomDetailsButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               </Group>
@@ -358,13 +354,13 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="DoubleRoomStatusLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="DoubleRoomDetailsButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="33" max="32767" attributes="0"/>
+                  <EmptySpace pref="37" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -402,7 +398,7 @@
     <Component class="javax.swing.JLabel" name="AccomodationLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Accomodation"/>
       </Properties>
@@ -410,7 +406,7 @@
     <Component class="javax.swing.JLabel" name="AvailabilityLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Availability"/>
       </Properties>
@@ -418,7 +414,7 @@
     <Container class="javax.swing.JPanel" name="DashboardMenuPanel">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="7d" green="7d" red="3d" type="rgb"/>
         </Property>
       </Properties>
 
@@ -428,11 +424,11 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace pref="55" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="LogoutButton" min="-2" max="-2" attributes="0"/>
                       <Component id="BookingHistoryButton" max="32767" attributes="0"/>
                       <Component id="jLabel1" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
                       <Component id="DashboardButton" alignment="0" max="32767" attributes="0"/>
                       <Component id="UserProfileRedirectionButton" alignment="0" max="32767" attributes="0"/>
+                      <Component id="LogoutButton" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
               </Group>
@@ -457,9 +453,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="UserNameLabel" min="-2" max="-2" attributes="0"/>
-                      <Component id="UserProfileLabel" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="UserProfileLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="UserNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                   <Component id="DashboardButton" min="-2" max="-2" attributes="0"/>
@@ -524,6 +520,9 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Ram Bahadur"/>
           </Properties>

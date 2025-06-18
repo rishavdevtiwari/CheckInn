@@ -32,14 +32,17 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
                               <Component id="AccomodationLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="205" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="205" max="-2" attributes="0"/>
+                                      <Component id="TitleLabel" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
                                       <Component id="CheckInLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="185" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
                                       <Component id="CheckOutLabel" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="TitleLabel" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
@@ -86,7 +89,7 @@
                       <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="44" max="32767" attributes="0"/>
+                      <EmptySpace pref="42" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
@@ -102,7 +105,7 @@
     <Container class="javax.swing.JPanel" name="jPanel7">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="7d" green="7d" red="3d" type="rgb"/>
         </Property>
       </Properties>
 
@@ -233,7 +236,7 @@
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="a1" green="a1" red="71" type="rgb"/>
         </Property>
       </Properties>
 
@@ -282,7 +285,7 @@
     <Container class="javax.swing.JPanel" name="jPanel3">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="cc" green="d6" red="a8" type="rgb"/>
         </Property>
       </Properties>
 
@@ -293,10 +296,10 @@
                   <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                   <Component id="SingleLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="217" max="32767" attributes="0"/>
-                  <Component id="CheckInLabelSingle" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="171" max="-2" attributes="0"/>
-                  <Component id="CheckOutLabelSingle" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+                  <Component id="CheckInLabelSingle" min="-2" pref="146" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="CheckOutLabelSingle" min="-2" pref="124" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                   <Component id="SingleRoomViewInvoice" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
@@ -369,7 +372,7 @@
     <Container class="javax.swing.JPanel" name="jPanel6">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="cc" green="d6" red="a8" type="rgb"/>
         </Property>
       </Properties>
 
@@ -380,10 +383,10 @@
                   <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
                   <Component id="DoubleLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="208" max="32767" attributes="0"/>
-                  <Component id="CheckInLabelDouble" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
-                  <Component id="CheckOutLabelDouble" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
+                  <Component id="CheckInLabelDouble" min="-2" pref="141" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
+                  <Component id="CheckOutLabelDouble" min="-2" pref="135" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
                   <Component id="DoubleRoomViewInvoice" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               </Group>
@@ -454,7 +457,7 @@
     <Container class="javax.swing.JPanel" name="jPanel4">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="cc" green="d6" red="a8" type="rgb"/>
         </Property>
       </Properties>
 
@@ -465,10 +468,10 @@
                   <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="ExecutiveSuiteLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
-                  <Component id="CheckInLabelExecutiveSuite" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="176" max="32767" attributes="0"/>
-                  <Component id="CheckOutLabelExecutiveSuite" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
+                  <Component id="CheckInLabelExecutiveSuite" min="-2" pref="147" max="-2" attributes="0"/>
+                  <EmptySpace pref="104" max="32767" attributes="0"/>
+                  <Component id="CheckOutLabelExecutiveSuite" min="-2" pref="154" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                   <Component id="ExecutiveSuiteVieWInvoice" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               </Group>
@@ -539,7 +542,7 @@
     <Component class="javax.swing.JLabel" name="AccomodationLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Accomodation"/>
       </Properties>
@@ -555,7 +558,7 @@
     <Component class="javax.swing.JLabel" name="CheckInLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Check-in"/>
       </Properties>
@@ -563,7 +566,7 @@
     <Component class="javax.swing.JLabel" name="CheckOutLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Check-out"/>
       </Properties>
@@ -571,7 +574,7 @@
     <Container class="javax.swing.JPanel" name="jPanel5">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="cc" green="d6" red="a8" type="rgb"/>
         </Property>
       </Properties>
 
@@ -582,10 +585,10 @@
                   <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
                   <Component id="DeluxeLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="212" max="32767" attributes="0"/>
-                  <Component id="CheckInLabelDeluxe" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
-                  <Component id="CheckOutLabelDeluxe" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
+                  <Component id="CheckInLabelDeluxe" min="-2" pref="141" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+                  <Component id="CheckOutLabelDeluxe" min="-2" pref="147" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                   <Component id="DeluxeRoomViewInvoice" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               </Group>
