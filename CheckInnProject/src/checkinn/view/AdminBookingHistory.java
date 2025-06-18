@@ -636,4 +636,8 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         setExecutiveSuiteBooking(false, null);
     }
 
+   public javax.swing.JButton getAdminReviewButton(){
+    return AdminReviewButton;
+}
+   
 }

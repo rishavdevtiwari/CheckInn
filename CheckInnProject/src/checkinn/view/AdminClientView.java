@@ -294,6 +294,8 @@ public void setClientTextArea(String text) {
     DeleteClientButton.addActionListener(listener); 
 }
     
-    
+  public javax.swing.JButton getAdminReviewButton(){
+    return AdminReviewButton;
+}  
     
 }

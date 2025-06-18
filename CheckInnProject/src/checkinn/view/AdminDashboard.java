@@ -5,6 +5,7 @@
 package checkinn.view;
 
 
+import checkinn.controller.AdminReviewController;
 import checkinn.controller.DashboardController;
 import checkinn.controller.RegistrationController;
 import checkinn.controller.mail.SMTPSMailSender;
@@ -632,4 +633,14 @@ public void addLogoutListener(ActionListener listener) {
     private javax.swing.JLabel singleRoomStatusLabel;
     private javax.swing.JLabel suiteStatusLabel;
     // End of variables declaration//GEN-END:variables
+
+private void openAdminReviewView(){
+    AdminReviewView adminReviewView = new AdminReviewView();
+    AdminReviewController adminReviewController = new AdminReviewController(adminReviewView);
+    adminController.open();
+}
+
+public javax.swing.JButton getAdminReviewButton(){
+    return AdminReviewButton;
+}
 }

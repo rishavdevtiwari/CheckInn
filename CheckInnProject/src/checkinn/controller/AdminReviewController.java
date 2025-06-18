@@ -7,15 +7,19 @@ import java.util.List;
 
 public class AdminReviewController {
     private final AdminReviewView view;
+    private final AdminDashboardController dashboardController;
 
-    public AdminReviewController(AdminReviewView view) {
+    public AdminReviewController(AdminReviewView view,AdminDashboardController dashboardController) {
         this.view = view;
+        this.dashboardController=dashboardController;
         initialize();
     }
 
     private void initialize() {
         loadReviews();
-        view.getExitButton().addActionListener(e -> view.dispose());
+        view.getExitButton().addActionListener(e -> {view.dispose();
+dashboardController.open();
+        });
     }
 
     private void loadReviews() {
