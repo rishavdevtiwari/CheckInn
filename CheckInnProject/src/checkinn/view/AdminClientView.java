@@ -300,5 +300,8 @@ public void setClientTextArea(String text) {
   public javax.swing.JButton getBookingHistoryButton() {
       return BookingHistoryButton;
 }
+    public javax.swing.JButton getLogOutButton() {
+      return LogOutButton;
+  }
     
 }
