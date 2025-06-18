@@ -14,6 +14,8 @@ public class ReviewView extends javax.swing.JFrame {
      * Creates new form ReviewView
      */
     public ReviewView() {
+                setTitle("Leave a Review | CheckInn");
+                        setLocationRelativeTo(null);
         initComponents();
     }
 
