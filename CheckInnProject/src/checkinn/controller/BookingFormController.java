@@ -21,14 +21,13 @@ public class BookingFormController {
 
     public BookingFormController(BookingForm bookingForm, String roomName, double roomPrice, RoomDetailsController roomDetailsController, DashboardView dashboardView, String email, InvoiceView invoiceView) {
         this.bookingForm = bookingForm;
-            this.dashboardView = dashboardView;
-                this.email = email;
+        this.dashboardView = dashboardView;
+        this.email = email;
         this.roomDetailsController = roomDetailsController;
         this.bookingForm.setRoomName(roomName);
         this.bookingForm.setRoomPrice(roomPrice);
-
-        initializeListeners();
         this.invoiceView = invoiceView;
+        initializeListeners();
     }
 
 private void initializeListeners() {
@@ -43,7 +42,13 @@ private void initializeListeners() {
         Date checkIn = bookingForm.getCheckInDate();
         Date checkOut = bookingForm.getCheckOutDate();
         List<MenuItem> selectedMenuItems = bookingForm.getSelectedMenuItems();
+            int roomId = bookingForm.getRoomId();
 
+            BookingDao bookingDao = new BookingDao();
+    if (bookingDao.isRoomBookedForPeriod(roomId, checkIn, checkOut)) {
+        bookingForm.showError("This room is already booked for the selected dates. Please choose another date.");
+        return;
+    }   
         if (fullName == null || fullName.trim().isEmpty()) {
             bookingForm.showError("Full name is required.");
             return;
@@ -71,14 +76,13 @@ private void initializeListeners() {
         booking.setRoomId(bookingForm.getRoomId());
         booking.setUserId(bookingForm.getUserId());
         booking.setStatusId(2); // 2 = Occupied
-        booking.setInvoiceId(0); // Set to 0 if error with generation
+        booking.setInvoiceId(0);
         booking.setCheckInDate(checkIn);
         booking.setCheckOutDate(checkOut);
         booking.setTotalPrice(totalPrice);
 
         int bookingId = bookingDao.saveBooking(booking);
         if (bookingId > 0) {
-            // Save menu items for this booking - multiple menu items connected in db
             bookingDao.saveBookingMenuItems(bookingId, selectedMenuItems);
 
             RoomDao roomDao = new RoomDao();
@@ -90,8 +94,8 @@ private void initializeListeners() {
 
             bookingForm.showMessage("Booking successful!");
 
-            InvoiceView invoiceView = new InvoiceView();
-            invoiceView.setInvoiceData(
+            InvoiceView newInvoiceView = new InvoiceView();
+            newInvoiceView.setInvoiceData(
                 bookingForm.getRoomName(),
                 bookingForm.getFullName(),
                 fullName,
@@ -100,22 +104,15 @@ private void initializeListeners() {
                 selectedMenuItems,
                 totalPrice
             );
-    invoiceView.addCloseInvoiceListener(e2 -> {
-        invoiceView.dispose();
-        DashboardView dashboardView = new DashboardView();
-        DashboardController dashboardController = new DashboardController(dashboardView, email);
-        dashboardController.open();
-    });
-            // invoiceView.addWindowListener(new java.awt.event.WindowAdapter() {
-            //     @Override
-            //     public void windowClosed(java.awt.event.WindowEvent e) {
-            //     DashboardView dashboardView = new DashboardView();
-            //     DashboardController dashboardController = new DashboardController(dashboardView, email);
-            //     dashboardController.open();
-            //     }
-            // });
 
-            invoiceView.setVisible(true);
+            newInvoiceView.getCloseInvoiceButton().addActionListener(e2 -> {
+                newInvoiceView.dispose();
+                DashboardView newDashboardView = new DashboardView();
+                DashboardController dashboardController = new DashboardController(newDashboardView, email);
+                dashboardController.open();
+            });
+
+            newInvoiceView.setVisible(true);
             close();
         } else {
             bookingForm.showError("Booking failed. Please try again.");

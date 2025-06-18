@@ -1,5 +1,6 @@
 package checkinn.controller;
 
+import checkinn.dao.RoomDao;
 import checkinn.dao.UserDao;
 import checkinn.model.UserData;
 import checkinn.view.AdminBookingHistory;
@@ -31,13 +32,27 @@ public class AdminDashboardController {
         view.setAdminName(adminData.getFirstName() + " " + adminData.getLastName());
     }
 
-    // Initial state setting of dashboard
-    private void loadInitialRoomStatuses() {
-        view.setSingleRoomStatus("Vacant");
-        view.setDoubleRoomStatus("Occupied");
-        view.setDeluxeRoomStatus("Out of Order");
-        view.setSuiteRoomStatus("Vacant");
-    }
+private void loadInitialRoomStatuses() {
+    RoomDao roomDao = new RoomDao();
+    int singleStatus = roomDao.getRoomStatusId(1);
+    int doubleStatus = roomDao.getRoomStatusId(2);
+    int deluxeStatus = roomDao.getRoomStatusId(3);
+    int suiteStatus = roomDao.getRoomStatusId(4);
+
+    view.setSingleRoomStatus(statusString(singleStatus));
+    view.setDoubleRoomStatus(statusString(doubleStatus));
+    view.setDeluxeRoomStatus(statusString(deluxeStatus));
+    view.setSuiteRoomStatus(statusString(suiteStatus));
+}
+
+private String statusString(int statusId) {
+    return switch (statusId) {
+        case 1 -> "Vacant";
+        case 2 -> "Occupied";
+        case 3 -> "Out of Order";
+        default -> "Unknown";
+    };
+}
 
     private void openAdminBookingHistory() {
         AdminBookingHistory bookingHistoryView = new AdminBookingHistory();
@@ -85,30 +100,31 @@ public class AdminDashboardController {
      * @param roomType The type of room to update (e.g., "Single")
      * @param newStatus The new status to set (e.g., "Vacant")
      */
-    private void updateRoomStatus(String roomType, String newStatus) {
-        System.out.println("Admin is setting " + roomType + " room status to: " + newStatus);
+private void updateRoomStatus(String roomType, String newStatus) {
+    int roomId = switch (roomType) {
+        case "Single" -> 1;
+        case "Double" -> 2;
+        case "Deluxe" -> 3;
+        case "Suite" -> 4;
+        default -> throw new IllegalArgumentException("Unknown room type: " + roomType);
+    };
+    int statusId = switch (newStatus) {
+        case "Vacant" -> 1;
+        case "Occupied" -> 2;
+        case "Out of Order" -> 3;
+        default -> throw new IllegalArgumentException("Unknown status: " + newStatus);
+    };
+    checkinn.dao.RoomDao roomDao = new checkinn.dao.RoomDao();
+    roomDao.setRoomStatus(roomId, statusId);
 
-        // Update the correct label on the UI
-        switch (roomType) {
-            case "Single":
-                view.setSingleRoomStatus(newStatus);
-                break;
-            case "Double":
-                view.setDoubleRoomStatus(newStatus);
-                break;
-            case "Deluxe":
-                view.setDeluxeRoomStatus(newStatus);
-                break;
-            case "Suite":
-                view.setSuiteRoomStatus(newStatus);
-                break;
-        }
-
-        // TODO: In the future, you will save this change to your database here.
-        // E.g., roomStatusDao.updateStatus(roomType, newStatus);
-        
-        JOptionPane.showMessageDialog(view, roomType + " room status has been set to '" + newStatus + "'");
+    switch (roomType) {
+        case "Single" -> view.setSingleRoomStatus(newStatus);
+        case "Double" -> view.setDoubleRoomStatus(newStatus);
+        case "Deluxe" -> view.setDeluxeRoomStatus(newStatus);
+        case "Suite" -> view.setSuiteRoomStatus(newStatus);
     }
+    javax.swing.JOptionPane.showMessageDialog(view, roomType + " room status has been set to '" + newStatus + "'");
+}
 
     private void logout() {
         int confirm = JOptionPane.showConfirmDialog(view, "Are you sure you want to logout?", "Confirm Logout", JOptionPane.YES_NO_OPTION);

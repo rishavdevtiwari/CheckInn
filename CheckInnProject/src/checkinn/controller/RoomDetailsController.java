@@ -1,5 +1,6 @@
 package checkinn.controller;
 
+import checkinn.dao.RoomDao;
 import checkinn.model.Room; // <-- Import the Room model
 import checkinn.model.UserData;
 import checkinn.view.BookingForm;
@@ -89,4 +90,23 @@ close();
         view.setLocationRelativeTo(dashboardView); 
         view.setVisible(true);
     }
+
+private void loadRoomDetails() {
+    String status;
+    int statusId = room.getStatusId();
+    if (statusId == 2) {
+        status = "Occupied";
+    } else if (statusId == 1) {
+        status = "Vacant";
+    } else if (statusId == 3) {
+        status = "Out of Order";
+    } else {
+        status = "Unknown";
+    }
+    view.setRoomStatus(status);
+    view.setRoomName(room.getRoomType());
+    view.setPrice(room.getPrice());
+    view.setDescription(room.getDescription());
+    view.setRoomImage(room.getImagePath());
+}
 }

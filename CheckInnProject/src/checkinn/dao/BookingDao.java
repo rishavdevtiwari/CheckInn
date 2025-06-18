@@ -13,7 +13,7 @@ import java.util.List;
 
 public class BookingDao {
     private final MySqlConnection dbConnection = new MySqlConnection();
-
+    
     public int saveBooking(Booking booking) {
         String sql = "INSERT INTO Booking (room_id, user_id, status_id, invoice_id, CheckIn_date, CheckOut_date, total_price) VALUES (?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = dbConnection.openConnection();
@@ -113,12 +113,18 @@ public class BookingDao {
         return bookings;
     }
     
+    // This is the correct version of getAllBookings
     public List<Booking> getAllBookings() {
         List<Booking> bookings = new ArrayList<>();
-        String sql = "SELECT b.*, r.room_type, r.price, u.first_name, u.last_name " +
+        String sql = "SELECT b.*, r.room_type, r.price, u.first_name, u.last_name, " +
+                     "GROUP_CONCAT(m.itemname SEPARATOR ',') AS menu_items, " +
+                     "GROUP_CONCAT(m.price SEPARATOR ',') AS menu_prices " +
                      "FROM Booking b " +
                      "JOIN Room r ON b.room_id = r.room_id " +
                      "JOIN User u ON b.user_id = u.user_id " +
+                     "LEFT JOIN BookingMenuItem bmi ON b.booking_id = bmi.booking_id " +
+                     "LEFT JOIN MenuItem m ON bmi.menu_id = m.menu_id " +
+                     "GROUP BY b.booking_id " +
                      "ORDER BY b.CheckIn_date DESC";
         try (Connection conn = dbConnection.openConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);
@@ -133,16 +139,70 @@ public class BookingDao {
                 booking.setCheckOutDate(rs.getTimestamp("CheckOut_date"));
                 booking.setTotalPrice(rs.getDouble("total_price"));
                 booking.setRoomType(rs.getString("room_type"));
+                booking.setClientName(rs.getString("first_name") + " " + rs.getString("last_name"));
 
-                // You might want to add customer name to your Booking model
-                // For now, you can handle it in the controller or print it.
-                String customerName = rs.getString("first_name") + " " + rs.getString("last_name");
-
+                List<MenuItem> menuItems = new ArrayList<>();
+                String[] menuNames = rs.getString("menu_items") != null ? rs.getString("menu_items").split(",") : new String[0];
+                String[] menuPrices = rs.getString("menu_prices") != null ? rs.getString("menu_prices").split(",") : new String[0];
+                for (int i = 0; i < menuNames.length; i++) {
+                    MenuItem item = new MenuItem();
+                    item.setItemName(menuNames[i]);
+                    if (i < menuPrices.length) {
+                        item.setPrice(Double.parseDouble(menuPrices[i]));
+                    }
+                    menuItems.add(item);
+                }
+                booking.setMenuItems(menuItems);
                 bookings.add(booking);
             }
-        } catch (SQLException e) {
+        } catch (SQLException | NumberFormatException e) {
             e.printStackTrace();
         }
         return bookings;
     }
+
+public boolean isRoomBookedForPeriod(int roomId, java.util.Date checkIn, java.util.Date checkOut) {
+    String sql = "SELECT COUNT(*) FROM Booking WHERE room_id = ? " +
+                 "AND (CheckIn_date < ? AND CheckOut_date > ?)";
+    try (Connection conn = dbConnection.openConnection();
+         PreparedStatement stmt = conn.prepareStatement(sql)) {
+        stmt.setInt(1, roomId);
+        stmt.setTimestamp(2, new java.sql.Timestamp(checkOut.getTime()));
+        stmt.setTimestamp(3, new java.sql.Timestamp(checkIn.getTime()));
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            return rs.getInt(1) > 0;
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    return false;
+}
+
+    public void deleteBookingMenuItems(int bookingId) {
+        String sql = "DELETE FROM BookingMenuItem WHERE booking_id = ?";
+        try (Connection conn = dbConnection.openConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, bookingId);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public boolean cancelBooking(int bookingId) {
+        deleteBookingMenuItems(bookingId);
+        
+        String sql = "DELETE FROM Booking WHERE booking_id = ?";
+        try (Connection conn = dbConnection.openConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, bookingId);
+            int affectedRows = stmt.executeUpdate();
+            return affectedRows > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }
