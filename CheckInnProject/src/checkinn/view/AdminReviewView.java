@@ -14,6 +14,9 @@ public class AdminReviewView extends javax.swing.JFrame {
      * Creates new form AdminReviewView
      */
     public AdminReviewView() {
+        setLocationRelativeTo(null);
+        setTitle("View User Reviews | CheckInn");
+                setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         initComponents();
     }
 
