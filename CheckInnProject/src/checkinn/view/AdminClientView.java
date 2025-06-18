@@ -46,7 +46,7 @@ public class AdminClientView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel2.setBackground(new java.awt.Color(113, 161, 161));
 
         CheckinnLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
 
@@ -75,7 +75,7 @@ public class AdminClientView extends javax.swing.JFrame {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        jPanel7.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel7.setBackground(new java.awt.Color(61, 125, 125));
 
         AdminDashboardButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         AdminDashboardButton.setText("Admin Dashboard");
