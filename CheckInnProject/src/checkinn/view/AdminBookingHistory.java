@@ -66,7 +66,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel6.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel6.setBackground(new java.awt.Color(168, 214, 204));
 
         DoubleViewInvoiceButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DoubleViewInvoiceButton.setText("View Invoice");
@@ -125,7 +125,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         CheckedInClientLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         CheckedInClientLabel.setText("Checked In Client");
 
-        jPanel2.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel2.setBackground(new java.awt.Color(113, 161, 161));
 
         CheckInnLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
 
@@ -206,7 +206,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel3.setBackground(new java.awt.Color(168, 214, 204));
 
         SingleViewInvoiceButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         SingleViewInvoiceButton.setText("View Invoice");
@@ -264,7 +264,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
                 .addGap(22, 22, 22))
         );
 
-        jPanel7.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel7.setBackground(new java.awt.Color(61, 125, 125));
 
         AdminDashboardButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         AdminDashboardButton.setText("Admin Dashboard");
@@ -355,7 +355,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         AccomodationLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         AccomodationLabel.setText("Accomodation");
 
-        jPanel5.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel5.setBackground(new java.awt.Color(168, 214, 204));
 
         DeluxeViewInvoiceButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DeluxeViewInvoiceButton.setText("View Invoice");
