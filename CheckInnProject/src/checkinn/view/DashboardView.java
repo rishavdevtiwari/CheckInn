@@ -5,6 +5,8 @@
 package checkinn.view;
 
 import java.awt.event.ActionListener;
+
+import checkinn.controller.ReviewController;
 /**
  *
  * @author niss
@@ -545,4 +547,5 @@ public void addBookingHistoryListener(java.awt.event.ActionListener listener) {
     }
     
 }
+
 }
