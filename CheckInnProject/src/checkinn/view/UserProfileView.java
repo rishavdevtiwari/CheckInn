@@ -43,6 +43,7 @@ public class UserProfileView extends javax.swing.JFrame {
         BackToDashboard = new javax.swing.JButton();
         DeleteAccountButton = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         ImageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dsh.png"))); // NOI18N
 
@@ -55,6 +56,7 @@ public class UserProfileView extends javax.swing.JFrame {
         PhoneNumber.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         PhoneNumber.setText("Phone Number");
 
+        BackToDashboard.setBackground(new java.awt.Color(61, 125, 125));
         BackToDashboard.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         BackToDashboard.setText("<- Dashboard");
 
@@ -80,16 +82,17 @@ public class UserProfileView extends javax.swing.JFrame {
                             .addComponent(PhoneNumberLabel)))
                     .addGroup(UserProfilePannelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(BackToDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
+                        .addComponent(BackToDashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(ImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(UserProfile)))
+                        .addGap(18, 18, 18)
+                        .addComponent(UserProfile)
+                        .addGap(8, 8, 8)))
                 .addGap(46, 46, 46))
             .addGroup(UserProfilePannelLayout.createSequentialGroup()
                 .addGap(173, 173, 173)
                 .addComponent(DeleteAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(222, Short.MAX_VALUE))
         );
         UserProfilePannelLayout.setVerticalGroup(
             UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,11 +102,11 @@ public class UserProfileView extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(ImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(UserProfilePannelLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(UserProfile))
-                    .addGroup(UserProfilePannelLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
-                        .addComponent(BackToDashboard)))
+                        .addComponent(BackToDashboard))
+                    .addGroup(UserProfilePannelLayout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(UserProfile)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
                 .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Username, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
