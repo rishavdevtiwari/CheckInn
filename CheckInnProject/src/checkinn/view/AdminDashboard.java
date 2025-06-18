@@ -168,7 +168,7 @@ public void addLogoutListener(ActionListener listener) {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel2.setBackground(new java.awt.Color(113, 161, 161));
 
         CheckinnLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
 
@@ -197,7 +197,7 @@ public void addLogoutListener(ActionListener listener) {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel3.setBackground(new java.awt.Color(168, 214, 204));
 
         SingleLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         SingleLabel.setText("Single");
@@ -246,7 +246,7 @@ public void addLogoutListener(ActionListener listener) {
                 .addGap(33, 33, 33))
         );
 
-        jPanel9.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel9.setBackground(new java.awt.Color(168, 214, 204));
 
         DoubleLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DoubleLabel.setText("Double");
@@ -346,7 +346,7 @@ public void addLogoutListener(ActionListener listener) {
         SetAvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         SetAvailabilityLabel.setText("Set Availability");
 
-        jPanel7.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel7.setBackground(new java.awt.Color(61, 125, 125));
 
         AdminDashboardButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         AdminDashboardButton.setText("Admin Dashboard");
@@ -444,7 +444,7 @@ public void addLogoutListener(ActionListener listener) {
         CurrentAvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         CurrentAvailabilityLabel.setText("Current Availability");
 
-        jPanel5.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel5.setBackground(new java.awt.Color(168, 214, 204));
 
         DeluxeLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DeluxeLabel.setText("Deluxe");
