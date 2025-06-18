@@ -297,5 +297,8 @@ public void setClientTextArea(String text) {
   public javax.swing.JButton getAdminReviewButton(){
     return AdminReviewButton;
 }  
+  public javax.swing.JButton getBookingHistoryButton() {
+      return BookingHistoryButton;
+}
     
 }

@@ -2,6 +2,7 @@ package checkinn.controller;
 
 import checkinn.dao.UserDao;
 import checkinn.model.UserData;
+import checkinn.view.AdminBookingHistory;
 import checkinn.view.AdminClientView;
 import checkinn.view.AdminReviewView;
 import java.util.ArrayList;
@@ -36,6 +37,13 @@ public class AdminClientController {
         adminReviewController = new AdminReviewController(adminReviewView,dashboardController);
             adminReviewController.open();
         });
+            
+    view.getBookingHistoryButton().addActionListener(e -> {
+        view.dispose();
+        AdminBookingHistory bookingHistoryView = new AdminBookingHistory();
+        AdminBookingHistoryController bookingHistoryController = new AdminBookingHistoryController(bookingHistoryView, dashboardController);
+        bookingHistoryController.open();
+    });
     
     view.addDeleteClientListener(e -> {
         String input = javax.swing.JOptionPane.showInputDialog(view, "Enter User ID to delete:");
