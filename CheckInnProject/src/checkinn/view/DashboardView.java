@@ -249,10 +249,10 @@ public class DashboardView extends javax.swing.JFrame {
                 .addContainerGap(37, Short.MAX_VALUE))
         );
 
-        AccomodationLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AccomodationLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         AccomodationLabel.setText("Accomodation");
 
-        AvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         AvailabilityLabel.setText("Availability");
 
         DashboardMenuPanel.setBackground(new java.awt.Color(61, 125, 125));

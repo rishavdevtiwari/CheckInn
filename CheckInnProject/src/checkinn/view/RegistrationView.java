@@ -102,6 +102,7 @@ public class RegistrationView extends javax.swing.JFrame {
 
         RegButton.setBackground(new java.awt.Color(61, 125, 125));
         RegButton.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        RegButton.setForeground(new java.awt.Color(255, 255, 255));
         RegButton.setText("Register");
         RegButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -340,10 +340,10 @@ public void addLogoutListener(ActionListener listener) {
                 .addGap(33, 33, 33))
         );
 
-        AccomodationLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AccomodationLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         AccomodationLabel.setText("Accomodation");
 
-        SetAvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        SetAvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         SetAvailabilityLabel.setText("Set Availability");
 
         jPanel7.setBackground(new java.awt.Color(61, 125, 125));
@@ -441,7 +441,7 @@ public void addLogoutListener(ActionListener listener) {
                 .addGap(44, 44, 44))
         );
 
-        CurrentAvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CurrentAvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         CurrentAvailabilityLabel.setText("Current Availability");
 
         jPanel5.setBackground(new java.awt.Color(168, 214, 204));
@@ -541,7 +541,7 @@ public void addLogoutListener(ActionListener listener) {
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(47, 47, 47)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 17, Short.MAX_VALUE))
+                        .addGap(0, 15, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
