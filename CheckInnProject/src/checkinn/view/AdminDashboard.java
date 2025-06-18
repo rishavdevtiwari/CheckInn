@@ -33,23 +33,22 @@ public class AdminDashboard extends javax.swing.JFrame {
          setTitle("Administrator Dashboard | CheckInn");
         
     }
-
+    
+public void setAdminName(String name) {
+    AdUserNameLabel.setText(name); // AdUserNameLabel is the name of your JLabel
+}
 public void setSingleRoomStatus(String status) {
     singleRoomStatusLabel.setText(status);
 }
-
 public void setDoubleRoomStatus(String status) {
     doubleRoomStatusLabel.setText(status);
 }
-
 public void setDeluxeRoomStatus(String status) {
     deluxeRoomStatusLabel.setText(status);
 }
-
 public void setSuiteRoomStatus(String status) {
     suiteStatusLabel.setText(status);
 }
-
 
 // --- 2. METHODS TO LISTEN FOR BUTTON CLICKS ---
 
@@ -107,6 +106,11 @@ public void addBookingHistoryListener(ActionListener listener) {
     BookingHistoryButton.addActionListener(listener);
 }
 
+
+public void addAdminClientButtonListener(java.awt.event.ActionListener listener) {
+    AdminClientButton.addActionListener(listener);
+}
+
 public void addLogoutListener(ActionListener listener) {
     LogOutButton.addActionListener(listener);
 }
@@ -153,6 +157,7 @@ public void addLogoutListener(ActionListener listener) {
         AdUserNameLabel = new javax.swing.JLabel();
         AdminLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        AdminClientButton = new javax.swing.JButton();
         CurrentAvailabilityLabel = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         DeluxeLabel = new javax.swing.JLabel();
@@ -368,19 +373,18 @@ public void addLogoutListener(ActionListener listener) {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dsh.png"))); // NOI18N
 
+        AdminClientButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AdminClientButton.setText("Clients");
+        AdminClientButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AdminClientButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(AdminDashboardButton))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(BookingHistoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(51, 51, 51))
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(AdminPfpLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -401,6 +405,17 @@ public void addLogoutListener(ActionListener listener) {
                         .addGap(75, 75, 75)
                         .addComponent(jLabel1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AdminDashboardButton))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(BookingHistoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AdminClientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(51, 51, 51))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -413,11 +428,13 @@ public void addLogoutListener(ActionListener listener) {
                         .addComponent(AdUserNameLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(AdminLabel)))
-                .addGap(114, 114, 114)
+                .addGap(77, 77, 77)
                 .addComponent(AdminDashboardButton)
-                .addGap(30, 30, 30)
+                .addGap(34, 34, 34)
                 .addComponent(BookingHistoryButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(AdminClientButton)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel1)
                 .addGap(37, 37, 37)
                 .addComponent(LogOutButton)
@@ -524,7 +541,7 @@ public void addLogoutListener(ActionListener listener) {
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(47, 47, 47)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 17, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -537,6 +554,10 @@ public void addLogoutListener(ActionListener listener) {
     private void BookingHistoryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BookingHistoryButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BookingHistoryButtonActionPerformed
+
+    private void AdminClientButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminClientButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AdminClientButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -574,6 +595,7 @@ public void addLogoutListener(ActionListener listener) {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AccomodationLabel;
     private javax.swing.JLabel AdUserNameLabel;
+    private javax.swing.JButton AdminClientButton;
     private javax.swing.JButton AdminDashboardButton;
     private javax.swing.JLabel AdminLabel;
     private javax.swing.JLabel AdminPfpLabel;
@@ -611,4 +633,5 @@ public void addLogoutListener(ActionListener listener) {
     private javax.swing.JLabel singleRoomStatusLabel;
     private javax.swing.JLabel suiteStatusLabel;
     // End of variables declaration//GEN-END:variables
+
 }

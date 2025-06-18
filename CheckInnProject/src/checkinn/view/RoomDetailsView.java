@@ -7,11 +7,8 @@ package checkinn.view;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 
-/**
- *
- * @author ACER NITRO
- */
 public class RoomDetailsView extends javax.swing.JFrame {
+    private javax.swing.JLabel roomStatusLabel;
     public RoomDetailsView() {
         initComponents();
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -22,6 +19,27 @@ public class RoomDetailsView extends javax.swing.JFrame {
     public void setRoomName(String roomName) {
         jLabel1.setText(roomName);
     }
+
+// public void setRoomStatus(String status, String roomType) {
+//     switch (roomType) {
+//         case "Single Room":
+//             SingleRoomStatusLabel.setText(status);
+//             break;
+//         case "Double Room":
+//             DoubleRoomStatusLabel.setText(status);
+//             break;
+//         case "Deluxe Room":
+//             DeluxeRoomStatusLabel.setText(status);
+//             break;
+//         case "Executive Suite":
+//             ExecutiveSuiteStatusLabel.setText(status);
+//             break;
+//     }
+// }
+
+public void setRoomStatus(String status) {
+    roomStatusLabel.setText("Status: " + status);
+}
 
     // Set the price in the price text field
     public void setPrice(double price) {

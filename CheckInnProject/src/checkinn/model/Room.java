@@ -5,6 +5,7 @@ package checkinn.model;
  */
 public class Room {
     private int roomId;
+    private int statusId;
     private String roomType;
     private double price;
     private String description;
@@ -27,8 +28,7 @@ public class Room {
         this.imagePath = imagePath;
     }
 
-    // --- Getters ---
-    // These methods allow other classes to read the private data.
+    //Getters
 
     public int getRoomId() {
         return roomId;
@@ -40,7 +40,13 @@ public class Room {
     public String getRoomType() {
         return roomType;
     }
+public int getStatusId() {
+    return statusId;
+}
 
+public void setStatusId(int statusId) {
+    this.statusId = statusId;
+}
     public double getPrice() {
         return price;
     }

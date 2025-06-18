@@ -3,9 +3,11 @@ package checkinn.controller;
 import checkinn.dao.UserDao;
 import checkinn.model.Room; 
 import checkinn.model.UserData;
+import checkinn.view.BookingHistoryView;
 import checkinn.view.DashboardView;
 import checkinn.view.LoginView;
 import checkinn.view.RoomDetailsView;
+import checkinn.view.UserProfileView;
 import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
 
@@ -18,6 +20,7 @@ public class DashboardController {
         this.dashboardView = dashboardView;
         this.userEmail = userEmail;
         loadUserData();
+        loadRoomStatuses();
         initialize();
     }
 
@@ -25,15 +28,36 @@ public class DashboardController {
         UserDao userDao = new UserDao();
         this.user = userDao.getUserByEmail(userEmail);
     }
+    private void loadRoomStatuses() {
+    checkinn.dao.RoomDao roomDao = new checkinn.dao.RoomDao();
+    int singleStatus = roomDao.getRoomStatusId(1);
+    int doubleStatus = roomDao.getRoomStatusId(2);
+    int deluxeStatus = roomDao.getRoomStatusId(3);
+    int suiteStatus = roomDao.getRoomStatusId(4);
+
+    dashboardView.setRoomStatus(statusString(singleStatus), "Single Room");
+    dashboardView.setRoomStatus(statusString(doubleStatus), "Double Room");
+    dashboardView.setRoomStatus(statusString(deluxeStatus), "Deluxe Room");
+    dashboardView.setRoomStatus(statusString(suiteStatus), "Executive Suite");
+}
+
+private String statusString(int statusId) {
+    return switch (statusId) {
+        case 1 -> "Vacant";
+        case 2 -> "Occupied";
+        case 3 -> "Out of Order";
+        default -> "Unknown";
+    };
+}
 
     private void initialize() {
         // Set user name and welcome message on dashboard if available
         if (user != null && user.getFirstName() != null) {
             dashboardView.setUserName(user.getFirstName());
-            dashboardView.setWelcomeMessage("Welcome, " + user.getFirstName() + "!");
+            dashboardView.setWelcomeMessage("Welcome to CheckInn, " + user.getFirstName() + "!");
         } else {
             dashboardView.setUserName("Guest");
-            dashboardView.setWelcomeMessage("Welcome, Guest!");
+            dashboardView.setWelcomeMessage("Welcome to CheckInn, Guest!");
         }
 
         // --- EDITED SECTION: Create Room objects to hold all data ---
@@ -49,16 +73,17 @@ public class DashboardController {
         dashboardView.addSuiteRoomListener((e) -> openRoomDetailsPage(suiteRoom));
 
 
-        dashboardView.addBookingHistoryListener((ActionEvent e) -> {
-            String bookingHistory = "Booking History for " + (user != null ? user.getFirstName() : "Guest") + ":\n"
-                                  + "1. Single Room - 2023-05-15 to 2023-05-17\n"
-                                  + "2. Deluxe Room - 2023-06-01 to 2023-06-05";
-            JOptionPane.showMessageDialog(dashboardView, bookingHistory, "Booking History", JOptionPane.INFORMATION_MESSAGE);
-        });
+    dashboardView.addBookingHistoryListener((ActionEvent e) -> {
+        openBookingHistoryView();
+    });
 
         dashboardView.addDashboardListener((ActionEvent e) -> {
             refreshDashboard();
         });
+        
+        dashboardView.addUserProfileRedirectionListener((ActionEvent e) -> {
+        openUserProfileView();
+    });
 
         dashboardView.addLogoutListener((ActionEvent e) -> {
             int confirm = JOptionPane.showConfirmDialog(
@@ -85,10 +110,24 @@ public class DashboardController {
         roomDetailsView,
         dashboardView,
         user,
-        room
+        room, null
     );
     dashboardView.setVisible(false); // Hide dashboard
     roomDetailsController.open();
+}
+    
+    private void openUserProfileView() {
+    UserProfileView userProfileView = new UserProfileView(user); // Pass user data if needed
+    UserProfileController userProfileController = new UserProfileController(userProfileView, this, user);
+    dashboardView.setVisible(false); // Hide dashboard
+    userProfileController.open();
+}
+
+private void openBookingHistoryView() {
+    BookingHistoryView bookingHistoryView = new BookingHistoryView();
+    BookingHistoryController bookingHistoryController = new BookingHistoryController(bookingHistoryView, user, this);
+    dashboardView.setVisible(false);
+    bookingHistoryController.open();
 }
 
     private void refreshDashboard() {
