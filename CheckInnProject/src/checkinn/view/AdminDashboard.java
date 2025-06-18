@@ -37,23 +37,18 @@ public class AdminDashboard extends javax.swing.JFrame {
 public void setAdminName(String name) {
     AdUserNameLabel.setText(name); // AdUserNameLabel is the name of your JLabel
 }
-
 public void setSingleRoomStatus(String status) {
     singleRoomStatusLabel.setText(status);
 }
-
 public void setDoubleRoomStatus(String status) {
     doubleRoomStatusLabel.setText(status);
 }
-
 public void setDeluxeRoomStatus(String status) {
     deluxeRoomStatusLabel.setText(status);
 }
-
 public void setSuiteRoomStatus(String status) {
     suiteStatusLabel.setText(status);
 }
-
 
 // --- 2. METHODS TO LISTEN FOR BUTTON CLICKS ---
 
@@ -638,4 +633,5 @@ public void addLogoutListener(ActionListener listener) {
     private javax.swing.JLabel singleRoomStatusLabel;
     private javax.swing.JLabel suiteStatusLabel;
     // End of variables declaration//GEN-END:variables
+
 }

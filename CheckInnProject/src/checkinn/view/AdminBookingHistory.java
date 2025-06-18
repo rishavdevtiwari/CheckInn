@@ -9,7 +9,6 @@ package checkinn.view;
  * @author ACEWR
  */
 public class AdminBookingHistory extends javax.swing.JFrame {
-    
 
     /**
      * Creates new form AdminBookingHistory
@@ -19,6 +18,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         setTitle("Admin Booking History | CheckInn");
         setLocationRelativeTo(null);
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -289,7 +289,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/IconAdmin.png"))); // NOI18N
         jLabel11.setText("jLabel11");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jLabel2.setText("Admin");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/IconBkngHstry.png"))); // NOI18N
@@ -326,7 +326,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
                         .addGap(17, 17, 17)
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 49, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -337,7 +337,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
                         .addGap(56, 56, 56)
                         .addComponent(jLabel11))
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
+                        .addGap(66, 66, 66)
                         .addComponent(jLabel2)))
                 .addGap(71, 71, 71)
                 .addComponent(AdminDashboardButton)
@@ -582,6 +582,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    // End of variables declaration//GEN-END:variables
 
     public javax.swing.JButton getAdminDashboardButton() { return AdminDashboardButton; }
     public javax.swing.JButton getSingleViewInvoiceButton() { return SingleViewInvoiceButton; }
@@ -592,8 +593,9 @@ public class AdminBookingHistory extends javax.swing.JFrame {
     public javax.swing.JButton getDoubleCancelButton() { return DoubleCancelButton; }
     public javax.swing.JButton getDeluxeCancelButton() { return DeluxeCancelButton; }
     public javax.swing.JButton getExecutiveSuiteCancelButton() { return ExecutiveSuiteCancelButton; }
-
-    // --- SETTERS FOR BOOKING INFO ---
+    
+    
+        // --- SETTERS FOR BOOKING INFO ---
      public void setSingleBooking(boolean isBooked, String clientName) {
         SingleRoomClient.setText(isBooked ? clientName : "-");
         SingleViewInvoiceButton.setEnabled(isBooked);
@@ -618,6 +620,10 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         ExecutiveSuiteCancelButton.setEnabled(isBooked);
     }
     
+    public javax.swing.JButton getLogoutButton() {
+        return LogoutButton;
+    }
+    
     // --- METHOD TO RESET THE VIEW ---
    public void resetAllBookings() {
         setSingleBooking(false, null);
@@ -626,7 +632,4 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         setExecutiveSuiteBooking(false, null);
     }
 
-
-
 }
-
