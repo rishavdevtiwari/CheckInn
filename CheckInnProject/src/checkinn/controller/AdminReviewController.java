@@ -18,7 +18,7 @@ public class AdminReviewController {
     private void initialize() {
         loadReviews();
         view.getExitButton().addActionListener(e -> {view.dispose();
-dashboardController.open();
+dashboardController.showView();
         });
     }
 

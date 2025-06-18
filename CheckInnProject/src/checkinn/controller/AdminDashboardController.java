@@ -84,7 +84,7 @@ private String statusString(int statusId) {
             AdminReviewView adminReviewView=new AdminReviewView();
             AdminReviewController adminReviewController=new AdminReviewController(adminReviewView,this);
             adminReviewController.open();
-        })
+        });
         
         // Admin dashboard navigation listeners
         view.addLogoutListener(e -> logout());

@@ -634,11 +634,11 @@ public void addLogoutListener(ActionListener listener) {
     private javax.swing.JLabel suiteStatusLabel;
     // End of variables declaration//GEN-END:variables
 
-private void openAdminReviewView(){
-    AdminReviewView adminReviewView = new AdminReviewView();
-    AdminReviewController adminReviewController = new AdminReviewController(adminReviewView);
-    adminController.open();
-}
+//private void openAdminReviewView(){
+//    AdminReviewView adminReviewView = new AdminReviewView();
+//    AdminReviewController adminReviewController = new AdminReviewController(adminReviewView);
+//    adminDashboardController.showView();
+//}
 
 public javax.swing.JButton getAdminReviewButton(){
     return AdminReviewButton;
