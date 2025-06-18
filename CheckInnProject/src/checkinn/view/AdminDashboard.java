@@ -293,7 +293,7 @@ public void addLogoutListener(ActionListener listener) {
                 .addContainerGap(37, Short.MAX_VALUE))
         );
 
-        jPanel4.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel4.setBackground(new java.awt.Color(168, 214, 204));
 
         ExecutiveSuitLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ExecutiveSuitLabel.setText("Executive Suite");
