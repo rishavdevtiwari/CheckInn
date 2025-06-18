@@ -47,7 +47,7 @@ public class UserProfileView extends javax.swing.JFrame {
 
         ImageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dsh.png"))); // NOI18N
 
-        UserProfile.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        UserProfile.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         UserProfile.setText("USER PROFILE");
 
         Username.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -57,11 +57,12 @@ public class UserProfileView extends javax.swing.JFrame {
         PhoneNumber.setText("Phone Number");
 
         BackToDashboard.setBackground(new java.awt.Color(61, 125, 125));
-        BackToDashboard.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        BackToDashboard.setText("<- Dashboard");
+        BackToDashboard.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BackToDashboard.setForeground(new java.awt.Color(255, 255, 255));
+        BackToDashboard.setText("Dashboard");
 
         DeleteAccountButton.setBackground(new java.awt.Color(255, 0, 0));
-        DeleteAccountButton.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        DeleteAccountButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         DeleteAccountButton.setForeground(new java.awt.Color(255, 255, 255));
         DeleteAccountButton.setText("Delete Account");
 
@@ -72,11 +73,13 @@ public class UserProfileView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UserProfilePannelLayout.createSequentialGroup()
                 .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(UserProfilePannelLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGap(63, 63, 63)
+                        .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PhoneNumber)
-                            .addComponent(Username))
-                        .addGap(128, 128, 128)
+                            .addGroup(UserProfilePannelLayout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(Username)))
+                        .addGap(85, 85, 85)
                         .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(UserNameLabel)
                             .addComponent(PhoneNumberLabel)))
@@ -111,8 +114,8 @@ public class UserProfileView extends javax.swing.JFrame {
                 .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Username, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(UserNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
-                .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(73, 73, 73)
+                .addGroup(UserProfilePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(PhoneNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(120, 120, 120)
