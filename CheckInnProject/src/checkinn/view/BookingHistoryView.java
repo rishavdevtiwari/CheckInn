@@ -550,6 +550,11 @@ private String formatDate(java.util.Date date) {
     private javax.swing.JPanel jPanel7;
     // End of variables declaration//GEN-END:variables
 
+    
+            public javax.swing.JButton getReviewButton(){
+        return ReviewButton;
+    }
+            
 public void addBackToDashboardListener(java.awt.event.ActionListener listener) {
     RedirectToDashboardButton.addActionListener(listener); 
 }

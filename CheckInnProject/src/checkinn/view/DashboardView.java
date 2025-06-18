@@ -493,6 +493,9 @@ public class DashboardView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 
+        public javax.swing.JButton getReviewButton(){
+        return ReviewButton;
+    }
      public void addSingleRoomListener(ActionListener actionListener) {
         SingleRoomDetailsButton.addActionListener(actionListener);
     }
@@ -540,5 +543,6 @@ public void addBookingHistoryListener(java.awt.event.ActionListener listener) {
         case "Deluxe Room" -> DeluxeRoomStatusLabel.setText(status);
         case "Executive Suite" -> ExecutiveSuiteStatusLabel.setText(status);
     }
+    
 }
 }
