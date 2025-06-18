@@ -188,4 +188,10 @@ public class AdminReviewView extends javax.swing.JFrame {
     private java.awt.Label label2;
     private java.awt.Label label3;
     // End of variables declaration//GEN-END:variables
+
+
+    public javax.swing.JButton getExitButton(){
+        return ExitButton;
+    }
+    
 }
