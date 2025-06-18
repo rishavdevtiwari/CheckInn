@@ -88,7 +88,7 @@ private String statusString(int statusId) {
 
     dashboardView.getReviewButton().addActionListener(e -> {
     ReviewView reviewView = new ReviewView();
-    ReviewController reviewController = new ReviewController(reviewView, user);
+    ReviewController reviewController = new ReviewController(reviewView, user,this);
     reviewController.open();
     dashboardView.setVisible(false); 
 });

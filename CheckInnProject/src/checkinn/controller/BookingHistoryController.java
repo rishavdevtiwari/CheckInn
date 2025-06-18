@@ -50,7 +50,7 @@ public class BookingHistoryController {
 
     view.getReviewButton().addActionListener(e -> {
     ReviewView reviewView = new ReviewView();
-    ReviewController reviewController = new ReviewController(reviewView, user);
+    ReviewController reviewController = new ReviewController(reviewView,user, dashboardController);
     reviewController.open();
     view.setVisible(false); 
 });

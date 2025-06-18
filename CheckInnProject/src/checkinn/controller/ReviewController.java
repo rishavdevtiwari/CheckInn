@@ -8,10 +8,12 @@ import checkinn.view.ReviewView;
 public class ReviewController {
     private final ReviewView view;
     private final UserData user;
+    private final DashboardController dashboardController;
 
-    public ReviewController(ReviewView view, UserData user) {
+    public ReviewController(ReviewView view, UserData user, DashboardController dashboardController) {
         this.view = view;
         this.user = user;
+        this.dashboardController = dashboardController;
         initializeListeners();
     }
 
@@ -28,6 +30,7 @@ public class ReviewController {
             new ReviewDao().addReview(review);
             javax.swing.JOptionPane.showMessageDialog(view, "Thank you for your review!", "Success", javax.swing.JOptionPane.INFORMATION_MESSAGE);
             view.dispose();
+            dashboardController.open();
         });
     }
 
