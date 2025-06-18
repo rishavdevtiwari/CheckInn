@@ -100,8 +100,9 @@ public class RegistrationView extends javax.swing.JFrame {
 
         RegPhInput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        RegButton.setBackground(new java.awt.Color(0, 153, 0));
+        RegButton.setBackground(new java.awt.Color(61, 125, 125));
         RegButton.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        RegButton.setForeground(new java.awt.Color(255, 255, 255));
         RegButton.setText("Register");
         RegButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,20 +157,20 @@ public class RegistrationView extends javax.swing.JFrame {
                                 .addComponent(RegEmailInput, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(265, 265, 265)
+                .addComponent(AlrHavAccQ)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(RedirectToLogin)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(222, 222, 222)
                         .addComponent(TitleLabel))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(346, 346, 346)
+                        .addGap(330, 330, 330)
                         .addComponent(SubtitleLabel)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(265, 265, 265)
-                .addComponent(AlrHavAccQ)
-                .addGap(18, 18, 18)
-                .addComponent(RedirectToLogin)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -236,8 +237,8 @@ public class RegistrationView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(80, 80, 80))
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(48, Short.MAX_VALUE))

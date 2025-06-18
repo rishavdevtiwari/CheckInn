@@ -73,7 +73,7 @@ public void setInvoiceData(String roomType, String customerName, String fullName
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFocusable(false);
 
-        InvoicePanel.setBackground(new java.awt.Color(255, 255, 204));
+        InvoicePanel.setBackground(new java.awt.Color(229, 224, 224));
         InvoicePanel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         LogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
@@ -116,8 +116,8 @@ public void setInvoiceData(String roomType, String customerName, String fullName
         ClientName.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         ClientName.setText("Name");
 
-        CloseInvoice.setBackground(new java.awt.Color(102, 255, 102));
-        CloseInvoice.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        CloseInvoice.setBackground(new java.awt.Color(61, 125, 125));
+        CloseInvoice.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         CloseInvoice.setForeground(new java.awt.Color(255, 255, 255));
         CloseInvoice.setText("Done");
 
@@ -155,9 +155,7 @@ public void setInvoiceData(String roomType, String customerName, String fullName
                 .addGap(25, 25, 25)
                 .addComponent(TotalPriceField)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(CloseInvoice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(InvoiceTotalPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(InvoiceTotalPrice)
                 .addGap(43, 43, 43))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InvoicePanelLayout.createSequentialGroup()
                 .addContainerGap()
@@ -171,6 +169,10 @@ public void setInvoiceData(String roomType, String customerName, String fullName
                     .addComponent(InvoiceCheckOut)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InvoicePanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(CloseInvoice, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
         );
         InvoicePanelLayout.setVerticalGroup(
             InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,7 +209,7 @@ public void setInvoiceData(String roomType, String customerName, String fullName
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 22, Short.MAX_VALUE)
                 .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TotalPriceField)
                     .addComponent(InvoiceTotalPrice))

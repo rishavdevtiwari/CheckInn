@@ -86,7 +86,7 @@
                   </Group>
                   <Component id="jPanel7" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="82" max="32767" attributes="0"/>
+              <EmptySpace pref="80" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -95,7 +95,7 @@
     <Container class="javax.swing.JPanel" name="jPanel6">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="cc" green="d6" red="a8" type="rgb"/>
         </Property>
       </Properties>
 
@@ -188,7 +188,7 @@
     <Component class="javax.swing.JLabel" name="CheckedInClientLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Checked In Client"/>
       </Properties>
@@ -196,7 +196,7 @@
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="a1" green="a1" red="71" type="rgb"/>
         </Property>
       </Properties>
 
@@ -332,7 +332,7 @@
     <Container class="javax.swing.JPanel" name="jPanel3">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="cc" green="d6" red="a8" type="rgb"/>
         </Property>
       </Properties>
 
@@ -427,7 +427,7 @@
     <Container class="javax.swing.JPanel" name="jPanel7">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="7d" green="7d" red="3d" type="rgb"/>
         </Property>
       </Properties>
 
@@ -566,7 +566,7 @@
     <Component class="javax.swing.JLabel" name="AccomodationLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Accomodation"/>
       </Properties>
@@ -574,7 +574,7 @@
     <Container class="javax.swing.JPanel" name="jPanel5">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9d" green="c2" red="17" type="rgb"/>
+          <Color blue="cc" green="d6" red="a8" type="rgb"/>
         </Property>
       </Properties>
 

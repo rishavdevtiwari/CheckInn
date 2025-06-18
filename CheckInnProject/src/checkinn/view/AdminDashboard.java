@@ -168,7 +168,7 @@ public void addLogoutListener(ActionListener listener) {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel2.setBackground(new java.awt.Color(113, 161, 161));
 
         CheckinnLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
 
@@ -197,7 +197,7 @@ public void addLogoutListener(ActionListener listener) {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel3.setBackground(new java.awt.Color(168, 214, 204));
 
         SingleLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         SingleLabel.setText("Single");
@@ -246,7 +246,7 @@ public void addLogoutListener(ActionListener listener) {
                 .addGap(33, 33, 33))
         );
 
-        jPanel9.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel9.setBackground(new java.awt.Color(168, 214, 204));
 
         DoubleLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DoubleLabel.setText("Double");
@@ -293,7 +293,7 @@ public void addLogoutListener(ActionListener listener) {
                 .addContainerGap(37, Short.MAX_VALUE))
         );
 
-        jPanel4.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel4.setBackground(new java.awt.Color(168, 214, 204));
 
         ExecutiveSuitLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ExecutiveSuitLabel.setText("Executive Suite");
@@ -340,13 +340,13 @@ public void addLogoutListener(ActionListener listener) {
                 .addGap(33, 33, 33))
         );
 
-        AccomodationLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AccomodationLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         AccomodationLabel.setText("Accomodation");
 
-        SetAvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        SetAvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         SetAvailabilityLabel.setText("Set Availability");
 
-        jPanel7.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel7.setBackground(new java.awt.Color(61, 125, 125));
 
         AdminDashboardButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         AdminDashboardButton.setText("Admin Dashboard");
@@ -441,10 +441,10 @@ public void addLogoutListener(ActionListener listener) {
                 .addGap(44, 44, 44))
         );
 
-        CurrentAvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CurrentAvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         CurrentAvailabilityLabel.setText("Current Availability");
 
-        jPanel5.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel5.setBackground(new java.awt.Color(168, 214, 204));
 
         DeluxeLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DeluxeLabel.setText("Deluxe");
@@ -541,7 +541,7 @@ public void addLogoutListener(ActionListener listener) {
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(47, 47, 47)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 17, Short.MAX_VALUE))
+                        .addGap(0, 15, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
