@@ -44,6 +44,7 @@ private String formatDate(java.util.Date date) {
         UserNameLabel = new javax.swing.JLabel();
         Image = new javax.swing.JLabel();
         UserProfileRedirectionButton = new javax.swing.JButton();
+        ReviewButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         CheckInnLogo = new javax.swing.JLabel();
         BoyWithStuffImg = new javax.swing.JLabel();
@@ -107,6 +108,9 @@ private String formatDate(java.util.Date date) {
         UserProfileRedirectionButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         UserProfileRedirectionButton.setText("Profile");
 
+        ReviewButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ReviewButton.setText("Leave a review");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -123,7 +127,8 @@ private String formatDate(java.util.Date date) {
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(UserProfileRedirectionButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(RedirectToDashboardButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BookingHistoryButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(BookingHistoryButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ReviewButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(51, 51, 51))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -145,9 +150,11 @@ private String formatDate(java.util.Date date) {
                 .addComponent(RedirectToDashboardButton)
                 .addGap(27, 27, 27)
                 .addComponent(BookingHistoryButton)
-                .addGap(33, 33, 33)
+                .addGap(36, 36, 36)
+                .addComponent(ReviewButton)
+                .addGap(37, 37, 37)
                 .addComponent(UserProfileRedirectionButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Image)
                 .addGap(66, 66, 66)
                 .addComponent(LogOutButton)
@@ -528,6 +535,7 @@ private String formatDate(java.util.Date date) {
     private javax.swing.JLabel Image;
     private javax.swing.JButton LogOutButton;
     private javax.swing.JButton RedirectToDashboardButton;
+    private javax.swing.JButton ReviewButton;
     private javax.swing.JLabel SingleLabel;
     public javax.swing.JButton SingleRoomViewInvoice;
     private javax.swing.JLabel TitleLabel;

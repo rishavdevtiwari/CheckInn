@@ -59,6 +59,7 @@ public class DashboardView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         UserProfileRedirectionButton = new javax.swing.JButton();
+        ReviewButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -290,6 +291,9 @@ public class DashboardView extends javax.swing.JFrame {
         UserProfileRedirectionButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         UserProfileRedirectionButton.setText("Profile");
 
+        ReviewButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ReviewButton.setText("Leave a review");
+
         javax.swing.GroupLayout DashboardMenuPanelLayout = new javax.swing.GroupLayout(DashboardMenuPanel);
         DashboardMenuPanel.setLayout(DashboardMenuPanelLayout);
         DashboardMenuPanelLayout.setHorizontalGroup(
@@ -301,7 +305,8 @@ public class DashboardView extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(DashboardButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(UserProfileRedirectionButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(LogoutButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(LogoutButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ReviewButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(51, 51, 51))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DashboardMenuPanelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -326,13 +331,15 @@ public class DashboardView extends javax.swing.JFrame {
                 .addComponent(DashboardButton)
                 .addGap(18, 18, 18)
                 .addComponent(BookingHistoryButton)
+                .addGap(15, 15, 15)
+                .addComponent(ReviewButton)
                 .addGap(18, 18, 18)
                 .addComponent(UserProfileRedirectionButton)
-                .addGap(31, 31, 31)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addGap(38, 38, 38)
                 .addComponent(LogoutButton)
                 .addGap(86, 86, 86))
         );
@@ -386,7 +393,7 @@ public class DashboardView extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addComponent(DashboardMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -470,6 +477,7 @@ public class DashboardView extends javax.swing.JFrame {
     private javax.swing.JLabel ExecutiveSuiteStatusLabel;
     private javax.swing.JPanel LogoPanel;
     private javax.swing.JButton LogoutButton;
+    private javax.swing.JButton ReviewButton;
     private javax.swing.JButton SingleRoomDetailsButton;
     private javax.swing.JPanel SingleRoomPanel;
     private javax.swing.JLabel SingleRoomStatusLabel;
