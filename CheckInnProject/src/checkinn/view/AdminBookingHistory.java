@@ -597,6 +597,9 @@ public class AdminBookingHistory extends javax.swing.JFrame {
     public javax.swing.JButton getDoubleCancelButton() { return DoubleCancelButton; }
     public javax.swing.JButton getDeluxeCancelButton() { return DeluxeCancelButton; }
     public javax.swing.JButton getExecutiveSuiteCancelButton() { return ExecutiveSuiteCancelButton; }
+    public javax.swing.JButton getAdminClientButton() {
+    return AdminClientButton;
+}
     
     
         // --- SETTERS FOR BOOKING INFO ---
