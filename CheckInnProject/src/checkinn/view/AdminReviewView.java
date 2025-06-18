@@ -193,5 +193,8 @@ public class AdminReviewView extends javax.swing.JFrame {
     public javax.swing.JButton getExitButton(){
         return ExitButton;
     }
+    public javax.swing.JTextArea getReviewTextArea(){
+        return ReviewTextArea;
+    }
     
 }
