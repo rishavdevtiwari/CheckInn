@@ -5,10 +5,8 @@
 package checkinn.view;
 
 import checkinn.model.MenuItem;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  *
@@ -23,18 +21,20 @@ public class InvoiceView extends javax.swing.JFrame {
         initComponents();
         setTitle("Invoice | CheckInn");
         setLocationRelativeTo(null);
+            setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
     }
 
-    public void setInvoiceData(String roomName, String clientName, String fullName, Date checkIn, Date checkOut, List<MenuItem> menuItems, double totalPrice) {
-    InvoiceRoomName.setText(roomName);
-    ClientName.setText(clientName);
-    SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-    InvoiceCheckIn.setText(sdf.format(checkIn));
-    InvoiceCheckOut.setText(sdf.format(checkOut));
-    String menuNames = menuItems.stream()
-        .map(MenuItem::getItemName)
-        .collect(Collectors.joining(", "));
-    InvoiceMenuItems.setText(menuNames);
+public void setInvoiceData(String roomType, String customerName, String fullName, Date checkIn, Date checkOut, List<MenuItem> menuItems, double totalPrice) {
+    InvoiceRoomName.setText(roomType);
+    ClientName.setText(customerName);
+    java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("dd-MM-yyyy");
+    InvoiceCheckIn.setText(checkIn != null ? sdf.format(checkIn) : "--");
+    InvoiceCheckOut.setText(checkOut != null ? sdf.format(checkOut) : "--");
+    StringBuilder menuList = new StringBuilder();
+    for (MenuItem item : menuItems) {
+        menuList.append(item.getItemName()).append(" - ").append(item.getPrice()).append("\n");
+    }
+    MenuItemsTextArea.setText(menuList.toString());
     InvoiceTotalPrice.setText("Rs. " + String.format("%.2f", totalPrice));
 }
 
@@ -64,10 +64,14 @@ public class InvoiceView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         ClientName = new javax.swing.JLabel();
+        CloseInvoice = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        MenuItemsTextArea = new javax.swing.JTextArea();
 
         jLabel12.setText("jLabel12");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setFocusable(false);
 
         InvoicePanel.setBackground(new java.awt.Color(255, 255, 204));
         InvoicePanel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -94,7 +98,6 @@ public class InvoiceView extends javax.swing.JFrame {
         MenuItemsField.setText("Menu Items :");
 
         InvoiceMenuItems.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        InvoiceMenuItems.setText("Breakfast Package, Brunch Package, Lunch Package, Dinner Package");
 
         InvoiceRoomName.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         InvoiceRoomName.setText("<RoomName>");
@@ -113,48 +116,61 @@ public class InvoiceView extends javax.swing.JFrame {
         ClientName.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         ClientName.setText("Name");
 
+        CloseInvoice.setBackground(new java.awt.Color(102, 255, 102));
+        CloseInvoice.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        CloseInvoice.setForeground(new java.awt.Color(255, 255, 255));
+        CloseInvoice.setText("Done");
+
+        MenuItemsTextArea.setEditable(false);
+        MenuItemsTextArea.setColumns(20);
+        MenuItemsTextArea.setLineWrap(true);
+        MenuItemsTextArea.setRows(5);
+        MenuItemsTextArea.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(MenuItemsTextArea);
+
         javax.swing.GroupLayout InvoicePanelLayout = new javax.swing.GroupLayout(InvoicePanel);
         InvoicePanel.setLayout(InvoicePanelLayout);
         InvoicePanelLayout.setHorizontalGroup(
             InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InvoicePanelLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
                 .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(InvoicePanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(LogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 659, Short.MAX_VALUE))
+                        .addComponent(CheckInDateField)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(InvoicePanelLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(InvoicePanelLayout.createSequentialGroup()
-                                .addComponent(CheckInDateField)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(InvoicePanelLayout.createSequentialGroup()
-                                .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(CheckOutDateField)
-                                    .addComponent(MenuItemsField)
-                                    .addComponent(RoomTypeField)
-                                    .addComponent(jLabel2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(InvoiceMenuItems, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(ClientName, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel1)
-                                        .addComponent(InvoiceCheckIn)
-                                        .addComponent(InvoiceRoomName)
-                                        .addComponent(InvoiceCheckOut)))))))
+                        .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CheckOutDateField)
+                            .addComponent(MenuItemsField)
+                            .addComponent(RoomTypeField)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(InvoiceMenuItems)))
                 .addGap(59, 59, 59))
             .addGroup(InvoicePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jSeparator1)
                 .addContainerGap())
-            .addGroup(InvoicePanelLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InvoicePanelLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(TotalPriceField)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(InvoiceTotalPrice)
+                .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CloseInvoice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(InvoiceTotalPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(43, 43, 43))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InvoicePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(LogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 418, Short.MAX_VALUE)
+                .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ClientName, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(InvoiceCheckIn)
+                    .addComponent(InvoiceRoomName)
+                    .addComponent(InvoiceCheckOut)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26))
         );
         InvoicePanelLayout.setVerticalGroup(
             InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,33 +179,41 @@ public class InvoiceView extends javax.swing.JFrame {
                 .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LogoLabel)
                     .addComponent(jLabel1))
-                .addGap(54, 54, 54)
+                .addGap(42, 42, 42)
                 .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RoomTypeField)
                     .addComponent(InvoiceRoomName))
-                .addGap(74, 74, 74)
+                .addGap(44, 44, 44)
                 .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(ClientName))
-                .addGap(61, 61, 61)
+                .addGap(44, 44, 44)
                 .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CheckInDateField)
                     .addComponent(InvoiceCheckIn))
-                .addGap(80, 80, 80)
+                .addGap(44, 44, 44)
                 .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CheckOutDateField)
                     .addComponent(InvoiceCheckOut))
-                .addGap(69, 69, 69)
-                .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MenuItemsField)
-                    .addComponent(InvoiceMenuItems, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(69, 69, 69)
+                .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(InvoicePanelLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(MenuItemsField)
+                            .addComponent(InvoiceMenuItems, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(79, 79, 79))
+                    .addGroup(InvoicePanelLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 25, Short.MAX_VALUE)
                 .addGroup(InvoicePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TotalPriceField)
                     .addComponent(InvoiceTotalPrice))
-                .addGap(46, 46, 46))
+                .addGap(58, 58, 58)
+                .addComponent(CloseInvoice)
+                .addGap(32, 32, 32))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -249,6 +273,7 @@ public class InvoiceView extends javax.swing.JFrame {
     private javax.swing.JLabel CheckInDateField;
     private javax.swing.JLabel CheckOutDateField;
     private javax.swing.JLabel ClientName;
+    private javax.swing.JButton CloseInvoice;
     private javax.swing.JLabel InvoiceCheckIn;
     private javax.swing.JLabel InvoiceCheckOut;
     private javax.swing.JLabel InvoiceMenuItems;
@@ -257,15 +282,18 @@ public class InvoiceView extends javax.swing.JFrame {
     private javax.swing.JLabel InvoiceTotalPrice;
     private javax.swing.JLabel LogoLabel;
     private javax.swing.JLabel MenuItemsField;
+    private javax.swing.JTextArea MenuItemsTextArea;
     private javax.swing.JLabel RoomTypeField;
     private javax.swing.JLabel TotalPriceField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 
-    private void getLocationRelativeTo(Object object) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    public javax.swing.JButton getCloseInvoiceButton() {
+    return CloseInvoice;
+}
+
 }

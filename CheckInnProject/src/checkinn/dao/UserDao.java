@@ -2,12 +2,15 @@ package checkinn.dao;
 
 import checkinn.database.DbConnection;
 import checkinn.database.MySqlConnection;
+import checkinn.model.LoginRequest;
 import checkinn.model.RegistrationRequest;
 import checkinn.model.UserData;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDao {
     private final DbConnection dbConnection;
@@ -155,4 +158,82 @@ public class UserDao {
         }
         return null;
     }
+    
+    
+    public boolean deleteUserByEmail(String email) {
+    String sql = "DELETE FROM User WHERE email = ?";
+    try (Connection conn = dbConnection.openConnection();
+         PreparedStatement stmt = conn.prepareStatement(sql)) {
+        stmt.setString(1, email);
+        int rows = stmt.executeUpdate();
+        return rows > 0;
+    } catch (SQLException e) {
+        e.printStackTrace();
+        return false;
+    }
+}
+    
+    
+    public List<UserData> getAllUsers() {
+    List<UserData> users = new ArrayList<>();
+    String sql = "SELECT * FROM User";
+    try (Connection conn = dbConnection.openConnection();
+         PreparedStatement stmt = conn.prepareStatement(sql);
+         ResultSet rs = stmt.executeQuery()) {
+        while (rs.next()) {
+            UserData user = new UserData(
+                rs.getInt("user_id"),
+                rs.getString("first_name"),
+                rs.getString("last_name"),
+                rs.getString("email"),
+                rs.getString("password"),
+                rs.getString("phone_number")
+            );
+            users.add(user);
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    return users;
+}
+    
+    
+    public boolean deleteUserById(int userId) {
+    String sql = "DELETE FROM User WHERE user_id = ?";
+    try (Connection conn = dbConnection.openConnection();
+         PreparedStatement stmt = conn.prepareStatement(sql)) {
+        stmt.setInt(1, userId);
+        int rows = stmt.executeUpdate();
+        return rows > 0;
+    } catch (SQLException e) {
+        e.printStackTrace();
+        return false;
+    }
+}
+  public UserData login(LoginRequest loginReq) {
+    String query = "SELECT * FROM User WHERE email=? AND password=?";
+    Connection conn = dbConnection.openConnection();
+    try {
+        PreparedStatement stmnt = conn.prepareStatement(query);
+        stmnt.setString(1, loginReq.getEmail());
+        stmnt.setString(2, loginReq.getPassword());
+        ResultSet result = stmnt.executeQuery();
+        if (result.next()) {
+            int userId = result.getInt("user_id");
+            String firstName = result.getString("first_name");
+            String lastName = result.getString("last_name");
+            String email = result.getString("email");
+            String password = result.getString("password");
+            String phoneNumber = result.getString("phone_number");
+            UserData user = new UserData(userId, firstName, lastName, email, password, phoneNumber);
+            return user;
+        } else {
+            return null;
+        }
+    } catch (Exception e) {
+        return null;
+    } finally {
+        try { if (conn != null) conn.close(); } catch (Exception ex) {}
+    }
+}  
 }
