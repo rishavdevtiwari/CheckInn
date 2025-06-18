@@ -19,7 +19,16 @@ public class AdminReviewController {
     }
 
     private void loadReviews() {
-
+        List<Review> reviews = new ReviewDao().getAllReviews();
+        StringBuilder sb = new StringBuilder();
+        for (Review r : reviews) {
+            sb.append("User ID: ").append(r.getUserId())
+              .append(" | Date: ").append(r.getReviewDate())
+              .append("\n")
+              .append(r.getReviewText())
+              .append("\n----------------------\n");
+        }
+        view.getReviewTextArea().setText(sb.toString());
     }
 
     public void open() {
