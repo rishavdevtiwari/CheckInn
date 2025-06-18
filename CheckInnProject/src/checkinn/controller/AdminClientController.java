@@ -29,7 +29,13 @@ public class AdminClientController {
         dashboardController.showView();
     });
 
-
+            view.getAdminReviewButton().addActionListener(e->{
+            view.setVisible(false);
+            AdminReviewView adminReviewView=new AdminReviewView();
+            AdminReviewController adminReviewController;
+        adminReviewController = new AdminReviewController(adminReviewView,dashboardController);
+            adminReviewController.open();
+        });
     
     view.addDeleteClientListener(e -> {
         String input = javax.swing.JOptionPane.showInputDialog(view, "Enter User ID to delete:");
