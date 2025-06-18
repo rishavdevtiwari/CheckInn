@@ -33,7 +33,7 @@ public class AdminDashboard extends javax.swing.JFrame {
          setTitle("Administrator Dashboard | CheckInn");
         
     }
-
+    
 public void setSingleRoomStatus(String status) {
     singleRoomStatusLabel.setText(status);
 }
@@ -155,10 +155,9 @@ public void addLogoutListener(ActionListener listener) {
         BookingHistoryButton = new javax.swing.JButton();
         LogOutButton = new javax.swing.JButton();
         AdminPfpLabel = new javax.swing.JLabel();
-        AdUserNameLabel = new javax.swing.JLabel();
-        AdminLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         AdminClientButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         CurrentAvailabilityLabel = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         DeluxeLabel = new javax.swing.JLabel();
@@ -211,6 +210,11 @@ public void addLogoutListener(ActionListener listener) {
 
         SingleSetOccupiedButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         SingleSetOccupiedButton.setText("Occupied");
+        SingleSetOccupiedButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SingleSetOccupiedButtonActionPerformed(evt);
+            }
+        });
 
         SingleSetOutOfOrderButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         SingleSetOutOfOrderButton.setText("Out Of Order");
@@ -222,28 +226,27 @@ public void addLogoutListener(ActionListener listener) {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(62, 62, 62)
                 .addComponent(SingleLabel)
-                .addGap(176, 176, 176)
-                .addComponent(singleRoomStatusLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(SingleSetVacantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(SingleSetOccupiedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(SingleSetOutOfOrderButton)
-                .addGap(32, 32, 32))
+                .addComponent(singleRoomStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(135, 135, 135)
+                .addComponent(SingleSetVacantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(SingleSetOccupiedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(SingleSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap(33, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(SingleLabel)
-                        .addComponent(singleRoomStatusLabel))
+                    .addComponent(SingleLabel)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(SingleSetOccupiedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(SingleSetVacantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(SingleSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(SingleSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(singleRoomStatusLabel)))
                 .addGap(33, 33, 33))
         );
 
@@ -271,15 +274,15 @@ public void addLogoutListener(ActionListener listener) {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(63, 63, 63)
                 .addComponent(DoubleLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
-                .addComponent(doubleRoomStatusLabel)
-                .addGap(175, 175, 175)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(doubleRoomStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(110, 110, 110)
                 .addComponent(DoubleSetVacantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(18, 18, 18)
                 .addComponent(DoubleSetOccupiedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(DoubleSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
+                .addGap(18, 18, 18)
+                .addComponent(DoubleSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -318,14 +321,14 @@ public void addLogoutListener(ActionListener listener) {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addComponent(ExecutiveSuitLabel)
-                .addGap(134, 134, 134)
-                .addComponent(suiteStatusLabel)
+                .addGap(115, 115, 115)
+                .addComponent(suiteStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ExecutiveSetVacantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ExecutiveSetVacantButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(ExecutiveSetOccupiedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ExecutiveSetOccupiedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(ExecutiveSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ExecutiveSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
         jPanel4Layout.setVerticalGroup(
@@ -367,11 +370,6 @@ public void addLogoutListener(ActionListener listener) {
         AdminPfpLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/IconAdmin.png"))); // NOI18N
         AdminPfpLabel.setText("jLabel11");
 
-        AdUserNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        AdUserNameLabel.setText("John Doe");
-
-        AdminLabel.setText("Admin");
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dsh.png"))); // NOI18N
 
         AdminClientButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -382,64 +380,55 @@ public void addLogoutListener(ActionListener listener) {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        jLabel3.setText("Admin");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap(41, Short.MAX_VALUE)
+                        .addComponent(AdminDashboardButton))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(LogOutButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BookingHistoryButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                            .addComponent(AdminClientButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE))))
+                .addGap(51, 51, 51))
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(AdminPfpLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(AdUserNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
-                        .addGap(18, 18, 18))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(AdminLabel)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(LogOutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29)
+                        .addComponent(AdminPfpLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(75, 75, 75)
                         .addComponent(jLabel1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(AdminDashboardButton))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(BookingHistoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AdminClientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(51, 51, 51))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AdminPfpLabel)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(AdUserNameLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(AdminLabel)))
+                    .addComponent(jLabel3))
                 .addGap(77, 77, 77)
                 .addComponent(AdminDashboardButton)
                 .addGap(34, 34, 34)
                 .addComponent(BookingHistoryButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addComponent(AdminClientButton)
                 .addGap(31, 31, 31)
                 .addComponent(jLabel1)
-                .addGap(37, 37, 37)
+                .addGap(34, 34, 34)
                 .addComponent(LogOutButton)
-                .addGap(44, 44, 44))
+                .addGap(47, 47, 47))
         );
 
         CurrentAvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -470,13 +459,13 @@ public void addLogoutListener(ActionListener listener) {
                 .addGap(67, 67, 67)
                 .addComponent(DeluxeLabel)
                 .addGap(151, 151, 151)
-                .addComponent(deluxeRoomStatusLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(DeluxeSetVacant, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(DeluxeSetOccupied, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(deluxeRoomStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addComponent(DeluxeSetVacant, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(DeluxeSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(DeluxeSetOccupied, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(DeluxeSetOutOfOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
         );
         jPanel5Layout.setVerticalGroup(
@@ -501,7 +490,7 @@ public void addLogoutListener(ActionListener listener) {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 61, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -512,7 +501,7 @@ public void addLogoutListener(ActionListener listener) {
                                     .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addGap(0, 56, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(100, 100, 100)
                                 .addComponent(AccomodationLabel)
@@ -560,6 +549,10 @@ public void addLogoutListener(ActionListener listener) {
         // TODO add your handling code here:
     }//GEN-LAST:event_AdminClientButtonActionPerformed
 
+    private void SingleSetOccupiedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SingleSetOccupiedButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SingleSetOccupiedButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -595,10 +588,8 @@ public void addLogoutListener(ActionListener listener) {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AccomodationLabel;
-    private javax.swing.JLabel AdUserNameLabel;
     private javax.swing.JButton AdminClientButton;
     private javax.swing.JButton AdminDashboardButton;
-    private javax.swing.JLabel AdminLabel;
     private javax.swing.JLabel AdminPfpLabel;
     private javax.swing.JButton BookingHistoryButton;
     private javax.swing.JLabel CheckinnLogoLabel;
@@ -625,6 +616,7 @@ public void addLogoutListener(ActionListener listener) {
     private javax.swing.JLabel doubleRoomStatusLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;

@@ -22,15 +22,10 @@ public class AdminDashboardController {
     public AdminDashboardController(AdminDashboard view, UserData adminData) {
         this.view = view;
         this.adminData = adminData; // Store the admin data
-        initializeView(); // Call method to set the admin's name
         initializeListeners();
         loadInitialRoomStatuses();
     }
     
-    // Re-add the method to set the admin's name on the view
-    private void initializeView() {
-        view.setAdminName(adminData.getFirstName() + " " + adminData.getLastName());
-    }
 
 private void loadInitialRoomStatuses() {
     RoomDao roomDao = new RoomDao();
