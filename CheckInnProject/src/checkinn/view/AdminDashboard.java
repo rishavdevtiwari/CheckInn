@@ -158,6 +158,7 @@ public void addLogoutListener(ActionListener listener) {
         jLabel1 = new javax.swing.JLabel();
         AdminClientButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        AdminReviewButton = new javax.swing.JButton();
         CurrentAvailabilityLabel = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         DeluxeLabel = new javax.swing.JLabel();
@@ -383,22 +384,13 @@ public void addLogoutListener(ActionListener listener) {
         jLabel3.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jLabel3.setText("Admin");
 
+        AdminReviewButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AdminReviewButton.setText("Client Reviews");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addContainerGap(41, Short.MAX_VALUE)
-                        .addComponent(AdminDashboardButton))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(LogOutButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BookingHistoryButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
-                            .addComponent(AdminClientButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE))))
-                .addGap(51, 51, 51))
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
@@ -409,7 +401,18 @@ public void addLogoutListener(ActionListener listener) {
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(75, 75, 75)
                         .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(AdminDashboardButton)
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(AdminReviewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(LogOutButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BookingHistoryButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                            .addComponent(AdminClientButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE))))
+                .addGap(51, 51, 51))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -418,13 +421,15 @@ public void addLogoutListener(ActionListener listener) {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AdminPfpLabel)
                     .addComponent(jLabel3))
-                .addGap(77, 77, 77)
+                .addGap(38, 38, 38)
                 .addComponent(AdminDashboardButton)
-                .addGap(34, 34, 34)
+                .addGap(18, 18, 18)
                 .addComponent(BookingHistoryButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(AdminClientButton)
-                .addGap(31, 31, 31)
+                .addGap(18, 18, 18)
+                .addComponent(AdminReviewButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(34, 34, 34)
                 .addComponent(LogOutButton)
@@ -591,6 +596,7 @@ public void addLogoutListener(ActionListener listener) {
     private javax.swing.JButton AdminClientButton;
     private javax.swing.JButton AdminDashboardButton;
     private javax.swing.JLabel AdminPfpLabel;
+    private javax.swing.JButton AdminReviewButton;
     private javax.swing.JButton BookingHistoryButton;
     private javax.swing.JLabel CheckinnLogoLabel;
     private javax.swing.JLabel CurrentAvailabilityLabel;
