@@ -546,7 +546,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JLabel AccomodationLabel;
     private javax.swing.JButton AdminBookingHistoryButton;
     private javax.swing.JButton AdminClientButton;
@@ -617,6 +617,10 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         ExecutiveSuiteViewInvoiceButton.setEnabled(isBooked);
         ExecutiveSuiteCancelButton.setEnabled(isBooked);
     }
+    
+    public javax.swing.JButton getLogoutButton() {
+    return LogoutButton;
+}
     
     // --- METHOD TO RESET THE VIEW ---
    public void resetAllBookings() {
