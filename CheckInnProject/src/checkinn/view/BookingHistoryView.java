@@ -74,7 +74,7 @@ private String formatDate(java.util.Date date) {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel7.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel7.setBackground(new java.awt.Color(61, 125, 125));
 
         RedirectToDashboardButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         RedirectToDashboardButton.setText("Dashboard");
@@ -154,7 +154,7 @@ private String formatDate(java.util.Date date) {
                 .addGap(44, 44, 44))
         );
 
-        jPanel2.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel2.setBackground(new java.awt.Color(113, 161, 161));
 
         CheckInnLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
 
@@ -181,7 +181,7 @@ private String formatDate(java.util.Date date) {
                 .addContainerGap())
         );
 
-        jPanel3.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel3.setBackground(new java.awt.Color(168, 214, 204));
 
         SingleRoomViewInvoice.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         SingleRoomViewInvoice.setText("View Invoice");
@@ -228,7 +228,7 @@ private String formatDate(java.util.Date date) {
                 .addGap(19, 19, 19))
         );
 
-        jPanel6.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel6.setBackground(new java.awt.Color(168, 214, 204));
 
         DoubleRoomViewInvoice.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DoubleRoomViewInvoice.setText("View Invoice");
@@ -274,7 +274,7 @@ private String formatDate(java.util.Date date) {
                 .addGap(18, 18, 18))
         );
 
-        jPanel4.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel4.setBackground(new java.awt.Color(168, 214, 204));
 
         ExecutiveSuiteVieWInvoice.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ExecutiveSuiteVieWInvoice.setText("View Invoice");
@@ -332,7 +332,7 @@ private String formatDate(java.util.Date date) {
         CheckOutLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         CheckOutLabel.setText("Check-out");
 
-        jPanel5.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel5.setBackground(new java.awt.Color(168, 214, 204));
 
         DeluxeRoomViewInvoice.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DeluxeRoomViewInvoice.setText("View Invoice");
