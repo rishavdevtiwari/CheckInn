@@ -62,7 +62,7 @@ public class DashboardView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        LogoPanel.setBackground(new java.awt.Color(23, 194, 157));
+        LogoPanel.setBackground(new java.awt.Color(113, 161, 161));
 
         CheckInnLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
 
@@ -89,7 +89,7 @@ public class DashboardView extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        SingleRoomPanel.setBackground(new java.awt.Color(23, 194, 157));
+        SingleRoomPanel.setBackground(new java.awt.Color(168, 214, 204));
 
         SingleRoomDetailsButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         SingleRoomDetailsButton.setText("Access Details");
@@ -129,7 +129,7 @@ public class DashboardView extends javax.swing.JFrame {
                 .addGap(33, 33, 33))
         );
 
-        DeluxeRoomPanel.setBackground(new java.awt.Color(23, 194, 157));
+        DeluxeRoomPanel.setBackground(new java.awt.Color(168, 214, 204));
 
         DeluxeRoomDetailsButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DeluxeRoomDetailsButton.setText("Access Details");
@@ -172,7 +172,7 @@ public class DashboardView extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
         );
 
-        ExecutiveSuitePanel.setBackground(new java.awt.Color(23, 194, 157));
+        ExecutiveSuitePanel.setBackground(new java.awt.Color(168, 214, 204));
 
         ExecutiveSuiteRoomDetailsButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ExecutiveSuiteRoomDetailsButton.setText("Access Details");
@@ -212,7 +212,7 @@ public class DashboardView extends javax.swing.JFrame {
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        DoubleRoomPanel.setBackground(new java.awt.Color(23, 194, 157));
+        DoubleRoomPanel.setBackground(new java.awt.Color(168, 214, 204));
 
         DoubleRoomDetailsButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DoubleRoomDetailsButton.setText("Access Details");
@@ -258,7 +258,7 @@ public class DashboardView extends javax.swing.JFrame {
         AvailabilityLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         AvailabilityLabel.setText("Availability");
 
-        DashboardMenuPanel.setBackground(new java.awt.Color(23, 194, 157));
+        DashboardMenuPanel.setBackground(new java.awt.Color(61, 125, 125));
 
         DashboardButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DashboardButton.setText("Dashboard");
