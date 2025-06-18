@@ -158,4 +158,14 @@ public class ReviewView extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
+
+
+public javax.swing.JButton getReviewSubmitButton(){
+    return ReviewSubmitButton;
+}
+
+public javax.swing.JTextArea getReviewsTextArea(){
+    return ReviewsTextArea;
+}
+
 }
