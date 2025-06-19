@@ -1,12 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+import checkinn.dao.ReviewDao;
+import checkinn.model.Review;
+import org.junit.*;
+import static org.junit.Assert.*;
 
-/**
- *
- * @author ACEWR
- */
+import java.util.List;
+
 public class ReviewTest {
-    
+
+    private ReviewDao reviewDao;
+
+    @Before
+    public void setUp() {
+        reviewDao = new ReviewDao();
+    }
+
+   
 }
