@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="2" hostname="DESKTOP-NV8DDEF" name="UserRegistrationTest" skipped="0" tests="2" time="0.947" timestamp="2025-06-18T15:05:36">
+<testsuite errors="0" failures="0" hostname="DESKTOP-NV8DDEF" name="MenuItemTest" skipped="0" tests="1" time="0.985" timestamp="2025-06-18T15:05:33">
   <properties>
     <property name="" value="======" />
     <property name="javac.test.classpath" value="D:/CheckInnProject/lib/absolutelayout/AbsoluteLayout.jar:D:/CheckInnProject/lib/junit_4/junit-4.13.2.jar:D:/CheckInnProject/lib/flatlaf-3.4.1-no-natives.jar;D:/CheckInnProject/lib/flatlaf-extras-3.4.1.jar;D:/CheckInnProject/lib/jakarta.activation-1.2.2.jar;D:/CheckInnProject/lib/junit-4.13.2.jar;D:/CheckInnProject/lib/mail.jar;D:/CheckInnProject/lib/mysql-connector-j-9.2.0.jar;D:/CheckInnProject/lib/absolutelayout;D:/CheckInnProject/lib/CopyLibs;D:/CheckInnProject/lib/MyLibrary/jcalendar-1.4.jar:lib/jcalendar-1.4.jar:lib/hamcrest-3.0.jar:build/classes" />
@@ -17,7 +17,7 @@
     <property name="libs.eclipselink.javadoc" value="C:\Program Files\NetBeans-25\netbeans\java\modules\ext\docs\jakarta.persistence-2.2.3-doc.zip" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner UserRegistrationTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\CheckInnProject\build\test\results\TEST-UserRegistrationTest.xml crashfile=D:\CheckInnProject\build\junitvmwatcher11445819864748174188.properties propsfile=D:\CheckInnProject\build\junit12513187572137123850.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner MenuItemTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\CheckInnProject\build\test\results\TEST-MenuItemTest.xml crashfile=D:\CheckInnProject\build\junitvmwatcher10166413401615880273.properties propsfile=D:\CheckInnProject\build\junit248844431156806532.properties" />
     <property name="jdk.debug" value="release" />
     <property name="javadoc.use" value="true" />
     <property name="javadoc.notree" value="false" />
@@ -165,7 +165,6 @@
     <property name="libs.javaee-web-api-7.0.maven-pom" value="" />
     <property name="libs.javaee-web-api-8.0.maven-pom" value="" />
     <property name="netbeans.dirs" value="C:\Program Files\NetBeans-25\netbeans\nb;C:\Program Files\NetBeans-25\netbeans\ergonomics;C:\Program Files\NetBeans-25\netbeans\ide;C:\Program Files\NetBeans-25\netbeans\extide;C:\Program Files\NetBeans-25\netbeans\java;C:\Program Files\NetBeans-25\netbeans\apisupport;C:\Program Files\NetBeans-25\netbeans\webcommon;C:\Program Files\NetBeans-25\netbeans\websvccommon;C:\Program Files\NetBeans-25\netbeans\enterprise;C:\Program Files\NetBeans-25\netbeans\mobility;C:\Program Files\NetBeans-25\netbeans\profiler;C:\Program Files\NetBeans-25\netbeans\python;C:\Program Files\NetBeans-25\netbeans\php;C:\Program Files\NetBeans-25\netbeans\identity;C:\Program Files\NetBeans-25\netbeans\harness;C:\Program Files\NetBeans-25\netbeans\cnd;C:\Program Files\NetBeans-25\netbeans\cndext;C:\Program Files\NetBeans-25\netbeans\cpplite;C:\Program Files\NetBeans-25\netbeans\dlight;C:\Program Files\NetBeans-25\netbeans\groovy;C:\Program Files\NetBeans-25\netbeans\extra;C:\Program Files\NetBeans-25\netbeans\javacard;C:\Program Files\NetBeans-25\netbeans\javafx;C:\Program Files\NetBeans-25\netbeans\rust" />
-    <property name="tests.failed" value="true" />
     <property name="libraries.dir.nativedirsep" value="D:\CheckInnProject\lib" />
     <property name="libs.hamcrest.maven-pom" value="" />
     <property name="javac.processorpath" value="D:/CheckInnProject/lib/absolutelayout/AbsoluteLayout.jar:D:/CheckInnProject/lib/junit_4/junit-4.13.2.jar:D:/CheckInnProject/lib/flatlaf-3.4.1-no-natives.jar;D:/CheckInnProject/lib/flatlaf-extras-3.4.1.jar;D:/CheckInnProject/lib/jakarta.activation-1.2.2.jar;D:/CheckInnProject/lib/junit-4.13.2.jar;D:/CheckInnProject/lib/mail.jar;D:/CheckInnProject/lib/mysql-connector-j-9.2.0.jar;D:/CheckInnProject/lib/absolutelayout;D:/CheckInnProject/lib/CopyLibs;D:/CheckInnProject/lib/MyLibrary/jcalendar-1.4.jar:lib/jcalendar-1.4.jar:lib/hamcrest-3.0.jar" />
@@ -443,27 +442,14 @@
     <property name="libs.jsp-compiler.classpath" value="C:\Program Files\NetBeans-25\netbeans\enterprise\ant\extra\jspcompile.jar" />
     <property name="libs.javaee-endorsed-api-6.0.classpath" value="C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\javaee6-endorsed\javax.annotation.jar;C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\javaee6-endorsed\jaxb-api-osgi.jar;C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\javaee6-endorsed\webservices-api-osgi.jar" />
   </properties>
-  <testcase classname="UserRegistrationTest" name="registerWithExistingCredentials" time="0.684">
-    <failure message="Registration should fail with existing credentials" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Registration should fail with existing credentials
-	at UserRegistrationTest.registerWithExistingCredentials(UserRegistrationTest.java:37)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-</failure>
-  </testcase>
-  <testcase classname="UserRegistrationTest" name="registerWithNewCredentials" time="0.048">
-    <failure message="Registration should succeed with new credentials" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Registration should succeed with new credentials
-	at UserRegistrationTest.registerWithNewCredentials(UserRegistrationTest.java:26)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-</failure>
-  </testcase>
+  <testcase classname="MenuItemTest" name="testGetAllMenuItems_NotEmpty" time="0.69" />
   <system-out><![CDATA[Database 'CheckInndb' ensured to exist.
 Successfully connected to database 'CheckInndb'.
 All tables initialized successfully.
-Database 'CheckInndb' ensured to exist.
-Successfully connected to database 'CheckInndb'.
-All tables initialized successfully.
-Database 'CheckInndb' ensured to exist.
-Successfully connected to database 'CheckInndb'.
-All tables initialized successfully.
+ID: 1, Name: Breakfast Package, Price: 500.0
+ID: 2, Name: Brunch Package, Price: 850.0
+ID: 3, Name: Lunch Package, Price: 1000.0
+ID: 4, Name: Dinner Package, Price: 1500.0
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
