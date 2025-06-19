@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<<<<<<< HEAD
 <testsuite errors="0" failures="0" hostname="Pooja" name="UserLoginTest" skipped="0" tests="3" time="0.811" timestamp="2025-06-18T15:16:37">
+=======
+<testsuite errors="0" failures="1" hostname="DESKTOP-NV8DDEF" name="UserLoginTest" skipped="0" tests="3" time="0.955" timestamp="2025-06-18T15:05:34">
+>>>>>>> a6fa9956f23f4e5ce63339383eb9daf6fce92450
   <properties>
     <property name="" value="======" />
     <property name="javac.test.classpath" value="D:/CheckInnProject/lib/absolutelayout/AbsoluteLayout.jar:D:/CheckInnProject/lib/junit_4/junit-4.13.2.jar:D:/CheckInnProject/lib/flatlaf-3.4.1-no-natives.jar;D:/CheckInnProject/lib/flatlaf-extras-3.4.1.jar;D:/CheckInnProject/lib/jakarta.activation-1.2.2.jar;D:/CheckInnProject/lib/junit-4.13.2.jar;D:/CheckInnProject/lib/mail.jar;D:/CheckInnProject/lib/mysql-connector-j-9.2.0.jar;D:/CheckInnProject/lib/absolutelayout;D:/CheckInnProject/lib/CopyLibs;D:/CheckInnProject/lib/MyLibrary/jcalendar-1.4.jar:lib/jcalendar-1.4.jar:lib/hamcrest-3.0.jar:build/classes" />
@@ -17,7 +21,11 @@
     <property name="libs.eclipselink.javadoc" value="C:\Program Files\NetBeans-25\netbeans\java\modules\ext\docs\jakarta.persistence-2.2.3-doc.zip" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin" />
+<<<<<<< HEAD
     <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner UserLoginTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\CheckInnProject\build\test\results\TEST-UserLoginTest.xml crashfile=D:\CheckInnProject\build\junitvmwatcher170723773715214964.properties propsfile=D:\CheckInnProject\build\junit293449839695158734.properties" />
+=======
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner UserLoginTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\CheckInnProject\build\test\results\TEST-UserLoginTest.xml crashfile=D:\CheckInnProject\build\junitvmwatcher425689282862399963.properties propsfile=D:\CheckInnProject\build\junit7006314921879867011.properties" />
+>>>>>>> a6fa9956f23f4e5ce63339383eb9daf6fce92450
     <property name="jdk.debug" value="release" />
     <property name="javadoc.use" value="true" />
     <property name="javadoc.notree" value="false" />
@@ -31,7 +39,11 @@
     <property name="netbeans.extbrowser.manual_chrome_plugin_install" value="yes" />
     <property name="libs.jakartaee-api-10.0.maven-pom" value="" />
     <property name="libs.spring-framework500.javadoc" value="" />
+<<<<<<< HEAD
     <property name="netbeans.default_userdir_root" value="C:\Users\ACER NITRO\AppData\Roaming\NetBeans" />
+=======
+    <property name="netbeans.default_userdir_root" value="C:\Users\LPR HUB\AppData\Roaming\NetBeans" />
+>>>>>>> a6fa9956f23f4e5ce63339383eb9daf6fce92450
     <property name="libs.jsp-compilation-syscp.src" value="" />
     <property name="jdk.home" value="C:\Program Files\Java\jdk-24" />
     <property name="java.runtime.version" value="24+36-3646" />
@@ -47,13 +59,21 @@
     <property name="libs.junit_5.javadoc" value="C:\Program Files\NetBeans-25\netbeans\platform\docs\junit-jupiter-api-5.10.3-javadoc.jar;C:\Program Files\NetBeans-25\netbeans\platform\docs\junit-jupiter-params-5.10.3-javadoc.jar;C:\Program Files\NetBeans-25\netbeans\platform\docs\junit-jupiter-engine-5.10.3-javadoc.jar" />
     <property name="libs.jakartaee-api-11.0.maven-pom" value="" />
     <property name="dist.archive.excludes" value="" />
+<<<<<<< HEAD
     <property name="java.io.tmpdir" value="C:\Users\ACERNI~1\AppData\Local\Temp\" />
+=======
+    <property name="java.io.tmpdir" value="C:\Users\LPRHUB~1\AppData\Local\Temp\" />
+>>>>>>> a6fa9956f23f4e5ce63339383eb9daf6fce92450
     <property name="java.version" value="24" />
     <property name="libraries.basename" value="nblibraries" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="libs.jakartaee-api-8.0.javadoc" value="C:\Program Files\NetBeans-25\netbeans\enterprise\docs\jakartaee8-doc-api.jar" />
     <property name="native.encoding" value="Cp1252" />
+<<<<<<< HEAD
     <property name="java.library.path" value="C:\Program Files\Java\jdk-24\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\ACER NITRO\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\ACER NITRO\AppData\Local\Programs\Python\Python313\;C:\Users\ACER NITRO\AppData\Local\Microsoft\WindowsApps;C:\Users\ACER NITRO\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ACER NITRO\AppData\Roaming\npm;;." />
+=======
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-24\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\LPR HUB\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\LPR HUB\AppData\Local\Programs\Python\Python38\;C:\Users\LPR HUB\AppData\Local\Microsoft\WindowsApps;C:\Users\LPR HUB\AppData\Local\Programs\Microsoft VS Code\bin;;." />
+>>>>>>> a6fa9956f23f4e5ce63339383eb9daf6fce92450
     <property name="libs.hamcrest.src" value="" />
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="libs.groovy-all.src" value="" />
@@ -80,7 +100,11 @@
     <property name="javadoc.noindex" value="false" />
     <property name="javadoc.private" value="false" />
     <property name="libs.JAXB-ENDORSED.maven-pom" value="" />
+<<<<<<< HEAD
     <property name="user.home" value="C:\Users\ACER NITRO" />
+=======
+    <property name="user.home" value="C:\Users\LPR HUB" />
+>>>>>>> a6fa9956f23f4e5ce63339383eb9daf6fce92450
     <property name="ant.file.CheckInnProject" value="D:\CheckInnProject\build.xml" />
     <property name="libs.eclipselinkmodelgen.maven-pom" value="" />
     <property name="have.sources" value="true" />
@@ -132,7 +156,10 @@
     <property name="default.javac.target" value="24" />
     <property name="javac.fork" value="true" />
     <property name="libs.eclipselink.classpath" value="C:\Program Files\NetBeans-25\netbeans\java\modules\ext\eclipselink\org.eclipse.persistence.core-2.7.12.jar;C:\Program Files\NetBeans-25\netbeans\java\modules\ext\eclipselink\org.eclipse.persistence.asm-9.4.0.jar;C:\Program Files\NetBeans-25\netbeans\java\modules\ext\eclipselink\org.eclipse.persistence.antlr-2.7.12.jar;C:\Program Files\NetBeans-25\netbeans\java\modules\ext\eclipselink\org.eclipse.persistence.jpa-2.7.12.jar;C:\Program Files\NetBeans-25\netbeans\java\modules\ext\eclipselink\org.eclipse.persistence.jpa.jpql-2.7.12.jar;C:\Program Files\NetBeans-25\netbeans\java\modules\ext\eclipselink\org.eclipse.persistence.moxy-2.7.12.jar;C:\Program Files\NetBeans-25\netbeans\java\modules\ext\eclipselink\jakarta.persistence-2.2.3.jar" />
+<<<<<<< HEAD
     <property name="user.country.format" value="AS" />
+=======
+>>>>>>> a6fa9956f23f4e5ce63339383eb9daf6fce92450
     <property name="libs.PostgreSQLDriver.maven-pom" value="" />
     <property name="libs.absolutelayout.src" value="" />
     <property name="ant.file.CheckInnProject-impl" value="D:\CheckInnProject\nbproject\build-impl.xml" />
@@ -190,7 +217,11 @@
     <property name="javac.processormodulepath" value="" />
     <property name="javadoc.encoding" value="UTF-8" />
     <property name="libs.jakartaee-api-11.0.src" value="" />
+<<<<<<< HEAD
     <property name="netbeans.hash.code" value="unique=NB_EXTIDE_JAVA_PHP_WEBCOMMON_WEBEE07b38474b-cfeb-4f70-a162-ba820182da49_398511b0-0089-4141-b080-7f6382118ffd" />
+=======
+    <property name="netbeans.hash.code" value="unique=NB_EXTIDE_JAVA_PHP_WEBCOMMON_WEBEE0184eafd6-d5c2-48a0-9f1e-fd4ba92ec7f0_9a69c868-d1d8-40ea-840a-8efbfef54763" />
+>>>>>>> a6fa9956f23f4e5ce63339383eb9daf6fce92450
     <property name="libs.jstl.src" value="" />
     <property name="libs.jsp-compilation-syscp.maven-pom" value="" />
     <property name="jlink.strip" value="false" />
@@ -206,7 +237,11 @@
     <property name="javac.profile.cmd.line.arg" value="" />
     <property name="libs.jakartaee-web-api-11.0.src" value="" />
     <property name="libs.jakartaee-api-9.0.classpath" value="C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\jakarta.jakartaee-api-9.0.0.jar" />
+<<<<<<< HEAD
     <property name="&gt;&gt;&gt;&gt;&gt;&gt;&gt;" value="e00890512c0b97e78f0490bd01bb25e76660843e" />
+=======
+    <property name="&gt;&gt;&gt;&gt;&gt;&gt;&gt;" value="manitasc5" />
+>>>>>>> a6fa9956f23f4e5ce63339383eb9daf6fce92450
     <property name="application.title" value="CheckInnProject" />
     <property name="do.archive+main.class.available" value="true" />
     <property name="javac.test.modulepath" value="" />
@@ -336,7 +371,11 @@
     <property name="netbeans.autoupdate.version" value="1.23" />
     <property name="empty.dir" value="D:\CheckInnProject\build\empty" />
     <property name="libs.jakartaee-api-10.0.classpath" value="C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\jakarta.jakartaee-api-10.0.0.jar" />
+<<<<<<< HEAD
     <property name="netbeans.user" value="C:\Users\ACER NITRO\AppData\Roaming\NetBeans\25" />
+=======
+    <property name="netbeans.user" value="C:\Users\LPR HUB\AppData\Roaming\NetBeans\25" />
+>>>>>>> a6fa9956f23f4e5ce63339383eb9daf6fce92450
     <property name="file.separator" value="\" />
     <property name="line.separator" value="&#xd;&#xa;" />
     <property name="javadoc.additionalparam" value="" />
@@ -347,7 +386,11 @@
     <property name="ant.file.type.CheckInnProject-impl" value="file" />
     <property name="libs.testng.classpath" value="C:\Program Files\NetBeans-25\netbeans\platform\modules\ext\testng-6.14.3.jar;C:\Program Files\NetBeans-25\netbeans\platform\modules\ext\jcommander-1.78.jar" />
     <property name="libs.jsp-compiler.src" value="" />
+<<<<<<< HEAD
     <property name="user.name" value="ACER NITRO" />
+=======
+    <property name="user.name" value="LPR HUB" />
+>>>>>>> a6fa9956f23f4e5ce63339383eb9daf6fce92450
     <property name="${file.reference.flatlaf-3.4.1-no-natives.jar}" value="C:\Users\risha\Downloads\flatlaf-extras-3.4.1.jar:${file.reference.mail__1_.jar}:C:\Users\risha\Downloads\jakarta.activation-1.2.2.jar" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="javadoc.windowtitle" value="" />
@@ -374,7 +417,11 @@
     <property name="java.failonerror" value="true" />
     <property name="javac.modulepath" value="" />
     <property name="libs.spring-framework500.src" value="" />
+<<<<<<< HEAD
     <property name="user.properties.file" value="C:\Users\ACER NITRO\AppData\Roaming\NetBeans\25\build.properties" />
+=======
+    <property name="user.properties.file" value="C:\Users\LPR HUB\AppData\Roaming\NetBeans\25\build.properties" />
+>>>>>>> a6fa9956f23f4e5ce63339383eb9daf6fce92450
     <property name="libs.javaee-api-6.0.src" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
     <property name="java.class.path" value="D:\CheckInnProject\lib\absolutelayout\AbsoluteLayout.jar;D:\CheckInnProject\lib\junit_4\junit-4.13.2.jar;D:\CheckInnProject\lib\flatlaf-3.4.1-no-natives.jar;D:\CheckInnProject\lib\flatlaf-extras-3.4.1.jar;D:\CheckInnProject\lib\jakarta.activation-1.2.2.jar;D:\CheckInnProject\lib\junit-4.13.2.jar;D:\CheckInnProject\lib\mail.jar;D:\CheckInnProject\lib\mysql-connector-j-9.2.0.jar;D:\CheckInnProject\lib\absolutelayout;D:\CheckInnProject\lib\CopyLibs;D:\CheckInnProject\lib\MyLibrary\jcalendar-1.4.jar;D:\CheckInnProject\lib\jcalendar-1.4.jar;D:\CheckInnProject\lib\hamcrest-3.0.jar;D:\CheckInnProject\build\classes;D:\CheckInnProject\build\test\classes;C:\Program Files\NetBeans-25\netbeans\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans-25\netbeans\extide\ant\lib\ant.jar;C:\Program Files\NetBeans-25\netbeans\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans-25\netbeans\extide\ant\lib\ant-junit4.jar" />
@@ -443,9 +490,20 @@
     <property name="libs.jsp-compiler.classpath" value="C:\Program Files\NetBeans-25\netbeans\enterprise\ant\extra\jspcompile.jar" />
     <property name="libs.javaee-endorsed-api-6.0.classpath" value="C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\javaee6-endorsed\javax.annotation.jar;C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\javaee6-endorsed\jaxb-api-osgi.jar;C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\javaee6-endorsed\webservices-api-osgi.jar" />
   </properties>
+<<<<<<< HEAD
   <testcase classname="UserLoginTest" name="loginWithInvalidPassword_shouldFail" time="0.519" />
   <testcase classname="UserLoginTest" name="loginWithNonexistentEmail_shouldFail" time="0.036" />
   <testcase classname="UserLoginTest" name="loginWithValidCredentials_shouldSucceed" time="0.037" />
+=======
+  <testcase classname="UserLoginTest" name="loginWithInvalidPassword_shouldFail" time="0.645" />
+  <testcase classname="UserLoginTest" name="loginWithNonexistentEmail_shouldFail" time="0.047" />
+  <testcase classname="UserLoginTest" name="loginWithValidCredentials_shouldSucceed" time="0.049">
+    <failure message="Login should succeed with correct credentials" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Login should succeed with correct credentials
+	at UserLoginTest.loginWithValidCredentials_shouldSucceed(UserLoginTest.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+</failure>
+  </testcase>
+>>>>>>> a6fa9956f23f4e5ce63339383eb9daf6fce92450
   <system-out><![CDATA[Database 'CheckInndb' ensured to exist.
 Successfully connected to database 'CheckInndb'.
 All tables initialized successfully.

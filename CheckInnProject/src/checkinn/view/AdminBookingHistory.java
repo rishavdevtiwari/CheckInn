@@ -57,6 +57,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         AdminClientButton = new javax.swing.JButton();
+        AdminReviewButton = new javax.swing.JButton();
         AccomodationLabel = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         DeluxeViewInvoiceButton = new javax.swing.JButton();
@@ -99,11 +100,11 @@ public class AdminBookingHistory extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addGap(105, 105, 105)
                 .addComponent(DoubleRoomLabel)
-                .addGap(243, 243, 243)
-                .addComponent(DoubleRoomClient, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(211, 211, 211)
+                .addGap(190, 190, 190)
+                .addComponent(DoubleRoomClient, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(90, 90, 90)
                 .addComponent(DoubleViewInvoiceButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
                 .addComponent(DoubleCancelButton)
                 .addGap(38, 38, 38))
         );
@@ -153,7 +154,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
 
-        jPanel4.setBackground(new java.awt.Color(23, 194, 157));
+        jPanel4.setBackground(new java.awt.Color(168, 214, 204));
 
         ExecutiveSuiteViewInvoiceButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ExecutiveSuiteViewInvoiceButton.setText("View Invoice");
@@ -186,9 +187,9 @@ public class AdminBookingHistory extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGap(82, 82, 82)
                 .addComponent(ExecutiveSuiteLabel)
-                .addGap(223, 223, 223)
-                .addComponent(ExecutiveSuiteRoomClient, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(217, 217, 217)
+                .addGap(175, 175, 175)
+                .addComponent(ExecutiveSuiteRoomClient, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77)
                 .addComponent(ExecutiveSuiteViewInvoiceButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
                 .addComponent(ExecutiveSuiteCancelButton)
@@ -243,9 +244,9 @@ public class AdminBookingHistory extends javax.swing.JFrame {
                 .addComponent(SingleRoomLabel)
                 .addGap(175, 175, 175)
                 .addComponent(jLabel14)
-                .addGap(71, 71, 71)
-                .addComponent(SingleRoomClient, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(211, 211, 211)
+                .addGap(19, 19, 19)
+                .addComponent(SingleRoomClient, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(89, 89, 89)
                 .addComponent(SingleViewInvoiceButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addComponent(SingleCancelButton)
@@ -290,6 +291,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         jLabel11.setText("jLabel11");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Admin");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/IconBkngHstry.png"))); // NOI18N
@@ -302,54 +304,55 @@ public class AdminBookingHistory extends javax.swing.JFrame {
             }
         });
 
+        AdminReviewButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AdminReviewButton.setText("Client Reviews");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(LogoutButton)
-                .addGap(59, 59, 59))
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(82, 82, 82)
                 .addComponent(jLabel3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(17, 17, 17)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(LogoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(AdminBookingHistoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(AdminDashboardButton)
-                            .addComponent(AdminClientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(AdminBookingHistoryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(AdminReviewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(AdminClientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(13, 13, 13)))
                 .addGap(0, 49, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addComponent(jLabel11))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jLabel2)))
-                .addGap(71, 71, 71)
+                .addGap(56, 56, 56)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel2))
+                .addGap(41, 41, 41)
                 .addComponent(AdminDashboardButton)
-                .addGap(29, 29, 29)
+                .addGap(18, 18, 18)
                 .addComponent(AdminBookingHistoryButton)
-                .addGap(29, 29, 29)
+                .addGap(18, 18, 18)
                 .addComponent(AdminClientButton)
-                .addGap(38, 38, 38)
+                .addGap(18, 18, 18)
+                .addComponent(AdminReviewButton)
+                .addGap(45, 45, 45)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(66, 66, 66)
                 .addComponent(LogoutButton)
-                .addGap(86, 86, 86))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         AccomodationLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -388,11 +391,11 @@ public class AdminBookingHistory extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addGap(106, 106, 106)
                 .addComponent(DeluxeRoomLabel)
-                .addGap(254, 254, 254)
-                .addComponent(DeluxeRoomClient, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(217, 217, 217)
+                .addGap(198, 198, 198)
+                .addComponent(DeluxeRoomClient, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(85, 85, 85)
                 .addComponent(DeluxeViewInvoiceButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
                 .addComponent(DeluxeCancelButton)
                 .addGap(37, 37, 37))
         );
@@ -551,6 +554,7 @@ public class AdminBookingHistory extends javax.swing.JFrame {
     private javax.swing.JButton AdminBookingHistoryButton;
     private javax.swing.JButton AdminClientButton;
     private javax.swing.JButton AdminDashboardButton;
+    private javax.swing.JButton AdminReviewButton;
     private javax.swing.JLabel BookingHistoryLabel;
     private javax.swing.JLabel CheckInnLogoLabel;
     private javax.swing.JLabel CheckedInClientLabel;
@@ -593,6 +597,9 @@ public class AdminBookingHistory extends javax.swing.JFrame {
     public javax.swing.JButton getDoubleCancelButton() { return DoubleCancelButton; }
     public javax.swing.JButton getDeluxeCancelButton() { return DeluxeCancelButton; }
     public javax.swing.JButton getExecutiveSuiteCancelButton() { return ExecutiveSuiteCancelButton; }
+    public javax.swing.JButton getAdminClientButton() {
+    return AdminClientButton;
+}
     
     
         // --- SETTERS FOR BOOKING INFO ---
@@ -632,4 +639,8 @@ public class AdminBookingHistory extends javax.swing.JFrame {
         setExecutiveSuiteBooking(false, null);
     }
 
+   public javax.swing.JButton getAdminReviewButton(){
+    return AdminReviewButton;
+}
+   
 }

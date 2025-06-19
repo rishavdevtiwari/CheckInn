@@ -35,12 +35,17 @@ public class RegistrationController {
             String lastName = registrationView.getLastName();
             String email = registrationView.getEmail();
             String password = registrationView.getPassword();
+            String confirmPassword = registrationView.getConfirmPassword();
             String phoneNumber = registrationView.getPhoneNumber();
-
+            
+            
             RegistrationRequest request = new RegistrationRequest(
                 firstName, lastName, email, password, phoneNumber
             );
-
+            if (!password.equals(confirmPassword)) {
+            registrationView.showError("Passwords do not match. Please enter the same password in both fields.");
+            return;
+            }
             if (!request.isValid()) {
                 registrationView.showError("Please fill all fields.");
                 return;

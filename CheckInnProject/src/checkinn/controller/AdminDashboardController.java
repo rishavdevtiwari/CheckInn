@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 // Add missing imports for the controllers
 import checkinn.controller.AdminBookingHistoryController;
 import checkinn.controller.AdminClientController;
+import checkinn.view.AdminReviewView;
 
 
 public class AdminDashboardController {
@@ -22,15 +23,10 @@ public class AdminDashboardController {
     public AdminDashboardController(AdminDashboard view, UserData adminData) {
         this.view = view;
         this.adminData = adminData; // Store the admin data
-        initializeView(); // Call method to set the admin's name
         initializeListeners();
         loadInitialRoomStatuses();
     }
     
-    // Re-add the method to set the admin's name on the view
-    private void initializeView() {
-        view.setAdminName(adminData.getFirstName() + " " + adminData.getLastName());
-    }
 
 private void loadInitialRoomStatuses() {
     RoomDao roomDao = new RoomDao();
@@ -83,6 +79,13 @@ private String statusString(int statusId) {
         view.addSuiteOccupiedListener(e -> updateRoomStatus("Suite", "Occupied"));
         view.addSuiteOutOfOrderListener(e -> updateRoomStatus("Suite", "Out of Order"));
 
+        view.getAdminReviewButton().addActionListener(e->{
+            view.setVisible(false);
+            AdminReviewView adminReviewView=new AdminReviewView();
+            AdminReviewController adminReviewController=new AdminReviewController(adminReviewView,this);
+            adminReviewController.open();
+        });
+        
         // Admin dashboard navigation listeners
         view.addLogoutListener(e -> logout());
         view.addAdminClientButtonListener(e -> openAdminClientView());

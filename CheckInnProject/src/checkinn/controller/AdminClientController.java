@@ -2,9 +2,13 @@ package checkinn.controller;
 
 import checkinn.dao.UserDao;
 import checkinn.model.UserData;
+import checkinn.view.AdminBookingHistory;
 import checkinn.view.AdminClientView;
+import checkinn.view.AdminReviewView;
+import checkinn.view.LoginView;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 public class AdminClientController {
     private final AdminClientView view;
@@ -28,6 +32,38 @@ public class AdminClientController {
         dashboardController.showView();
     });
 
+            view.getAdminReviewButton().addActionListener(e->{
+            view.setVisible(false);
+            AdminReviewView adminReviewView=new AdminReviewView();
+            AdminReviewController adminReviewController;
+        adminReviewController = new AdminReviewController(adminReviewView,dashboardController);
+            adminReviewController.open();
+        });
+            
+    view.getBookingHistoryButton().addActionListener(e -> {
+        view.dispose();
+        AdminBookingHistory bookingHistoryView = new AdminBookingHistory();
+        AdminBookingHistoryController bookingHistoryController = new AdminBookingHistoryController(bookingHistoryView, dashboardController);
+        bookingHistoryController.open();
+    });
+    
+    view.getLogOutButton().addActionListener(e -> {
+        int confirm = JOptionPane.showConfirmDialog(
+            view, 
+            "Are you sure you want to logout?",
+            "Confirm Logout",
+            JOptionPane.YES_NO_OPTION
+        );
+        if (confirm == JOptionPane.YES_OPTION) {
+            view.dispose();
+            
+            // Open the LoginView
+            LoginView loginView = new LoginView();
+            UserDao userDao = new UserDao(); 
+            new LoginController(loginView, userDao).open();
+        }
+    });
+    
     view.addDeleteClientListener(e -> {
         String input = javax.swing.JOptionPane.showInputDialog(view, "Enter User ID to delete:");
         if (input != null && !input.trim().isEmpty()) {

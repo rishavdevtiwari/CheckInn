@@ -5,6 +5,8 @@
 package checkinn.view;
 
 import java.awt.event.ActionListener;
+
+import checkinn.controller.ReviewController;
 /**
  *
  * @author niss
@@ -59,6 +61,7 @@ public class DashboardView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         UserProfileRedirectionButton = new javax.swing.JButton();
+        ReviewButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -112,9 +115,9 @@ public class DashboardView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SingleRoomPanelLayout.createSequentialGroup()
                 .addGap(105, 105, 105)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 353, Short.MAX_VALUE)
-                .addComponent(SingleRoomStatusLabel)
-                .addGap(256, 256, 256)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 345, Short.MAX_VALUE)
+                .addComponent(SingleRoomStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(180, 180, 180)
                 .addComponent(SingleRoomDetailsButton)
                 .addGap(32, 32, 32))
         );
@@ -153,8 +156,8 @@ public class DashboardView extends javax.swing.JFrame {
                 .addGap(103, 103, 103)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(DeluxeRoomStatusLabel)
-                .addGap(228, 228, 228)
+                .addComponent(DeluxeRoomStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(190, 190, 190)
                 .addComponent(DeluxeRoomDetailsButton)
                 .addGap(35, 35, 35))
         );
@@ -193,8 +196,8 @@ public class DashboardView extends javax.swing.JFrame {
                 .addGap(78, 78, 78)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 311, Short.MAX_VALUE)
-                .addComponent(ExecutiveSuiteStatusLabel)
-                .addGap(252, 252, 252)
+                .addComponent(ExecutiveSuiteStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(200, 200, 200)
                 .addComponent(ExecutiveSuiteRoomDetailsButton)
                 .addGap(33, 33, 33))
         );
@@ -232,9 +235,9 @@ public class DashboardView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DoubleRoomPanelLayout.createSequentialGroup()
                 .addGap(100, 100, 100)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 346, Short.MAX_VALUE)
-                .addComponent(DoubleRoomStatusLabel)
-                .addGap(244, 244, 244)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(DoubleRoomStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(173, 173, 173)
                 .addComponent(DoubleRoomDetailsButton)
                 .addGap(32, 32, 32))
         );
@@ -281,6 +284,7 @@ public class DashboardView extends javax.swing.JFrame {
         UserProfileLabel.setText("jLabel11");
 
         UserNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        UserNameLabel.setForeground(new java.awt.Color(255, 255, 255));
         UserNameLabel.setText("Ram Bahadur");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dsh.png"))); // NOI18N
@@ -289,6 +293,9 @@ public class DashboardView extends javax.swing.JFrame {
         UserProfileRedirectionButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         UserProfileRedirectionButton.setText("Profile");
 
+        ReviewButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ReviewButton.setText("Leave a review");
+
         javax.swing.GroupLayout DashboardMenuPanelLayout = new javax.swing.GroupLayout(DashboardMenuPanel);
         DashboardMenuPanel.setLayout(DashboardMenuPanelLayout);
         DashboardMenuPanelLayout.setHorizontalGroup(
@@ -296,11 +303,12 @@ public class DashboardView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DashboardMenuPanelLayout.createSequentialGroup()
                 .addContainerGap(55, Short.MAX_VALUE)
                 .addGroup(DashboardMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(LogoutButton)
                     .addComponent(BookingHistoryButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(DashboardButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(UserProfileRedirectionButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(UserProfileRedirectionButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LogoutButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ReviewButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(51, 51, 51))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DashboardMenuPanelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -318,20 +326,22 @@ public class DashboardView extends javax.swing.JFrame {
             DashboardMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DashboardMenuPanelLayout.createSequentialGroup()
                 .addGap(45, 45, 45)
-                .addGroup(DashboardMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(UserNameLabel)
-                    .addComponent(UserProfileLabel))
+                .addGroup(DashboardMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(UserProfileLabel)
+                    .addComponent(UserNameLabel))
                 .addGap(61, 61, 61)
                 .addComponent(DashboardButton)
                 .addGap(18, 18, 18)
                 .addComponent(BookingHistoryButton)
+                .addGap(15, 15, 15)
+                .addComponent(ReviewButton)
                 .addGap(18, 18, 18)
                 .addComponent(UserProfileRedirectionButton)
-                .addGap(31, 31, 31)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addGap(38, 38, 38)
                 .addComponent(LogoutButton)
                 .addGap(86, 86, 86))
         );
@@ -385,7 +395,7 @@ public class DashboardView extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addComponent(DashboardMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -469,6 +479,7 @@ public class DashboardView extends javax.swing.JFrame {
     private javax.swing.JLabel ExecutiveSuiteStatusLabel;
     private javax.swing.JPanel LogoPanel;
     private javax.swing.JButton LogoutButton;
+    private javax.swing.JButton ReviewButton;
     private javax.swing.JButton SingleRoomDetailsButton;
     private javax.swing.JPanel SingleRoomPanel;
     private javax.swing.JLabel SingleRoomStatusLabel;
@@ -484,6 +495,9 @@ public class DashboardView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 
+        public javax.swing.JButton getReviewButton(){
+        return ReviewButton;
+    }
      public void addSingleRoomListener(ActionListener actionListener) {
         SingleRoomDetailsButton.addActionListener(actionListener);
     }
@@ -531,5 +545,7 @@ public void addBookingHistoryListener(java.awt.event.ActionListener listener) {
         case "Deluxe Room" -> DeluxeRoomStatusLabel.setText(status);
         case "Executive Suite" -> ExecutiveSuiteStatusLabel.setText(status);
     }
+    
 }
+
 }

@@ -5,6 +5,7 @@ import checkinn.model.Booking;
 import checkinn.model.UserData;
 import checkinn.view.BookingHistoryView;
 import checkinn.view.InvoiceView;
+import checkinn.view.ReviewView;
 import checkinn.view.UserProfileView;
 import java.util.List;
 
@@ -46,6 +47,14 @@ public class BookingHistoryController {
     view.DeluxeRoomViewInvoice.addActionListener(e -> openInvoiceForRoom("Deluxe Room"));
     view.ExecutiveSuiteVieWInvoice.addActionListener(e -> openInvoiceForRoom("Executive Suite"));
             
+
+    view.getReviewButton().addActionListener(e -> {
+    ReviewView reviewView = new ReviewView();
+    ReviewController reviewController = new ReviewController(reviewView,user, dashboardController);
+    reviewController.open();
+    view.setVisible(false); 
+});
+
                 view.addLogoutListener(e -> {
         int confirm = javax.swing.JOptionPane.showConfirmDialog(
             view,
