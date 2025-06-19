@@ -27,5 +27,10 @@ public class RoomTest {
         int statusRestored = roomDao.getRoomStatusId(roomId);
         assertEquals(originalStatus, statusRestored);
     }
+    @Test
+    public void testGetRoomStatusId_InvalidRoom() {
+        int status = roomDao.getRoomStatusId(-1); // Invalid room ID for testing
+        assertEquals(1, status); // this needs to return vacant for test to pass
+    }
 }
     
