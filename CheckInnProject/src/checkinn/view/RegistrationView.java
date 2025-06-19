@@ -38,6 +38,20 @@ public class RegistrationView extends javax.swing.JFrame {
         }
     });
         
+        RegConfirmPassEyeButton.addActionListener(new java.awt.event.ActionListener() {
+        @Override
+        public void actionPerformed(java.awt.event.ActionEvent e) {
+            if (isConfirmPasswordVisible) {
+                RegConfirmNewPassInput.setEchoChar('•');
+                RegConfirmPassEyeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/CloseEye.jpg")));
+            } else {
+                RegConfirmNewPassInput.setEchoChar((char) 0);
+                RegConfirmPassEyeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OpenEye.jpg")));
+            }
+            isConfirmPasswordVisible = !isConfirmPasswordVisible;
+        }
+    });
+        
     }
   
     /**
