@@ -51,7 +51,7 @@ public class LoginView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         BoyOnTableImg = new javax.swing.JLabel();
         LogoImg = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        LoginEyeButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -178,7 +178,8 @@ public class LoginView extends javax.swing.JFrame {
         LogoImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/smallcheckinnlogo.png"))); // NOI18N
         LogoImg.setText("jLabel3");
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OpenEye.jpg"))); // NOI18N
+        LoginEyeButton.setBackground(new java.awt.Color(204, 204, 204));
+        LoginEyeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OpenEye.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -187,7 +188,7 @@ public class LoginView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(BoyOnTableImg, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(LoginEyeButton)
                 .addGap(86, 86, 86))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -217,7 +218,7 @@ public class LoginView extends javax.swing.JFrame {
                         .addComponent(BoyOnTableImg, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(46, 46, 46))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LoginEyeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(297, 297, 297))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -273,6 +274,7 @@ public class LoginView extends javax.swing.JFrame {
     private javax.swing.JLabel BoyOnTableImg;
     private javax.swing.JLabel ForgotPassword;
     private javax.swing.JButton LoginButton;
+    private javax.swing.JButton LoginEyeButton;
     private javax.swing.JPanel LoginFormPanel;
     private javax.swing.JLabel LoginPassword;
     private javax.swing.JPasswordField LoginPasswordInput;
@@ -283,7 +285,6 @@ public class LoginView extends javax.swing.JFrame {
     private javax.swing.JLabel RedirectToReg;
     private javax.swing.JLabel SubTitleLabel;
     private javax.swing.JLabel TitleLabel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
