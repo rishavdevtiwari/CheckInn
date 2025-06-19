@@ -4,12 +4,20 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class RoomTest {
+    
 
     private RoomDao roomDao;
+    private int originalStatus;
 
     @Before
     public void setUp() {
         roomDao = new RoomDao();
+    }
+    
+    @After
+    public void tearDown() {
+       
+        roomDao.setRoomStatus(1, originalStatus);
     }
 
     @Test
