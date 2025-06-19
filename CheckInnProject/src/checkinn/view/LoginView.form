@@ -25,7 +25,9 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="BoyOnTableImg" min="-2" pref="501" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="452" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="LoginEyeButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
@@ -38,7 +40,7 @@
                       <Component id="LogoImg" min="-2" pref="326" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="621" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
@@ -57,8 +59,16 @@
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="BoyOnTableImg" min="-2" pref="496" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="BoyOnTableImg" min="-2" pref="496" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="LoginEyeButton" min="-2" pref="26" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="299" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
@@ -117,11 +127,11 @@
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="LoginUsername" min="-2" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="LoginPassword" min="-2" max="-2" attributes="0"/>
-                                      <Component id="LoginButton" alignment="1" pref="317" max="32767" attributes="0"/>
-                                      <Component id="LoginPasswordInput" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="LoginUsernameInput" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="LoginButton" alignment="1" min="-2" pref="317" max="-2" attributes="0"/>
+                                      <Component id="LoginPasswordInput" alignment="0" min="-2" pref="277" max="-2" attributes="0"/>
+                                      <Component id="LoginUsernameInput" alignment="0" min="-2" pref="317" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="SubTitleLabel" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
                                   <Component id="TitleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -276,7 +286,6 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/images/boyontable.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="LogoImg">
@@ -285,6 +294,16 @@
           <Image iconType="3" name="/images/smallcheckinnlogo.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="LoginEyeButton">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/images/OpenEye.jpg"/>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>
