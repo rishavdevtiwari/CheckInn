@@ -47,8 +47,8 @@ public class RegistrationView extends javax.swing.JFrame {
         RegButton = new javax.swing.JButton();
         AlrHavAccQ = new javax.swing.JLabel();
         RedirectToLogin = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        RegNewPassEyeButton = new javax.swing.JButton();
+        RegConfirmPassEyeButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -119,17 +119,19 @@ public class RegistrationView extends javax.swing.JFrame {
         RedirectToLogin.setForeground(new java.awt.Color(0, 51, 153));
         RedirectToLogin.setText("Log In");
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OpenEye.jpg"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        RegNewPassEyeButton.setBackground(new java.awt.Color(204, 204, 204));
+        RegNewPassEyeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OpenEye.jpg"))); // NOI18N
+        RegNewPassEyeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                RegNewPassEyeButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OpenEye.jpg"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        RegConfirmPassEyeButton.setBackground(new java.awt.Color(204, 204, 204));
+        RegConfirmPassEyeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OpenEye.jpg"))); // NOI18N
+        RegConfirmPassEyeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                RegConfirmPassEyeButtonActionPerformed(evt);
             }
         });
 
@@ -157,12 +159,12 @@ public class RegistrationView extends javax.swing.JFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addComponent(RegNewPassInput, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(17, 17, 17)
-                                        .addComponent(jButton1))
+                                        .addComponent(RegNewPassEyeButton))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                             .addComponent(RegConfirmNewPassInput)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jButton2))
+                                            .addComponent(RegConfirmPassEyeButton))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                             .addComponent(RegConfirmNewpass)
                                             .addGap(172, 172, 172)))))
@@ -219,7 +221,7 @@ public class RegistrationView extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegLNameInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RegNewPassInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(RegNewPassEyeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(60, 60, 60)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegPh)
@@ -228,7 +230,7 @@ public class RegistrationView extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegConfirmNewPassInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RegPhInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(RegConfirmPassEyeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(62, 62, 62)
                 .addComponent(RegButton)
                 .addGap(18, 18, 18)
@@ -285,13 +287,13 @@ public class RegistrationView extends javax.swing.JFrame {
    
     }//GEN-LAST:event_RegConfirmNewPassInputActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void RegNewPassEyeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegNewPassEyeButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_RegNewPassEyeButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void RegConfirmPassEyeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegConfirmPassEyeButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_RegConfirmPassEyeButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -332,20 +334,20 @@ public class RegistrationView extends javax.swing.JFrame {
     private javax.swing.JButton RegButton;
     private javax.swing.JPasswordField RegConfirmNewPassInput;
     private javax.swing.JLabel RegConfirmNewpass;
+    private javax.swing.JButton RegConfirmPassEyeButton;
     private javax.swing.JLabel RegEmail;
     private javax.swing.JTextField RegEmailInput;
     private javax.swing.JTextField RegFNameInput;
     private javax.swing.JLabel RegFirstName;
     private javax.swing.JTextField RegLNameInput;
     private javax.swing.JLabel RegLastName;
+    private javax.swing.JButton RegNewPassEyeButton;
     private javax.swing.JPasswordField RegNewPassInput;
     private javax.swing.JLabel RegNewpass;
     private javax.swing.JLabel RegPh;
     private javax.swing.JTextField RegPhInput;
     private javax.swing.JLabel SubtitleLabel;
     private javax.swing.JLabel TitleLabel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

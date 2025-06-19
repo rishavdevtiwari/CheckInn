@@ -13,6 +13,8 @@ import javax.swing.*;
  * @author risha
  */
 public class LoginView extends javax.swing.JFrame {
+    
+    private boolean isLoginPasswordVisible = false;
 
     /**
      * Creates new form LoginView
@@ -23,6 +25,7 @@ public class LoginView extends javax.swing.JFrame {
         makeForgotPasswordLabelClickable();
         setTitle("Login Form | CheckInn");
         setLocationRelativeTo(null);
+        addLoginEyeButtonListener();
     }
     
     
@@ -189,7 +192,7 @@ public class LoginView extends javax.swing.JFrame {
                 .addComponent(BoyOnTableImg, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(LoginEyeButton)
-                .addGap(86, 86, 86))
+                .addGap(83, 83, 83))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -219,7 +222,7 @@ public class LoginView extends javax.swing.JFrame {
                         .addGap(46, 46, 46))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(LoginEyeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(297, 297, 297))))
+                        .addGap(299, 299, 299))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(74, Short.MAX_VALUE)
@@ -241,6 +244,8 @@ public class LoginView extends javax.swing.JFrame {
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_LoginButtonActionPerformed
+
+    
 
     /**
      * @param args the command line arguments
@@ -330,6 +335,21 @@ public void showMessage(String message) { JOptionPane.showMessageDialog(this, me
     public void addForgotPasswordListener(MouseListener listener) {
         ForgotPassword.addMouseListener(listener);
     }
+    
+    public void addLoginEyeButtonListener() {
+    LoginEyeButton.addActionListener((java.awt.event.ActionEvent e) -> {
+        if (isLoginPasswordVisible) {
+            LoginPasswordInput.setEchoChar('•');
+            LoginEyeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/CloseEye.jpg")));
+        } else {
+            LoginPasswordInput.setEchoChar((char) 0);
+            LoginEyeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OpenEye.jpg")));
+        }
+        isLoginPasswordVisible = !isLoginPasswordVisible;
+    });
+}
+    
+ 
 
     public void addRegisterNavigationListener(MouseListener listener) {
         RedirectToReg.addMouseListener(listener);
@@ -349,5 +369,10 @@ public javax.swing.JLabel getForgotPassword(){
 private void makeForgotPasswordLabelClickable(){
 ForgotPassword.setForeground(new java.awt.Color(0,51,153));
 ForgotPassword.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+}
+
+
+public void addLoginEyeButtonListener(ActionListener listener) {
+    LoginEyeButton.addActionListener(listener);
 }
 }
