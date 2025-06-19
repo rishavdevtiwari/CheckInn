@@ -12,4 +12,20 @@ public class RoomTest {
         roomDao = new RoomDao();
     }
 
+    @Test
+    public void testSetAndGetRoomStatus() {
+        int roomId = 1; // Using a valid room id (single =1)
+        int originalStatus = roomDao.getRoomStatusId(roomId);
+
+        // Set to Occupied which is 2
+        roomDao.setRoomStatus(roomId, 2);
+        int statusAfterSet = roomDao.getRoomStatusId(roomId);
+        assertEquals(2, statusAfterSet);
+
+        // Setting room status back to original status
+        roomDao.setRoomStatus(roomId, originalStatus);
+        int statusRestored = roomDao.getRoomStatusId(roomId);
+        assertEquals(originalStatus, statusRestored);
+    }
+}
     
