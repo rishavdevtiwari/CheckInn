@@ -2,7 +2,8 @@ import checkinn.dao.ReviewDao;
 import checkinn.model.Review;
 import org.junit.*;
 import static org.junit.Assert.*;
-
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.List;
 
 public class ReviewTest {
@@ -12,6 +13,18 @@ public class ReviewTest {
     @Before
     public void setUp() {
         reviewDao = new ReviewDao();
+    }
+    
+    @After
+    public void tearDown() {
+        
+        try (Connection conn = new checkinn.database.MySqlConnection().openConnection();
+             PreparedStatement stmt = conn.prepareStatement(
+                 "DELETE FROM Review WHERE review_text LIKE 'JUnit test review%'")) {
+            stmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
