@@ -11,12 +11,32 @@ import javax.swing.JOptionPane;
  * @author rishav
  */
 public class RegistrationView extends javax.swing.JFrame {
+    
+    private boolean isNewPasswordVisible = false;
+    private boolean isConfirmPasswordVisible = false;
 
     public RegistrationView() {
         initComponents();
         makeRedirectLabelClickable();
         setTitle("Registration Form | CheckInn");
         setLocationRelativeTo(null);
+        
+        
+        
+        
+        RegNewPassEyeButton.addActionListener(new java.awt.event.ActionListener() {
+        @Override
+        public void actionPerformed(java.awt.event.ActionEvent e) {
+            if (isNewPasswordVisible) {
+                RegNewPassInput.setEchoChar('•');
+                RegNewPassEyeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/CloseEye.jpg")));
+            } else {
+                RegNewPassInput.setEchoChar((char) 0);
+                RegNewPassEyeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/OpenEye.jpg")));
+            }
+            isNewPasswordVisible = !isNewPasswordVisible;
+        }
+    });
         
     }
   
@@ -385,6 +405,7 @@ public class RegistrationView extends javax.swing.JFrame {
         RegButton.addActionListener(listener);
     }
 
+    
     public void addLoginNavigationListener(MouseListener listener) {
         RedirectToLogin.addMouseListener(listener);
     }
