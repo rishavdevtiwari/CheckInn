@@ -17,7 +17,7 @@ public class ReviewTest {
     
     @After
     public void tearDown() {
-        
+        // Remove test reviews so the database is no altered
         try (Connection conn = new checkinn.database.MySqlConnection().openConnection();
              PreparedStatement stmt = conn.prepareStatement(
                  "DELETE FROM Review WHERE review_text LIKE 'JUnit test review%'")) {

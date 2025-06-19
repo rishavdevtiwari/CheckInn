@@ -7,7 +7,7 @@ public class RoomTest {
     
 
     private RoomDao roomDao;
-    private int originalStatus;
+    private int originalStatus;//initializing variable to acces it in @ After 
 
     @Before
     public void setUp() {
@@ -16,7 +16,8 @@ public class RoomTest {
     
     @After
     public void tearDown() {
-       
+       // Restore the status of room 1 as it was after testing for avoiding inconveniences
+      
         roomDao.setRoomStatus(1, originalStatus);
     }
 
