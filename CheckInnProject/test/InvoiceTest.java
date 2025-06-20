@@ -15,7 +15,20 @@ public class InvoiceTest {
         invoiceDao = new InvoiceDao();
     }
 
-    
+    @After
+    public void tearDown() {
+        // Restore the database state after test of invoice
+        if (lastInvoiceId > 0) {
+            try (Connection conn = new checkinn.database.MySqlConnection().openConnection();
+                 PreparedStatement stmt = conn.prepareStatement(
+                         "DELETE FROM Invoice WHERE invoice_id = ?")) {
+                stmt.setInt(1, lastInvoiceId);
+                stmt.executeUpdate();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
     @Test
     public void testCreateInvoice() {
