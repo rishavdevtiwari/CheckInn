@@ -1,12 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+import checkinn.dao.InvoiceDao;
+import org.junit.*;
+import static org.junit.Assert.*;
 
-/**
- *
- * @author saura
- */
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
 public class InvoiceTest {
+
+    private InvoiceDao invoiceDao;
+    private int lastInvoiceId = 0;
+
+    @Before
+    public void setUp() {
+        invoiceDao = new InvoiceDao();
+    }
+
+    
     
 }
