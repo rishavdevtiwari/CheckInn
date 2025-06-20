@@ -16,7 +16,13 @@ public class BookingTest {
         bookingDao = new BookingDao();
     }
 
-
+@After
+    public void tearDown() {
+        // Clean up test booking to keep database intact
+        if (testBookingId > 0) {
+            bookingDao.cancelBooking(testBookingId);
+        }
+}
 
     @Test
     public void testSaveAndGetAllBookings() {
