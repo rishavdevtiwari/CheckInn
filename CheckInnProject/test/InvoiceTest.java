@@ -16,5 +16,14 @@ public class InvoiceTest {
     }
 
     
-    
+
+    @Test
+    public void testCreateInvoice() {
+        int bookingId = 1; // Using valid booking ID from the database
+        double totalAmount = 999.99;
+        String paymentMethod = "Cash";
+
+        lastInvoiceId = invoiceDao.createInvoice(bookingId, totalAmount, paymentMethod);
+        assertTrue(lastInvoiceId > 0);
+    }
 }
