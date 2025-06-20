@@ -1,5 +1,6 @@
 import checkinn.dao.BookingDao;
 import checkinn.model.Booking;
+import java.util.Calendar;
 import org.junit.*;
 import static org.junit.Assert.*;
 
@@ -45,29 +46,45 @@ public class BookingTest {
     }
 
     @Test
-    public void testIsRoomBookedForPeriod() {
-        // place booking for room
-        Booking booking = new Booking();
-        booking.setRoomId(1);
-        booking.setUserId(1);
-        booking.setStatusId(2);
-        booking.setInvoiceId(0);
-        Date checkIn = new Date(System.currentTimeMillis() + 3600 * 1000);
-        Date checkOut = new Date(System.currentTimeMillis() + 2 * 3600 * 1000);
-        booking.setCheckInDate(checkIn);
-        booking.setCheckOutDate(checkOut);
-        booking.setTotalPrice(1000.0);
+public void testIsRoomBookedForPeriod() {
+    int roomId = 1;
+    int userId = 1;
 
-        testBookingId = bookingDao.saveBooking(booking);
+    Calendar cal = Calendar.getInstance();
+    cal.set(Calendar.HOUR_OF_DAY, 0);
+    cal.set(Calendar.MINUTE, 0);
+    cal.set(Calendar.SECOND, 0);
+    cal.set(Calendar.MILLISECOND, 0);
 
-        // overlapping period should return true
-        boolean isBooked = bookingDao.isRoomBookedForPeriod(1, checkIn, checkOut);
-        assertTrue(isBooked);
+    // Booking for the day tomorrow
+    cal.add(Calendar.DATE, 1);
+    Date checkIn = cal.getTime();
+    cal.add(Calendar.DATE, 1);
+    Date checkOut = cal.getTime();
 
-        // non-overlapping period should return false
-        Date futureCheckIn = new Date(System.currentTimeMillis() + 10 * 3600 * 1000);
-        Date futureCheckOut = new Date(System.currentTimeMillis() + 12 * 3600 * 1000);
-        boolean notBooked = bookingDao.isRoomBookedForPeriod(1, futureCheckIn, futureCheckOut);
-        assertFalse(notBooked);
-    }
+    Booking booking = new Booking();
+    booking.setRoomId(roomId);
+    booking.setUserId(userId);
+    booking.setStatusId(2);
+    booking.setInvoiceId(0);
+    booking.setCheckInDate(checkIn);
+    booking.setCheckOutDate(checkOut);
+    booking.setTotalPrice(1000.0);
+
+    testBookingId = bookingDao.saveBooking(booking);
+    assertTrue("Booking should be saved", testBookingId > 0);
+
+    // Overlapping period with booking
+    boolean isBooked = bookingDao.isRoomBookedForPeriod(roomId, checkIn, checkOut);
+    assertTrue("Room should be booked for the same period", isBooked);
+
+    // Non-overlapping period with booking
+    cal.add(Calendar.DATE, 8);//-> 10 days after original booking
+    Date futureCheckIn = cal.getTime();
+    cal.add(Calendar.DATE, 1);
+    Date futureCheckOut = cal.getTime();
+
+    boolean notBooked = bookingDao.isRoomBookedForPeriod(roomId, futureCheckIn, futureCheckOut);
+    assertFalse("Room should not be booked for a non-overlapping period", notBooked);
+}
 }

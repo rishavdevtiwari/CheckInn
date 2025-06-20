@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="rishavdevtiwari" name="MenuItemTest" skipped="0" tests="1" time="0.728" timestamp="2025-06-20T08:36:43">
+<testsuite errors="0" failures="0" hostname="rishavdevtiwari" name="BookingTest" skipped="0" tests="2" time="1.242" timestamp="2025-06-20T08:36:41">
   <properties>
     <property name="" value="======" />
     <property name="javac.test.classpath" value="E:/CheckInnProject/lib/absolutelayout/AbsoluteLayout.jar:C:\Program Files\NetBeans-25\netbeans\platform\modules\ext\junit-4.13.2.jar:E:/CheckInnProject/lib/flatlaf-3.4.1-no-natives.jar;E:/CheckInnProject/lib/flatlaf-extras-3.4.1.jar;E:/CheckInnProject/lib/jakarta.activation-1.2.2.jar;E:/CheckInnProject/lib/junit-4.13.2.jar;E:/CheckInnProject/lib/mail.jar;E:/CheckInnProject/lib/mysql-connector-j-9.2.0.jar;E:/CheckInnProject/lib/absolutelayout;E:/CheckInnProject/lib/CopyLibs;E:/CheckInnProject/lib/MyLibrary/jcalendar-1.4.jar:lib/jcalendar-1.4.jar:lib/hamcrest-3.0.jar:build/classes" />
@@ -17,7 +17,7 @@
     <property name="libs.eclipselink.javadoc" value="C:\Program Files\NetBeans-25\netbeans\java\modules\ext\docs\jakarta.persistence-2.2.3-doc.zip" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner MenuItemTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,E:\CheckInnProject\build\test\results\TEST-MenuItemTest.xml crashfile=E:\CheckInnProject\build\junitvmwatcher15430745177250676578.properties propsfile=E:\CheckInnProject\build\junit10371227917157365072.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner BookingTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,E:\CheckInnProject\build\test\results\TEST-BookingTest.xml crashfile=E:\CheckInnProject\build\junitvmwatcher13077157178971909812.properties propsfile=E:\CheckInnProject\build\junit9639239534866245219.properties" />
     <property name="jdk.debug" value="release" />
     <property name="javadoc.use" value="true" />
     <property name="javadoc.notree" value="false" />
@@ -443,14 +443,35 @@
     <property name="libs.jsp-compiler.classpath" value="C:\Program Files\NetBeans-25\netbeans\enterprise\ant\extra\jspcompile.jar" />
     <property name="libs.javaee-endorsed-api-6.0.classpath" value="C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\javaee6-endorsed\javax.annotation.jar;C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\javaee6-endorsed\jaxb-api-osgi.jar;C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\javaee6-endorsed\webservices-api-osgi.jar" />
   </properties>
-  <testcase classname="MenuItemTest" name="testGetAllMenuItems_NotEmpty" time="0.621" />
+  <testcase classname="BookingTest" name="testIsRoomBookedForPeriod" time="0.76" />
+  <testcase classname="BookingTest" name="testSaveAndGetAllBookings" time="0.37" />
   <system-out><![CDATA[Database 'CheckInndb' ensured to exist.
 Successfully connected to database 'CheckInndb'.
 All tables initialized successfully.
-ID: 1, Name: Breakfast Package, Price: 500.0
-ID: 2, Name: Brunch Package, Price: 850.0
-ID: 3, Name: Lunch Package, Price: 1000.0
-ID: 4, Name: Dinner Package, Price: 1500.0
+Database 'CheckInndb' ensured to exist.
+Successfully connected to database 'CheckInndb'.
+All tables initialized successfully.
+Database 'CheckInndb' ensured to exist.
+Successfully connected to database 'CheckInndb'.
+All tables initialized successfully.
+Database 'CheckInndb' ensured to exist.
+Successfully connected to database 'CheckInndb'.
+All tables initialized successfully.
+Database 'CheckInndb' ensured to exist.
+Successfully connected to database 'CheckInndb'.
+All tables initialized successfully.
+Database 'CheckInndb' ensured to exist.
+Successfully connected to database 'CheckInndb'.
+All tables initialized successfully.
+Database 'CheckInndb' ensured to exist.
+Successfully connected to database 'CheckInndb'.
+All tables initialized successfully.
+Database 'CheckInndb' ensured to exist.
+Successfully connected to database 'CheckInndb'.
+All tables initialized successfully.
+Database 'CheckInndb' ensured to exist.
+Successfully connected to database 'CheckInndb'.
+All tables initialized successfully.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
