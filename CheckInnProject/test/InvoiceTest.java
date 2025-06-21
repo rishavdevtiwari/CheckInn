@@ -58,4 +58,8 @@ public void testDuplicateInvoiceNotAllowed() {
     }
 }
 
+    private void deleteInvoiceById(int secondInvoiceId) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }
