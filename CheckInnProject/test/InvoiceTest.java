@@ -39,4 +39,23 @@ public class InvoiceTest {
         lastInvoiceId = invoiceDao.createInvoice(bookingId, totalAmount, paymentMethod);
         assertTrue(lastInvoiceId > 0);
     }
+    @Test
+public void testDuplicateInvoiceNotAllowed() {
+    int bookingId = 1; // Ensure this booking exists and has no invoice yet
+    double totalAmount = 500.00;
+    String paymentMethod = "UPI";
+
+    int firstInvoiceId = invoiceDao.createInvoice(bookingId, totalAmount, paymentMethod);
+    assertTrue("First invoice should be created", firstInvoiceId > 0);
+    lastInvoiceId = firstInvoiceId;
+
+    int secondInvoiceId = invoiceDao.createInvoice(bookingId, totalAmount, paymentMethod);
+    assertEquals("Duplicate invoice should be prevented", -1, secondInvoiceId);
+
+    // Clean up if second invoice was somehow created
+    if (secondInvoiceId > 0) {
+        deleteInvoiceById(secondInvoiceId);
+    }
+}
+
 }
