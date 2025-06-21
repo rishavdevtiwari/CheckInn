@@ -205,4 +205,8 @@ public boolean isRoomBookedForPeriod(int roomId, java.util.Date checkIn, java.ut
         }
     }
 
+    public Booking getBookingById(int bookingId) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }
