@@ -70,4 +70,25 @@ public class BookingTest {
         boolean notBooked = bookingDao.isRoomBookedForPeriod(1, futureCheckIn, futureCheckOut);
         assertFalse(notBooked);
     }
+    @Test
+public void testCancelBooking() {
+    Booking booking = new Booking();
+    booking.setRoomId(1);
+    booking.setUserId(1);
+    booking.setStatusId(2);
+    booking.setInvoiceId(0);
+    booking.setCheckInDate(new Date(System.currentTimeMillis() + 3600 * 1000));
+    booking.setCheckOutDate(new Date(System.currentTimeMillis() + 2 * 3600 * 1000));
+    booking.setTotalPrice(1234.56);
+
+    int bookingId = bookingDao.saveBooking(booking);
+    assertTrue(bookingId > 0);
+
+    boolean cancelResult = bookingDao.cancelBooking(bookingId);
+    assertTrue(cancelResult);
+
+    Booking canceledBooking = bookingDao.getBookingById(bookingId);
+    assertNull("Booking should no longer exist after cancellation", canceledBooking);
+}
+
 }
