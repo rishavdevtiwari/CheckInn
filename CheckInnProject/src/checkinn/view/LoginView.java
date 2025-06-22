@@ -21,6 +21,7 @@ public class LoginView extends javax.swing.JFrame {
         initComponents();
         makeRedirectLabelClickable();
         makeForgotPasswordLabelClickable();
+        setTitle("Login Form | CheckInn");
         setLocationRelativeTo(null);
     }
     
@@ -91,8 +92,9 @@ public class LoginView extends javax.swing.JFrame {
         RedirectToReg.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
         RedirectToReg.setText("Sign Up");
 
-        LoginButton.setBackground(new java.awt.Color(0, 102, 0));
+        LoginButton.setBackground(new java.awt.Color(61, 125, 125));
         LoginButton.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        LoginButton.setForeground(new java.awt.Color(255, 255, 255));
         LoginButton.setText("Log In");
         LoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -1,13 +1,16 @@
 package checkinn.controller;
 
+import checkinn.controller.LoginController.ForgotPasswordListener;
+import checkinn.controller.LoginController.RegisterNavigationListener;
+import checkinn.controller.mail.SMTPSMailSender;
 import checkinn.dao.UserDao;
 import checkinn.model.LoginRequest;
 import checkinn.model.ResetPasswordRequest;
+import checkinn.model.UserData;
+import checkinn.view.AdminDashboard;
 import checkinn.view.DashboardView;
 import checkinn.view.LoginView;
 import checkinn.view.RegistrationView;
-import checkinn.controller.mail.SMTPSMailSender;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -29,6 +32,7 @@ public class LoginController {
     }
 
     public void open() {
+        loginView.setLocationRelativeTo(null); // Center the login view
         loginView.setVisible(true);
     }
 
@@ -41,17 +45,60 @@ public class LoginController {
         public void actionPerformed(ActionEvent e) {
             String email = loginView.getEmail();
             String password = loginView.getPassword();
-            LoginRequest request = new LoginRequest(email, password);
-
-            if (!request.isValid()) {
+            
+            if (email.isEmpty() || password.isEmpty()) {
                 loginView.showError("Please enter both email and password.");
                 return;
             }
+            // First, check for the hardcoded admin credentials.
+            if (email.equals("admin") && password.equals("admin@")) {
+    
+    loginView.showMessage("Admin login successful!");
+    close(); // Close the login view
 
+    // Create a placeholder UserData object for the admin
+    UserData adminData = new UserData();
+    adminData.setFirstName("John");
+    adminData.setLastName("Doe");
+    adminData.setEmail("admin");
+    
+    // Create and show the new Admin Dashboard
+    AdminDashboard adminView = new AdminDashboard();
+    // Pass both the view AND the admin data to the controller
+    AdminDashboardController adminController = new AdminDashboardController(adminView, adminData);
+    adminController.showView();
+
+} else { 
+                // If not admin, proceed with the database check for regular users.
+LoginRequest request = new LoginRequest(email, password);
+            if (!request.isValid()) {
+                loginView.showError("Invalid email format.");
+                return;
+            }
+
+            // Check if email is a Gmail address and does not exist
+            if (email.endsWith("@gmail.com") && !userDao.emailExists(email)) {
+                int choice = javax.swing.JOptionPane.showConfirmDialog(
+                    loginView,
+                    "This Gmail is not registered. Would you like to create a new account?",
+                    "Register New Account",
+                    javax.swing.JOptionPane.YES_NO_OPTION
+                );
+                if (choice == javax.swing.JOptionPane.YES_OPTION) {
+                    close();
+                    RegistrationView registrationView = new RegistrationView();
+                    RegistrationController registrationController = new RegistrationController(registrationView, userDao);
+                    registrationController.open();
+                }
+                return;
+            }
+
+            // Now check credentials
             boolean authenticated = userDao.authenticateUser(email, password);
             if (authenticated) {
                 loginView.showMessage("Login successful!");
                 close();
+
                 DashboardView dashboardView = new DashboardView();
                 DashboardController dashboardController = new DashboardController(dashboardView, email);
                 dashboardController.open();
@@ -59,6 +106,8 @@ public class LoginController {
                 loginView.showError("Invalid email or password.");
             }
         }
+    }
+    
     }
 
     class RegisterNavigationListener extends MouseAdapter {
@@ -82,11 +131,12 @@ public class LoginController {
             if (!userDao.emailExists(email)) {
                 loginView.showError("No user found with this email.");
                 return;
-            } else {
             }
+            
             // Generate OTP
             generatedOTP = String.format("%06d", new Random().nextInt(999999));
             otpEmail = email;
+            
             // Send OTP
             boolean sent = SMTPSMailSender.sendOtpEmail(email, generatedOTP);
             if (!sent) {

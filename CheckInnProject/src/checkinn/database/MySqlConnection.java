@@ -50,7 +50,6 @@ public class MySqlConnection implements DbConnection {
 
     private void initializeTables(Connection conn) throws SQLException {
         try (Statement stmt = conn.createStatement()) {
-            // Create tables if they don't exist
             String[] createTables = {
                 "CREATE TABLE IF NOT EXISTS Statuses (" +
                 "status_id INT AUTO_INCREMENT PRIMARY KEY, " +
@@ -62,9 +61,7 @@ public class MySqlConnection implements DbConnection {
                 "last_name VARCHAR(50) NOT NULL, " +
                 "phone_number VARCHAR(20), " +
                 "email VARCHAR(100) UNIQUE NOT NULL, " +
-                "password VARCHAR(255) NOT NULL, " +
-                "security_question VARCHAR(255), " +
-                "security_answer VARCHAR(255))",
+                "password VARCHAR(255) NOT NULL)",
 
                 "CREATE TABLE IF NOT EXISTS Admin (" +
                 "admin_id INT AUTO_INCREMENT PRIMARY KEY, " +
@@ -75,14 +72,17 @@ public class MySqlConnection implements DbConnection {
                 "FOREIGN KEY (status_id) REFERENCES Statuses(status_id) ON DELETE SET NULL ON UPDATE CASCADE)",
 
                 "CREATE TABLE IF NOT EXISTS Room (" +
-                "room_id INT AUTO_INCREMENT PRIMARY KEY, " +
+                "room_id INT PRIMARY KEY not null, " +
+                "price decimal(15,2),"+
                 "description TEXT, " +
-                "status_id INT, " +
+                "image_path varchar(150),"+
+                "status_id INT default 1, " +
                 "FOREIGN KEY (status_id) REFERENCES Statuses(status_id) ON DELETE SET NULL ON UPDATE CASCADE)",
 
                 "CREATE TABLE IF NOT EXISTS MenuItem (" +
                 "menu_id INT AUTO_INCREMENT PRIMARY KEY, " +
-                "itemname VARCHAR(100) NOT NULL, ",
+                "itemname VARCHAR(100) NOT NULL, " +
+                "price DECIMAL(10,2) NOT NULL)",
 
                 "CREATE TABLE IF NOT EXISTS Booking (" +
                 "booking_id INT AUTO_INCREMENT PRIMARY KEY, " +
@@ -94,10 +94,9 @@ public class MySqlConnection implements DbConnection {
                 "invoice_id INT, " +
                 "CheckIn_date DATETIME NOT NULL, " +
                 "CheckOut_date DATETIME NOT NULL, " +
-                "total_price Decimal(5,2),"+
+                "total_price Decimal(10,2),"+
                 "FOREIGN KEY (room_id) REFERENCES Room(room_id) ON DELETE CASCADE ON UPDATE CASCADE, " +
                 "FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE CASCADE ON UPDATE CASCADE, " +
-                "FOREIGN KEY (admin_id) REFERENCES Admin(admin_id) ON DELETE SET NULL ON UPDATE CASCADE, " +
                 "FOREIGN KEY (status_id) REFERENCES Statuses(status_id) ON DELETE SET NULL ON UPDATE CASCADE, " +
                 "FOREIGN KEY (menu_id) REFERENCES MenuItem(menu_id) ON DELETE SET NULL ON UPDATE CASCADE)",
 
@@ -114,12 +113,43 @@ public class MySqlConnection implements DbConnection {
                 stmt.execute(sql);
             }
 
-            // Add the invoice foreign key to Booking if it doesn't exist
-            if (!foreignKeyExists(conn, DB_NAME, "Booking", "fk_booking_invoice")) {
-                stmt.execute("ALTER TABLE Booking ADD CONSTRAINT fk_booking_invoice " +
-                             "FOREIGN KEY (invoice_id) REFERENCES Invoice(invoice_id) " +
-                             "ON DELETE SET NULL ON UPDATE CASCADE");
-            }
+        ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM Statuses");
+        rs.next();
+
+        if (rs.getInt(1) == 0) {
+            stmt.executeUpdate("INSERT INTO Statuses (status_id, status_info) VALUES " +
+                              "(1, 'Vacant'), (2, 'Occupied'), (3, 'Out of Order')");
+        }
+
+        rs = stmt.executeQuery("SELECT COUNT(*) FROM MenuItem");
+        rs.next();
+        if (rs.getInt(1) == 0) {
+            stmt.executeUpdate(
+                "INSERT INTO MenuItem (menu_id, itemname, price) VALUES " +
+                "(1, 'Breakfast Package', 500.00), " +
+                "(2, 'Brunch Package', 850.00), " +
+                "(3, 'Lunch Package', 1000.00), " +
+                "(4, 'Dinner Package', 1500.00)"
+            );
+        }
+
+        rs = stmt.executeQuery("SELECT COUNT(*) FROM Room");
+        rs.next();
+        if (rs.getInt(1) == 0) {
+            stmt.executeUpdate(
+                "INSERT INTO Room (room_type, price, description, image_path, status_id) VALUES " +
+                "('Single Room', 2000.00, 'Perfect for the solo traveler...', '/images/singleroom.jpg', 1), " +
+                "('Double Room', 3000.00, 'Ideal for couples or friends...', '/images/doubleroom.jpg', 1), " +
+                "('Deluxe Room', 5000.00, 'Indulge in an elevated experience...', '/images/Deluxe.jpg', 1), " +
+                "('Executive Suite', 8000.00, 'Experience the pinnacle of luxury...', '/images/executive room.jpg', 1)"
+            );
+        }
+
+        if (!foreignKeyExists(conn, DB_NAME, "Booking", "fk_booking_invoice")) {
+            stmt.execute("ALTER TABLE Booking ADD CONSTRAINT fk_booking_invoice " +
+                        "FOREIGN KEY (invoice_id) REFERENCES Invoice(invoice_id) " +
+                        "ON DELETE SET NULL ON UPDATE CASCADE");
+        }
 
             System.out.println("All tables initialized successfully.");
         }
