@@ -45,7 +45,7 @@ private String formatDate(java.util.Date date) {
         Image = new javax.swing.JLabel();
         UserProfileRedirectionButton = new javax.swing.JButton();
         ReviewButton = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        AboutUsButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         CheckInnLogo = new javax.swing.JLabel();
         BoyWithStuffImg = new javax.swing.JLabel();
@@ -112,8 +112,8 @@ private String formatDate(java.util.Date date) {
         ReviewButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ReviewButton.setText("Leave a review");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("About Us");
+        AboutUsButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AboutUsButton.setText("About Us");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -142,7 +142,7 @@ private String formatDate(java.util.Date date) {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(AboutUsButton)
                 .addGap(77, 77, 77))
         );
         jPanel7Layout.setVerticalGroup(
@@ -161,7 +161,7 @@ private String formatDate(java.util.Date date) {
                 .addGap(37, 37, 37)
                 .addComponent(UserProfileRedirectionButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(AboutUsButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Image)
                 .addGap(66, 66, 66)
@@ -518,6 +518,7 @@ private String formatDate(java.util.Date date) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AboutUsButton;
     private javax.swing.JLabel AccomodationLabel;
     private javax.swing.JButton BookingHistoryButton;
     private javax.swing.JLabel BoyWithStuffImg;
@@ -548,7 +549,6 @@ private String formatDate(java.util.Date date) {
     private javax.swing.JLabel UserNameLabel;
     private javax.swing.JLabel UserProfile;
     private javax.swing.JButton UserProfileRedirectionButton;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;

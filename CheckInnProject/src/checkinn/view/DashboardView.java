@@ -62,7 +62,7 @@ public class DashboardView extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         UserProfileRedirectionButton = new javax.swing.JButton();
         ReviewButton = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        AboutUsButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -297,8 +297,8 @@ public class DashboardView extends javax.swing.JFrame {
         ReviewButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ReviewButton.setText("Leave a review");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("About Us");
+        AboutUsButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AboutUsButton.setText("About Us");
 
         javax.swing.GroupLayout DashboardMenuPanelLayout = new javax.swing.GroupLayout(DashboardMenuPanel);
         DashboardMenuPanel.setLayout(DashboardMenuPanelLayout);
@@ -321,7 +321,7 @@ public class DashboardView extends javax.swing.JFrame {
                     .addComponent(ReviewButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(DashboardMenuPanelLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1)))
+                        .addComponent(AboutUsButton)))
                 .addGap(51, 51, 51))
             .addGroup(DashboardMenuPanelLayout.createSequentialGroup()
                 .addGap(63, 63, 63)
@@ -346,7 +346,7 @@ public class DashboardView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(AboutUsButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addGap(30, 30, 30)
@@ -470,6 +470,7 @@ public class DashboardView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AboutUsButton;
     private javax.swing.JLabel AccomodationLabel;
     private javax.swing.JLabel AvailabilityLabel;
     private javax.swing.JButton BookingHistoryButton;
@@ -494,7 +495,6 @@ public class DashboardView extends javax.swing.JFrame {
     private javax.swing.JLabel UserNameLabel;
     private javax.swing.JLabel UserProfileLabel;
     private javax.swing.JButton UserProfileRedirectionButton;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
