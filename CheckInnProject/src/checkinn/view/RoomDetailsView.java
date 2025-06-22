@@ -7,25 +7,39 @@ package checkinn.view;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 
-/**
- *
- * @author ACER NITRO
- */
 public class RoomDetailsView extends javax.swing.JFrame {
-
-    /**
-     * Creates new form RoomDetailsView
-     */
+    private javax.swing.JLabel roomStatusLabel;
     public RoomDetailsView() {
         initComponents();
-        // **IMPORTANT FIX:** This prevents the whole app from closing
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setLocationRelativeTo(null); // Center the window on screen
+        setTitle("Room Details | CheckInn");
+        setLocationRelativeTo(null); 
     }
 
     public void setRoomName(String roomName) {
         jLabel1.setText(roomName);
     }
+
+// public void setRoomStatus(String status, String roomType) {
+//     switch (roomType) {
+//         case "Single Room":
+//             SingleRoomStatusLabel.setText(status);
+//             break;
+//         case "Double Room":
+//             DoubleRoomStatusLabel.setText(status);
+//             break;
+//         case "Deluxe Room":
+//             DeluxeRoomStatusLabel.setText(status);
+//             break;
+//         case "Executive Suite":
+//             ExecutiveSuiteStatusLabel.setText(status);
+//             break;
+//     }
+// }
+
+public void setRoomStatus(String status) {
+    roomStatusLabel.setText("Status: " + status);
+}
 
     // Set the price in the price text field
     public void setPrice(double price) {
@@ -34,11 +48,7 @@ public class RoomDetailsView extends javax.swing.JFrame {
 
     // Set the description in the text area
    public void setDescription(String description) {
-    // We use HTML to make the JLabel wrap the text automatically.
-    // You can adjust the width (e.g., "350px") to best fit your layout.
     descriptionLabel.setText("<html><p style=\"width:350px\">" + description + "</p></html>");
-    
-    // This makes the text align to the top of the label, which looks much better.
     descriptionLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 }
     /**
@@ -70,7 +80,9 @@ public class RoomDetailsView extends javax.swing.JFrame {
         imageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel1.add(imageLabel, java.awt.BorderLayout.CENTER);
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(61, 125, 125));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Book now");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -91,7 +103,9 @@ public class RoomDetailsView extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextField2.setBackground(new java.awt.Color(61, 125, 125));
+        jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
         jTextField2.setText("Dashboard");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,21 +134,18 @@ public class RoomDetailsView extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(62, 62, 62)
                                 .addComponent(jLabel1)))
-                        .addGap(49, 49, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(descriptionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(179, 179, 179))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(62, 62, 62)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(71, 71, 71))))
         );
         layout.setVerticalGroup(
@@ -150,7 +161,7 @@ public class RoomDetailsView extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(79, 79, 79)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addComponent(descriptionLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -158,8 +169,8 @@ public class RoomDetailsView extends javax.swing.JFrame {
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(182, 182, 182))
         );
 
@@ -221,33 +232,15 @@ public class RoomDetailsView extends javax.swing.JFrame {
     private javax.swing.JButton jTextField2;
     // End of variables declaration//GEN-END:variables
 
-
+    //BOOK NOW BUTTON
     public void addBookingListener(ActionListener listener) {
-        jButton1.addActionListener(listener); // The "Book now" button
+        jButton1.addActionListener(listener); 
     }
 
-    /**
-     * Adds a listener for mouse clicks on the "Back" text field.
-     * @param listener The mouse adapter to be added.
-     */
     public void addBackListener(MouseAdapter listener) {
-        jTextField2.addMouseListener(listener); // The "<- Dashboard" text field
+        jTextField2.addMouseListener(listener); 
     }
-    // In RoomDetailsView.java, add these two methods at the end of the file
-
-/**
- * Loads an image from the given path, scales it, and sets it on the imageLabel.
- * @param imagePath The resource path to the image (e.g., "/images/singleroom.jpg").
- */
-// In RoomDetailsView.java
-
-/**
- * Loads an image from the given path, scales it to a FIXED size, and sets it on the imageLabel.
- * @param imagePath The resource path to the image (e.g., "/images/singleroom.jpg").
- */
 public void setRoomImage(String imagePath) {
-    // --- EDITED SECTION: Define a fixed size for the image ---
-    // You can adjust these values to best fit your UI design.
     final int IMAGE_WIDTH = 450;
     final int IMAGE_HEIGHT = 220;
 

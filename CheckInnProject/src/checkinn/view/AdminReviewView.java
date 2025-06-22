@@ -52,7 +52,6 @@ public class AdminReviewView extends javax.swing.JFrame {
 
         ReviewTextArea.setColumns(20);
         ReviewTextArea.setRows(5);
-        ReviewTextArea.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 4, 4, new java.awt.Color(204, 204, 204)));
         jScrollPane1.setViewportView(ReviewTextArea);
 
         label3.setText("label3");

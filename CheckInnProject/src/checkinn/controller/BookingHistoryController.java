@@ -3,6 +3,7 @@ package checkinn.controller;
 import checkinn.dao.BookingDao;
 import checkinn.model.Booking;
 import checkinn.model.UserData;
+import checkinn.view.AboutUs;
 import checkinn.view.BookingHistoryView;
 import checkinn.view.InvoiceView;
 import checkinn.view.ReviewView;
@@ -71,6 +72,13 @@ public class BookingHistoryController {
             loginController.open();
         }
     });
+        
+        view.addAboutUsListener(e -> {
+            AboutUs aboutUsView = new AboutUs();
+            AboutUsController aboutUsController = new AboutUsController(aboutUsView, this);
+            aboutUsController.open();
+            view.dispose();
+        });
             
     }
     private void loadBookingHistory() {
@@ -98,6 +106,7 @@ public class BookingHistoryController {
             );
         }
     }
+    
     view.setUnbookedRooms(userBookings);
 }
 
