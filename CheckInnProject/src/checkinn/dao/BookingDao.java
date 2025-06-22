@@ -205,7 +205,6 @@ public boolean isRoomBookedForPeriod(int roomId, java.util.Date checkIn, java.ut
         }
     }
 
-    
     public Booking getBookingById(int bookingId) {
         String sql = "SELECT * FROM bookings WHERE booking_id = ?";
     try (Connection con = dbConnection.openConnection()) {
@@ -229,4 +228,5 @@ public boolean isRoomBookedForPeriod(int roomId, java.util.Date checkIn, java.ut
     }
     return null;
 }
+    
 }

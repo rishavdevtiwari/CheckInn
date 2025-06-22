@@ -31,8 +31,8 @@
                       <Component id="jLabel2" min="-2" pref="494" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" min="-2" pref="830" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -47,7 +47,7 @@
           </Group>
           <Group type="102" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="48" max="32767" attributes="0"/>
+              <EmptySpace pref="52" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -56,8 +56,10 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-            <BevelBorder/>
+          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+            <MatteColorBorder bottom="4" left="1" right="4" top="1">
+              <Color PropertyName="color" blue="cc" green="cc" red="cc" type="rgb"/>
+            </MatteColorBorder>
           </Border>
         </Property>
       </Properties>
@@ -69,33 +71,27 @@
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="RegButton" alignment="0" max="32767" attributes="0"/>
+                          <Component id="RegButton" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                          <Component id="RegConfirmNewpass" min="-2" max="-2" attributes="0"/>
-                                          <Component id="RegConfirmNewPassInput" min="-2" pref="361" max="-2" attributes="0"/>
-                                      </Group>
+                                  <Component id="RegPhInput" min="-2" pref="334" max="-2" attributes="0"/>
+                                  <EmptySpace pref="85" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="RegLNameInput" min="-2" pref="361" max="-2" attributes="0"/>
-                                              <Component id="RegLastName" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="RegNewpass" min="-2" pref="210" max="-2" attributes="0"/>
-                                              <Component id="RegNewPassInput" min="-2" pref="361" max="-2" attributes="0"/>
-                                          </Group>
+                                          <Component id="RegConfirmNewPassInput" min="-2" pref="313" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="RegConfirmPassEyeButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="RegConfirmNewpass" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="RegFirstName" min="-2" max="-2" attributes="0"/>
@@ -104,14 +100,30 @@
                                   </Group>
                                   <Component id="RegPh" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="RegPhInput" alignment="0" min="-2" pref="361" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="RegFNameInput" min="-2" pref="361" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                                  <Component id="RegEmailInput" min="-2" pref="361" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="RegLNameInput" alignment="0" pref="334" max="32767" attributes="0"/>
+                                      <Component id="RegLastName" min="-2" max="-2" attributes="0"/>
+                                      <Component id="RegFNameInput" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="RegNewpass" min="-2" pref="210" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                  <Component id="RegEmailInput" min="-2" pref="319" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="RegNewPassInput" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="RegNewPassEyeButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="73" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -160,11 +172,14 @@
                       <Component id="RegLastName" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="RegLNameInput" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="RegNewPassInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="RegNewPassEyeButton" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="RegLNameInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="RegNewPassInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="RegPh" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="RegConfirmNewpass" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -173,6 +188,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="RegConfirmNewPassInput" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="RegPhInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="RegConfirmPassEyeButton" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                   <Component id="RegButton" min="-2" max="-2" attributes="0"/>
@@ -265,6 +281,9 @@
               <Font name="Segoe UI" size="18" style="0"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegNewPassInputActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JPasswordField" name="RegConfirmNewPassInput">
           <Properties>
@@ -334,6 +353,32 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Log In"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="RegNewPassEyeButton">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/OpenEye.jpg"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegNewPassEyeButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="RegConfirmPassEyeButton">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/OpenEye.jpg"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegConfirmPassEyeButtonActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
