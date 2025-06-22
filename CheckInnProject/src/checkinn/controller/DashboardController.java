@@ -3,12 +3,9 @@ package checkinn.controller;
 import checkinn.dao.UserDao;
 import checkinn.model.Room; 
 import checkinn.model.UserData;
-import checkinn.view.BookingHistoryView;
 import checkinn.view.DashboardView;
 import checkinn.view.LoginView;
-import checkinn.view.ReviewView;
 import checkinn.view.RoomDetailsView;
-import checkinn.view.UserProfileView;
 import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
 
@@ -21,7 +18,6 @@ public class DashboardController {
         this.dashboardView = dashboardView;
         this.userEmail = userEmail;
         loadUserData();
-        loadRoomStatuses();
         initialize();
     }
 
@@ -29,43 +25,22 @@ public class DashboardController {
         UserDao userDao = new UserDao();
         this.user = userDao.getUserByEmail(userEmail);
     }
-    private void loadRoomStatuses() {
-    checkinn.dao.RoomDao roomDao = new checkinn.dao.RoomDao();
-    int singleStatus = roomDao.getRoomStatusId(1);
-    int doubleStatus = roomDao.getRoomStatusId(2);
-    int deluxeStatus = roomDao.getRoomStatusId(3);
-    int suiteStatus = roomDao.getRoomStatusId(4);
-
-    dashboardView.setRoomStatus(statusString(singleStatus), "Single Room");
-    dashboardView.setRoomStatus(statusString(doubleStatus), "Double Room");
-    dashboardView.setRoomStatus(statusString(deluxeStatus), "Deluxe Room");
-    dashboardView.setRoomStatus(statusString(suiteStatus), "Executive Suite");
-}
-
-private String statusString(int statusId) {
-    return switch (statusId) {
-        case 1 -> "Vacant";
-        case 2 -> "Occupied";
-        case 3 -> "Out of Order";
-        default -> "Unknown";
-    };
-}
 
     private void initialize() {
         // Set user name and welcome message on dashboard if available
         if (user != null && user.getFirstName() != null) {
             dashboardView.setUserName(user.getFirstName());
-            dashboardView.setWelcomeMessage("Welcome to CheckInn, " + user.getFirstName() + "!");
+            dashboardView.setWelcomeMessage("Welcome, " + user.getFirstName() + "!");
         } else {
             dashboardView.setUserName("Guest");
-            dashboardView.setWelcomeMessage("Welcome to CheckInn, Guest!");
+            dashboardView.setWelcomeMessage("Welcome, Guest!");
         }
 
         // --- EDITED SECTION: Create Room objects to hold all data ---
-        Room singleRoom = new Room(1,"Single Room", 2000.00, "Perfect for the solo traveler, our Single Room offers a peaceful and efficient space to unwind. It features a comfortable single bed, a dedicated work desk, and modern amenities to ensure a productive and restful stay. The room provides a quiet sanctuary, ideal for relaxing after a busy day of exploring the city or attending meetings. Enjoy a blend of comfort and convenience tailored just for you..", "/images/singleroom.jpg");
-        Room doubleRoom = new Room(2,"Double Room", 3000.00, "\"Ideal for couples or friends traveling together, our Double Room provides ample space and comfort. It is furnished with a plush double bed and a cozy seating area, creating a warm and inviting atmosphere. The room is equipped with all the essential amenities needed for a memorable stay. Whether you're starting your day with a fresh coffee or winding down in the evening, this room is your perfect home away from home..", "/images/doubleroom.jpg");
-        Room deluxeRoom = new Room(3,"Deluxe Room", 5000.00, "Indulge in an elevated experience in our spacious Deluxe Room, where modern luxury meets exceptional comfort. This room features premium furnishings, a king-sized bed, and large windows offering stunning city views. The elegant decor and enhanced amenities, including a minibar and plush bathrobes, create a truly sophisticated environment. It's the perfect choice for guests seeking an extra touch of class and a more memorable, relaxing stay.", "/images/Deluxe.jpg");
-        Room suiteRoom = new Room(4, "Executive Suite", 8000.00, "Experience the pinnacle of luxury and sophistication in our Executive Suite. This expansive suite offers a private world of comfort, featuring a separate living area for entertaining or relaxing, and a master bedroom with a luxurious king sized bed. Enjoy exclusive access to premium services, state-of-the-art entertainment systems, and breathtaking panoramic views. The suite is meticulously designed for discerning guests who demand the utmost in space, privacy, and elegance..", "/images/executive room.jpg");
+        Room singleRoom = new Room("Single Room", 2000.00, "Perfect for the solo traveler, our Single Room offers a peaceful and efficient space to unwind. It features a comfortable single bed, a dedicated work desk, and modern amenities to ensure a productive and restful stay. The room provides a quiet sanctuary, ideal for relaxing after a busy day of exploring the city or attending meetings. Enjoy a blend of comfort and convenience tailored just for you..", "/images/singleroom.jpg");
+        Room doubleRoom = new Room("Double Room", 3000.00, "\"Ideal for couples or friends traveling together, our Double Room provides ample space and comfort. It is furnished with a plush double bed and a cozy seating area, creating a warm and inviting atmosphere. The room is equipped with all the essential amenities needed for a memorable stay. Whether you're starting your day with a fresh coffee or winding down in the evening, this room is your perfect home away from home..", "/images/doubleroom.jpg");
+        Room deluxeRoom = new Room("Deluxe Room", 5000.00, "Indulge in an elevated experience in our spacious Deluxe Room, where modern luxury meets exceptional comfort. This room features premium furnishings, a king-sized bed, and large windows offering stunning city views. The elegant decor and enhanced amenities, including a minibar and plush bathrobes, create a truly sophisticated environment. It's the perfect choice for guests seeking an extra touch of class and a more memorable, relaxing stay.", "/images/Deluxe.jpg");
+        Room suiteRoom = new Room("Executive Suite", 8000.00, "Experience the pinnacle of luxury and sophistication in our Executive Suite. This expansive suite offers a private world of comfort, featuring a separate living area for entertaining or relaxing, and a master bedroom with a luxurious king sized bed. Enjoy exclusive access to premium services, state-of-the-art entertainment systems, and breathtaking panoramic views. The suite is meticulously designed for discerning guests who demand the utmost in space, privacy, and elegance..", "/images/executive room.jpg");
         
         // --- EDITED SECTION: Assign listeners using the Room objects ---
         dashboardView.addSingleRoomListener((e) -> openRoomDetailsPage(singleRoom));
@@ -74,24 +49,16 @@ private String statusString(int statusId) {
         dashboardView.addSuiteRoomListener((e) -> openRoomDetailsPage(suiteRoom));
 
 
-    dashboardView.addBookingHistoryListener((ActionEvent e) -> {
-        openBookingHistoryView();
-    });
+        dashboardView.addBookingHistoryListener((ActionEvent e) -> {
+            String bookingHistory = "Booking History for " + (user != null ? user.getFirstName() : "Guest") + ":\n"
+                                  + "1. Single Room - 2023-05-15 to 2023-05-17\n"
+                                  + "2. Deluxe Room - 2023-06-01 to 2023-06-05";
+            JOptionPane.showMessageDialog(dashboardView, bookingHistory, "Booking History", JOptionPane.INFORMATION_MESSAGE);
+        });
 
         dashboardView.addDashboardListener((ActionEvent e) -> {
             refreshDashboard();
         });
-        
-        dashboardView.addUserProfileRedirectionListener((ActionEvent e) -> {
-        openUserProfileView();
-    });
-
-    dashboardView.getReviewButton().addActionListener(e -> {
-    ReviewView reviewView = new ReviewView();
-    ReviewController reviewController = new ReviewController(reviewView, user,this);
-    reviewController.open();
-    dashboardView.setVisible(false); 
-});
 
         dashboardView.addLogoutListener((ActionEvent e) -> {
             int confirm = JOptionPane.showConfirmDialog(
@@ -112,30 +79,21 @@ private String statusString(int statusId) {
         });
     }
 
+    /**
+     * EDITED: This method now accepts a single Room object.
+     * It creates and shows the RoomDetailsView, passing the responsibility to the RoomDetailsController.
+     * @param room The Room object containing all details for the selected room.
+     */
     private void openRoomDetailsPage(Room room) {
     RoomDetailsView roomDetailsView = new RoomDetailsView();
     RoomDetailsController roomDetailsController = new RoomDetailsController(
         roomDetailsView,
         dashboardView,
         user,
-        room, null
+        room
     );
     dashboardView.setVisible(false); // Hide dashboard
     roomDetailsController.open();
-}
-    
-    private void openUserProfileView() {
-    UserProfileView userProfileView = new UserProfileView(user); // Pass user data if needed
-    UserProfileController userProfileController = new UserProfileController(userProfileView, this, user);
-    dashboardView.setVisible(false); // Hide dashboard
-    userProfileController.open();
-}
-
-private void openBookingHistoryView() {
-    BookingHistoryView bookingHistoryView = new BookingHistoryView();
-    BookingHistoryController bookingHistoryController = new BookingHistoryController(bookingHistoryView, user, this);
-    dashboardView.setVisible(false);
-    bookingHistoryController.open();
 }
 
     private void refreshDashboard() {

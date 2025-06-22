@@ -1,59 +1,20 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package checkinn.view;
 
-import checkinn.dao.MenuItemDao;
-import checkinn.model.MenuItem;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.ArrayList;
-import java.util.List;
-
-import com.toedter.calendar.JDateChooser;
-
-import javax.swing.JCheckBox;
-
+/**
+ *
+ * @author LPR HUB
+ */
 public class BookingForm extends javax.swing.JFrame {
-    private int roomId;
-    private int userId;
-    private MenuItem breakfastMenuItem;
-    private MenuItem brunchMenuItem;
-    private MenuItem lunchMenuItem;
-    private MenuItem dinnerMenuItem;
-    private JDateChooser checkInDateChooser;
-private JDateChooser checkOutDateChooser;
-    private List<MenuItem> selectedMenuItems = new ArrayList<>();
 
+    /**
+     * Creates new form BookingForm
+     */
     public BookingForm() {
         initComponents();
-        setTitle("Booking Form | CheckInn");
-        setLocationRelativeTo(null);
-        loadMenuItemsFromDatabase();
-
-            checkInDateChooser = new JDateChooser();
-            checkInDateChooser.setDateFormatString("dd-MM-yyyy");
-            CheckInDateChooser.setMinSelectableDate(new Date());
-            checkOutDateChooser = new JDateChooser();
-            checkOutDateChooser.setDateFormatString("dd-MM-yyyy");
-
-                jPanel1.add(checkInDateChooser);
-                jPanel1.add(checkOutDateChooser);
-
-                    CheckInDateChooser.getDateEditor().addPropertyChangeListener(evt -> {
-        if ("date".equals(evt.getPropertyName())) {
-            Date checkIn = CheckInDateChooser.getDate();
-            if (checkIn != null) {
-                CheckOutDateChooser.setMinSelectableDate(checkIn);
-            }
-                        updateTotalPrice();
-        }
-    });
-
-        CheckOutDateChooser.getDateEditor().addPropertyChangeListener(evt -> {
-        if ("date".equals(evt.getPropertyName())) {
-            updateTotalPrice();
-        }
-    });
-
     }
 
     /**
@@ -66,41 +27,29 @@ private JDateChooser checkOutDateChooser;
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        BFCompleteBookingButton = new javax.swing.JTextField();
         BFFullNameLabel = new javax.swing.JLabel();
         BFCheckInDateLabel = new javax.swing.JLabel();
         BFCheckOutDateLabel = new javax.swing.JLabel();
         BFRoomNameLabel = new javax.swing.JLabel();
+        BFCheckInDateInput = new javax.swing.JTextField();
         BFTotalPriceLabel = new javax.swing.JTextField();
+        BFCheckOutDateInput = new javax.swing.JTextField();
         BFFullNameInput = new javax.swing.JTextField();
-        BackToRoomDetailsButton = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        DinnerPackage = new javax.swing.JCheckBox();
-        BreakfastPackage = new javax.swing.JCheckBox();
-        BrunchPackage = new javax.swing.JCheckBox();
-        LunchPackage = new javax.swing.JCheckBox();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
-        jSeparator3 = new javax.swing.JSeparator();
-        jSeparator4 = new javax.swing.JSeparator();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        CheckInDateChooser = new com.toedter.calendar.JDateChooser();
-        CheckOutDateChooser = new com.toedter.calendar.JDateChooser();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        BFRoomDetailButton = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        BFCompleteBookingButton.setBackground(new java.awt.Color(0, 204, 102));
+        BFCompleteBookingButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        BFCompleteBookingButton.setText("                 Complete Booking");
+        BFCompleteBookingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BFCompleteBookingButtonActionPerformed(evt);
+            }
+        });
 
         BFFullNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         BFFullNameLabel.setText("Full Name");
@@ -114,12 +63,26 @@ private JDateChooser checkOutDateChooser;
         BFRoomNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         BFRoomNameLabel.setText("       <ROOM NAME>");
 
+        BFCheckInDateInput.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        BFCheckInDateInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BFCheckInDateInputActionPerformed(evt);
+            }
+        });
+
         BFTotalPriceLabel.setEditable(false);
         BFTotalPriceLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         BFTotalPriceLabel.setText("Total Price: Rs XXXX.XX /- only");
         BFTotalPriceLabel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BFTotalPriceLabelActionPerformed(evt);
+            }
+        });
+
+        BFCheckOutDateInput.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        BFCheckOutDateInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BFCheckOutDateInputActionPerformed(evt);
             }
         });
 
@@ -130,89 +93,23 @@ private JDateChooser checkOutDateChooser;
             }
         });
 
-        BackToRoomDetailsButton.setBackground(new java.awt.Color(61, 125, 125));
-        BackToRoomDetailsButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        BackToRoomDetailsButton.setForeground(new java.awt.Color(255, 255, 255));
-        BackToRoomDetailsButton.setText("<- Room Details");
-
-        jButton2.setBackground(new java.awt.Color(61, 125, 125));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Complete Booking");
-
-        DinnerPackage.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        DinnerPackage.setText("Dinner Package");
-        DinnerPackage.addActionListener(new java.awt.event.ActionListener() {
+        BFRoomDetailButton.setBackground(new java.awt.Color(0, 204, 102));
+        BFRoomDetailButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        BFRoomDetailButton.setText("           <- Room Detail");
+        BFRoomDetailButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DinnerPackageActionPerformed(evt);
+                BFRoomDetailButtonActionPerformed(evt);
             }
         });
 
-        BreakfastPackage.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BreakfastPackage.setText("Breakfast Package");
-        BreakfastPackage.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setBackground(new java.awt.Color(0, 204, 51));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton1.setText("Select Menu Items ->");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BreakfastPackageActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-
-        BrunchPackage.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BrunchPackage.setText("Brunch Package");
-        BrunchPackage.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BrunchPackageActionPerformed(evt);
-            }
-        });
-
-        LunchPackage.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        LunchPackage.setText("Lunch Package");
-        LunchPackage.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LunchPackageActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel2.setText("Price:");
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel3.setText("Price:");
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel4.setText("Price:");
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel5.setText("Price:");
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel6.setText("500.00");
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel7.setText("1000.00");
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel8.setText("1500.00");
-
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel9.setText("850.00");
-
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel10.setText("Sandwitch, Sausages, Dry Fruits, Coffee");
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel11.setText("Scrambled Eggs, Fresh Juice Set, Eggs, Sweet corn");
-
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel12.setText("Chicken Sandwitch, Keema Nodles, Chicken Drumstick, Mojito");
-
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel13.setText("Steamed Vegetables, Mashed potato, Chocolate Mousse, Rice Set");
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Please note that our room rates vary depending on the day of your stay. \nThe standard check-out time is 12:00 PM (noon).");
-        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -222,163 +119,63 @@ private JDateChooser checkOutDateChooser;
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(BFRoomNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(BFRoomNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
+                        .addGap(19, 19, 19)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(BFRoomDetailButton)
+                            .addComponent(BFTotalPriceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(273, 273, 273)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(143, 143, 143)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(BreakfastPackage)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jLabel6)
-                                                .addGap(50, 50, 50))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(jSeparator3)
-                                                .addGap(88, 88, 88))
-                                            .addComponent(jSeparator4)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addGap(21, 21, 21)
-                                                        .addComponent(jLabel10))
-                                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 507, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                                            .addComponent(LunchPackage)
-                                                            .addGap(189, 189, 189)
-                                                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addGap(18, 18, 18)
-                                                            .addComponent(jLabel7)))
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addComponent(DinnerPackage)
-                                                        .addGap(183, 183, 183)
-                                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(jLabel8)))
-                                                .addGap(0, 33, Short.MAX_VALUE))
-                                            .addComponent(jSeparator2)
-                                            .addComponent(jSeparator1)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(21, 21, 21)
-                                                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(BrunchPackage)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jLabel9)
-                                                .addGap(44, 44, 44))))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addGap(10, 10, 10)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BFTotalPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(100, 100, 100))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(BackToRoomDetailsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                            .addComponent(BFCheckOutDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(CheckOutDateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(BFFullNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(BFCheckInDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGap(18, 18, 18)
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(BFFullNameInput, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE)
-                                                .addComponent(CheckInDateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                                .addGap(174, 174, 174)
-                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addContainerGap())
+                            .addComponent(BFCheckOutDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BFCheckInDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BFFullNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BFFullNameInput, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(BFCheckOutDateInput, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE)
+                                .addComponent(BFCheckInDateInput, javax.swing.GroupLayout.Alignment.TRAILING))))
+                    .addComponent(BFCompleteBookingButton))
+                .addGap(13, 13, 13))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel6)
-                            .addComponent(BreakfastPackage)))
-                    .addComponent(BFRoomNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BFFullNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BFFullNameInput, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(BrunchPackage)
-                                .addComponent(jLabel9)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel11)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LunchPackage)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(CheckInDateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BFCheckInDateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
-                    .addComponent(jLabel12))
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(DinnerPackage)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel8))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(37, 37, 37)
+                                .addComponent(BFFullNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(45, 45, 45)
+                                .addComponent(BFFullNameInput, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(103, 103, 103)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(BFCheckInDateInput, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BFCheckInDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BFCheckOutDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CheckOutDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BFTotalPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(11, 11, 11)))
-                .addGap(34, 34, 34)
+                        .addGap(23, 23, 23)
+                        .addComponent(BFRoomNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(161, 161, 161)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BackToRoomDetailsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(29, 29, 29))
+                    .addComponent(BFCheckOutDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BFTotalPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BFCheckOutDateInput, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BFCompleteBookingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BFRoomDetailButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(71, 71, 71))
         );
 
-        jLabel1.setBackground(new java.awt.Color(113, 161, 161));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkinnlogo.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -386,178 +183,66 @@ private JDateChooser checkOutDateChooser;
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(84, 84, 84))
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void BFCompleteBookingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BFCompleteBookingButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BFCompleteBookingButtonActionPerformed
+
+    private void BFCheckInDateInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BFCheckInDateInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BFCheckInDateInputActionPerformed
+
     private void BFTotalPriceLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BFTotalPriceLabelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BFTotalPriceLabelActionPerformed
+
+    private void BFCheckOutDateInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BFCheckOutDateInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BFCheckOutDateInputActionPerformed
 
     private void BFFullNameInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BFFullNameInputActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BFFullNameInputActionPerformed
 
-    private void DinnerPackageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DinnerPackageActionPerformed
-    handleMenuItemSelection(dinnerMenuItem, DinnerPackage.isSelected());
-    }//GEN-LAST:event_DinnerPackageActionPerformed
+    private void BFRoomDetailButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BFRoomDetailButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BFRoomDetailButtonActionPerformed
 
-    private void BreakfastPackageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BreakfastPackageActionPerformed
-    handleMenuItemSelection(breakfastMenuItem, BreakfastPackage.isSelected());
-    }//GEN-LAST:event_BreakfastPackageActionPerformed
-
-    private void BrunchPackageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BrunchPackageActionPerformed
-    handleMenuItemSelection(brunchMenuItem, BrunchPackage.isSelected());
-    }//GEN-LAST:event_BrunchPackageActionPerformed
-
-    private void LunchPackageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LunchPackageActionPerformed
-    handleMenuItemSelection(lunchMenuItem, LunchPackage.isSelected());
-    }//GEN-LAST:event_LunchPackageActionPerformed
-
-    private void loadMenuItemsFromDatabase() {
-        MenuItemDao menuItemDao = new MenuItemDao();
-        List<MenuItem> menuItems = menuItemDao.getAllMenuItems();
-        for (MenuItem item : menuItems) {
-            switch (item.getItemName()) {
-                case "Breakfast Package" -> breakfastMenuItem = item;
-                case "Brunch Package" -> brunchMenuItem = item;
-                case "Lunch Package" -> lunchMenuItem = item;
-                case "Dinner Package" -> dinnerMenuItem = item;
-            }
-        }
-    }
-
-    public void setRoomId(int roomId) { this.roomId = roomId; }
-    public int getRoomId() { return roomId; }
-
-    public void setUserId(int userId) { this.userId = userId; }
-    public int getUserId() { return userId; }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public void setRoomName(String roomName) {
         BFRoomNameLabel.setText(roomName);
     }
 
-    private double roomPrice;
-
     public void setRoomPrice(double price) {
-        this.roomPrice = price;
         BFTotalPriceLabel.setText("Total Price: Rs " + String.format("%.2f", price) + " /- only");
     }
 
-    public double getRoomPrice() {
-        return this.roomPrice;
-    }
-    public String getFullName() { return BFFullNameInput.getText(); }
-
-// public Date getCheckInDate() {
-//     String input = BFCheckInDateInput.getText();
-//     try {
-//         return new SimpleDateFormat("dd-MM-yyyy").parse(input);
-//     } catch (ParseException e) {
-//         // showError("Check-In Date format is invalid. Please use dd-MM-yyyy (e.g., 13-06-2025).");
-//         return null;
-//     }
-// }
-
-// public Date getCheckOutDate() {
-//     String input = BFCheckOutDateInput.getText();
-//     try {
-//         return new SimpleDateFormat("dd-MM-yyyy").parse(input);
-//     } catch (ParseException e) {
-//         // showError("Check-Out Date format is invalid. Please use dd-MM-yyyy (e.g., 15-06-2025).");
-//         return null;
-//     }
-// }
-
-public Date getCheckInDate() {
-    return CheckInDateChooser.getDate();
-}
-
-public Date getCheckOutDate() {
-    return CheckOutDateChooser.getDate();
-}
-
-private double getMenuItemsTotalPrice() {
-    return selectedMenuItems.stream().mapToDouble(MenuItem::getPrice).sum();
-}
-
-private double totalPrice;
-public void setTotalPrice(double totalPrice) {
-    this.totalPrice = totalPrice;
-    BFTotalPriceLabel.setText("Total Price: Rs " + String.format("%.2f", totalPrice) + " /- only");
-}
-
-public double getTotalPrice() {
-    return this.totalPrice;
-}
-
-public void updateTotalPrice() {
-    Date checkIn = getCheckInDate();
-    Date checkOut = getCheckOutDate();
-    double roomPrice = getRoomPrice();
-    double menuPrice = getMenuItemsTotalPrice();
-
-    if (checkIn != null && checkOut != null && checkOut.after(checkIn)) {
-        long diffMillis = checkOut.getTime() - checkIn.getTime();
-        long days = (diffMillis / (1000 * 60 * 60 * 24));
-        if (days < 1) days = 1;
-        double total = (roomPrice * days) + menuPrice;
-        setTotalPrice(total);
-    } else {
-        setTotalPrice(roomPrice + menuPrice);
-    }
-}
-
-    public void addCompleteBookingListener(java.awt.event.ActionListener listener) {
-        jButton2.addActionListener(listener);
-    }
-
     public void addBackListener(java.awt.event.ActionListener listener) {
-        BackToRoomDetailsButton.addActionListener(listener); 
+        BFRoomDetailButton.addActionListener(listener); 
     }
-
-private void handleMenuItemSelection(MenuItem item, boolean selected) {
-    if (item == null) return;
-    if (selected) {
-        if (!selectedMenuItems.contains(item)) selectedMenuItems.add(item);
-    } else {
-        selectedMenuItems.remove(item);
-    }
-    updateTotalPrice();
-}
-
-public List<MenuItem> getSelectedMenuItems() {
-    return new ArrayList<>(selectedMenuItems);
-}
-
-public void showMessage(String message) {
-    javax.swing.JOptionPane.showMessageDialog(this, message, "Info", javax.swing.JOptionPane.INFORMATION_MESSAGE);
-}
-
-    public void showError(String message) {
-        javax.swing.JOptionPane.showMessageDialog(this, message, "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
-    }
-
-    public String getRoomName() {
-    return BFRoomNameLabel.getText();
-}
 
 
     /**
@@ -594,39 +279,18 @@ public void showMessage(String message) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField BFCheckInDateInput;
     private javax.swing.JLabel BFCheckInDateLabel;
+    private javax.swing.JTextField BFCheckOutDateInput;
     private javax.swing.JLabel BFCheckOutDateLabel;
+    private javax.swing.JTextField BFCompleteBookingButton;
     private javax.swing.JTextField BFFullNameInput;
     private javax.swing.JLabel BFFullNameLabel;
+    private javax.swing.JTextField BFRoomDetailButton;
     private javax.swing.JLabel BFRoomNameLabel;
     private javax.swing.JTextField BFTotalPriceLabel;
-    private javax.swing.JButton BackToRoomDetailsButton;
-    private javax.swing.JCheckBox BreakfastPackage;
-    private javax.swing.JCheckBox BrunchPackage;
-    private com.toedter.calendar.JDateChooser CheckInDateChooser;
-    private com.toedter.calendar.JDateChooser CheckOutDateChooser;
-    private javax.swing.JCheckBox DinnerPackage;
-    private javax.swing.JCheckBox LunchPackage;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

@@ -161,6 +161,10 @@ public class AboutUs extends javax.swing.JFrame {
         });
     }
 
+    public void addExitButtonListener(java.awt.event.ActionListener listener) {
+        ExitButton.addActionListener(listener);
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ExitButton;
     private javax.swing.JLabel jLabel1;
