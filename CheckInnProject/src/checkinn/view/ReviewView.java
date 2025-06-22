@@ -45,7 +45,6 @@ public class ReviewView extends javax.swing.JFrame {
         ReviewsTextArea.setLineWrap(true);
         ReviewsTextArea.setRows(5);
         ReviewsTextArea.setWrapStyleWord(true);
-        ReviewsTextArea.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 255, 255)));
         jScrollPane1.setViewportView(ReviewsTextArea);
 
         ReviewSubmitButton.setBackground(new java.awt.Color(0, 153, 153));

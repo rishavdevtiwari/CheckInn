@@ -3,6 +3,7 @@ package checkinn.controller;
 import checkinn.dao.UserDao;
 import checkinn.model.Room; 
 import checkinn.model.UserData;
+import checkinn.view.AboutUs;
 import checkinn.view.BookingHistoryView;
 import checkinn.view.DashboardView;
 import checkinn.view.LoginView;
@@ -109,6 +110,13 @@ private String statusString(int statusId) {
                 LoginController loginController = new LoginController(loginView, userDao);
                 loginController.open();
             }
+        });
+        
+        dashboardView.addAboutUsListener((ActionEvent e) -> {
+            AboutUs aboutUsView = new AboutUs();
+            AboutUsController aboutUsController = new AboutUsController(aboutUsView, this);
+            aboutUsController.open();
+            dashboardView.setVisible(false);
         });
     }
 
