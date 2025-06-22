@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class UserLoginTest {
 
-    private static final String TEST_EMAIL = "Test1234@gmail.com"; // Same as in your registration test
+    private static final String TEST_EMAIL = "Test1234@gmail.com"; 
     private static final String TEST_PASSWORD = "password1234";
 
     private static UserDao dao;

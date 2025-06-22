@@ -123,6 +123,7 @@ public void setInvoiceData(String roomType, String customerName, String fullName
 
         MenuItemsTextArea.setEditable(false);
         MenuItemsTextArea.setColumns(20);
+        MenuItemsTextArea.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         MenuItemsTextArea.setLineWrap(true);
         MenuItemsTextArea.setRows(5);
         MenuItemsTextArea.setWrapStyleWord(true);
