@@ -206,7 +206,29 @@ public boolean isRoomBookedForPeriod(int roomId, java.util.Date checkIn, java.ut
     }
 
     public Booking getBookingById(int bookingId) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    // Replace with actual DB code to fetch booking by ID
+    try (Connection con = MySqlConnection.getConnection()) {
+        String query = "SELECT * FROM bookings WHERE booking_id = ?";
+        PreparedStatement ps = con.prepareStatement(query);
+        ps.setInt(1, bookingId);
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) {
+            Booking booking = new Booking();
+            booking.setBookingId(rs.getInt("booking_id"));
+            booking.setRoomId(rs.getInt("room_id"));
+            booking.setUserId(rs.getInt("user_id"));
+            booking.setStatusId(rs.getInt("status_id"));
+            booking.setInvoiceId(rs.getInt("invoice_id"));
+            booking.setCheckInDate(rs.getTimestamp("check_in_date"));
+            booking.setCheckOutDate(rs.getTimestamp("check_out_date"));
+            booking.setTotalPrice(rs.getDouble("total_price"));
+            return booking;
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
     }
+    return null;
+}
+
 
 }

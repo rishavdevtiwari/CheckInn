@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Zenbook" name="BookingTest" skipped="0" tests="3" time="0.635" timestamp="2025-06-22T02:58:19">
+<testsuite errors="0" failures="0" hostname="Zenbook" name="RoomTest" skipped="0" tests="2" time="1.278" timestamp="2025-06-22T02:46:18">
   <properties>
     <property name="" value="======" />
     <property name="javac.test.classpath" value="D:/NetBeansProjects/CheckInnProject/lib/absolutelayout/AbsoluteLayout.jar:D:/NetBeansProjects/CheckInnProject/lib/junit_4/junit-4.13.2.jar:D:/NetBeansProjects/CheckInnProject/lib/flatlaf-3.4.1-no-natives.jar;D:/NetBeansProjects/CheckInnProject/lib/flatlaf-extras-3.4.1.jar;D:/NetBeansProjects/CheckInnProject/lib/jakarta.activation-1.2.2.jar;D:/NetBeansProjects/CheckInnProject/lib/junit-4.13.2.jar;D:/NetBeansProjects/CheckInnProject/lib/mail.jar;D:/NetBeansProjects/CheckInnProject/lib/mysql-connector-j-9.2.0.jar;D:/NetBeansProjects/CheckInnProject/lib/absolutelayout;D:/NetBeansProjects/CheckInnProject/lib/CopyLibs;D:/NetBeansProjects/CheckInnProject/lib/MyLibrary/jcalendar-1.4.jar:lib/jcalendar-1.4.jar:lib/hamcrest-3.0.jar:build/classes" />
@@ -17,7 +17,7 @@
     <property name="libs.eclipselink.javadoc" value="C:\Program Files\NetBeans-25\netbeans\java\modules\ext\docs\jakarta.persistence-2.2.3-doc.zip" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner BookingTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\NetBeansProjects\CheckInnProject\build\test\results\TEST-BookingTest.xml crashfile=D:\NetBeansProjects\CheckInnProject\build\junitvmwatcher10851366052879419230.properties propsfile=D:\NetBeansProjects\CheckInnProject\build\junit3500151190475272576.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner RoomTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\NetBeansProjects\CheckInnProject\build\test\results\TEST-RoomTest.xml crashfile=D:\NetBeansProjects\CheckInnProject\build\junitvmwatcher6459093782391856724.properties propsfile=D:\NetBeansProjects\CheckInnProject\build\junit6035795288824925928.properties" />
     <property name="jdk.debug" value="release" />
     <property name="javadoc.use" value="true" />
     <property name="javadoc.notree" value="false" />
@@ -64,7 +64,7 @@
     <property name="libs.testng.maven-pom" value="" />
     <property name="jlink.additionalparam" value="" />
     <property name="org.openide.version" value="deprecated" />
-    <property name="test.includes" value="BookingTest.java" />
+    <property name="test.includes" value="RoomTest.java" />
     <property name="run.classpath" value="D:/NetBeansProjects/CheckInnProject/lib/absolutelayout/AbsoluteLayout.jar:D:/NetBeansProjects/CheckInnProject/lib/junit_4/junit-4.13.2.jar:D:/NetBeansProjects/CheckInnProject/lib/flatlaf-3.4.1-no-natives.jar;D:/NetBeansProjects/CheckInnProject/lib/flatlaf-extras-3.4.1.jar;D:/NetBeansProjects/CheckInnProject/lib/jakarta.activation-1.2.2.jar;D:/NetBeansProjects/CheckInnProject/lib/junit-4.13.2.jar;D:/NetBeansProjects/CheckInnProject/lib/mail.jar;D:/NetBeansProjects/CheckInnProject/lib/mysql-connector-j-9.2.0.jar;D:/NetBeansProjects/CheckInnProject/lib/absolutelayout;D:/NetBeansProjects/CheckInnProject/lib/CopyLibs;D:/NetBeansProjects/CheckInnProject/lib/MyLibrary/jcalendar-1.4.jar:lib/jcalendar-1.4.jar:lib/hamcrest-3.0.jar:build/classes" />
     <property name="libs.jaxb.src" value="" />
     <property name="sun.awt.enableExtraMouseButtons" value="true" />
@@ -217,7 +217,7 @@
     <property name="${file.reference.flatlaf-3.4.1-no-natives.jar-1}" value="C:\Users\risha\Downloads\flatlaf-extras-3.4.1.jar:C:\Users\risha\Downloads\jakarta.activation-1.2.2.jar:C:\Users\risha\Downloads\mail.jar:${file.reference.mysql-connector-j-9.2.0.jar}:C:\Users\LPR HUB\Downloads\junit-4.13.2.jar" />
     <property name="org.apache.commons.logging.Log" value="org.apache.commons.logging.impl.Jdk14Logger" />
     <property name="libs.javaee-api-6.0.classpath" value="C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\javaee-api-6.0.jar" />
-    <property name="javac.includesfile.binary" value="D:\NetBeansProjects\CheckInnProject\null875706967" />
+    <property name="javac.includesfile.binary" value="D:\NetBeansProjects\CheckInnProject\null115510126" />
     <property name="libs.javaee-api-7.0.classpath" value="C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\javaee-api-7.0.jar" />
     <property name="sun.cpu.isalist" value="amd64" />
     <property name="libs.restapi.maven-pom" value="" />
@@ -337,7 +337,7 @@
     <property name="empty.dir" value="D:\NetBeansProjects\CheckInnProject\build\empty" />
     <property name="libs.jakartaee-api-10.0.classpath" value="C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\jakarta.jakartaee-api-10.0.0.jar" />
     <property name="netbeans.user" value="C:\Users\saura\AppData\Roaming\NetBeans\25" />
-    <property name="javac.includes.binary" value="D:\NetBeansProjects\CheckInnProject\build\test\classes\BookingTest.class" />
+    <property name="javac.includes.binary" value="D:\NetBeansProjects\CheckInnProject\build\test\classes\RoomTest.class" />
     <property name="file.separator" value="\" />
     <property name="line.separator" value="&#xd;&#xa;" />
     <property name="javadoc.additionalparam" value="" />
@@ -377,7 +377,7 @@
     <property name="libs.spring-framework500.src" value="" />
     <property name="user.properties.file" value="C:\Users\saura\AppData\Roaming\NetBeans\25\build.properties" />
     <property name="libs.javaee-api-6.0.src" value="" />
-    <property name="javac.includes" value="BookingTest.java" />
+    <property name="javac.includes" value="RoomTest.java" />
     <property name="netbeans.autoupdate.country" value="US" />
     <property name="java.class.path" value="D:\NetBeansProjects\CheckInnProject\lib\absolutelayout\AbsoluteLayout.jar;D:\NetBeansProjects\CheckInnProject\lib\junit_4\junit-4.13.2.jar;D:\NetBeansProjects\CheckInnProject\lib\flatlaf-3.4.1-no-natives.jar;D:\NetBeansProjects\CheckInnProject\lib\flatlaf-extras-3.4.1.jar;D:\NetBeansProjects\CheckInnProject\lib\jakarta.activation-1.2.2.jar;D:\NetBeansProjects\CheckInnProject\lib\junit-4.13.2.jar;D:\NetBeansProjects\CheckInnProject\lib\mail.jar;D:\NetBeansProjects\CheckInnProject\lib\mysql-connector-j-9.2.0.jar;D:\NetBeansProjects\CheckInnProject\lib\absolutelayout;D:\NetBeansProjects\CheckInnProject\lib\CopyLibs;D:\NetBeansProjects\CheckInnProject\lib\MyLibrary\jcalendar-1.4.jar;D:\NetBeansProjects\CheckInnProject\lib\jcalendar-1.4.jar;D:\NetBeansProjects\CheckInnProject\lib\hamcrest-3.0.jar;D:\NetBeansProjects\CheckInnProject\build\classes;D:\NetBeansProjects\CheckInnProject\build\test\classes;C:\Program Files\NetBeans-25\netbeans\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans-25\netbeans\extide\ant\lib\ant.jar;C:\Program Files\NetBeans-25\netbeans\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans-25\netbeans\extide\ant\lib\ant-junit4.jar" />
     <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
@@ -437,7 +437,7 @@
     <property name="libs.metro.javadoc" value="C:\Program Files\NetBeans-25\netbeans\enterprise\docs\webservices-api-javadoc.jar;C:\Program Files\NetBeans-25\netbeans\enterprise\docs\webservices-extra-javadoc.jar;C:\Program Files\NetBeans-25\netbeans\enterprise\docs\webservices-extra-api-javadoc.jar;C:\Program Files\NetBeans-25\netbeans\enterprise\docs\webservices-rt-javadoc.jar;C:\Program Files\NetBeans-25\netbeans\enterprise\docs\webservices-tools-javadoc.jar" />
     <property name="libs.jakartaee-web-api-9.0.src" value="" />
     <property name="libs.jakartaee-web-api-10.0.classpath" value="C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\jakarta.jakartaee-web-api-10.0.0.jar" />
-    <property name="test.class" value="BookingTest" />
+    <property name="test.class" value="RoomTest" />
     <property name="sun.awt.datatransfer.timeout" value="1000" />
     <property name="libs.javaee-web-api-7.0.src" value="" />
     <property name="libs.jakartaee-api-8.0.src" value="" />
@@ -446,9 +446,8 @@
     <property name="libs.jsp-compiler.classpath" value="C:\Program Files\NetBeans-25\netbeans\enterprise\ant\extra\jspcompile.jar" />
     <property name="libs.javaee-endorsed-api-6.0.classpath" value="C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\javaee6-endorsed\javax.annotation.jar;C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\javaee6-endorsed\jaxb-api-osgi.jar;C:\Program Files\NetBeans-25\netbeans\enterprise\modules\ext\javaee6-endorsed\webservices-api-osgi.jar" />
   </properties>
-  <testcase classname="BookingTest" name="testCancelBooking" time="0.375" />
-  <testcase classname="BookingTest" name="testIsRoomBookedForPeriod" time="0.094" />
-  <testcase classname="BookingTest" name="testSaveAndGetAllBookings" time="0.078" />
+  <testcase classname="RoomTest" name="testSetAndGetRoomStatus" time="1.126" />
+  <testcase classname="RoomTest" name="testGetRoomStatusId_InvalidRoom" time="0.043" />
   <system-out><![CDATA[Database 'CheckInndb' ensured to exist.
 Successfully connected to database 'CheckInndb'.
 All tables initialized successfully.
@@ -473,31 +472,57 @@ All tables initialized successfully.
 Database 'CheckInndb' ensured to exist.
 Successfully connected to database 'CheckInndb'.
 All tables initialized successfully.
-Database 'CheckInndb' ensured to exist.
-Successfully connected to database 'CheckInndb'.
-All tables initialized successfully.
-Database 'CheckInndb' ensured to exist.
-Successfully connected to database 'CheckInndb'.
-All tables initialized successfully.
-Database 'CheckInndb' ensured to exist.
-Successfully connected to database 'CheckInndb'.
-All tables initialized successfully.
-Database 'CheckInndb' ensured to exist.
-Successfully connected to database 'CheckInndb'.
-All tables initialized successfully.
 ]]></system-out>
-  <system-err><![CDATA[java.lang.UnsupportedOperationException: Not supported yet.
-	at checkinn.database.MySqlConnection.getConnection(MySqlConnection.java:22)
-	at checkinn.dao.BookingDao.getBookingById(BookingDao.java:210)
-	at BookingTest.testCancelBooking(BookingTest.java:90)
+  <system-err><![CDATA[java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`checkinndb`.`room`, CONSTRAINT `room_ibfk_1` FOREIGN KEY (`status_id`) REFERENCES `statuses` (`status_id`) ON DELETE SET NULL ON UPDATE CASCADE)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:990)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1168)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1103)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1450)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1086)
+	at checkinn.dao.RoomDao.setRoomStatus(RoomDao.java:18)
+	at RoomTest.tearDown(RoomTest.java:21)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:50)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
+java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`checkinndb`.`room`, CONSTRAINT `room_ibfk_1` FOREIGN KEY (`status_id`) REFERENCES `statuses` (`status_id`) ON DELETE SET NULL ON UPDATE CASCADE)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:990)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1168)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1103)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1450)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1086)
+	at checkinn.dao.RoomDao.setRoomStatus(RoomDao.java:18)
+	at RoomTest.tearDown(RoomTest.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
